@@ -1,0 +1,86 @@
+# Code Coven · v0.3.0
+
+**A Little Magic. A Lot of Code.** A completely free, cozy magical coding academy. Free to learn. Free to grow. Free forever.
+
+The public academy, searchable course catalog, seven open departments, student demo dashboard, Daylight/Midnight themes, and Hexi concept illustrations work as a static React application. Mission 003 prepares it for Cloudflare Pages while preserving its design. Nothing has been deployed. The GitHub repository is [spookytechgirl/code-coven](https://github.com/spookytechgirl/code-coven).
+
+## Stack and structure
+
+- React / React DOM 19.3.0, React Router 7.18.4, Lucide React 1.55.0.
+- Vite 8.3.4 with the React plugin; default root URL base `/`, output `dist`, no server functions.
+- TypeScript 7.0.2 with strict checking, ES2022 target, bundler resolution, no source emission.
+- Tailwind CSS 4.3.3 integrated through `@tailwindcss/vite` and the stylesheet import. Custom Daylight/Midnight tokens and responsive styles live in `src/styles/`; no separate Tailwind config is required.
+- Node 24.19.0 (`.nvmrc`), pnpm 11.25.0 (`packageManager`), exact dependencies in `pnpm-lock.yaml`.
+- `src/pages`, `src/layouts`, `src/components`: page content, public/student shells, reusable UI and artwork.
+- `src/data`, `src/types`: Department → LearningPath → Course → CourseModule → Lesson → Challenge; sample progress is separate from curriculum metadata.
+- `src/assets`: local Hexi and study concepts, bundled by Vite. Other concepts are reusable inline SVGs. System fonts and local Lucide icons require no external font or image services.
+- `public`: favicon and Cloudflare response headers, copied into the build output.
+
+React Router uses `BrowserRouter` with routes for `/`, `/dashboard`, `/courses`, `/courses/:courseId`, `/academy`, `/academy/:departmentId`, public informational pages, and student sidebar pages. Both public and student areas retain not-found screens.
+
+## Install and run locally
+
+Install Node 24.19.0 (for example, `nvm install` then `nvm use`) and pnpm 11.25.0. If your Node installation includes Corepack, `corepack enable` and `corepack prepare pnpm@11.25.0 --activate` select the package manager. Otherwise install that pnpm version using its official installer/package-manager instructions.
+
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+Open http://127.0.0.1:5173. Stop with Ctrl+C. Vite may select another port if that one is already in use.
+
+If Node and pnpm are not on your terminal's PATH, configure your Node installation or version manager before running these commands. The project does not require a computer-specific runtime path.
+
+## Checks and production preview
+
+```sh
+pnpm typecheck
+pnpm check:format
+pnpm build
+pnpm test:build
+pnpm preview --port 4173 --strictPort
+```
+
+Open http://127.0.0.1:4173 and try entering or refreshing `/dashboard`, `/courses`, `/academy`, and nested course/department routes directly. `npm run build` invokes the same build script and is the recommended Cloudflare command; dependency installation remains pnpm-based. Do not run `npm install` or create a second lockfile.
+
+There is no ESLint configuration or lint script. `check:format` is a formatting check, not a semantic lint substitute. TypeScript checks types; `test:build` uses Node's built-in test runner to verify distribution contents, metadata, local entry assets, security-header declarations, and SPA-fallback prerequisites.
+
+The optional browser smoke test requires Playwright plus an installed Chrome, not application dependencies:
+
+```sh
+BASE_URL=http://127.0.0.1:4173 CHECK_PAGES_HEADERS=1 PLAYWRIGHT_CHANNEL=chrome node scripts/verify-browser.cjs
+```
+
+If Playwright is installed outside the project, set `PLAYWRIGHT_MODULE` to its module directory. For example, with a separately installed local tools directory:
+
+```sh
+BASE_URL=http://127.0.0.1:4173 CHECK_PAGES_HEADERS=1 PLAYWRIGHT_CHANNEL=chrome PLAYWRIGHT_MODULE="$PWD/.tools/node_modules/playwright" node scripts/verify-browser.cjs
+```
+
+The optional `.tools/` directory is ignored by Git. Supply your own Playwright installation there or use the standard module resolution shown above.
+
+The browser test exercises both themes, route loading and refreshes, filters, tips, mobile menus, keyboard navigation, reduced motion, asset requests, and overflow checks. Vite preview does **not** apply Cloudflare `_headers`; the test reproduces the single global header rule on local responses to exercise the production CSP. This is local simulation, not verification of a deployed Cloudflare edge. Screenshots are saved to ignored `artifacts/`.
+
+## Cloudflare Pages readiness
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for exact build settings, routing behavior, and step-by-step GitHub connection instructions. Do not click **Save and Deploy** until deployment is explicitly authorized. No Cloudflare project or paid service has been activated.
+
+No Wrangler config, Worker, Functions directory, redirects file, database, authentication, or private runtime configuration is needed. Native Pages SPA fallback is intentional: the build must have `index.html` and **no top-level `404.html`**. Existing static assets are served normally before fallback routing.
+
+## Environment and security
+
+The app requires **no environment variables or credentials**; `.env.example` is unnecessary. `.env` and local variants, `.dev.vars`, private key files, dependencies, build output, temporary tools, and generated artifacts are ignored. Do not put secrets in frontend code or variables prefixed `VITE_`: Vite embeds those values into public browser JavaScript. Build-only `NODE_VERSION` and `PNPM_VERSION` are nonsecret runtime selectors.
+
+The only persisted student-side setting is the theme in browser `localStorage`, with a fallback if storage is unavailable. There are no analytics, external scripts, API integrations, real student records, or network-backed features. `public/_headers` restricts scripts and assets to local origins, blocks framing and object embeds, and disables camera, microphone, and geolocation permissions. The CSP applies on Pages production responses, not the Vite development server.
+
+A current source/configuration scan found no credential-like tokens or private keys; that is a scoped code review, not a guarantee about future files or Git history. The initial pre-commit review found no existing project history or advertised remote references. Review the exact files you upload to GitHub; exclude synced `sources/`, credentials, and build artifacts.
+
+## Demo and artwork limitations
+
+Course lesson totals are planned content. Modules, lessons, challenges, code execution, progress saving, notes, quests, achievements, login, community, and Ask Hexi remain informative placeholders. Statistics and progress are clearly labeled demo data; the quest awards no XP. The local coding tips rotate on request without a background timer.
+
+All academy/course concept illustrations remain explicitly labeled placeholders. Hexi's original local SVG is preserved. [ARTWORK.md](ARTWORK.md) lists replacement assets, filenames, dimensions, and registry instructions. No paid services are required.
+
+The homepage HTML contains the requested title, description, favicon, viewport, and Open Graph title/description/type/site-name/locale. Client navigation gives named pages readable titles. No final domain, canonical URL, `og:url`, or absolute social-image URL is invented; add those after the public origin and approved share image are known. This is a client-rendered SPA, so deeper page-specific search/social previews would require future prerendering work.
+
+Synced `sources/` material is read-only reference content and is excluded from the application repository.

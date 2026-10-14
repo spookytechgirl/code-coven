@@ -1,0 +1,28 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.pnpm-store/
+*.tsbuildinfo
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.dev.vars
+.dev.vars.*
+.npmrc.local
+
+# Local tools, generated checks/previews, and editor/OS files
+.tools/
+artifacts/
+coverage/
+*.log
+*.tmp
+.DS_Store
+.vscode/
+.idea/
+
+# Read-only synced project references, not application source
+sources/

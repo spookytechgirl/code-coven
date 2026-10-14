@@ -1,0 +1,606 @@
+/* Mission 002: a shared atmosphere, with quiet decorative layers. */
+:root {
+  --ambient-pink: #eac1d72b;
+  --ambient-lavender: #b99bdd26;
+  --glow: #b99bdd50;
+  --scene-border: #c8acdc;
+}
+:root[data-theme="midnight"] {
+  --ambient-pink: #b66c9a12;
+  --ambient-lavender: #b99bdd15;
+  --glow: #c6a3eb35;
+  --scene-border: #9270ac;
+}
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(
+      ellipse at 90% 12%,
+      var(--ambient-lavender),
+      transparent 45%
+    ),
+    radial-gradient(ellipse at 3% 40%, var(--ambient-pink), transparent 38%);
+}
+body,
+.card,
+.sidebar,
+.public-header,
+.dashboard-topbar,
+.invitation,
+.theme-toggle {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.25s ease;
+}
+.public-header {
+  background: var(--surface);
+}
+.hero {
+  gap: 38px;
+  padding-top: 55px;
+  padding-bottom: 60px;
+  grid-template-columns: 1fr 1.1fr;
+}
+.hero-copy {
+  position: relative;
+}
+.hero-copy::before {
+  content: "✧";
+  position: absolute;
+  left: -24px;
+  top: 75px;
+  color: var(--gold);
+  font-size: 19px;
+  pointer-events: none;
+}
+.hero h1 > span {
+  font-size: clamp(42px, 4.1vw, 61px);
+}
+.academy-scene {
+  min-width: 0;
+  position: relative;
+}
+.academy-scene-frame {
+  position: relative;
+  aspect-ratio: 680/620;
+  border-radius: 32px 32px 20px 20px;
+  border: 1px solid var(--scene-border);
+  box-shadow:
+    0 18px 55px #57306826,
+    0 0 45px var(--glow);
+  isolation: isolate;
+  overflow: hidden;
+  background: #38264b;
+}
+.academy-study {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scene-inscription {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4%;
+  text-align: center;
+  color: #fff0d0;
+  font:
+    italic 15px Georgia,
+    serif;
+  letter-spacing: 0.5px;
+}
+.study-hexi {
+  position: absolute;
+  width: 42%;
+  left: 37%;
+  top: 31%;
+  filter: drop-shadow(0 8px 9px #24102b55);
+}
+.study-hexi img {
+  width: 100%;
+}
+.study-caption {
+  position: absolute;
+  bottom: 3.5%;
+  left: 23%;
+  right: 23%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #d9b76e70;
+  border-radius: 10px;
+  background: #301b42ee;
+  padding: 10px;
+  color: #fff8f1;
+  font:
+    17px Georgia,
+    serif;
+}
+.study-caption > span {
+  color: #f1ce87;
+}
+.study-caption small {
+  display: block;
+  font:
+    10px/1.5 ui-sans-serif,
+    system-ui,
+    sans-serif;
+  color: #e9ddf5;
+  margin-top: 5px;
+}
+.scene-artwork-note {
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--muted);
+  padding-top: 10px;
+}
+.button:not(.secondary) {
+  box-shadow:
+    0 4px 15px #57306826,
+    0 0 0 1px #b99bdd35;
+}
+.button:not(.secondary):hover {
+  box-shadow:
+    0 6px 22px #57306840,
+    0 0 22px var(--glow);
+}
+.button:focus-visible {
+  box-shadow: 0 0 22px var(--glow);
+}
+.card {
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease,
+    background-color 0.35s ease;
+}
+.course-card:hover,
+.stat:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 24px #301b4212,
+    0 0 14px var(--glow);
+}
+.section-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-heading h2::before {
+  content: "✧";
+  font-size: 23px;
+  color: var(--gold);
+}
+.eyebrow {
+  font-size: 11px;
+}
+.feature-strip {
+  border-radius: 15px;
+  padding: 26px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.feature-strip article > svg {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  background: var(--soft);
+  border-radius: 11px;
+}
+.department-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.enchanted-destination {
+  padding: 0;
+  overflow: hidden;
+}
+.destination-picture {
+  position: relative;
+  aspect-ratio: 5/3;
+  overflow: hidden;
+  background: #50385f;
+}
+.destination-art {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.enchanted-destination:hover {
+  box-shadow:
+    0 12px 26px #57306820,
+    0 0 16px var(--glow);
+}
+.enchanted-destination:hover .destination-art {
+  transform: scale(1.035);
+}
+.destination-number {
+  position: absolute;
+  right: 13px;
+  top: 12px;
+  background: #301b42e6;
+  border: 1px solid #e9ddf54d;
+  color: #f8eacb;
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font:
+    13px Georgia,
+    serif;
+}
+.artwork-label {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  font-size: 10px;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+  padding: 5px 8px;
+  color: #fff8f1;
+  background: #301b42ed;
+  border: 1px solid #e9ddf52b;
+  border-radius: 5px;
+}
+.destination-copy {
+  padding: 23px;
+}
+.destination-copy h3 {
+  font-size: 23px;
+  min-height: 58px;
+}
+.destination-copy p {
+  font-size: 12px;
+  min-height: 20px;
+}
+.department-explore {
+  font-size: 12px;
+  padding-top: 16px;
+  margin-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.invitation {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse at 15% 70%, var(--ambient-pink), transparent 50%),
+    var(--soft);
+}
+.invitation::before,
+.invitation::after {
+  position: absolute;
+  font-size: 80px;
+  font-family: Georgia, serif;
+  color: var(--accent);
+  opacity: 0.12;
+  pointer-events: none;
+}
+.invitation::before {
+  content: "☾";
+  left: 30px;
+  top: 30px;
+  transform: rotate(-18deg);
+}
+.invitation::after {
+  content: "✧";
+  right: 35px;
+  bottom: 10px;
+}
+.dashboard-main {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 85% 0, var(--ambient-lavender), transparent 55%),
+    radial-gradient(ellipse at 5% 55%, var(--ambient-pink), transparent 50%);
+}
+.welcome {
+  border-left: 3px solid var(--accent);
+  padding: 4px 0 4px 20px;
+}
+.welcome h1 {
+  font-size: 34px;
+}
+.demo-label {
+  background: var(--surface);
+}
+.sidebar {
+  background-image: radial-gradient(
+    ellipse at 5% 0,
+    var(--ambient-lavender),
+    transparent 60%
+  );
+}
+.sidebar .sidebar-note {
+  background-image: radial-gradient(
+    ellipse at 90% 10%,
+    var(--ambient-pink),
+    transparent 70%
+  );
+}
+.profile .apprentice-avatar {
+  width: 43px;
+  height: 43px;
+  background: #684084;
+  color: #ffe4ae;
+  border: 3px solid #d9b76e;
+  box-shadow: 0 0 13px var(--glow);
+}
+.profile small {
+  font-size: 10px;
+}
+.stat {
+  border-top: 2px solid var(--scene-border);
+}
+.stat strong {
+  font-family: Georgia, serif;
+  font-size: 32px;
+}
+.stat > div svg {
+  color: var(--gold);
+}
+.enchanted-course-art {
+  height: 185px;
+  background: linear-gradient(135deg, #503964, #796090);
+}
+.enchanted-course-art.pink {
+  background: linear-gradient(135deg, #644364, #986c89);
+}
+.enchanted-course-art.gold {
+  background: linear-gradient(135deg, #4b3b5c, #7f6b85);
+}
+.course-illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.enchanted-course-art .destination-art {
+  object-fit: cover;
+}
+.enchanted-course-art .pill {
+  top: 11px;
+  font-size: 11px;
+}
+.progress-wrap > div {
+  font-size: 11px;
+}
+progress {
+  height: 8px;
+  box-shadow: 0 0 10px var(--glow);
+}
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--accent), #a47fc7);
+}
+:root[data-theme="midnight"] progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #b99bdd, #eac1d7);
+}
+.hexi-corner.enchanted-hexi-corner {
+  position: relative;
+  overflow: hidden;
+  gap: 20px;
+  padding: 27px;
+  background:
+    radial-gradient(ellipse at 90% 60%, var(--ambient-pink), transparent 60%),
+    var(--soft);
+}
+.enchanted-hexi-corner .hexi-corner-copy {
+  flex: 1 1 0;
+}
+.enchanted-hexi-corner .hexi-portrait {
+  flex: 0 0 150px;
+  align-self: center;
+  text-align: center;
+  position: relative;
+  background: radial-gradient(ellipse at center, #b99bdd55, transparent 70%);
+}
+.hexi-portrait .hexi {
+  width: 100%;
+}
+.hexi-portrait .hexi img {
+  width: 100%;
+}
+.portrait-stars {
+  display: block;
+  letter-spacing: 10px;
+  color: var(--gold);
+  font-size: 18px;
+}
+.portrait-label {
+  font-size: 10px;
+  color: var(--muted);
+}
+.enchanted-hexi-corner .eyebrow {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.enchanted-hexi-corner .tip {
+  font-size: 13px;
+  min-height: 66px;
+}
+.hexi-encouragement {
+  font:
+    italic 14px/1.5 Georgia,
+    serif;
+  color: var(--text);
+  margin: 0 0 16px;
+}
+.enchanted-hexi-corner small {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.quest.enchanted-quest {
+  position: relative;
+  border: 1px solid var(--scene-border);
+  padding: 26px;
+  background: linear-gradient(135deg, var(--surface), var(--soft));
+}
+.quest-seal {
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+}
+.quest .quest-demo-note {
+  font-size: 11px;
+  margin-bottom: 14px;
+}
+.quest .reward {
+  font-size: 11px;
+  background: var(--surface);
+}
+@media (max-width: 1190px) {
+  .hero {
+    gap: 25px;
+  }
+  .study-caption {
+    left: 17%;
+    right: 17%;
+  }
+  .destination-copy h3 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero h1 > span {
+    font-size: 42px;
+  }
+  .department-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .study-caption {
+    font-size: 15px;
+    padding: 8px;
+    left: 10%;
+    right: 10%;
+  }
+  .study-caption small {
+    font-size: 9px;
+  }
+  .scene-inscription {
+    font-size: 12px;
+  }
+  .destination-copy h3 {
+    min-height: 54px;
+  }
+}
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .hero h1 > span {
+    font-size: 50px;
+  }
+  .hero-copy::before {
+    display: none;
+  }
+  .academy-scene {
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+  }
+  .scene-inscription {
+    font-size: 15px;
+  }
+  .study-caption {
+    left: 18%;
+    right: 18%;
+  }
+  .welcome {
+    padding-left: 15px;
+  }
+  .welcome h1 {
+    font-size: 30px;
+  }
+  .enchanted-hexi-corner .hexi-portrait {
+    flex-basis: 125px;
+  }
+  .feature-strip {
+    padding: 22px;
+  }
+  .invitation::before,
+  .invitation::after {
+    font-size: 50px;
+  }
+}
+@media (max-width: 430px) {
+  .hero h1 > span {
+    font-size: 43px;
+  }
+  .department-grid {
+    grid-template-columns: 1fr;
+  }
+  .destination-copy h3 {
+    min-height: 0;
+  }
+  .study-caption {
+    left: 8%;
+    right: 8%;
+    padding: 8px;
+  }
+  .scene-inscription {
+    font-size: 12px;
+  }
+  .scene-artwork-note {
+    font-size: 10px;
+  }
+  .hexi-corner.enchanted-hexi-corner {
+    padding: 22px;
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+  .enchanted-hexi-corner .hexi-portrait {
+    flex: none;
+    width: 135px;
+  }
+  .enchanted-hexi-corner .hexi-corner-copy {
+    flex: none;
+    width: 100%;
+  }
+  .enchanted-hexi-corner .tip {
+    min-height: 0;
+  }
+  .welcome h1 {
+    font-size: 28px;
+  }
+  .stat strong {
+    font-size: 28px;
+  }
+  .invitation::before,
+  .invitation::after {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button:hover,
+  .card:hover,
+  .enchanted-destination:hover .destination-art {
+    transform: none;
+  }
+}
