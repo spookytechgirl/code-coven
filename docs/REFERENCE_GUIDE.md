@@ -4,15 +4,15 @@ Last reviewed: 2026-10-15 · Status: Implemented documentation, not an integrati
 
 ## Start with the purpose
 
-Read the [Vision](ACADEMY_VISION.md), then the [Feature Registry](FEATURE_REGISTRY.md). Understand the distinction between a functioning academy interface and a completed educational system. Machine-readable agent lessons, assessments, execution, and audience-specific teaching are plans, not working products to integrate with today.
+Read the [Vision](ACADEMY_VISION.md), then the [Feature Registry](FEATURE_REGISTRY.md). Understand the distinction between a functioning academy interface and a completed educational system. Mission 008 now implements one shared print() pilot with audience adaptations, human text checks, and a machine-readable AI specification. Python execution, agent APIs, trusted capability progression, and broader curricula remain plans.
 
 ## Study the boundaries
 
-1. Inspect [curriculum types](../src/types/curriculum.ts) and [data](../src/data/curriculum.ts) to see a metadata/presentation separation. Notice that lesson modules are empty and path links reference course IDs.
+1. Inspect [curriculum types](../src/types/curriculum.ts) and [data](../src/data/curriculum.ts) to see a metadata/presentation separation. One Python module contains the canonical print() lesson; other modules remain empty, and path links reference course IDs.
 2. Compare [Explore](../src/pages/Explore.tsx), [CourseCard](../src/components/CourseCard.tsx), and [Dashboard](../src/pages/Dashboard.tsx): one data model supports multiple views while demo progress remains separate.
 3. Study [theme state](../src/theme/ThemeProvider.tsx), semantic navigation, and reduced-motion styles as implementation patterns. Revalidate accessibility for your own users instead of inheriting a compliance claim.
 4. Read the [Learning Architecture](LEARNING_ARCHITECTURE.md) as a set of intentions and open choices. Adapt objectives, evaluation, capability evidence, and controlled execution to your own educational purpose.
-5. Use the [Decision Log](DECISION_LOG.md) format to record your own reasoning. Preserve uncertainty rather than importing undocumented history as fact.
+5. Inspect the [AI integration guide](AI_INTEGRATION.md) for the bounded pilot checker and future contract; it grants no access or execution permissions. Use the [Decision Log](DECISION_LOG.md) format to record your own reasoning. Preserve uncertainty rather than importing undocumented history as fact.
 
 ## Keep independent identity and governance
 

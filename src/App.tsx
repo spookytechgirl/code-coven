@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { courses, departments } from "./data/curriculum";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Outlet, useLocation } from "react-router-dom";
 import { PublicLayout } from "./layouts/PublicLayout";
 import { DashboardLayout } from "./layouts/DashboardLayout";
 import { Home } from "./pages/Home";
@@ -12,12 +12,32 @@ import {
   DepartmentPage,
 } from "./pages/Explore";
 import { Placeholder, NotFound } from "./pages/Placeholder";
+const LearningEntry = lazy(() =>
+  import("./pages/Learn").then((m) => ({ default: m.LearningEntry })),
+);
+const PathOverview = lazy(() =>
+  import("./pages/Learn").then((m) => ({ default: m.PathOverview })),
+);
+const HumanLesson = lazy(() =>
+  import("./pages/HumanLesson").then((m) => ({ default: m.HumanLesson })),
+);
+const AiLesson = lazy(() =>
+  import("./pages/AiLesson").then((m) => ({ default: m.AiLesson })),
+);
 function RouteFocus() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
     document.getElementById("main-content")?.focus();
     const pageNames: Record<string, string> = {
+      "/learn": "Choose Your Learning Path",
+      "/learn/kids": "Code Coven for Kids",
+      "/learn/adults": "Code Coven for Adults",
+      "/learn/ai": "Code Coven for AIs",
+      "/learn/kids/python/first-spell": "Your First Magical Spell!",
+      "/learn/adults/python/first-program":
+        "Introduction to Python: Your First Program",
+      "/learn/ai/python/output-fundamentals": "Python Output Fundamentals",
       "/dashboard": "Student Dashboard",
       "/courses": "Explore Courses",
       "/academy": "The Academy",
@@ -60,6 +80,35 @@ export function App() {
       <Routes>
         <Route element={<PublicLayout />}>
           <Route index element={<Home />} />
+          <Route
+            path="learn"
+            element={
+              <Suspense
+                fallback={
+                  <p className="page-width interior" role="status">
+                    Opening your classroom…
+                  </p>
+                }
+              >
+                <Outlet />
+              </Suspense>
+            }
+          >
+            <Route index element={<LearningEntry />} />
+            <Route path=":audience" element={<PathOverview />} />
+            <Route
+              path="kids/python/first-spell"
+              element={<HumanLesson audience="kids" />}
+            />
+            <Route
+              path="adults/python/first-program"
+              element={<HumanLesson audience="adults" />}
+            />
+            <Route
+              path="ai/python/output-fundamentals"
+              element={<AiLesson />}
+            />
+          </Route>
           <Route path="courses" element={<Courses />} />
           <Route path="courses/:courseId" element={<CourseDetail />} />
           <Route path="academy" element={<Academy />} />

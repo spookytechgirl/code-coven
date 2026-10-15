@@ -1,0 +1,130 @@
+{
+  "lessonId": "python-output-001",
+  "specificationVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "courseId": "python-potions",
+  "departmentId": "potions",
+  "moduleId": "python-output-basics",
+  "conceptId": "python.output.print-string",
+  "title": "Python Output Fundamentals",
+  "learningObjectives": [
+    {
+      "id": "python.print.text",
+      "description": "Use Python's print() function to display text."
+    }
+  ],
+  "prerequisites": [],
+  "conceptExplanations": [
+    "Python is a programming language: a way to give a computer instructions. A Python interpreter normally reads and executes those instructions.",
+    "The print() function displays its argument as text. A string literal is text surrounded by matching single or double quotation marks. The quotation marks are part of the code, not the displayed message.",
+    "This pilot does not execute Python. Its restricted text checker recognizes one print call containing one plain, single-line string. It compares the extracted message with the task's expected output, including a final newline."
+  ],
+  "examples": [
+    {
+      "code": "print(\"Hello, Code Coven!\")",
+      "expectedOutput": "Hello, Code Coven!\n",
+      "explanation": "print is the function name; parentheses surround the argument; matching quotes mark the string. print normally ends its output with a newline."
+    }
+  ],
+  "audienceAdaptations": [
+    {
+      "id": "kids-little",
+      "audience": "kids",
+      "route": "/learn/kids/python/first-spell",
+      "title": "Your First Magical Spell!"
+    },
+    {
+      "id": "kids-junior",
+      "audience": "kids",
+      "route": "/learn/kids/python/first-spell",
+      "title": "Your First Magical Spell!"
+    },
+    {
+      "id": "adults",
+      "audience": "adults",
+      "route": "/learn/adults/python/first-program",
+      "title": "Introduction to Python: Your First Program"
+    },
+    {
+      "id": "ai",
+      "audience": "ai",
+      "route": "/learn/ai/python/output-fundamentals",
+      "title": "Python Output Fundamentals"
+    }
+  ],
+  "practiceTasks": [
+    {
+      "id": "hello",
+      "instruction": "Write one print call that displays Hello, Code Coven!",
+      "expectedOutput": "Hello, Code Coven!\n"
+    },
+    {
+      "id": "welcome",
+      "instruction": "Write one print call that displays Welcome to Code Coven!",
+      "expectedOutput": "Welcome to Code Coven!\n"
+    }
+  ],
+  "assessment": {
+    "method": "restricted-print-pattern-v1",
+    "successCriteria": [
+      "Use one lowercase print function call.",
+      "Supply one plain string in matching quotes and parentheses.",
+      "Match the requested text exactly, including case and punctuation."
+    ],
+    "evaluationCriteria": [
+      "Reject unsupported syntax without executing it.",
+      "Accept single or double quotes and surrounding horizontal whitespace.",
+      "Infer one final newline; do not claim that Python ran."
+    ],
+    "testCases": [
+      {
+        "id": "hello-double",
+        "taskId": "hello",
+        "source": "print(\"Hello, Code Coven!\")",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "welcome-single",
+        "taskId": "welcome",
+        "source": "print('Welcome to Code Coven!')",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "message-case",
+        "taskId": "welcome",
+        "source": "print(\"welcome to Code Coven!\")",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "output-mismatch"
+      },
+      {
+        "id": "missing-quotes",
+        "taskId": "hello",
+        "source": "print(Hello, Code Coven!)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported-syntax"
+      },
+      {
+        "id": "additional-command",
+        "taskId": "hello",
+        "source": "print(\"Hello, Code Coven!\"); open(\"file\")",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported-syntax"
+      }
+    ]
+  },
+  "errorFeedback": {
+    "empty": "Start with print, add parentheses, and place your message inside matching quotes.",
+    "unsupported-syntax": "Use exactly one print call with one plain string in matching quotes. This small checker does not support variables, escapes, comments, extra statements, or other Python features.",
+    "output-mismatch": "The print pattern is recognized, but the message differs. Compare capitalization, punctuation, spaces, and spelling with the exact expected output.",
+    "too-long": "Keep this small practice answer to 500 characters or fewer.",
+    "correct": "The text matches this task's expected print pattern. Python was not executed."
+  },
+  "capabilityIdentifiers": ["python.output.print-string"],
+  "safety": {
+    "execution": "none",
+    "permissions": [],
+    "performanceClaim": "Passing demonstrates successful task performance under this restricted checker, not humanlike understanding, consciousness, or permanent learning."
+  }
+}

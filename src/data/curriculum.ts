@@ -1,3 +1,4 @@
+import { pythonLesson } from "./lessons/python-output.ts";
 import type { Course, Department } from "../types/curriculum";
 export const courses: Course[] = [
   {
@@ -15,11 +16,18 @@ export const courses: Course[] = [
     id: "python-potions",
     departmentId: "potions",
     title: "Python Potions",
+    learningEntry: "/learn",
     description:
       "A pinch of logic, a dash of Python. Brew your first programs.",
     difficulty: "Beginner",
     lessonCount: 18,
-    modules: [],
+    modules: [
+      {
+        id: "python-output-basics",
+        title: "Your first Python output",
+        lessons: [pythonLesson],
+      },
+    ],
     accent: "purple",
   },
   {

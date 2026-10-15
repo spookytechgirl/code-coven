@@ -18,6 +18,7 @@ import { ThemeToggle } from "../components/ThemeToggle";
 const items = [
   ["/dashboard", "Dashboard", LayoutDashboard],
   ["/dashboard/spellbook", "The Spellbook", BookOpen],
+  ["/learn", "Learning Paths", Sparkles],
   ["/dashboard/potion-lab", "Potion Lab", FlaskConical],
   ["/dashboard/quests", "My Quests", Flag],
   ["/dashboard/grimoire", "My Grimoire", NotebookPen],

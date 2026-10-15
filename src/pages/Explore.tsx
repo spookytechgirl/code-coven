@@ -34,7 +34,7 @@ export function Courses() {
       <h1>Explore Courses</h1>
       <p className="page-intro">
         Real skills. A little wonder. Every course is completely free. Lesson
-        content is coming soon.
+        content is growing — start with the Python print() pilot.
       </p>
       <div className="filters">
         <label htmlFor="course-search">
@@ -133,17 +133,41 @@ export function CourseDetail() {
         </span>
         <span>Completely free</span>
       </div>
-      <article className="card detail-placeholder">
-        <h2>The spellbook is being written</h2>
-        <p>
-          This is a course preview. Modules, lessons, challenges, and the
-          learning workspace are coming soon. There are no exercises to complete
-          or progress to save yet.
-        </p>
-        <Link className="button" to="/dashboard">
-          Visit your demo dashboard
-        </Link>
-      </article>
+      {course.learningEntry ? (
+        <article className="card detail-placeholder">
+          <h2>Your first Python classroom is open</h2>
+          <p>
+            One implemented pilot lesson teaches print() through Kids, Adults,
+            and AI experiences. The remaining lessons are planned. Practice
+            checks text only; no Python interpreter runs.
+          </p>
+          {course.modules.map((module) => (
+            <section key={module.id}>
+              <h3>{module.title}</h3>
+              <ul>
+                {module.lessons.map((lesson) => (
+                  <li key={lesson.id}>{lesson.title}</li>
+                ))}
+              </ul>
+            </section>
+          ))}
+          <Link className="button" to={course.learningEntry}>
+            Choose your learning path
+          </Link>
+        </article>
+      ) : (
+        <article className="card detail-placeholder">
+          <h2>The spellbook is being written</h2>
+          <p>
+            This is a course preview. Modules, lessons, challenges, and the
+            learning workspace are coming soon. There are no exercises to
+            complete or progress to save in this course yet.
+          </p>
+          <Link className="button" to="/dashboard">
+            Visit your demo dashboard
+          </Link>
+        </article>
+      )}
     </section>
   );
 }

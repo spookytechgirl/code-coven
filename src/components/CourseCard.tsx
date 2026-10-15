@@ -31,8 +31,15 @@ export function CourseCard({
             />
           </div>
         )}
-        <Link className="course-link" to={`/courses/${course.id}`}>
-          {progress !== undefined ? "Continue Learning" : "Explore Course"}
+        <Link
+          className="course-link"
+          to={course.learningEntry ?? `/courses/${course.id}`}
+        >
+          {course.learningEntry
+            ? "Begin Learning"
+            : progress !== undefined
+              ? "Continue Learning"
+              : "Explore Course"}
           <ArrowRight size={16} />
         </Link>
       </div>

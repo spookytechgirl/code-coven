@@ -1,6 +1,6 @@
 # Feature Registry
 
-Last reviewed: 2026-10-15 · Baseline: v0.3.0
+Last reviewed: 2026-10-15 · Baseline: v0.3.0 + Mission 008 pilot / Mission 009 local improvements
 
 ## How to read and maintain this registry
 
@@ -54,17 +54,17 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Security:** text filtering only; no query execution, uploads, or remote search.
 - **Future improvements:** meaningful learning objectives and richer metadata when content exists.
 
-### F04 — Course previews and not-found routing
+### F04 — Course previews, pilot entry, and not-found routing
 
-- **Status:** Implemented, as previews only.
-- **Purpose:** give each course a working route and honest content-availability message.
-- **Audience:** visitors/demo students.
-- **Benefit:** understand difficulty and planned scope without broken links.
-- **Location:** [Explore / CourseDetail](../src/pages/Explore.tsx), [NotFound](../src/pages/Placeholder.tsx), [App](../src/App.tsx).
-- **Dependencies:** course/department IDs, BrowserRouter.
-- **Accessibility:** one page heading, readable status copy, back links, route focus.
-- **Security:** unknown IDs are handled locally; previews execute no code.
-- **Future improvements:** deliver F17 lessons; preserve URLs and honest continuation behavior.
+- **Status:** Implemented; Python links to a real pilot, other courses remain previews.
+- **Purpose:** provide stable course routes and honest availability messages.
+- **Audience:** visitors and human/AI pilot learners.
+- **Benefit:** reach working content without broken links or invented completed courses.
+- **Location:** [Explore](../src/pages/Explore.tsx), [CourseCard](../src/components/CourseCard.tsx), [App](../src/App.tsx).
+- **Dependencies:** course/department IDs, optional `learningEntry`, BrowserRouter.
+- **Accessibility:** headings, back links, route focus, textual availability notices.
+- **Security:** unknown IDs show not-found; previews and lessons execute no submitted code.
+- **Future improvements:** populate additional courses while preserving URLs.
 
 ### F05 — Demo student dashboard and profile
 
@@ -152,15 +152,15 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F12 — Modular curriculum types and metadata
 
-- **Status:** Implemented structure only.
-- **Purpose:** separate educational metadata from presentation.
-- **Audience:** developers now; future human/AI learning systems.
-- **Benefit:** add content without embedding entire courses in dashboard components.
-- **Location:** [types](../src/types/curriculum.ts), [data](../src/data/curriculum.ts).
-- **Dependencies:** TypeScript interfaces, stable local IDs; paths reference course IDs.
-- **Accessibility:** types alone do not ensure accessible lesson content.
-- **Security:** no content ingestion, schema validation service, or execution engine.
-- **Future improvements:** reviewed objectives, variants, evidence model, and content validation; see [Learning Architecture](LEARNING_ARCHITECTURE.md).
+- **Status:** Implemented, including one populated Python module/lesson.
+- **Purpose:** separate canonical objectives, adaptations, and course presentation.
+- **Audience:** maintainers and human/AI pilot learners.
+- **Benefit:** one print objective serves all three classroom experiences.
+- **Location:** [curriculum types](../src/types/curriculum.ts), [LearningLesson](../src/types/learning.ts), [canonical JSON](../src/data/lessons/python-output.v1.json), [adapters](../src/data/lessons/python-output.ts), [course data](../src/data/curriculum.ts).
+- **Dependencies:** TypeScript, Valibot validation, stable IDs, existing hierarchy.
+- **Accessibility:** content variants carry readable explanations and text feedback; this is not proof of audience suitability.
+- **Security:** specification is validated before use; content does not grant execution privileges.
+- **Future improvements:** more concepts, content review, and migration policy without duplicating foundational logic.
 
 ### F13 — Informational and coming-soon destinations
 
@@ -210,47 +210,47 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Security:** ignores secrets/generated files; CSP is applied by hosting or simulated in the browser check, not enforced by Vite dev itself.
 - **Future improvements:** expand threat/accessibility reviews when real data, content ingestion, or execution is introduced; no semantic lint is configured.
 
-## Planned educational and learner workflows
+## Educational and learner workflows
 
 ### F17 — Shared lessons, objectives, and practical challenges
 
-- **Status:** Planned.
-- **Purpose:** deliver actual beginner-through-advanced programming education.
-- **Audience:** kids, adults, and AI learners through appropriate variants.
-- **Benefit:** explicit goals followed by meaningful practice.
-- **Location:** no implemented content; current scaffolding is [curriculum types/data](../src/types/curriculum.ts) and [Learning Architecture](LEARNING_ARCHITECTURE.md).
-- **Dependencies:** founder-selected initial scope, authored/reviewed lessons, objective model, accessible task design.
-- **Accessibility:** equivalent instructions and feedback beyond visual metaphor alone.
-- **Security:** review challenge content; do not treat authored instructions as permission to run untrusted code.
-- **Future improvements:** approve the first course and schema extensions before claiming course availability.
+- **Status:** Implemented for one print() pilot; broader beginner-to-advanced curriculum remains Planned.
+- **Purpose:** teach one canonical objective through differentiated explanations and tasks.
+- **Audience:** Kids, Adults, and AI/developer experiences.
+- **Benefit:** clear goal, example, practice, feedback, and explicit success criteria.
+- **Location:** [canonical data/adapters](../src/data/lessons/python-output.ts), [JSON](../src/data/lessons/python-output.v1.json), [HumanLesson](../src/pages/HumanLesson.tsx), [AiLesson](../src/pages/AiLesson.tsx).
+- **Dependencies:** F12, F22, F32–F35; no interpreter.
+- **Accessibility:** semantic headings, labeled activities, text equivalents for syntax cues.
+- **Security:** text-only checks; no code execution or remote submissions.
+- **Future improvements:** learner evaluation and the next reviewed concept, not mass placeholder generation.
 
 ### F18 — Little Apprentices (ages 6–9)
 
-- **Status:** Planned.
-- **Purpose:** provide an age-appropriate children's experience.
-- **Audience:** children ages 6–9 and any future supporting adults.
-- **Benefit:** approachable foundations with appropriate support.
-- **Location:** none implemented; [audience design](LEARNING_ARCHITECTURE.md).
-- **Dependencies:** F17, founder decisions on reading/interaction/supervision and data practices.
-- **Accessibility:** validate literacy demands, motor interaction, and multimodal alternatives.
-- **Security:** no age collection or guardian system exists; design privacy/safeguards before adding them.
-- **Future improvements:** prototype and evaluate a small supported learning sequence.
+- **Status:** Implemented pilot; broader pathway and target-audience validation remain Planned.
+- **Purpose:** offer friendly introductory print() practice.
+- **Audience:** children around 6–9 or anyone choosing guided difficulty.
+- **Benefit:** recognize a correct spell, predict its output, and finish guided text practice; receive short actionable hints and a warm completion celebration (F36).
+- **Location:** [Kids variant](../src/data/lessons/python-output.ts), [HumanLesson](../src/pages/HumanLesson.tsx).
+- **Dependencies:** F17/F22/F33/F34; local Hexi, optional browser completion storage.
+- **Accessibility:** simple language, native radios/textarea, repeatable feedback, no timers or score pressure.
+- **Security:** no age/name collection, saved answers/code, accounts, chat, public profiles, leaderboards, streaks, or XP awards.
+- **Future improvements:** validate reading and support needs with appropriate human review; age bands never lock access.
 
 ### F19 — Junior Spellcasters (ages 10–13)
 
-- **Status:** Planned.
-- **Purpose:** offer increasingly independent programming practice.
-- **Audience:** children ages 10–13.
-- **Benefit:** supported debugging and practical problem solving.
-- **Location:** none implemented; [audience design](LEARNING_ARCHITECTURE.md).
-- **Dependencies:** F17, founder-approved scope, support and safety expectations.
-- **Accessibility:** readable instructions, understandable errors, alternatives to timing pressure.
-- **Security:** no accounts/community permissions are implied by an age band.
-- **Future improvements:** choose starting capabilities, projects, and feedback conventions.
+- **Status:** Implemented pilot; broader pathway remains Planned.
+- **Purpose:** introduce syntax parts and message modification.
+- **Audience:** children around 10–13 or anyone choosing this difficulty.
+- **Benefit:** identify quotes/string syntax, predict output, and modify a message in a challenge.
+- **Location:** [Junior variant](../src/data/lessons/python-output.ts), [HumanLesson](../src/pages/HumanLesson.tsx).
+- **Dependencies:** F17/F22/F33/F34.
+- **Accessibility:** switch bands freely; no timed task, readable text explanations and immediate feedback.
+- **Security:** no personal information requested/stored, no social/reward mechanics, no source execution.
+- **Future improvements:** evaluate scope/readability and add reviewed tasks without treating age as permanent placement.
 
 ### F20 — Flexible older-learner and adult pathways
 
-- **Status:** Planned.
+- **Status:** Planned for broader pathways; the Adults pilot is Implemented under F33.
 - **Purpose:** provide flexible entry and progressively advanced routes for older learners and adults.
 - **Audience:** older learners beyond the specified child bands and adult learners.
 - **Benefit:** learn according to goals/readiness rather than age-only placement.
@@ -262,31 +262,31 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F21 — Machine-readable AI agent lessons
 
-- **Status:** Planned.
-- **Purpose:** teach/evaluate agents through explicit machine-consumable tasks.
-- **Audience:** AI learners and their human developers/reviewers.
-- **Benefit:** precise objectives, constraints, and assessable outputs.
-- **Location:** none implemented; [AI learning design](LEARNING_ARCHITECTURE.md), not the human AI Fundamentals preview.
-- **Dependencies:** F17, schema/version choices, F22, F24, tool-access policy.
-- **Accessibility:** retain a human-readable interpretation of machine tasks and outcomes.
-- **Security:** agent instructions/output are untrusted data; no implicit access to private resources.
-- **Future improvements:** choose a minimal schema, delivery interface, and evaluation method.
+- **Status:** Implemented downloadable print() pilot; network integration remains Planned.
+- **Purpose:** provide a versioned, inspectable task specification for developers evaluating agents.
+- **Audience:** agent developers, authorized tooling, and AI learners.
+- **Benefit:** canonical objective, prerequisites, examples, tasks, expected outputs, tests, criteria, error feedback, and capability IDs.
+- **Location:** [JSON](../src/data/lessons/python-output.v1.json), [schema](../src/learning/schema.ts), [AiLesson](../src/pages/AiLesson.tsx), [AI integration guide](AI_INTEGRATION.md).
+- **Dependencies:** Valibot strict validation and F35 local sample evaluator.
+- **Accessibility:** readable web presentation alongside JSON downloads.
+- **Security:** execution is `none`, permissions empty; no registration, endpoint, shell, network, filesystem, or server privileges.
+- **Future improvements:** authorized delivery/version negotiation if separately approved; no claim of humanlike understanding, consciousness, or permanent learning.
 
 ### F22 — Assessment and learning feedback
 
-- **Status:** Planned.
-- **Purpose:** evaluate attempts against objectives and explain next steps.
-- **Audience:** human and AI learners, with different feedback presentations.
-- **Benefit:** correct misunderstandings rather than merely display completion.
-- **Location:** none implemented; [assessment design](LEARNING_ARCHITECTURE.md).
-- **Dependencies:** F17, approved criteria/rubrics, evidence model; execution only if needed.
-- **Accessibility:** actionable feedback in text; never communicate results by color alone.
-- **Security:** validate submissions and evaluator outputs; avoid exposing sensitive learner work.
-- **Future improvements:** evaluate deterministic tests, rubrics, and human review as Proposed options; none selected yet.
+- **Status:** Implemented limited pilot checks; broader assessment and mastery evaluation remain Planned.
+- **Purpose:** provide immediate feedback for knowledge and source-text tasks.
+- **Audience:** human pilot learners and AI sample evaluations.
+- **Benefit:** explain incorrect choices and compare the requested message exactly.
+- **Location:** [LessonControls](../src/components/lessons/LessonControls.tsx), [checkPrintAnswer](../src/learning/evaluate.ts), [questions](../src/data/lessons/python-output.ts).
+- **Dependencies:** fixed trusted questions, bounded recognizer, declared expected outputs.
+- **Accessibility:** fieldsets/legends, labeled radios, keyboard submission, polite text feedback and retries.
+- **Security:** never evaluates submitted source; rejects extra statements and unsupported syntax; 500-character input bound.
+- **Future improvements:** evaluate more capable controlled assessment separately. A pattern pass is task performance, not general Python validity or mastery.
 
 ### F23 — Capability-based progression and real learner records
 
-- **Status:** Planned.
+- **Status:** Planned for trusted capability progression; browser-only pilot completion is Implemented under F34.
 - **Purpose:** base progression on demonstrated capability with truthful learner evidence.
 - **Audience:** future human/AI learners.
 - **Benefit:** flexible readiness and useful progress beyond demo XP or elapsed time.
@@ -334,7 +334,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F27 — Achievements and earned quests
 
-- **Status:** Planned; preview displays exist under F05/F08/F13.
+- **Status:** Planned for tracked achievements/earned quests; preview displays exist under F05/F08/F13 and a local completion recognition is Implemented under F36.
 - **Purpose:** recognize actual practice and milestones.
 - **Audience:** future human learners; AI relevance undecided.
 - **Benefit:** transparent encouragement connected to real learning.
@@ -393,3 +393,67 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Accessibility:** clear Markdown headings, consistent fields, human-readable explanations.
 - **Security:** no private paths/resources/secrets in docs; reference material is not permission to access other systems.
 - **Future improvements:** update alongside relevant code, retain superseded decisions, and obtain founder choices listed in the Vision.
+
+## Mission 008 classroom delivery
+
+### F32 — Three-path lesson selection and switching
+
+- **Status:** Implemented.
+- **Purpose:** choose Kids, Adults, or AI learning without accounts.
+- **Audience:** human learners and agent developers.
+- **Benefit:** distinct content treatments around one objective, with free switching.
+- **Location:** [Learn](../src/pages/Learn.tsx), [App](../src/App.tsx), public/student navigation and Python course entry.
+- **Dependencies:** existing Router, local artwork and learning-path metadata.
+- **Accessibility:** real links, headings, readable intended-audience text, mobile navigation.
+- **Security:** no age gates, registration, personal profiles, or permission grants.
+- **Future improvements:** more reviewed lessons and user-tested pathway descriptions.
+
+### F33 — Shared human classroom and Adults pilot
+
+- **Status:** Implemented.
+- **Purpose:** present audience-specific explanations, examples, checks, and practice through reusable controls.
+- **Audience:** Kids bands and Adults; beginners/returning learners choose freely.
+- **Benefit:** Adults learn Python/program execution, print, string literals, quotes, mistakes, and expected output, with a Welcome to Code Coven! practice quest. Kids retain their distinct guided/adaptive activities.
+- **Location:** [HumanLesson](../src/pages/HumanLesson.tsx), [LessonControls](../src/components/lessons/LessonControls.tsx), [variants](../src/data/lessons/python-output.ts), [lesson styles](../src/styles/lessons.css).
+- **Dependencies:** F17/F22/F34, optional clipboard, current themes/Hexi.
+- **Accessibility:** syntax color is supplemented by explanation; copy reports failure; labeled inputs, native radios, text feedback, reduced motion.
+- **Security:** no Python execution or source transmission; code renders as text; only completion IDs may persist.
+- **Future improvements:** learner/screen-reader validation and additional reviewed content; no interpreter is implied.
+
+### F34 — Browser-only lesson completion
+
+- **Status:** Implemented; not a trusted capability record.
+- **Purpose:** remember completed pilot activities separately for Kids Little, Kids Junior, and Adults.
+- **Audience:** human pilot learners.
+- **Benefit:** resume completion indicators after refresh and reset only the active lesson variant.
+- **Location:** [progress helpers](../src/learning/progress.ts), [hook](../src/learning/useLessonProgress.ts), [HumanLesson](../src/pages/HumanLesson.tsx).
+- **Dependencies:** localStorage when available, variant/content versions, allowed activity IDs.
+- **Accessibility:** labeled progress bar and text counts; clear storage-failure notice; accessible reset button.
+- **Security:** saves no name, age, answer, submitted source, or timestamp; no account sync, telemetry, or AI retention claim. Editable local records are not evidence of mastery. Corrupt/stale data fails safely.
+- **Future improvements:** broader evidence design only after explicit review; preserve demo dashboard separation.
+
+### F35 — Deterministic AI samples and future contract
+
+- **Status:** Implemented local sample evaluator/record; live integration remains Planned.
+- **Purpose:** show how validated agent task output could be checked within explicit bounds.
+- **Audience:** developers of authorized compatible agents.
+- **Benefit:** reproducible pass/fail examples, error feedback, and downloadable request/response/sample record.
+- **Location:** [agent evaluator](../src/learning/agent.ts), [schemas](../src/learning/schema.ts), [AiLesson](../src/pages/AiLesson.tsx), [AI integration guide](AI_INTEGRATION.md).
+- **Dependencies:** F21/F22, pinned content/specification/checker versions and known task IDs.
+- **Accessibility:** human-readable examples and JSON; no automatic agent interaction required.
+- **Security:** strict schema rejects unknown fields and wrong versions/tasks; no execution or granted permissions. No real agent identity/session or permanent-learning claim.
+- **Future improvements:** authenticated/authorized integration design only if separately approved; this pilot exposes no API.
+
+## Mission 009 teaching presentation
+
+### F36 — Little Apprentices feedback and first-spell celebration
+
+- **Status:** Implemented locally for the Little Apprentices print() pilot.
+- **Purpose:** present accurate assessment results in child-friendly language and warmly recognize all three completed activities.
+- **Audience:** Little Apprentices ages 6–9 or anyone freely selecting that band.
+- **Benefit:** one actionable correction at a time, unlimited retries, and genuine completion recognition without shame or return pressure.
+- **Location:** [teaching copy](../src/data/lessons/little-apprentice-teaching.ts), [feedback adapter](../src/learning/feedback.ts), [completion card](../src/components/lessons/CompletionCelebration.tsx), [controls](../src/components/lessons/LessonControls.tsx), [HumanLesson](../src/pages/HumanLesson.tsx), [styles](../src/styles/lessons.css).
+- **Dependencies:** existing three successful activity IDs and local progress; optional LessonTeaching configuration; original Hexi artwork, themes, and unchanged checker. No new package/service dependency.
+- **Accessibility:** short feedback in status regions, polite atomic completion announcement, labeled section, keyboard review/return controls, responsive card, one fresh-completion animation only, reduced-motion support, no audio/flashing/modals/forced focus.
+- **Security:** no source execution, account, personal-data collection, new storage record, or XP/badge ledger; source correctness remains exclusively the unchanged checker's decision. Browser records remain user-editable.
+- **Future improvements:** founder/learner review and real assistive-technology testing; additional lessons may opt into configurable content later. The hint recognizer does not diagnose arbitrary Python, and the local recognition is not a mastery certification.

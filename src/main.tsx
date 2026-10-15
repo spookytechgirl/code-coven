@@ -5,6 +5,7 @@ import { App } from "./App";
 import { ThemeProvider } from "./theme/ThemeProvider";
 import "./styles/index.css";
 import "./styles/enchantment.css";
+import "./styles/lessons.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>

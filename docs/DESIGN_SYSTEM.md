@@ -1,6 +1,6 @@
 # Design System
 
-Last reviewed: 2026-10-15 · Baseline: v0.3.0
+Last reviewed: 2026-10-15 · Baseline: v0.3.0 + Mission 008 local pilot
 
 ## Atmosphere and usability
 
@@ -35,7 +35,7 @@ Illustrations also use brand lavender `#B99BDD`, deep plum `#573068`, dusty pink
 
 **Implemented:** system sans-serif for UI and supporting copy; Georgia/serif for major academy and card headings. There are no externally hosted fonts. Use semantic heading levels, actual labels, and familiar button/link text. Preserve readable line lengths and room for translated or enlarged text.
 
-**Planned:** age-appropriate reading and instruction variants. The current visual system is not validated as a children's reading interface. Existing small labels deserve review at zoom and on phones before claiming suitability for all ages. Typography/accessibility improvements should be measured in the actual layout rather than assumed from a font choice.
+**Implemented:** separate Little Apprentice and Junior Spellcaster pilot instructions/activities. **Planned:** broader age-appropriate curriculum and learner validation. The current visual system is not validated as a children's reading interface. Existing small labels deserve review at zoom and on phones before claiming suitability for all ages. Typography/accessibility improvements should be measured in the actual layout rather than assumed from a font choice.
 
 ## Reusable components and visual ownership
 
@@ -44,7 +44,7 @@ Illustrations also use brand lavender `#B99BDD`, deep plum `#573068`, dusty pink
 | [Hexi](../src/components/Hexi.tsx), [local portrait](../src/assets/hexi.svg)                                         | Black familiar with lavender eyes/hat, alt text, optional message and replaceable artwork | Chief Bug Inspector; “Bugs fear me!”; expression prop is an extension point, not distinct implemented portraits |
 | [MagicalScenery](../src/components/MagicalScenery.tsx)                                                               | Study backdrop and separate focal Hexi with placeholder caption                           | Use a local asset; do not replace Hexi with stock photography                                                   |
 | [DepartmentCard](../src/components/DepartmentCard.tsx), [DepartmentArtwork](../src/components/DepartmentArtwork.tsx) | Seven linked destination concepts                                                         | Keep course associations and meaningful link names                                                              |
-| [CourseCard](../src/components/CourseCard.tsx), [CourseIllustration](../src/components/CourseIllustration.tsx)       | Course metadata, illustration, optional labeled demo progress                             | A preview link is not an implemented lesson                                                                     |
+| [CourseCard](../src/components/CourseCard.tsx), [CourseIllustration](../src/components/CourseIllustration.tsx)       | Course metadata, illustration, optional labeled demo progress                             | Python Potions links to implemented pilot pathways; other courses remain previews                               |
 | [HexiCorner](../src/components/HexiCorner.tsx)                                                                       | User-controlled rotating tips and encouragement                                           | No remote AI chat or automatic timer                                                                            |
 | [DailyQuestCard](../src/components/DailyQuestCard.tsx)                                                               | Demo challenge/reward preview                                                             | Awards no XP                                                                                                    |
 | [Artwork registry](../src/data/artwork.ts)                                                                           | Replacement image sources and placeholder flags                                           | Do not remove placeholder labels before approval                                                                |
@@ -58,6 +58,12 @@ Illustrations also use brand lavender `#B99BDD`, deep plum `#573068`, dusty pink
 
 Focus outlines, the skip link, main-landmark focus after routing, label associations, progress labels, and semantic controls are implemented. Tips use a polite live region. `prefers-reduced-motion` suppresses animations/transitions and hover transforms in the enchantment layer. There are no continuous heavy animations.
 
+## Mission 008 classroom components
+
+**Implemented:** [Learning entry and path overviews](../src/pages/Learn.tsx) reuse destination artwork and academy cards without redesigning existing pages. [HumanLesson](../src/pages/HumanLesson.tsx) supplies shared objectives, Kids band selection, local activity progress, and pathway navigation. [LessonControls](../src/components/lessons/LessonControls.tsx) provides syntax-highlighted examples, copy status, native radio knowledge checks, labeled code textareas, and educational feedback. [AiLesson](../src/pages/AiLesson.tsx) presents data downloads and sample evaluations. [Lesson styles](../src/styles/lessons.css) reuse existing tokens and respect existing reduced-motion rules.
+
+Human activities use fieldsets/legends, real buttons, associated labels, and polite status messages. Output and correctness are explained in text, not color alone. The sidebar becomes an in-flow progress summary at narrower widths. Completion is resettable and not tied to streaks or rewards. Neither kid band restricts access or requests age. Existing mascot/environment artwork remains concept material; no final art is newly approved.
+
 ## Verification boundaries
 
 The historical local checks in [DEPLOYMENT.md](../DEPLOYMENT.md) cover selected text contrast pairs, routes, keyboard interaction, reduced motion, and multiple viewport widths. They do not constitute a full accessibility audit. The [browser smoke check](../scripts/verify-browser.cjs) is available for future UI changes; [README](../README.md) describes how to run it.
@@ -67,3 +73,17 @@ The historical local checks in [DEPLOYMENT.md](../DEPLOYMENT.md) cover selected 
 ## Maintenance
 
 Update this guide and the relevant [feature entries](FEATURE_REGISTRY.md) when tokens, typography, themes, responsive rules, or reusable visual behavior changes. Record consequential tradeoffs in the [Decision Log](DECISION_LOG.md). Keep final-asset instructions in ARTWORK.md and deployment behavior in DEPLOYMENT.md.
+
+## Mission 009 · Hexi's teaching feedback and celebration
+
+**Implemented, Little Apprentices Lesson 001 only:** short, familiar, encouraging feedback with one actionable correction at a time. [Teaching copy](../src/data/lessons/little-apprentice-teaching.ts) supplies child-specific knowledge-check and practice messages. [Feedback presentation](../src/learning/feedback.ts) maps the unchanged checker's outcome to a likely next step; it never decides whether an answer passes. Junior/Adults retain their existing richer explanations.
+
+**Age-appropriate feedback:** match presentation to developmental needs. Name the thing to change, avoid shame and unnecessary jargon, and allow unlimited retries. For a missing quote, explain where the matching marks belong. For missing parentheses, call them round brackets and show `( and )`. More complex unsupported input gets one clear instruction to try the short example, not an invented comprehensive Python diagnosis.
+
+**Celebration without manipulation:** [CompletionCelebration](../src/components/lessons/CompletionCelebration.tsx) is a reusable card with configurable title, Hexi message, achievement text, review link, and return route. Lavender/dusty-pink surfaces, readable plum/cream text, gold decoration, static stars, and existing Hexi artwork recognize three genuinely completed local activities. “First Spell Cast!” is a local recognition label, not XP, a stored badge ledger, a streak, a deadline, or a reason to pressure a learner to return.
+
+A fresh completion gets a single 450 ms fade/small rise. A restored completion is static; review and repeated correct submissions do not replay the animation. Reset then explicitly completing the activities again can celebrate again. Reduced-motion preference disables the animation. There is no flashing, audio, modal, automatic scrolling, or forced focus on completion. The existing Hexi image remains placeholder artwork.
+
+**Educational transparency:** retain a brief separate practice notice: “This is guided practice. It checks your written spell. It does not run Python.” Do not bury this clarification, but keep it outside the main celebration so the celebration stays warm. Older learners retain the original fuller explanation.
+
+A persistent polite, atomic status region announces the completion title/recognition on a state change. The card is a labeled section, decorative stars are hidden from assistive technology, and Review This Lesson targets a focusable lesson heading without clearing progress. Return to Learning Path uses the real Kids path; no nonexistent second lesson is linked. Automated checks verify these semantics and keyboard behavior, not actual listening with every screen reader or educational effectiveness with children.

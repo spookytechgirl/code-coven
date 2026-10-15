@@ -24,6 +24,7 @@ export interface Course {
   lessonCount: number;
   modules: CourseModule[];
   accent: string;
+  learningEntry?: string;
 }
 export interface LearningPath {
   id: string;

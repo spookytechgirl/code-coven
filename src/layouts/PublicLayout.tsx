@@ -36,6 +36,7 @@ export function PublicLayout() {
             ["/", "Home"],
             ["/about", "About"],
             ["/courses", "Courses"],
+            ["/learn", "Learn"],
             ["/academy", "The Academy"],
             ["/community", "Community"],
           ].map(([to, label]) => (
@@ -68,6 +69,7 @@ export function PublicLayout() {
         <nav aria-label="Footer navigation">
           <Link to="/about">About</Link>
           <Link to="/courses">Courses</Link>
+          <Link to="/learn">Learn</Link>
           <Link to="/academy">The Academy</Link>
           <Link to="/community">Community</Link>
           <Link to="/accessibility">Accessibility</Link>

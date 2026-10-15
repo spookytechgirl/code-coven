@@ -106,8 +106,80 @@ Existing code establishes what was implemented, not what discussions occurred. W
 
 ## Missing context and next records
 
-The repository available for this review has one initial commit, not a contemporaneous series of mission-by-mission decision records. Earlier documents preserve specifications, preparation notes, and selected verification results; they do not establish the original dates, alternatives, or reasoning for every engineering and design choice. No Mission 006 material is present in the reviewed documentation. Do not invent its contents or infer a completed push/deployment from this gap.
+At the initial Mission 007 review, the repository had one initial commit, not a contemporaneous series of mission-by-mission decision records. Those earlier documents preserve specifications, preparation notes, and selected verification results; they do not establish the original dates, alternatives, or reasoning for every engineering and design choice. No Mission 006 material is present in the reviewed documentation. Do not invent its contents or infer a completed push/deployment from this gap.
 
 Unknowns include original detailed palette/typography tradeoffs, curriculum sequence review, learner research, audience testing, and prior evaluation of progression/execution approaches. Record new evidence if Crystal supplies it, identify its source, and distinguish a corrected historical fact from a new decision.
 
 For future entries, copy the field structure above, use the actual recorded/adopted dates, include feature IDs and file links, and state unresolved founder choices rather than silently choosing a policy.
+
+## D009 — Deliver one canonical print() objective across three classrooms
+
+- **Date:** 2026-10-15, Mission 008 instruction and local implementation.
+- **Status:** Implemented pilot; broader pathways remain Planned.
+- **Decision:** use one versioned JSON specification and validated canonical objective, with human audience adapters and a populated lesson in the existing Python course/module hierarchy.
+- **Context:** the founder requested complete Kids/Adults/AI pilots around the same concept, not a new project or large placeholder catalog.
+- **Alternatives considered:** three independent lesson/curriculum copies would drift; a full external content service is unnecessary for this bounded pilot.
+- **Reasoning:** one objective and shared checking semantics support consistent content while allowing different teaching and assessment activities.
+- **Tradeoffs:** broader curriculum/schema evolution remains future work; the first supported specification/content version is explicit rather than silently accepting unknown versions.
+- **Result:** selector/path routes, Little/Junior adaptations, Adults lesson, and downloadable AI specification implemented locally; course metadata and links preserve the existing academy.
+- **Related:** F12, F17–F22, F32–F35; [canonical JSON](../src/data/lessons/python-output.v1.json), [adapters](../src/data/lessons/python-output.ts), [learning types](../src/types/learning.ts), [App](../src/App.tsx).
+
+## D010 — Use an honest restricted text checker, not a Python interpreter
+
+- **Date:** 2026-10-15, Mission 008 local implementation.
+- **Status:** Implemented text checking; execution remains Planned.
+- **Decision:** share a bounded one-print/string recognizer between human practice and deterministic AI samples; never execute submitted source.
+- **Context:** the founder allows simplified checking but requires clear labeling and prohibits unsafe evaluation or unrestricted execution.
+- **Alternatives considered:** exact full-source matching would reject harmless quote/spacing variants; introducing a Python runtime would add execution/security scope beyond the pilot.
+- **Reasoning:** a small recognizer can provide useful immediate feedback and exact expected-output checks while keeping execution permissions absent.
+- **Tradeoffs:** many valid Python programs are unsupported. A pass establishes only performance on the specified pattern, not general understanding/mastery or persistent AI learning.
+- **Result:** matching quote styles/spacing accepted; extra statements, escapes, variables, comments, or mismatched syntax rejected with educational explanations. Native tests cover supported/unsupported inputs and expected AI outcomes.
+- **Related:** F22, F24, F35; [checker](../src/learning/evaluate.ts), [lesson controls](../src/components/lessons/LessonControls.tsx), [tests](../tests/lessons.test.ts).
+
+## D011 — Keep human completion local, separate, and minimal
+
+- **Date:** 2026-10-15, Mission 008 local implementation.
+- **Status:** Implemented browser completion; trusted capability records remain Planned.
+- **Decision:** store completed activity IDs and record/content versions separately for Little, Junior, and Adults. Save no answers, source text, names, ages, or timestamps; keep dashboard demo values independent.
+- **Context:** the founder requests browser-only human progress without child personal-information collection or invented synchronization.
+- **Alternatives considered:** ephemeral-only progress would disappear after refresh; accounts/backend storage would introduce prohibited scope and unnecessary identity collection.
+- **Reasoning:** bounded local completion supports return visits without pretending to be durable account evidence.
+- **Tradeoffs:** browser owners can edit/clear records; another browser has no progress. Correctness is not re-assessed on restoration. A previously completed activity stays complete until reset even when its new unsaved answer changes.
+- **Result:** content-version checks, safe parsing/filtering, per-variant reset, and storage-failure notices implemented. No AI retention state, XP, streak, or reward tracking was added.
+- **Related:** F05, F23, F34; [progress](../src/learning/progress.ts), [hook](../src/learning/useLessonProgress.ts), [HumanLesson](../src/pages/HumanLesson.tsx).
+
+## D012 — Validate versioned AI data and expose only a sample contract
+
+- **Date:** 2026-10-15, Mission 008 local implementation.
+- **Status:** Implemented data/download/sample contract; live integration remains Planned.
+- **Decision:** use Valibot strict schemas for the local lesson and illustrative agent request, and expose downloadable data and pure deterministic sample responses without any public agent service.
+- **Context:** the founder requests structured lessons, schema validation, error feedback/capability IDs, and an example future contract with no execution privileges.
+- **Alternatives considered:** unchecked JSON would leave schema/permission ambiguities; runtime code-generating validation would be unnecessary under the existing strict CSP; public registration/ingestion endpoints are outside scope.
+- **Reasoning:** declarative version-pinned validation and small pure functions make boundaries inspectable, reusable, and testable without granting tool access.
+- **Tradeoffs:** consumers need compatible local tooling; no endpoint, permanent learning record, external agent identity, or integration guarantee is provided. Only the documented content/checker versions are supported.
+- **Result:** malformed/unknown-version/permission-bearing requests fail validation; JSON downloads and sample records explicitly state no execution and bounded task-performance claims.
+- **Related:** F21, F35; [schema](../src/learning/schema.ts), [agent samples](../src/learning/agent.ts), [AI classroom](../src/pages/AiLesson.tsx), [integration guide](AI_INTEGRATION.md).
+
+## D013 — Adapt Little feedback without changing assessment correctness
+
+- **Date:** 2026-10-15, Mission 009 instruction and local implementation.
+- **Status:** Implemented for Little Apprentices Lesson 001; broader adoption remains Proposed.
+- **Decision:** add a configurable presentation layer with short familiar wording, one actionable hint at a time, and isolated Little knowledge-question feedback. Keep the checker, accepted patterns, IDs, and older/AI feedback unchanged.
+- **Context:** the founder reports hands-on browser testing found technical feedback and an insufficiently warm completion. That report motivates this change; it is not a claim of broader child-user research.
+- **Alternatives considered:** replacing shared feedback globally would affect Junior/Adults; modifying validator outcomes or adding a Python interpreter would change assessment scope; duplicating the checker would invite drift.
+- **Reasoning:** the same accurate pass/fail result can be presented in developmentally appropriate language without hiding meaningful errors or overwhelming younger learners.
+- **Tradeoffs:** syntax hints identify likely corrections within this small activity, not every Python error. Complex unsupported input gets a concise supported-example prompt. Educational effectiveness still requires learner review.
+- **Result:** missing/mismatched quotes, round brackets, function-name mistakes, wrong messages, empty/long input, and success have Little-friendly feedback. Unlimited retries and progress semantics are preserved; no submitted source executes.
+- **Related:** F18, F22, F33, F36; [teaching copy](../src/data/lessons/little-apprentice-teaching.ts), [adapter](../src/learning/feedback.ts), [controls](../src/components/lessons/LessonControls.tsx), [lesson tests](../tests/lessons.test.ts).
+
+## D014 — Recognize completion warmly without reward pressure or repeated interruptions
+
+- **Date:** 2026-10-15, Mission 009 instruction and local implementation.
+- **Status:** Implemented for the Little pilot; reusable component/configuration available.
+- **Decision:** show a configurable Hexi card only after all three existing activities are completed; use a single subtle entrance for fresh completion and a static card on return. Keep the guided-checker clarification separate from the main celebration.
+- **Context:** the founder specified the title, Hexi message, “First Spell Cast!” recognition, and review/path navigation while preserving browser-local progress and avoiding manipulative mechanics.
+- **Alternatives considered:** an automatically replayed modal/confetti/audio celebration could interrupt returning learners; creating persisted rewards or another lesson link would add unsupported functionality; embedding all copy in UI would limit reuse.
+- **Reasoning:** recognize genuine completed activity with warmth while retaining educational transparency, learner control, keyboard access, and reduced-motion support.
+- **Tradeoffs:** there is no platform achievement ledger or mastery claim. Local completion remains editable by the browser owner; previous completed activities remain complete until reset. A reset followed by new completion can animate again.
+- **Result:** all-three completion gates the card; review focuses the lesson heading without clearing progress, and return uses the existing Kids path. No automatic scroll/focus, audio, flashing, XP, streaks, private data, or new storage fields are added. A persistent polite/atomic status region supplies the completion announcement.
+- **Related:** F18, F27, F34, F36; [card](../src/components/lessons/CompletionCelebration.tsx), [HumanLesson](../src/pages/HumanLesson.tsx), [styles](../src/styles/lessons.css), [browser checks](../scripts/verify-teaching.cjs).

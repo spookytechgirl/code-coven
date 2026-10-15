@@ -15,7 +15,7 @@ const copy: Record<string, [string, string]> = {
   ],
   "/privacy": [
     "Privacy",
-    "This local prototype saves only your Daylight/Midnight theme preference in your browser. It has no accounts, analytics, database, or server-side student records. A full privacy policy will accompany future services.",
+    "This prototype saves your theme preference and separate lesson-completion activity IDs only in this browser. Lesson answers, submitted code, names, and ages are not saved or sent to a server. It has no accounts, analytics, database, or server-side student records. A full privacy policy will accompany future services.",
   ],
   "/accessibility": [
     "An academy for everyone",

@@ -1,37 +1,37 @@
 # Learning Architecture
 
-Last reviewed: 2026-10-15 · Baseline: v0.3.0
+Last reviewed: 2026-10-15 · Baseline: v0.3.0 + Mission 008 local pilot
 
 ## Verified implementation boundary
 
-**Implemented:** TypeScript interfaces and locally organized metadata, browsable departments, derived learning paths, course previews, and demo dashboard progress. **Not implemented:** populated lessons/challenges, learning objectives, assessment, feedback processing, capability tracking, code execution, audience adaptations, machine-readable lesson delivery, or learner collaboration.
-
-The structure in [curriculum types](../src/types/curriculum.ts) is:
+**Implemented:** the existing hierarchy now contains one Python output module with one canonical lesson and four human/data adaptations (Little, Junior, Adults, AI). Kids and Adults have real knowledge checks and restricted text practice; AI has a versioned validated specification, deterministic sample evaluations, and a non-operational future contract. **Not implemented:** Python execution, trusted capability tracking, a public agent API, or multi-course audience curricula.
 
 ```text
-Department
-  └─ LearningPath (courseIds)
-      └─ Course (departmentId, modules)
-          └─ CourseModule (lessons)
-              └─ Lesson (content, challenges)
-                  └─ Challenge (instructions, rewardXP)
+Department: potions
+  └─ LearningPath (references python-potions)
+      └─ Course: python-potions
+          └─ Module: python-output-basics
+              └─ Lesson: python-output-001
+                  └─ Challenges: hello, welcome (no XP awards)
 ```
 
-This is a data model, not an operational teaching pipeline. The current Lesson has an ID, title, content string, and challenges; it has no objective, age-band, assessment, or capability fields. Course metadata includes difficulty and planned lesson count; every modules array is empty. The catalog and dashboard read [local data](../src/data/curriculum.ts); dashboard percentages come from a separate `demoProgress` object and are not evidence of learning.
+[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; other modules remain empty and catalog lesson totals remain planned counts.
+
+The dashboard's `demoProgress` still represents sample numbers, not the pilot's local completion. No lesson completion changes dashboard XP or percentages.
 
 ## Shared foundation, different presentations
 
-**Planned:** a shared foundational curriculum spanning concepts such as variables, control flow, decomposition, debugging, and practical programming. These examples describe possible foundational scope, not approved lesson sequences. Reuse concepts and stable identifiers rather than forcing identical reading, task length, or interaction on every learner.
+**Implemented:** one shared output concept across the three experiences. **Planned:** a broader shared foundational curriculum spanning concepts such as variables, control flow, decomposition, debugging, and practical programming. These examples describe possible foundational scope, not approved lesson sequences. Reuse concepts and stable identifiers rather than forcing identical reading, task length, or interaction on every learner.
 
-| Experience                      | Status  | Intended adaptation                                                                         | Decisions still needed                                                                 |
-| ------------------------------- | ------- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Little Apprentices, ages 6–9    | Planned | Short, concrete, supported activities; accessible visual and textual explanations           | Reading assumptions, adult support, interaction methods, privacy and supervision model |
-| Junior Spellcasters, ages 10–13 | Planned | Increasing independence, explanations and debugging practice, appropriately scoped projects | Starting capabilities, task scope, feedback style, safety expectations                 |
-| Flexible older-learner pathways | Planned | Choose entry points based on goals/readiness, with support available                        | Age boundaries if any, placement options, whether and how capability checks work       |
-| Adult learning paths            | Planned | Foundations through advanced practical work, flexible pace and entry                        | Initial goals, first deliverable, sequencing, project expectations                     |
-| AI agent learning experiences   | Planned | Structured lessons, explicit objectives, constrained tasks, assessable outputs              | Schema, delivery interface, permitted tools, provenance and evaluation criteria        |
+| Experience                      | Status                             | Intended adaptation                                                                         | Decisions still needed                                                                 |
+| ------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Little Apprentices, ages 6–9    | Implemented pilot; broader Planned | Short, concrete, supported activities; accessible visual and textual explanations           | Reading assumptions, adult support, interaction methods, privacy and supervision model |
+| Junior Spellcasters, ages 10–13 | Implemented pilot; broader Planned | Increasing independence, explanations and debugging practice, appropriately scoped projects | Starting capabilities, task scope, feedback style, safety expectations                 |
+| Flexible older-learner pathways | Planned                            | Choose entry points based on goals/readiness, with support available                        | Age boundaries if any, placement options, whether and how capability checks work       |
+| Adult learning paths            | Implemented pilot; broader Planned | Foundations through advanced practical work, flexible pace and entry                        | Initial goals, first deliverable, sequencing, project expectations                     |
+| AI agent learning experiences   | Implemented pilot; broader Planned | Structured lessons, explicit objectives, constrained tasks, assessable outputs              | Schema, delivery interface, permitted tools, provenance and evaluation criteria        |
 
-No audience-selection UI or placement mechanism exists. No age information is collected. These intended adaptations are not claims that existing content has been tested for these groups.
+**Implemented:** `/learn` selects Kids, Adults, or AIs; Kids can switch either band without an age gate. Little Apprentices recognize an example, predict output, and finish guided text practice. Junior Spellcasters identify syntax, predict output, and modify a message. Adults receive execution/string/syntax explanations, three knowledge checks, and a Welcome to Code Coven! practice task. AI learners receive downloadable data rather than an interactive agent account. No age information is collected. These adaptations have not been evaluated with their target audiences.
 
 ## Current academy map
 
@@ -51,9 +51,9 @@ The map summarizes [source metadata](../src/data/curriculum.ts); it is not a com
 
 ## Intended learning cycle
 
-**Planned:** clear objective → explanation/example → practical challenge → evidence → assessment/feedback → next activity. Each learner should know what they are practicing, how to begin, and what the feedback means. A lesson completion click or elapsed time alone should not be mistaken for demonstrated capability.
+**Implemented for the pilot:** clear objective → explanation/example → practical challenge → evidence → assessment/feedback → next activity. Each learner should know what they are practicing, how to begin, and what the feedback means. A lesson completion click or elapsed time alone should not be mistaken for demonstrated capability.
 
-**Proposed schema extensions**, not current TypeScript properties or an adopted schema:
+**Broader Proposed extensions**, beyond the pilot fields now implemented in LearningLesson and the AI specification:
 
 - Stable objective and capability identifiers linked to a concept.
 - Audience presentation variants, prerequisites with a reason, and accessible alternatives.
@@ -65,7 +65,9 @@ Choose the smallest useful extension only when implementing a reviewed lesson. K
 
 ## Practical challenges, assessment, and progression
 
-**Planned:** practical challenges and feedback that help learners correct misunderstandings. Assessment criteria and mastery thresholds remain undecided. Possible checks include deterministic output tests, explanation rubrics, or project review; these are **Proposed** options, not selected historical alternatives.
+**Implemented:** form-based knowledge checks with explanations of incorrect answers and exact expected-output text practice. [checkPrintAnswer](../src/learning/evaluate.ts) accepts one lowercase print call containing a plain single-line quoted string and compares the extracted text plus newline. It recognizes limited syntax; it does not execute Python, evaluate expressions, or validate all legal Python. Matching single/double quotes and surrounding whitespace are supported; escapes, comments, variables, multiple arguments, and extra statements are rejected.
+
+**Planned:** broader practical challenges and trustworthy assessment. Pilot completion means every activity has passed its local check at least once, not independently assessed mastery. Broader mastery thresholds remain undecided. Possible checks include deterministic output tests, explanation rubrics, or project review; these are **Proposed** options, not selected historical alternatives.
 
 **Planned:** capability-based progression. Age and XP should not be substitutes for demonstrated understanding. A learner who already knows a concept should have a considered way to show it, while another learner can revisit material without punitive locks. How evidence is collected, reviewed, stored, and made understandable still requires founder and engineering decisions.
 
@@ -73,7 +75,7 @@ XP, streaks, and achievement displays are currently demo presentation only. Do n
 
 ## Controlled code execution
 
-**Planned:** controlled practice execution. **Implemented today:** no runner, interpreter, sandbox, server execution, or tool-grant interface. The existing Potion Lab route is informative text.
+**Planned:** controlled practice execution. **Implemented today:** no runner, interpreter, sandbox, server execution, or tool-grant interface. The existing Potion Lab route remains informative text; pilot practice checks source text without running it.
 
 Before introducing execution, decide the runtime and threat model. **Proposed design constraints** include resource/time limits, isolation from application credentials and personal files, network/filesystem restrictions, resettable sessions, bounded outputs, and accessible errors. Browser-based and isolated remote runtimes are options to evaluate, not selected dependencies. Never run untrusted lesson/agent code directly in the application or developer shell as a shortcut.
 
@@ -81,16 +83,36 @@ This architecture document does not authorize provisioning infrastructure or ser
 
 ## AI lessons and human–AI collaboration
 
-**Planned:** machine-readable agent lessons with explicit objectives, input/output contracts, permitted tools, challenge bounds, and assessable outcomes. The existing TypeScript metadata is not a published lesson schema or API. A task specification must not silently grant an agent access to a learner's resources.
+**Implemented:** a versioned JSON pilot with objective/concept/capability IDs, prerequisites, explanations/examples, tasks, outputs, success criteria, test cases, and error feedback. [Valibot schemas](../src/learning/schema.ts) validate content and a future request envelope, reject unknown properties, require no execution/permissions, and check identifier references. [Local sample evaluation](../src/learning/agent.ts) is deterministic pure text checking, not a public API. Passing demonstrates successful task performance under this checker, not humanlike understanding, consciousness, or permanent learning.
+
+**Planned:** authorized agent delivery and integrations. A task specification must not silently grant access to a learner's resources. See [AI Integration](AI_INTEGRATION.md) for schema versions, example contracts, and limitations.
 
 **Planned:** human–AI collaboration that makes authorship, assistance, and assessment evidence understandable. **Proposed** practices include identifying who attempted a task, what assistance occurred, and when a human must review an outcome. No chat provider, collaboration protocol, model, or automated tutor has been selected. Ask Hexi currently offers no connected assistant.
 
 Machine-readable content and submitted outputs should be treated as data, not trusted instructions to alter platform permissions. Design execution boundaries and evaluation together; distinguish an AI's successful task result from a claim about its internal understanding.
 
+## Local progress and privacy
+
+**Implemented:** [progress helpers](../src/learning/progress.ts) and [the UI hook](../src/learning/useLessonProgress.ts) save only completed activity IDs, schema version, and lesson version under separate Kids Little/Junior/Adults browser keys. No names, ages, submitted code, or answers are persisted or transmitted. Reset removes only the active variant's record. Corrupt/stale/unknown fields are filtered; blocked or full storage falls back to in-memory completion with a notice. The AI page creates no progress/retention record.
+
+These records are local and editable by the browser owner; they are not a trusted evidence system or account synchronization. No streaks, XP, public profiles, chat, or leaderboards are added to the Kids experience. Real learner records, collaboration, and capability-based progression remain Planned.
+
 ## Delivery questions and verification
 
-Crystal must prioritize audiences and the first course, approve objectives, define readiness/mastery expectations, and choose the role of adult support and AI assistance. Data collection, consent/supervision requirements, retention, and any account model require separate design review before implementation. This document does not make legal or compliance claims.
+Mission 008 selects the print() objective and first pilot for all three experiences. Crystal still needs to prioritize subsequent content, define broader readiness/mastery expectations, and choose the role of adult support and AI assistance. Data collection, consent/supervision requirements, retention, and any account model require separate design review before implementation. This document does not make legal or compliance claims.
 
-For a future working lesson, verify objective clarity, audience readability, keyboard/assistive access, challenge/feedback consistency, assessment reliability, execution boundaries, and truthful progress reporting. For this blueprint, verification is a source/document consistency review only; no educational effectiveness has been tested.
+For a future working lesson, verify objective clarity, audience readability, keyboard/assistive access, challenge/feedback consistency, assessment reliability, execution boundaries, and truthful progress reporting. Mission 008 adds native unit tests and production-browser checks for metadata, adaptations, checking, versioned validation, local progress, navigation, keyboard interactions, copy/download controls, storage failure, and responsive themes. No educational effectiveness or full accessibility conformance has been established.
 
 See the [Feature Registry](FEATURE_REGISTRY.md) for delivery status and the [Decision Log](DECISION_LOG.md) for recorded choices and unresolved context.
+
+## Mission 009 · Developmentally appropriate feedback
+
+**Implemented:** Little Apprentices use an optional `LessonTeaching` configuration on their existing lesson variant. [Types](../src/types/learning.ts) define feedback-copy, practice-notice, and completion-card fields. [Little teaching data](../src/data/lessons/little-apprentice-teaching.ts) owns the lesson-specific messages and navigation, rather than embedding them in shared UI. This is reusable infrastructure; no other lesson variant has opted into it yet.
+
+The [presentation helper](../src/learning/feedback.ts) consumes the existing checker result and offers one likely correction for missing/mismatched quotes, missing round brackets, a function-name mistake, or a mismatched message. Complex unsupported input receives a short supported-example hint. It is not a new Python parser and never marks an invalid attempt correct. [checkPrintAnswer](../src/learning/evaluate.ts), its accepted patterns/expected outputs, AI evaluation, and schema versions are unchanged. Knowledge questions keep the same IDs/options/correct answers; only Little-specific feedback is copied into isolated question objects so shared Junior/Adults content does not mutate.
+
+**Implemented completion:** the existing `recognize`, `predict`, and `practice` IDs must all be completed before the new Little celebration renders. The same browser-local progress is read on return; no new identity, personal data, award state, or synchronization is introduced. Wrong attempts do not advance progress; retries are unrestricted. Existing policy remains: an earlier successful activity stays completed until reset even if a learner later types a new incorrect answer. Editable browser records are not trusted mastery evidence.
+
+A newly completed attempt can animate once; an already completed lesson restores a static celebration. Reset removes the current variant's progress using the unchanged helper and hides the celebration until all activities are completed again. Review focuses the lesson heading without resetting anything. Return navigates to `/learn/kids`, not a nonexistent Lesson 002.
+
+**Educational principles:** short actionable explanations reduce overwhelm; recognizing completed work need not create pressure, artificial urgency, forced streaks, or manipulative rewards. Celebrate what this guided practice establishes while separately explaining that no Python was executed. Full Python execution, formal achievement tracking, trusted capability assessment, and broader audience validation remain Planned. These boundaries are useful reference patterns for independent projects such as Alignment Academy; they imply no shared ownership, private access, or branding permission.
