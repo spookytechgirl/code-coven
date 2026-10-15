@@ -4,6 +4,18 @@
 
 The public academy, searchable course catalog, seven open departments, student demo dashboard, Daylight/Midnight themes, and Hexi concept illustrations work as a static React application. Mission 003 prepares it for Cloudflare Pages while preserving its design. Nothing has been deployed. The GitHub repository is [spookytechgirl/code-coven](https://github.com/spookytechgirl/code-coven).
 
+## Living academy blueprint
+
+The [Academy Vision](docs/ACADEMY_VISION.md) explains Crystal's founding direction and the academy's free, inclusive educational purpose. The blueprint separates verified implementation from Planned and Proposed work:
+
+- [Design System](docs/DESIGN_SYSTEM.md): visual identity, Hexi, themes, reusable UI, and accessibility boundaries.
+- [Learning Architecture](docs/LEARNING_ARCHITECTURE.md): current curriculum scaffolding and planned Kids, Adults, and AI learning experiences.
+- [Feature Registry](docs/FEATURE_REGISTRY.md): feature purposes, audiences, locations, dependencies, statuses, benefits, and accessibility/security considerations.
+- [Decision Log](docs/DECISION_LOG.md): recorded decisions, tradeoffs, evidence, and explicitly undocumented history.
+- [Reference Guide](docs/REFERENCE_GUIDE.md): how independent projects can study the architecture without assuming branding rights or private access.
+
+Developers and AI coding agents should follow [AGENTS.md](AGENTS.md) and maintain the affected documents alongside relevant changes. [ARTWORK.md](ARTWORK.md) and [DEPLOYMENT.md](DEPLOYMENT.md) remain the detailed asset and hosting guides. Audience pathways, real lessons, assessments, code execution, and capability-based progression are not implemented merely because they are documented here.
+
 ## Stack and structure
 
 - React / React DOM 19.3.0, React Router 7.18.4, Lucide React 1.55.0.
