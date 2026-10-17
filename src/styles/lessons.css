@@ -809,3 +809,67 @@
     animation: none !important;
   }
 }
+
+/* Mission 017: native sequencing controls within the existing classroom. */
+.sequence-practice fieldset {
+  border: 0;
+  padding: 0;
+  margin: 20px 0;
+  min-width: 0;
+}
+.sequence-practice legend {
+  font-weight: 650;
+  margin-bottom: 12px;
+}
+.sequence-steps {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.sequence-steps li {
+  padding: 14px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  min-width: 0;
+}
+.sequence-steps label {
+  display: block;
+  font-weight: 650;
+  margin-bottom: 8px;
+}
+.sequence-steps select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 12px 8px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font: inherit;
+}
+.sequence-preview {
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
+}
+.sequence-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.sequence-example {
+  padding: 22px;
+  margin-top: 18px;
+}
+.sequence-example ol {
+  padding-left: 26px;
+}
+.sequence-example li {
+  padding: 6px 0;
+}
+.lesson-thinking .ai-test {
+  overflow-wrap: anywhere;
+}

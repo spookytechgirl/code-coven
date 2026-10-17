@@ -1,3 +1,4 @@
+import { thinkingLesson } from "./lessons/programming-thinking.ts";
 import { variablesLesson } from "./lessons/python-variables.ts";
 import { pythonLesson } from "./lessons/python-output.ts";
 import type { Course, Department } from "../types/curriculum";
@@ -10,7 +11,14 @@ export const courses: Course[] = [
       "Start with variables, logic, and the joy of solving a problem.",
     difficulty: "Beginner",
     lessonCount: 12,
-    modules: [],
+    learningEntry: "/courses/programming-foundations#classrooms",
+    modules: [
+      {
+        id: "programming-thinking-basics",
+        title: "Thinking in clear steps",
+        lessons: [thinkingLesson],
+      },
+    ],
     accent: "pink",
   },
   {

@@ -56,7 +56,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F04 — Course previews, pilot entry, and not-found routing
 
-- **Status:** Implemented; Python links to a real pilot, other courses remain previews.
+- **Status:** Implemented; Python and Programming Fundamentals link to complete introductory lessons; five courses remain previews.
 - **Purpose:** provide stable course routes and honest availability messages.
 - **Audience:** visitors and human/AI pilot learners.
 - **Benefit:** reach working content without broken links or invented completed courses.
@@ -152,7 +152,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F12 — Modular curriculum types and metadata
 
-- **Status:** Implemented, including populated output and variables modules/lessons.
+- **Status:** Implemented, including populated output, variables and programming-thinking modules/lessons.
 - **Purpose:** separate canonical objectives, adaptations, and course presentation.
 - **Audience:** maintainers and human/AI pilot learners.
 - **Benefit:** one print objective serves all three classroom experiences.
@@ -214,7 +214,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F17 — Shared lessons, objectives, and practical challenges
 
-- **Status:** Implemented for output and variables lessons; broader beginner-to-advanced curriculum remains Planned.
+- **Status:** Implemented for output, variables and programming-thinking lessons; broader beginner-to-advanced curriculum remains Planned.
 - **Purpose:** teach one canonical objective through differentiated explanations and tasks.
 - **Audience:** Kids, Adults, and AI/developer experiences.
 - **Benefit:** clear goal, example, practice, feedback, and explicit success criteria.
@@ -472,3 +472,20 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Security:** bounded text-only assignment/print model; no Python execution, public agent API, network-backed evaluation, executor connection, tool permissions, or personal-data collection. Sources/answers are not saved. Lesson 001's checker and progress semantics are retained.
 - **Future improvements:** review with learners and assistive technologies; separately approve a Potion Lab adapter and further Python syntax. Passing a task is not a mastery or retained-learning claim.
 - **Verification:** [Mission 016 review](MISSION_016_REVIEW.md), [unit tests](../tests/variables.test.ts), [browser regression](../scripts/verify-variables.cjs).
+
+
+## Mission 017 classroom awakening · phase one
+
+### F38 — Thinking Like a Programmer
+
+- **Status:** Implemented locally; publication awaits founder approval. Five further course introductions remain Planned.
+- **Purpose:** give the existing Programming Fundamentals course one complete introduction to programming, instructions, precision, sequencing, decomposition and debugging.
+- **Audience:** Little Apprentices, Junior Spellcasters, Adults, and AI learners/developers, with distinct content and tasks.
+- **Benefit:** clear goals and examples, three knowledge checks plus three practical plans per experience, unlimited retries, helpful hints, local completion/reset and a satisfying Hexi celebration.
+- **Location:** [data](../src/data/lessons/programming-thinking.v1.json), [adapters](../src/data/lessons/programming-thinking.ts), [classroom](../src/pages/ThinkingLesson.tsx), [practice](../src/components/lessons/SequencePractice.tsx), [checker](../src/learning/thinking.ts), [schema](../src/learning/thinking-schema.ts), [curriculum](../src/data/curriculum.ts), course/path entry links.
+- **Dependencies:** existing React/Router, Valibot, knowledge checks, progress helpers, original Hexi, celebration and theme styles; no added package or paid service.
+- **Accessibility:** native labeled select/radio controls, numbered cards with wrapping text, fieldset/legend, keyboard hints/reset, polite status feedback and completion, existing reduced motion, no drag requirement or time pressure.
+- **Security:** finite ordered-ID comparison only; no arbitrary source, code execution, tool permission, external agent execution, model call, server request or executor integration. AI JSON is data, not authorization. Python lessons, dependencies, assets and security headers remain unchanged.
+- **Progress/privacy:** all four variants store only isolated completion IDs and versions. No names, ages, answers or assessment records are persisted. AI workbench completion is local practice, not agent retention. The last 20 practical checks can be downloaded in the current session; reload/reset clears them.
+- **Verification:** [review](MISSION_017_REVIEW.md), [native tests](../tests/thinking.test.ts), [browser checks](../scripts/verify-thinking.cjs), plus existing Python regressions.
+- **Future improvements:** founder/learner/assistive-technology review, additional foundations concepts and sequential implementation of the remaining five courses. No mastery certification is claimed.

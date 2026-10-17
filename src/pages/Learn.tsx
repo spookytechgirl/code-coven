@@ -1,3 +1,4 @@
+import { thinkingRoutes } from "../data/lessons/programming-thinking";
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, BookOpen, Sparkles } from "lucide-react";
 import { DepartmentArtwork } from "../components/DepartmentArtwork";
@@ -12,9 +13,9 @@ export function LearningEntry() {
       </span>
       <h1>One little spell. Three ways to learn.</h1>
       <p className="page-intro">
-        Start your Python adventure with <code>print()</code>. Choose the
-        experience that fits you. Every path is free, and you can switch
-        whenever you like.
+        Begin with Programming Fundamentals or explore Python with{" "}
+        <code>print()</code>. Choose the experience that fits you. Every path is
+        free, and you can switch whenever you like.
       </p>
       <div className="path-grid">
         {learningPaths.map((path) => (
@@ -37,10 +38,12 @@ export function LearningEntry() {
       <aside className="lesson-note">
         <BookOpen size={21} />
         <p>
-          Two Python lessons: display text with print(), then give values names
-          in the Variable Vault. Human activities use a limited text checker.
-          The AI classroom provides validated downloadable data and sample
-          evaluations, not an agent service.
+          Programming Fundamentals now has Thinking Like a Programmer, with
+          sequencing and debugging activities. Two Python lessons: display text
+          with print(), then give values names in the Variable Vault. Human
+          activities use a limited text checker. The AI classroom provides
+          validated downloadable data and sample evaluations, not an agent
+          service.
         </p>
       </aside>
     </section>
@@ -105,6 +108,17 @@ export function PathOverview() {
           </Link>
         </article>
       )}
+      <section className="card pilot-summary">
+        <span className="eyebrow">PROGRAMMING FUNDAMENTALS · LESSON 001</span>
+        <h2>Thinking Like a Programmer</h2>
+        <p>
+          Plan clear instructions, put steps in order, and fix a mistake. No
+          coding experience needed.
+        </p>
+        <Link className="button" to={thinkingRoutes[path.id]}>
+          Open Programming Fundamentals <ArrowRight size={17} />
+        </Link>
+      </section>
       <section className="card pilot-summary">
         <span className="eyebrow">LESSON 002 · PYTHON VARIABLES</span>
         <h2>The Variable Vault — Giving Names to Magic!</h2>

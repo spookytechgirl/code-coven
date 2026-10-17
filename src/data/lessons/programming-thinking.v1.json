@@ -1,0 +1,905 @@
+{
+  "specificationVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "lessonId": "programming-thinking-001",
+  "courseId": "programming-foundations",
+  "departmentId": "cottage",
+  "moduleId": "programming-thinking-basics",
+  "title": "Thinking Like a Programmer",
+  "learningObjectives": [
+    {
+      "id": "programming",
+      "description": "Explain programming as writing instructions a computer can follow."
+    },
+    {
+      "id": "instructions",
+      "description": "Recognize clear, precise instructions."
+    },
+    {
+      "id": "precision",
+      "description": "Explain why computers follow the given rules rather than guess our intentions."
+    },
+    {
+      "id": "sequencing",
+      "description": "Put dependent steps in a useful order (sequencing)."
+    },
+    {
+      "id": "decomposition",
+      "description": "Break a task into smaller, manageable steps (decomposition)."
+    },
+    {
+      "id": "debugging",
+      "description": "Find and correct a simple mistake, then check the result (debugging)."
+    }
+  ],
+  "prerequisites": [],
+  "variants": [
+    {
+      "id": "kids-little",
+      "audienceLabel": "Little Apprentices · ages 6–9",
+      "intro": "Hexi needs your help to reach the glowing garden. Let’s make a tiny plan! You can read with a grown-up.",
+      "sections": [
+        {
+          "title": "A program is a plan",
+          "paragraphs": [
+            "Programming means writing instructions for a computer. An instruction tells it what to do.",
+            "Hexi’s pretend robot follows our plan. It cannot guess what we meant."
+          ]
+        },
+        {
+          "title": "One step, then the next",
+          "paragraphs": [
+            "The order of steps is called sequencing. Open the gate before walking through it.",
+            "A big job can be small steps: find a lantern, switch it on, then follow the path."
+          ]
+        },
+        {
+          "title": "Fix a little mix-up",
+          "paragraphs": [
+            "A mistake in a program is often called a bug. Finding and fixing it is debugging.",
+            "If our plan says “walk through” before “open gate,” swap those steps. Check the new plan. Bugs are chances to learn!"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "meaning",
+          "prompt": "What is programming?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Hoping the computer reads our mind.",
+              "correct": false,
+              "feedback": "Hexi: A computer needs instructions. It cannot read our minds."
+            },
+            {
+              "id": "clear",
+              "text": "Writing instructions a computer can follow.",
+              "correct": true,
+              "feedback": "Hexi: Yes! Our instructions tell the computer what to do."
+            }
+          ]
+        },
+        {
+          "id": "precise",
+          "prompt": "Which instruction tells Hexi exactly what to do?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Go somewhere nice.",
+              "correct": false,
+              "feedback": "Hexi: “Somewhere nice” could mean many places. Look for a clear direction."
+            },
+            {
+              "id": "clear",
+              "text": "Take one step toward the gate.",
+              "correct": true,
+              "feedback": "Hexi: One step toward the gate is clear."
+            }
+          ]
+        },
+        {
+          "id": "small-steps",
+          "prompt": "How can we make a big adventure easier?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Skip all the steps and hope.",
+              "correct": false,
+              "feedback": "Hexi: Try one small step at a time."
+            },
+            {
+              "id": "clear",
+              "text": "Split it into little steps and check each one.",
+              "correct": true,
+              "feedback": "Hexi: Little steps make a big adventure possible!"
+            }
+          ]
+        }
+      ],
+      "taskIds": ["little-gate", "little-lantern", "little-bug"]
+    },
+    {
+      "id": "kids-junior",
+      "audienceLabel": "Junior Spellcasters · ages 10–13",
+      "intro": "Design a plan for Hexi’s delivery robot. Give it precise steps, trace the order, and fix a bug.",
+      "sections": [
+        {
+          "title": "Programs and algorithms",
+          "paragraphs": [
+            "Programming is writing instructions in a form a computer can follow. An algorithm is a step-by-step method for a task.",
+            "We can plan an algorithm in plain language before writing any code. “Move one tile east” is more precise than “go over there.”"
+          ]
+        },
+        {
+          "title": "Sequence and decompose",
+          "paragraphs": [
+            "Sequencing means putting steps in order. If a step needs an earlier result, it must come later.",
+            "Decomposition means splitting a task into smaller parts. Delivering a parcel can become: read the address, find the matching door, deliver the parcel."
+          ]
+        },
+        {
+          "title": "Trace, debug, check again",
+          "paragraphs": [
+            "Trace a plan by imagining each step in order. Compare its result with the goal.",
+            "A bug is a mistake that makes a program behave differently from our intention. Debugging means locating and correcting it, then checking again. Computers follow program rules; they do not repair our intentions for us."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "meaning",
+          "prompt": "What is an algorithm?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Only a long Python program.",
+              "correct": false,
+              "feedback": "An algorithm describes steps; it does not require a particular programming language."
+            },
+            {
+              "id": "clear",
+              "text": "A step-by-step method for a task.",
+              "correct": true,
+              "feedback": "An algorithm can be planned in ordinary language before coding."
+            }
+          ]
+        },
+        {
+          "id": "precise",
+          "prompt": "Which instruction is precise enough for a tile robot?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Go to a better place.",
+              "correct": false,
+              "feedback": "Specify the distance and direction rather than a personal judgment."
+            },
+            {
+              "id": "clear",
+              "text": "Move one tile east.",
+              "correct": true,
+              "feedback": "A direction and distance make the action unambiguous."
+            }
+          ]
+        },
+        {
+          "id": "debug",
+          "prompt": "A robot follows a wrong plan exactly. What should you do?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Assume it will guess the intended plan next time.",
+              "correct": false,
+              "feedback": "Computers follow the given rules. Inspect the plan rather than relying on a guess."
+            },
+            {
+              "id": "clear",
+              "text": "Trace the steps, fix the mistake, and check again.",
+              "correct": true,
+              "feedback": "Debugging compares the result with the goal and tests the correction."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["junior-delivery", "junior-map", "junior-bug"]
+    },
+    {
+      "id": "adults",
+      "audienceLabel": "Adult learners",
+      "intro": "Practice computational thinking with everyday workflows. No coding experience is required; we will plan, trace, and correct instructions before using a programming language.",
+      "sections": [
+        {
+          "title": "From an intention to a program",
+          "paragraphs": [
+            "Programming means expressing instructions in a form a computer can follow. An algorithm is a step-by-step method; a program expresses instructions in a particular computing system.",
+            "Computers apply the rules and inputs they receive, rather than infer what we intended. Precise instructions avoid ambiguous words such as “handle this properly.”"
+          ]
+        },
+        {
+          "title": "Sequence and decomposition",
+          "paragraphs": [
+            "Sequencing arranges steps so that required inputs exist before they are used. Load a report before reading it.",
+            "Decomposition separates a larger task into smaller, manageable tasks. Preparing a summary can become: read source values, calculate a total, write the summary. Each part can be checked separately."
+          ]
+        },
+        {
+          "title": "Debug a workflow",
+          "paragraphs": [
+            "Computational thinking includes decomposition, planning ordered steps, and checking behavior against a goal. Debugging finds and corrects a mistake.",
+            "Trace a process with a small example. If the result differs from the goal, locate the first incorrect step, change it, and check again. A failed attempt is information, not a penalty."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "meaning",
+          "prompt": "What best describes programming?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Relying on the computer to infer unstated requirements.",
+              "correct": false,
+              "feedback": "An unstated intention is not a usable instruction."
+            },
+            {
+              "id": "clear",
+              "text": "Expressing instructions a computer can follow.",
+              "correct": true,
+              "feedback": "A program makes intended operations explicit."
+            }
+          ]
+        },
+        {
+          "id": "decompose",
+          "prompt": "Which plan demonstrates decomposition?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Treat “prepare the report” as one unexplained action.",
+              "correct": false,
+              "feedback": "Break the broad task into specific, manageable actions."
+            },
+            {
+              "id": "clear",
+              "text": "Split report preparation into reading values, calculating a total, and writing a summary.",
+              "correct": true,
+              "feedback": "Smaller tasks expose the inputs and results we can check."
+            }
+          ]
+        },
+        {
+          "id": "debug",
+          "prompt": "What should follow a change made to correct a bug?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Assume the first edit must have solved it.",
+              "correct": false,
+              "feedback": "An edit alone does not establish correctness. Check the result."
+            },
+            {
+              "id": "clear",
+              "text": "Check the resulting behavior against the goal.",
+              "correct": true,
+              "feedback": "Rechecking provides evidence that the change solved the observed problem."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["adult-summary", "adult-backup", "adult-bug"]
+    },
+    {
+      "id": "ai",
+      "audienceLabel": "AI learning pathway · deterministic data",
+      "intro": "Inspect the structured objectives and finite sequencing tasks, then try the local assessment workbench. This page offers data and deterministic comparison, not an agent service or a claim of retained learning.",
+      "sections": [
+        {
+          "title": "Instruction semantics",
+          "paragraphs": [
+            "Programming expresses instructions a computer can follow. An algorithm is an ordered method for a task. Precise instructions specify the action and required input.",
+            "The task checker compares finite step identifiers. It does not interpret natural language or execute the described actions."
+          ]
+        },
+        {
+          "title": "Dependencies and decomposition",
+          "paragraphs": [
+            "A sequence must produce each required input before the next dependent action consumes it. Decomposition divides a larger goal into checkable actions.",
+            "For a fictional record pipeline, obtain the record before reading its status, then format and display the status. These descriptions are lesson data, not tool instructions."
+          ]
+        },
+        {
+          "title": "Deterministic debugging",
+          "paragraphs": [
+            "Trace the dependency order, identify the first mismatch, repair the sequence, and assess again. Wrong attempts remain retryable.",
+            "Matching the declared order demonstrates only performance on this bounded task. Browser completion belongs to this local practice session; it does not establish an external agent identity, memory or general capability."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "meaning",
+          "prompt": "Which statement defines an algorithm?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "A permission grant to execute tools.",
+              "correct": false,
+              "feedback": "Descriptions of steps do not authorize tool use."
+            },
+            {
+              "id": "clear",
+              "text": "An ordered, step-by-step method for a task.",
+              "correct": true,
+              "feedback": "An algorithm specifies a method; this lesson grants no permissions."
+            }
+          ]
+        },
+        {
+          "id": "precise",
+          "prompt": "Which instruction specifies an action and input?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Make everything correct.",
+              "correct": false,
+              "feedback": "Specify the operation and its input instead of a broad outcome."
+            },
+            {
+              "id": "clear",
+              "text": "Read the status field from the supplied fictional record.",
+              "correct": true,
+              "feedback": "A named operation and field reduce ambiguity."
+            }
+          ]
+        },
+        {
+          "id": "debug",
+          "prompt": "How should a repaired sequence be assessed?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Treat any changed sequence as correct.",
+              "correct": false,
+              "feedback": "A changed answer is not necessarily a correct answer."
+            },
+            {
+              "id": "clear",
+              "text": "Compare it again with the declared task dependencies.",
+              "correct": true,
+              "feedback": "A correction must be checked against the same goal and criteria."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["ai-record", "ai-summary", "ai-bug"]
+    }
+  ],
+  "practiceTasks": [
+    {
+      "id": "little-gate",
+      "title": "Open the garden gate",
+      "instruction": "Help Hexi reach the garden. Choose what happens first, next, and last. Each step is used once.",
+      "goal": "Hexi is inside the garden.",
+      "steps": [
+        {
+          "id": "little-gate-1",
+          "text": "Find the closed gate."
+        },
+        {
+          "id": "little-gate-2",
+          "text": "Open the gate."
+        },
+        {
+          "id": "little-gate-3",
+          "text": "Walk through the open gate."
+        }
+      ],
+      "expectedOrder": ["little-gate-1", "little-gate-2", "little-gate-3"],
+      "initialOrder": [],
+      "hint": "The gate must be open before Hexi walks through.",
+      "success": "Hexi: That order reaches the goal: Hexi is inside the garden."
+    },
+    {
+      "id": "little-lantern",
+      "title": "Make a little lantern plan",
+      "instruction": "The path is dark. Break “light the path” into three little steps.",
+      "goal": "Hexi carries a lit lantern along the path.",
+      "steps": [
+        {
+          "id": "little-lantern-1",
+          "text": "Pick up the unlit lantern."
+        },
+        {
+          "id": "little-lantern-2",
+          "text": "Switch on the lantern."
+        },
+        {
+          "id": "little-lantern-3",
+          "text": "Carry the lit lantern along the path."
+        }
+      ],
+      "expectedOrder": [
+        "little-lantern-1",
+        "little-lantern-2",
+        "little-lantern-3"
+      ],
+      "initialOrder": [],
+      "hint": "Pick up the lantern before switching it on.",
+      "success": "Hexi: That order reaches the goal: Hexi carries a lit lantern along the path."
+    },
+    {
+      "id": "little-bug",
+      "title": "Fix the bell mix-up",
+      "instruction": "This plan hangs a bell before finding it! Fix the order so Hexi finds the bell first.",
+      "goal": "The bell on the stand rings.",
+      "steps": [
+        {
+          "id": "little-bug-1",
+          "text": "Find the bell."
+        },
+        {
+          "id": "little-bug-2",
+          "text": "Hang the bell on its stand."
+        },
+        {
+          "id": "little-bug-3",
+          "text": "Ring the hanging bell."
+        }
+      ],
+      "expectedOrder": ["little-bug-1", "little-bug-2", "little-bug-3"],
+      "initialOrder": ["little-bug-2", "little-bug-1", "little-bug-3"],
+      "hint": "Find → hang → ring. The first two steps in this plan were swapped.",
+      "success": "Hexi: That order reaches the goal: The bell on the stand rings."
+    },
+    {
+      "id": "junior-delivery",
+      "title": "Plan a delivery",
+      "instruction": "The robot starts with a parcel and an unread address. Build the delivery algorithm.",
+      "goal": "The parcel reaches its addressed door.",
+      "steps": [
+        {
+          "id": "junior-delivery-1",
+          "text": "Read the parcel’s address."
+        },
+        {
+          "id": "junior-delivery-2",
+          "text": "Find the door matching that address."
+        },
+        {
+          "id": "junior-delivery-3",
+          "text": "Leave the parcel at that door."
+        }
+      ],
+      "expectedOrder": [
+        "junior-delivery-1",
+        "junior-delivery-2",
+        "junior-delivery-3"
+      ],
+      "initialOrder": [],
+      "hint": "The address identifies which door to find.",
+      "success": "Hexi: That order reaches the goal: The parcel reaches its addressed door."
+    },
+    {
+      "id": "junior-map",
+      "title": "Break down the map task",
+      "instruction": "Build a route card for a robot that does not know its destination yet.",
+      "goal": "A route to the task’s destination is marked.",
+      "steps": [
+        {
+          "id": "junior-map-1",
+          "text": "Read the destination on the task card."
+        },
+        {
+          "id": "junior-map-2",
+          "text": "Find that destination on the map."
+        },
+        {
+          "id": "junior-map-3",
+          "text": "Mark a route to that destination."
+        }
+      ],
+      "expectedOrder": ["junior-map-1", "junior-map-2", "junior-map-3"],
+      "initialOrder": [],
+      "hint": "You need the destination before you can locate it.",
+      "success": "Hexi: That order reaches the goal: A route to the task’s destination is marked."
+    },
+    {
+      "id": "junior-bug",
+      "title": "Debug the badge printer",
+      "instruction": "The first two steps are swapped. Correct the plan so the label exists before it is printed.",
+      "goal": "The label prints the name from the card.",
+      "steps": [
+        {
+          "id": "junior-bug-1",
+          "text": "Read the visitor’s fictional name card."
+        },
+        {
+          "id": "junior-bug-2",
+          "text": "Create a label using that name."
+        },
+        {
+          "id": "junior-bug-3",
+          "text": "Print the created label."
+        }
+      ],
+      "expectedOrder": ["junior-bug-1", "junior-bug-2", "junior-bug-3"],
+      "initialOrder": ["junior-bug-2", "junior-bug-1", "junior-bug-3"],
+      "hint": "Trace where the name comes from before creating the label.",
+      "success": "Hexi: That order reaches the goal: The label prints the name from the card."
+    },
+    {
+      "id": "adult-summary",
+      "title": "Sequence a report",
+      "instruction": "The source file is closed and the summary is blank. Order this simplified workflow.",
+      "goal": "The summary contains the source sales total.",
+      "steps": [
+        {
+          "id": "adult-summary-1",
+          "text": "Open the source file."
+        },
+        {
+          "id": "adult-summary-2",
+          "text": "Read its sales values."
+        },
+        {
+          "id": "adult-summary-3",
+          "text": "Calculate their total."
+        },
+        {
+          "id": "adult-summary-4",
+          "text": "Write that total in the summary."
+        }
+      ],
+      "expectedOrder": [
+        "adult-summary-1",
+        "adult-summary-2",
+        "adult-summary-3",
+        "adult-summary-4"
+      ],
+      "initialOrder": [],
+      "hint": "The values must be available before calculating their total.",
+      "success": "Hexi: That order reaches the goal: The summary contains the source sales total."
+    },
+    {
+      "id": "adult-backup",
+      "title": "Decompose a backup check",
+      "instruction": "There is no backup yet. Arrange a small, checkable backup workflow.",
+      "goal": "The new backup has been checked against its source.",
+      "steps": [
+        {
+          "id": "adult-backup-1",
+          "text": "Choose the source folder."
+        },
+        {
+          "id": "adult-backup-2",
+          "text": "Create a backup of that folder."
+        },
+        {
+          "id": "adult-backup-3",
+          "text": "Compare the backup contents with the source."
+        }
+      ],
+      "expectedOrder": ["adult-backup-1", "adult-backup-2", "adult-backup-3"],
+      "initialOrder": [],
+      "hint": "You cannot compare a backup that has not been created.",
+      "success": "Hexi: That order reaches the goal: The new backup has been checked against its source."
+    },
+    {
+      "id": "adult-bug",
+      "title": "Debug the receipt workflow",
+      "instruction": "A receipt is printed before its total is calculated. Repair this simplified plan.",
+      "goal": "The printed receipt contains the calculated total.",
+      "steps": [
+        {
+          "id": "adult-bug-1",
+          "text": "Read the item prices."
+        },
+        {
+          "id": "adult-bug-2",
+          "text": "Add those prices to calculate a total."
+        },
+        {
+          "id": "adult-bug-3",
+          "text": "Print a receipt containing that total."
+        }
+      ],
+      "expectedOrder": ["adult-bug-1", "adult-bug-2", "adult-bug-3"],
+      "initialOrder": ["adult-bug-1", "adult-bug-3", "adult-bug-2"],
+      "hint": "The receipt needs the calculated total as its input.",
+      "success": "Hexi: That order reaches the goal: The printed receipt contains the calculated total."
+    },
+    {
+      "id": "ai-record",
+      "title": "Sequence a record pipeline",
+      "instruction": "Order these fictional data-processing steps; no real record is loaded.",
+      "goal": "The supplied record’s status is displayed.",
+      "steps": [
+        {
+          "id": "ai-record-1",
+          "text": "Obtain the supplied fictional record."
+        },
+        {
+          "id": "ai-record-2",
+          "text": "Read its status field."
+        },
+        {
+          "id": "ai-record-3",
+          "text": "Display that status."
+        }
+      ],
+      "expectedOrder": ["ai-record-1", "ai-record-2", "ai-record-3"],
+      "initialOrder": [],
+      "hint": "The record must exist before a field is read.",
+      "success": "Hexi: That order reaches the goal: The supplied record’s status is displayed."
+    },
+    {
+      "id": "ai-summary",
+      "title": "Decompose a summary pipeline",
+      "instruction": "Order the dependent subtasks for a fictional summary.",
+      "goal": "The formatted total is displayed.",
+      "steps": [
+        {
+          "id": "ai-summary-1",
+          "text": "Obtain the supplied fictional values."
+        },
+        {
+          "id": "ai-summary-2",
+          "text": "Calculate the total of those values."
+        },
+        {
+          "id": "ai-summary-3",
+          "text": "Format the calculated total as text."
+        },
+        {
+          "id": "ai-summary-4",
+          "text": "Display the formatted text."
+        }
+      ],
+      "expectedOrder": [
+        "ai-summary-1",
+        "ai-summary-2",
+        "ai-summary-3",
+        "ai-summary-4"
+      ],
+      "initialOrder": [],
+      "hint": "Each step consumes the previous step’s result.",
+      "success": "Hexi: That order reaches the goal: The formatted total is displayed."
+    },
+    {
+      "id": "ai-bug",
+      "title": "Repair a dependency bug",
+      "instruction": "The first two steps are swapped. Return the corrected order of the supplied step IDs.",
+      "goal": "The message text is displayed.",
+      "steps": [
+        {
+          "id": "ai-bug-1",
+          "text": "Obtain the supplied fictional message."
+        },
+        {
+          "id": "ai-bug-2",
+          "text": "Read the message text."
+        },
+        {
+          "id": "ai-bug-3",
+          "text": "Display the read text."
+        }
+      ],
+      "expectedOrder": ["ai-bug-1", "ai-bug-2", "ai-bug-3"],
+      "initialOrder": ["ai-bug-2", "ai-bug-1", "ai-bug-3"],
+      "hint": "Read requires a message first.",
+      "success": "Hexi: That order reaches the goal: The message text is displayed."
+    }
+  ],
+  "assessment": {
+    "method": "finite-sequence-comparison-v1",
+    "successCriteria": [
+      "All steps are known and used exactly once.",
+      "Every step matches the declared dependency order.",
+      "All three knowledge checks and three practical tasks must pass at least once for browser completion."
+    ],
+    "testCases": [
+      {
+        "id": "little-gate-correct",
+        "taskId": "little-gate",
+        "order": ["little-gate-1", "little-gate-2", "little-gate-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-gate-swapped",
+        "taskId": "little-gate",
+        "order": ["little-gate-2", "little-gate-1", "little-gate-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "little-lantern-correct",
+        "taskId": "little-lantern",
+        "order": ["little-lantern-1", "little-lantern-2", "little-lantern-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-lantern-swapped",
+        "taskId": "little-lantern",
+        "order": ["little-lantern-2", "little-lantern-1", "little-lantern-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "little-bug-correct",
+        "taskId": "little-bug",
+        "order": ["little-bug-1", "little-bug-2", "little-bug-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-bug-swapped",
+        "taskId": "little-bug",
+        "order": ["little-bug-2", "little-bug-1", "little-bug-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "junior-delivery-correct",
+        "taskId": "junior-delivery",
+        "order": [
+          "junior-delivery-1",
+          "junior-delivery-2",
+          "junior-delivery-3"
+        ],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-delivery-swapped",
+        "taskId": "junior-delivery",
+        "order": [
+          "junior-delivery-2",
+          "junior-delivery-1",
+          "junior-delivery-3"
+        ],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "junior-map-correct",
+        "taskId": "junior-map",
+        "order": ["junior-map-1", "junior-map-2", "junior-map-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-map-swapped",
+        "taskId": "junior-map",
+        "order": ["junior-map-2", "junior-map-1", "junior-map-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "junior-bug-correct",
+        "taskId": "junior-bug",
+        "order": ["junior-bug-1", "junior-bug-2", "junior-bug-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-bug-swapped",
+        "taskId": "junior-bug",
+        "order": ["junior-bug-2", "junior-bug-1", "junior-bug-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "adult-summary-correct",
+        "taskId": "adult-summary",
+        "order": [
+          "adult-summary-1",
+          "adult-summary-2",
+          "adult-summary-3",
+          "adult-summary-4"
+        ],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-summary-swapped",
+        "taskId": "adult-summary",
+        "order": [
+          "adult-summary-2",
+          "adult-summary-1",
+          "adult-summary-3",
+          "adult-summary-4"
+        ],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "adult-backup-correct",
+        "taskId": "adult-backup",
+        "order": ["adult-backup-1", "adult-backup-2", "adult-backup-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-backup-swapped",
+        "taskId": "adult-backup",
+        "order": ["adult-backup-2", "adult-backup-1", "adult-backup-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "adult-bug-correct",
+        "taskId": "adult-bug",
+        "order": ["adult-bug-1", "adult-bug-2", "adult-bug-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-bug-swapped",
+        "taskId": "adult-bug",
+        "order": ["adult-bug-2", "adult-bug-1", "adult-bug-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "ai-record-correct",
+        "taskId": "ai-record",
+        "order": ["ai-record-1", "ai-record-2", "ai-record-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-record-swapped",
+        "taskId": "ai-record",
+        "order": ["ai-record-2", "ai-record-1", "ai-record-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "ai-summary-correct",
+        "taskId": "ai-summary",
+        "order": [
+          "ai-summary-1",
+          "ai-summary-2",
+          "ai-summary-3",
+          "ai-summary-4"
+        ],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-summary-swapped",
+        "taskId": "ai-summary",
+        "order": [
+          "ai-summary-2",
+          "ai-summary-1",
+          "ai-summary-3",
+          "ai-summary-4"
+        ],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      },
+      {
+        "id": "ai-bug-correct",
+        "taskId": "ai-bug",
+        "order": ["ai-bug-1", "ai-bug-2", "ai-bug-3"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-bug-swapped",
+        "taskId": "ai-bug",
+        "order": ["ai-bug-2", "ai-bug-1", "ai-bug-3"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "order"
+      }
+    ]
+  },
+  "safety": {
+    "execution": "none",
+    "permissions": [],
+    "performanceClaim": "A match demonstrates performance on a finite lesson task, not general mastery or retained AI learning."
+  }
+}

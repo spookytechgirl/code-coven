@@ -207,3 +207,16 @@ For future entries, copy the field structure above, use the actual recorded/adop
 - **Tradeoffs:** many valid Python programs are unsupported; ASCII/small integer bounds are checker limits, not Python language limits. A labeled-box metaphor helps beginners, with clarification that Python names refer to values. Local completion is editable and not trusted mastery evidence.
 - **Result:** two curriculum modules, differentiated six-activity human variants, 20 AI sample cases and downloadable records, namespace-isolated completion, hints, and a gated Hexi card. No executor integration, paid service, account system, or production change.
 - **Related:** F17–F24, F32–F37; [architecture](LEARNING_ARCHITECTURE.md), [AI integration](AI_INTEGRATION.md), [review](MISSION_016_REVIEW.md).
+
+
+## D017 — Awaken Programming Fundamentals with finite sequencing activities
+
+- **Date:** 2026-10-17, Mission 017 founder instruction and local implementation.
+- **Status:** Implemented locally; no commit, push or deployment authorized.
+- **Decision:** populate Programming Fundamentals first with Thinking Like a Programmer and four differentiated experiences; leave five further courses unimplemented. Reuse existing classroom/progress/celebration components and strict versioned AI data patterns.
+- **Context:** the founder requests one complete introduction per existing course over time, explicitly starting with Programming Fundamentals and prohibiting simultaneous implementation of all six gaps.
+- **Alternatives considered:** generating all missing courses would violate staged scope; importing Python execution would add unnecessary risk; drag-only ordering would exclude keyboard learners; free-form natural-language grading would lack deterministic correctness here.
+- **Reasoning:** finite supplied steps support precise, inspectable sequencing/decomposition/debugging practice without a new service or execution architecture. Native selects keep keyboard access and established styling.
+- **Tradeoffs:** exact task orders assess bounded dependency examples, not general reasoning. AI workbench progress is browser practice only; its optional session records are ephemeral. Completion is editable locally and cannot certify mastery. Target-audience and screen-reader review remain future work.
+- **Result:** six objectives, six activities per experience, hints/retries, isolated progress/reset and celebration; strict lesson and request schemas; 24 sample cases and JSON/session downloads; updated course/path discovery. Existing Python lesson source, helpers, assets, dependencies and security headers are preserved.
+- **Related:** F12, F17–F24, F31–F38; [review](MISSION_017_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [data](../src/data/lessons/programming-thinking.v1.json).

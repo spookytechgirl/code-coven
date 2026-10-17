@@ -32,6 +32,9 @@ const AiVariableVault = lazy(() =>
     default: m.AiVariableVault,
   })),
 );
+const ThinkingLesson = lazy(() =>
+  import("./pages/ThinkingLesson").then((m) => ({ default: m.ThinkingLesson })),
+);
 function RouteFocus() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -52,6 +55,12 @@ function RouteFocus() {
         "The Variable Vault — Giving Names to Magic!",
       "/learn/ai/python/variable-vault":
         "The Variable Vault — Giving Names to Magic!",
+      "/learn/kids/fundamentals/thinking-like-a-programmer":
+        "Thinking Like a Programmer",
+      "/learn/adults/fundamentals/thinking-like-a-programmer":
+        "Thinking Like a Programmer",
+      "/learn/ai/fundamentals/thinking-like-a-programmer":
+        "Thinking Like a Programmer",
       "/dashboard": "Student Dashboard",
       "/courses": "Explore Courses",
       "/academy": "The Academy",
@@ -110,6 +119,18 @@ export function App() {
           >
             <Route index element={<LearningEntry />} />
             <Route path=":audience" element={<PathOverview />} />
+            <Route
+              path="kids/fundamentals/thinking-like-a-programmer"
+              element={<ThinkingLesson audience="kids" />}
+            />
+            <Route
+              path="adults/fundamentals/thinking-like-a-programmer"
+              element={<ThinkingLesson audience="adults" />}
+            />
+            <Route
+              path="ai/fundamentals/thinking-like-a-programmer"
+              element={<ThinkingLesson audience="ai" />}
+            />
             <Route
               path="kids/python/first-spell"
               element={<HumanLesson audience="kids" />}

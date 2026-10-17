@@ -89,7 +89,7 @@ A current source/configuration scan found no credential-like tokens or private k
 
 ## Demo and artwork limitations
 
-Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Other courses remain previews. Restricted practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
+Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals now contains Thinking Like a Programmer; the other five courses remain previews. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
 
 Mission 015 preserves all existing academy/course illustrations and Hexi while removing visitor-facing temporary artwork labels. No image was replaced, recolored, cropped, or regenerated. [ARTWORK.md](ARTWORK.md) records the label inventory and asset guidance; [Mission 015 review](docs/MISSION_015_REVIEW.md) records scope and verification. No paid services are required.
 
@@ -129,3 +129,17 @@ As with the original browser test, set `PLAYWRIGHT_MODULE` to your optional Play
 Each human variant has six locally tracked activities with retries, hints, and a Hexi completion card. The variables checker recognizes a bounded assignment/print subset; **it does not run Python or contact an executor**. Lesson 001's checker remains unchanged. No account, API, name/age collection, source persistence, or dashboard reward is added. See [Mission 016 review](docs/MISSION_016_REVIEW.md), [Learning Architecture](docs/LEARNING_ARCHITECTURE.md), and [AI Integration](docs/AI_INTEGRATION.md).
 
 Run `pnpm test:variables` for the eight variable test groups and `pnpm test:lessons` for the existing ten lesson tests. The optional `scripts/verify-variables.cjs` uses the same external Playwright/Chrome setup documented above; with a running production preview, set `BASE_URL` and run it alongside the existing lesson/teaching browser regressions. It checks human activities, downloads, storage isolation/failure, keyboard behavior, reflow, reduced motion, local-only requests, and a local simulation of the existing Pages headers. It adds no application dependency or hosting setting.
+
+
+## Mission 017 · Thinking Like a Programmer
+
+**Implemented locally; publication awaits founder approval:** Programming Fundamentals (Your First Spell) now has its own complete introductory lesson, separate from Python Lesson 001. It teaches programming, precise instructions, sequencing, decomposition and debugging through six explicit objectives. Every experience has three checks and three practical plans with hints, unlimited retries, local progress/reset and a Hexi celebration.
+
+- Little / Junior: `/learn/kids/fundamentals/thinking-like-a-programmer?band=little` or `?band=junior`.
+- Adults: `/learn/adults/fundamentals/thinking-like-a-programmer`.
+- AIs: `/learn/ai/fundamentals/thinking-like-a-programmer`.
+- Course entry: `/courses/programming-foundations`.
+
+Practice compares fixed step identifiers; it neither runs code nor executes the described actions. AI downloads include the strict versioned lesson, 24 sample assessments, and up to 20 in-memory practical checks from the current session. All four experiences can remember completed activity IDs in this browser, separately from Python and each other. AI-page browser completion is a practice aid, not an external agent memory or capability record. No submitted answers/assessment records are persisted or transmitted.
+
+Run `pnpm test:thinking` alongside the existing lesson, variables and build checks. With a production preview running, `scripts/verify-thinking.cjs` uses the optional Playwright/Chrome setup above. See [Mission 017 review](docs/MISSION_017_REVIEW.md) for objectives, evidence, limitations, future course order and the exact changed files. Web, security, algorithms, AI Fundamentals and Software Sorcery are not implemented by this phase. Python Lessons 001/002, illustrations, security headers, dependencies and executor boundaries are preserved.

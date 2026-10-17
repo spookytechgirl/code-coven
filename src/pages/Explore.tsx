@@ -1,3 +1,4 @@
+import { thinkingRoutes } from "../data/lessons/programming-thinking";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Search, ArrowLeft, BookOpen } from "lucide-react";
@@ -34,7 +35,7 @@ export function Courses() {
       <h1>Explore Courses</h1>
       <p className="page-intro">
         Real skills. A little wonder. Every course is completely free. Lesson
-        content is growing — start with the Python print() pilot.
+        content is growing — try Programming Fundamentals or Python Potions.
       </p>
       <div className="filters">
         <label htmlFor="course-search">
@@ -133,7 +134,34 @@ export function CourseDetail() {
         </span>
         <span>Completely free</span>
       </div>
-      {course.learningEntry ? (
+      {course.id === "programming-foundations" ? (
+        <article id="classrooms" className="card detail-placeholder">
+          <h2>Thinking Like a Programmer</h2>
+          <p>
+            One complete introductory lesson: clear instructions, sequencing,
+            small steps, and debugging. Choose an experience; all are open to
+            everyone. The other 11 catalog lessons are planned.
+          </p>
+          <div className="lesson-downloads">
+            <Link className="button" to={`${thinkingRoutes.kids}?band=little`}>
+              Little Apprentices
+            </Link>
+            <Link className="button" to={`${thinkingRoutes.kids}?band=junior`}>
+              Junior Spellcasters
+            </Link>
+            <Link className="button" to={thinkingRoutes.adults}>
+              Adult learners
+            </Link>
+            <Link className="button" to={thinkingRoutes.ai}>
+              AI learning pathway
+            </Link>
+          </div>
+          <p>
+            Fixed-step checking only; no submitted code executes. Progress is
+            local to this browser.
+          </p>
+        </article>
+      ) : course.learningEntry ? (
         <article className="card detail-placeholder">
           <h2>Your first Python classroom is open</h2>
           <p>

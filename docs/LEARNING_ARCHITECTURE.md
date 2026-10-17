@@ -4,7 +4,7 @@ Last reviewed: 2026-10-17 · Baseline: Mission 015 + Mission 016 local lessons
 
 ## Verified implementation boundary
 
-**Implemented:** the hierarchy contains two Python modules: output (Lesson 001) and variables (Lesson 002), each with Little, Junior, Adults, and AI adaptations. Kids and Adults have real knowledge checks and restricted text practice; AI has a versioned validated specification, deterministic sample evaluations, and a non-operational future contract. **Not implemented:** Python execution, trusted capability tracking, a public agent API, or multi-course audience curricula.
+**Implemented:** the hierarchy contains two Python modules: output (Lesson 001) and variables (Lesson 002), each with Little, Junior, Adults, and AI adaptations. Kids and Adults have real knowledge checks and restricted text practice; AI has a versioned validated specification, deterministic sample evaluations, and a non-operational future contract. **Also Implemented locally in Mission 017:** Programming Fundamentals has one introductory lesson with four adaptations. **Not implemented:** Python execution, trusted capability tracking, a public agent API, or complete multi-course curricula.
 
 ```text
 Department: potions
@@ -15,7 +15,7 @@ Department: potions
                   └─ Challenges: hello, welcome (no XP awards)
 ```
 
-[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; other modules remain empty and catalog lesson totals remain planned counts.
+[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; five course module lists remain empty and catalog lesson totals remain planned counts.
 
 The dashboard's `demoProgress` still represents sample numbers, not the pilot's local completion. No lesson completion changes dashboard XP or percentages.
 
@@ -93,7 +93,7 @@ Machine-readable content and submitted outputs should be treated as data, not tr
 
 ## Local progress and privacy
 
-**Implemented:** [progress helpers](../src/learning/progress.ts) and [the UI hook](../src/learning/useLessonProgress.ts) save only completed activity IDs, schema version, and lesson version under separate Kids Little/Junior/Adults browser keys. No names, ages, submitted code, or answers are persisted or transmitted. Reset removes only the active variant's record. Corrupt/stale/unknown fields are filtered; blocked or full storage falls back to in-memory completion with a notice. The AI page creates no progress/retention record.
+**Implemented:** [progress helpers](../src/learning/progress.ts) and [the UI hook](../src/learning/useLessonProgress.ts) save only completed activity IDs, schema version, and lesson version under separate Kids Little/Junior/Adults browser keys. No names, ages, submitted code, or answers are persisted or transmitted. Reset removes only the active variant's record. Corrupt/stale/unknown fields are filtered; blocked or full storage falls back to in-memory completion with a notice. The existing Python AI pages create no progress/retention record. Mission 017 explicitly adds isolated browser practice completion on its AI workbench; that is not external agent retention.
 
 These records are local and editable by the browser owner; they are not a trusted evidence system or account synchronization. No streaks, XP, public profiles, chat, or leaderboards are added to the Kids experience. Real learner records, collaboration, and capability-based progression remain Planned.
 
@@ -130,3 +130,18 @@ Task checks require the declared value types and statement shapes, not merely a 
 Each lesson/variant keeps separate existing progress keys; only completed activity IDs and record/content versions persist. No answers, code, names, ages, timestamps, account synchronization, XP, or AI retention are added. Already-completed activities remain complete until reset. Reset clears only the active Lesson 002 variant and its current form state. Restore uses a static celebration; fresh completion has the existing reduced-motion-aware entrance.
 
 **Planned:** eventual integration with a separately reviewed real Python Potion Lab. The versioned examples and expected outputs can be adapter inputs in future authorized work, but there is no runner import, iframe bridge, API call, executor URL, or deployment in this lesson. This mission neither imports unpublished Potion Lab work nor changes its approved isolation/security architecture. Execution approval must be separate from lesson publication.
+
+
+## Mission 017 · Programming Fundamentals
+
+**Implemented locally:** Department cottage → existing path cottage-path → course programming-foundations → module programming-thinking-basics → lesson programming-thinking-001, content/specification 1.0.0. This is distinct from Python Lesson 001. Course and pathway pages link to all four experiences; no prerequisites lock access. Five other courses still have empty modules.
+
+[Versioned data](../src/data/lessons/programming-thinking.v1.json) owns six shared objectives, four differentiated introductions/sections, three questions and three practice tasks per experience, and 24 declared deterministic cases. [Strict schemas](../src/learning/thinking-schema.ts) reject unknown fields, versions, execution permissions, duplicate IDs and inconsistent references/orders. [Adapters](../src/data/lessons/programming-thinking.ts) register the lesson in the existing curriculum without changing legacy types or Python data.
+
+[The finite checker](../src/learning/thinking.ts) requires a permutation of the supplied step IDs in the declared dependency order. It rejects blanks, duplicates, unknown IDs and oversized input; hints identify the first wrong position. Every wrong attempt remains retryable. It does not parse natural language, execute code, control a robot, call a model or contact an executor. Other reasonable real-world workflows are outside each task's explicitly stated simplified scenario.
+
+[The classroom](../src/pages/ThinkingLesson.tsx) and [sequencing control](../src/components/lessons/SequencePractice.tsx) reuse existing knowledge checks, progress helpers, Hexi celebration and classroom styling. All six activities must pass at least once. The lesson ID plus variant scopes completion; reset clears that variant's record, its forms and session assessments. A plan's Start Again button resets only that plan, retaining prior completion as disclosed. Fresh completion animates once; restored completion is static and reduced motion suppresses animation.
+
+The AI workbench includes the same interactive learning cycle, explicit performance limits, lesson/sample JSON and current-session assessment downloads. The last 20 practical checks exist only in memory, are lost on navigation/reload/reset and never automatically transmitted. Only completed IDs and record/content versions may persist for all four experiences. AI browser practice completion does not establish an agent identity, external learning history or trusted mastery. Python AI storage behavior is unchanged. Specification/request validation plus finite comparison follows the established local AI architecture without a public API.
+
+**Planned:** the remaining five course introductions, real learner/assistive-technology review, and richer checking only under later scoped approval. No Mission 017 execution infrastructure is authorized. See [review](MISSION_017_REVIEW.md).
