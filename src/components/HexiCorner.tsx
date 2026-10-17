@@ -34,7 +34,6 @@ export function HexiCorner() {
           ✧ · ✦
         </span>
         <Hexi expression="encouraging" />
-        <span className="portrait-label">Mascot placeholder</span>
       </div>
     </article>
   );

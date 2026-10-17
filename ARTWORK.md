@@ -1,6 +1,22 @@
-# Code Coven artwork handoff · Mission 002
+# Code Coven artwork handoff · Mission 015
 
-All current academy, department, and course illustrations are **concept placeholders**, not finished or approved artwork. Visible labels identify them. Hexi's existing local SVG is unchanged; the official portrait is still needed. The new study backdrop is a lightweight local SVG, while destination and course concepts are reusable SVG components. No stock photography, remote artwork, paid service, or generated raster assets are used.
+Mission 015 (2026-10-17) explicitly preserves the existing study scene, seven department scenes, course illustrations, and Hexi. Their original SVG assets and drawing geometry/colors are unchanged. Temporary labels are removed from HTML, not painted out of pictures. No stock art, new raster asset, paid service, or replacement portrait is introduced.
+
+## Removed temporary labels
+
+| Label | Source | Where it appeared |
+| --- | --- | --- |
+| Study concept · placeholder illustration. Official Hexi artwork pending. | `MagicalScenery.tsx` HTML figcaption | Homepage study scene |
+| Concept art · placeholder | `DepartmentCard.tsx` HTML overlay | Homepage and academy department cards |
+| Concept art · placeholder | `CourseIllustration.tsx` HTML overlay | Catalog, dashboard, spellbook, and department course cards |
+| Mascot placeholder | `HexiCorner.tsx` HTML caption | Dashboard portrait |
+| Concept illustration | `Learn.tsx` HTML overlay | Three learning-path illustrations |
+
+The inventory covers shared rendering sites, not just one screenshot. CSS styled these labels but did not generate them. No temporary labels were embedded in the SVG images, so no image editing, cropping, or edited-image backup is needed: the original assets remain the active assets and are preserved in Git history. Demo/progress labels, planned lesson totals, course-preview notices, difficulty badges, and search-input hints are functional explanations and remain intact.
+
+## Optional future assets — not part of Mission 015
+
+The historical Mission 002 suggestions below remain reference guidance only. They are not outstanding replacement requirements: the founder explicitly likes the existing pictures. Do not replace them without a separate request.
 
 ## Suggested final assets
 
@@ -23,10 +39,10 @@ Store approved assets in `src/assets/`. Use compressed WebP for scenes and trans
 
 The remaining four course cards currently reuse their department concepts. They support individual course images through the same registry; recommended future filenames are `course-programming-foundations.webp`, `course-algorithm-alchemy.webp`, `course-cybersecurity-charms.webp`, and `course-software-sorcery.webp`, at 1200 × 660.
 
-## Replace the concepts
+## Optional future source changes
 
-- Import approved department/course images in `src/data/artwork.ts`, set the relevant `src`, and set `placeholder: false`. Components then render those assets while retaining the same cards, links, and metadata. Decorative images have empty alt text because adjacent headings provide the link names; descriptions in the registry document intended content.
-- `MagicalScenery` accepts `artwork` and `placeholder` props. Pass the approved study image and `placeholder={false}` from Home when ready. The scenery keeps Hexi as a separate replaceable component.
-- For approved Hexi art, replace the default import in `src/components/Hexi.tsx` or pass its existing `artwork` prop. Once approved, also remove the “Mascot placeholder” caption in HexiCorner and update the study caption. Expressions remain an extension point, not new finished portraits.
+- If a future artwork change is separately authorized, import local department/course images in `src/data/artwork.ts` and set the relevant `src`. Components retain their cards, links, and metadata. There is no temporary-label flag to toggle.
+- `MagicalScenery` accepts an optional `artwork` prop; the existing study remains its default. Hexi remains a separate component with an unchanged portrait and descriptive alt text.
+- `Hexi` supports an artwork prop, but Mission 015 does not authorize replacing its default image or appearance. Expressions remain an extension point, not new portraits.
 
 Check both themes and mobile crops after replacing assets. Keep meaningful copy and controls in HTML rather than embedding them in illustrations.

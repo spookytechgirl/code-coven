@@ -1,6 +1,6 @@
 # Feature Registry
 
-Last reviewed: 2026-10-15 · Baseline: v0.3.0 + Mission 008 pilot / Mission 009 local improvements
+Last reviewed: 2026-10-17 · Baseline: v0.3.0 + Mission 008/009 pilot + Mission 015 artwork-label cleanup
 
 ## How to read and maintain this registry
 
@@ -92,7 +92,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F07 — Hexi portrait, tips, and encouragement
 
-- **Status:** Implemented; portrait is a placeholder, tips are authored local text.
+- **Status:** Implemented; original portrait retained by Mission 015, tips are authored local text.
 - **Purpose:** provide a familiar companion and small coding reminders.
 - **Audience:** current visitors; future human learners.
 - **Benefit:** supportive, user-paced encouragement.
@@ -100,7 +100,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Dependencies:** original local SVG, React state; no AI provider.
 - **Accessibility:** descriptive mascot alt text, polite tip updates, button-controlled rotation.
 - **Security:** no chat, input processing, or model connection.
-- **Future improvements:** approved portrait per [ARTWORK](../ARTWORK.md); expression variants are not implemented.
+- **Future improvements:** preserve the current portrait per [ARTWORK](../ARTWORK.md); any new portrait or expression variants require separate direction.
 
 ### F08 — Daily quest and reward preview
 
@@ -138,17 +138,17 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Security:** no special permissions or tracking needed.
 - **Future improvements:** screen-reader, zoom, readability, and audience-specific testing; see [Design System](DESIGN_SYSTEM.md).
 
-### F11 — Magical scenery and replaceable concept illustrations
+### F11 — Magical scenery and preserved local illustrations
 
-- **Status:** Implemented rendering and replacement hooks; all current illustrations remain placeholders.
+- **Status:** Implemented rendering and optional source hooks; Mission 015 retains current illustrations and removes temporary artwork labels.
 - **Purpose:** establish an enchanted academy atmosphere.
 - **Audience:** human visitors.
 - **Benefit:** recognizable destinations and a coherent setting.
 - **Location:** [MagicalScenery](../src/components/MagicalScenery.tsx), [DepartmentArtwork](../src/components/DepartmentArtwork.tsx), [CourseIllustration](../src/components/CourseIllustration.tsx), [art registry](../src/data/artwork.ts), [assets](../src/assets).
-- **Dependencies:** local SVG/imported images, placeholder flags, shared components.
-- **Accessibility:** adjacent text names destinations; Hexi has alt text; controls remain HTML.
+- **Dependencies:** existing local SVG/imported images and shared components; temporary-label flags removed.
+- **Accessibility:** adjacent text names destinations; Hexi retains descriptive alt text; controls remain HTML. Removing temporary labels also removes them from card link names; useful headings, difficulty labels, and focus behavior remain.
 - **Security:** no remote stock-image service; replacement assets need review and permission.
-- **Future improvements:** approved art and crop checks, maintained in [ARTWORK](../ARTWORK.md).
+- **Future improvements:** preserve current artwork; review any separately requested replacement and responsive crops per [ARTWORK](../ARTWORK.md).
 
 ### F12 — Modular curriculum types and metadata
 

@@ -91,7 +91,7 @@ A current source/configuration scan found no credential-like tokens or private k
 
 Catalog lesson totals describe planned content. Python Potions now contains one complete output pilot with two Kids adaptations, an Adults lesson, and a machine-readable AI lesson. Other courses remain previews. Restricted practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
 
-All academy/course concept illustrations remain explicitly labeled placeholders. Hexi's original local SVG is preserved. [ARTWORK.md](ARTWORK.md) lists replacement assets, filenames, dimensions, and registry instructions. No paid services are required.
+Mission 015 preserves all existing academy/course illustrations and Hexi while removing visitor-facing temporary artwork labels. No image was replaced, recolored, cropped, or regenerated. [ARTWORK.md](ARTWORK.md) records the label inventory and asset guidance; [Mission 015 review](docs/MISSION_015_REVIEW.md) records scope and verification. No paid services are required.
 
 The homepage HTML contains the requested title, description, favicon, viewport, and Open Graph title/description/type/site-name/locale. Client navigation gives named pages readable titles. No final domain, canonical URL, `og:url`, or absolute social-image URL is invented; add those after the public origin and approved share image are known. This is a client-rendered SPA, so deeper page-specific search/social previews would require future prerendering work.
 

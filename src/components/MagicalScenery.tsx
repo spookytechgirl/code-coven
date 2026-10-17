@@ -2,10 +2,8 @@ import { Hexi } from "./Hexi";
 import studyConcept from "../assets/academy-study-concept.svg";
 export function MagicalScenery({
   artwork = studyConcept,
-  placeholder = true,
 }: {
   artwork?: string;
-  placeholder?: boolean;
 }) {
   return (
     <figure className="academy-scene">
@@ -20,12 +18,6 @@ export function MagicalScenery({
           </div>
         </div>
       </div>
-      {placeholder && (
-        <figcaption className="scene-artwork-note">
-          Study concept · placeholder illustration. Official Hexi artwork
-          pending.
-        </figcaption>
-      )}
     </figure>
   );
 }

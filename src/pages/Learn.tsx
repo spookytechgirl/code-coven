@@ -20,7 +20,6 @@ export function LearningEntry() {
           <article className={`card path-card path-${path.id}`} key={path.id}>
             <div className="path-art">
               <DepartmentArtwork departmentId={path.departmentId} />
-              <span className="artwork-label">Concept illustration</span>
             </div>
             <div className="path-copy">
               <span className="eyebrow">{path.description}</span>

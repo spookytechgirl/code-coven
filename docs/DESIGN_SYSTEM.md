@@ -1,10 +1,10 @@
 # Design System
 
-Last reviewed: 2026-10-15 · Baseline: v0.3.0 + Mission 008 local pilot
+Last reviewed: 2026-10-17 · Baseline: v0.3.0 + Mission 008/009 pilot + Mission 015 artwork-label cleanup
 
 ## Atmosphere and usability
 
-**Implemented:** an enchanted academy setting using lavender architecture, warm lights, books, stars, wisteria, and Hexi alongside conventional navigation, search, cards, and a professional dashboard. The intention is cozy exploration without obscuring the learning task. The current artwork is explicitly labeled concept/placeholder material, not approved finished illustration.
+**Implemented:** an enchanted academy setting using lavender architecture, warm lights, books, stars, wisteria, and Hexi alongside conventional navigation, search, cards, and a professional dashboard. The intention is cozy exploration without obscuring the learning task. Mission 015 explicitly retains the current illustrations and removes their temporary visitor-facing labels. This is approval to keep the existing pictures, not a redesign or a new illustration commission.
 
 Crystal is the creative director. Preserve the established academy identity and working controls; use future design work to support the [Academy Vision](ACADEMY_VISION.md), not to add decorative complexity for its own sake.
 
@@ -42,15 +42,15 @@ Illustrations also use brand lavender `#B99BDD`, deep plum `#573068`, dusty pink
 | Component / source                                                                                                   | Verified role                                                                             | Boundary                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | [Hexi](../src/components/Hexi.tsx), [local portrait](../src/assets/hexi.svg)                                         | Black familiar with lavender eyes/hat, alt text, optional message and replaceable artwork | Chief Bug Inspector; “Bugs fear me!”; expression prop is an extension point, not distinct implemented portraits |
-| [MagicalScenery](../src/components/MagicalScenery.tsx)                                                               | Study backdrop and separate focal Hexi with placeholder caption                           | Use a local asset; do not replace Hexi with stock photography                                                   |
+| [MagicalScenery](../src/components/MagicalScenery.tsx)                                                               | Study backdrop and separate focal Hexi without a temporary caption                           | Use a local asset; do not replace Hexi with stock photography                                                   |
 | [DepartmentCard](../src/components/DepartmentCard.tsx), [DepartmentArtwork](../src/components/DepartmentArtwork.tsx) | Seven linked destination concepts                                                         | Keep course associations and meaningful link names                                                              |
 | [CourseCard](../src/components/CourseCard.tsx), [CourseIllustration](../src/components/CourseIllustration.tsx)       | Course metadata, illustration, optional labeled demo progress                             | Python Potions links to implemented pilot pathways; other courses remain previews                               |
 | [HexiCorner](../src/components/HexiCorner.tsx)                                                                       | User-controlled rotating tips and encouragement                                           | No remote AI chat or automatic timer                                                                            |
 | [DailyQuestCard](../src/components/DailyQuestCard.tsx)                                                               | Demo challenge/reward preview                                                             | Awards no XP                                                                                                    |
-| [Artwork registry](../src/data/artwork.ts)                                                                           | Replacement image sources and placeholder flags                                           | Do not remove placeholder labels before approval                                                                |
+| [Artwork registry](../src/data/artwork.ts)                                                                           | Local image sources and artwork descriptions                                           | Mission 015 authorizes label removal; preserve current artwork                                                                |
 | [Public shell](../src/layouts/PublicLayout.tsx), [student shell](../src/layouts/DashboardLayout.tsx)                 | Shared brand/navigation and dashboard sidebar                                             | Preserve usable controls across sizes                                                                           |
 
-[ARTWORK.md](../ARTWORK.md) remains the authoritative asset handoff for missing art, dimensions, filenames, and replacement steps. Do not duplicate that inventory here. **Planned:** approved final environment illustrations and mascot artwork; no approval is implied by the existing concepts.
+[ARTWORK.md](../ARTWORK.md) records current artwork ownership, the removed-label inventory, and optional future asset guidance. Mission 015 explicitly retains the current study, departments, courses, and Hexi. Any future replacement requires separate direction; do not replace the pictures as part of label cleanup.
 
 ## Responsive and motion behavior
 
@@ -62,7 +62,7 @@ Focus outlines, the skip link, main-landmark focus after routing, label associat
 
 **Implemented:** [Learning entry and path overviews](../src/pages/Learn.tsx) reuse destination artwork and academy cards without redesigning existing pages. [HumanLesson](../src/pages/HumanLesson.tsx) supplies shared objectives, Kids band selection, local activity progress, and pathway navigation. [LessonControls](../src/components/lessons/LessonControls.tsx) provides syntax-highlighted examples, copy status, native radio knowledge checks, labeled code textareas, and educational feedback. [AiLesson](../src/pages/AiLesson.tsx) presents data downloads and sample evaluations. [Lesson styles](../src/styles/lessons.css) reuse existing tokens and respect existing reduced-motion rules.
 
-Human activities use fieldsets/legends, real buttons, associated labels, and polite status messages. Output and correctness are explained in text, not color alone. The sidebar becomes an in-flow progress summary at narrower widths. Completion is resettable and not tied to streaks or rewards. Neither kid band restricts access or requests age. Existing mascot/environment artwork remains concept material; no final art is newly approved.
+Human activities use fieldsets/legends, real buttons, associated labels, and polite status messages. Output and correctness are explained in text, not color alone. The sidebar becomes an in-flow progress summary at narrower widths. Completion is resettable and not tied to streaks or rewards. Neither kid band restricts access or requests age. Existing mascot/environment artwork is preserved; Mission 015 removes temporary artwork labels without changing classroom behavior.
 
 ## Verification boundaries
 
@@ -82,7 +82,7 @@ Update this guide and the relevant [feature entries](FEATURE_REGISTRY.md) when t
 
 **Celebration without manipulation:** [CompletionCelebration](../src/components/lessons/CompletionCelebration.tsx) is a reusable card with configurable title, Hexi message, achievement text, review link, and return route. Lavender/dusty-pink surfaces, readable plum/cream text, gold decoration, static stars, and existing Hexi artwork recognize three genuinely completed local activities. “First Spell Cast!” is a local recognition label, not XP, a stored badge ledger, a streak, a deadline, or a reason to pressure a learner to return.
 
-A fresh completion gets a single 450 ms fade/small rise. A restored completion is static; review and repeated correct submissions do not replay the animation. Reset then explicitly completing the activities again can celebrate again. Reduced-motion preference disables the animation. There is no flashing, audio, modal, automatic scrolling, or forced focus on completion. The existing Hexi image remains placeholder artwork.
+A fresh completion gets a single 450 ms fade/small rise. A restored completion is static; review and repeated correct submissions do not replay the animation. Reset then explicitly completing the activities again can celebrate again. Reduced-motion preference disables the animation. There is no flashing, audio, modal, automatic scrolling, or forced focus on completion. The existing Hexi image is preserved unchanged, including under Mission 015.
 
 **Educational transparency:** retain a brief separate practice notice: “This is guided practice. It checks your written spell. It does not run Python.” Do not bury this clarification, but keep it outside the main celebration so the celebration stays warm. Older learners retain the original fuller explanation.
 

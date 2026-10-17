@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import type { Department } from "../types/curriculum";
 import { DepartmentArtwork } from "./DepartmentArtwork";
-import { departmentArtwork } from "../data/artwork";
 export function DepartmentCard({
   department,
   index,
@@ -10,7 +9,6 @@ export function DepartmentCard({
   department: Department;
   index: number;
 }) {
-  const artwork = departmentArtwork[department.id];
   return (
     <Link
       className="card department enchanted-destination"
@@ -21,9 +19,6 @@ export function DepartmentCard({
         <span className="destination-number" aria-hidden="true">
           0{index + 1}
         </span>
-        {artwork?.placeholder && (
-          <span className="artwork-label">Concept art · placeholder</span>
-        )}
       </div>
       <div className="destination-copy">
         <h3>{department.title}</h3>

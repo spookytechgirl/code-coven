@@ -1,6 +1,6 @@
 # Decision Log
 
-Last reviewed: 2026-10-15 · Baseline: v0.3.0
+Last reviewed: 2026-10-17 · Baseline: v0.3.0 + Mission 015 artwork-label cleanup
 
 ## Recording rules
 
@@ -183,3 +183,15 @@ For future entries, copy the field structure above, use the actual recorded/adop
 - **Tradeoffs:** there is no platform achievement ledger or mastery claim. Local completion remains editable by the browser owner; previous completed activities remain complete until reset. A reset followed by new completion can animate again.
 - **Result:** all-three completion gates the card; review focuses the lesson heading without clearing progress, and return uses the existing Kids path. No automatic scroll/focus, audio, flashing, XP, streaks, private data, or new storage fields are added. A persistent polite/atomic status region supplies the completion announcement.
 - **Related:** F18, F27, F34, F36; [card](../src/components/lessons/CompletionCelebration.tsx), [HumanLesson](../src/pages/HumanLesson.tsx), [styles](../src/styles/lessons.css), [browser checks](../scripts/verify-teaching.cjs).
+
+## D015 — Remove temporary artwork labels while preserving the pictures
+
+- **Date:** 2026-10-17, Mission 015 founder instruction and local implementation.
+- **Status:** Implemented locally; no commit, push, or deployment authorized.
+- **Decision:** remove HTML overlays/captions identifying current illustrations as placeholders, concepts, or awaiting official art. Retain the actual illustrations, Hexi, colors, sizing, responsive rules, and optional local image-source hooks.
+- **Context:** Crystal explicitly likes the current pictures and requests removal of temporary labels. This supersedes earlier label-until-replacement guidance in the Mission 002 artwork handoff and design guide; those instructions are not permission to replace art now. D005 remains historical context; Mission 015 resolves its outstanding replacement direction in favor of preserving current pictures.
+- **Alternatives considered:** replacement images, raster generation, crop/paint-over edits, and CSS-only hiding would be unnecessary; all five label sources are HTML. Removing the source text avoids hidden temporary labels in accessible names.
+- **Reasoning:** satisfy the founder's creative direction with a bounded presentation change, without new assets, services, or changes to teaching or execution.
+- **Tradeoffs:** obsolete artwork flags and label-only CSS are removed. The study's temporary caption no longer occupies space; its illustration frame, contents, and responsive sizing are retained. Honest demo and unavailable-feature notices remain visible.
+- **Result:** shared department/course labels, study caption, dashboard mascot caption, and learning-path concept labels removed. No SVG artwork or Hexi component changed. Verification is recorded in the [Mission 015 review](MISSION_015_REVIEW.md); it does not claim deployment or a full accessibility audit.
+- **Related:** F07, F11, F31, F32; [artwork handoff](../ARTWORK.md), [design guide](DESIGN_SYSTEM.md), [art registry](../src/data/artwork.ts).

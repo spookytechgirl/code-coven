@@ -142,9 +142,6 @@ export function CourseIllustration({ course }: { course: Course }) {
         <DepartmentArtwork departmentId={course.departmentId} />
       )}
       <span className="pill">{course.difficulty}</span>
-      {artwork?.placeholder && (
-        <span className="artwork-label">Concept art · placeholder</span>
-      )}
     </div>
   );
 }
