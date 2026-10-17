@@ -24,6 +24,14 @@ const HumanLesson = lazy(() =>
 const AiLesson = lazy(() =>
   import("./pages/AiLesson").then((m) => ({ default: m.AiLesson })),
 );
+const VariableVault = lazy(() =>
+  import("./pages/VariableVault").then((m) => ({ default: m.VariableVault })),
+);
+const AiVariableVault = lazy(() =>
+  import("./pages/AiVariableVault").then((m) => ({
+    default: m.AiVariableVault,
+  })),
+);
 function RouteFocus() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -38,6 +46,12 @@ function RouteFocus() {
       "/learn/adults/python/first-program":
         "Introduction to Python: Your First Program",
       "/learn/ai/python/output-fundamentals": "Python Output Fundamentals",
+      "/learn/kids/python/variable-vault":
+        "The Variable Vault — Giving Names to Magic!",
+      "/learn/adults/python/variable-vault":
+        "The Variable Vault — Giving Names to Magic!",
+      "/learn/ai/python/variable-vault":
+        "The Variable Vault — Giving Names to Magic!",
       "/dashboard": "Student Dashboard",
       "/courses": "Explore Courses",
       "/academy": "The Academy",
@@ -103,6 +117,18 @@ export function App() {
             <Route
               path="adults/python/first-program"
               element={<HumanLesson audience="adults" />}
+            />
+            <Route
+              path="kids/python/variable-vault"
+              element={<VariableVault audience="kids" />}
+            />
+            <Route
+              path="adults/python/variable-vault"
+              element={<VariableVault audience="adults" />}
+            />
+            <Route
+              path="ai/python/variable-vault"
+              element={<AiVariableVault />}
             />
             <Route
               path="ai/python/output-fundamentals"

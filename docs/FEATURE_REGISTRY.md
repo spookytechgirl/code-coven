@@ -152,7 +152,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F12 — Modular curriculum types and metadata
 
-- **Status:** Implemented, including one populated Python module/lesson.
+- **Status:** Implemented, including populated output and variables modules/lessons.
 - **Purpose:** separate canonical objectives, adaptations, and course presentation.
 - **Audience:** maintainers and human/AI pilot learners.
 - **Benefit:** one print objective serves all three classroom experiences.
@@ -214,7 +214,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F17 — Shared lessons, objectives, and practical challenges
 
-- **Status:** Implemented for one print() pilot; broader beginner-to-advanced curriculum remains Planned.
+- **Status:** Implemented for output and variables lessons; broader beginner-to-advanced curriculum remains Planned.
 - **Purpose:** teach one canonical objective through differentiated explanations and tasks.
 - **Audience:** Kids, Adults, and AI/developer experiences.
 - **Benefit:** clear goal, example, practice, feedback, and explicit success criteria.
@@ -457,3 +457,18 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Accessibility:** short feedback in status regions, polite atomic completion announcement, labeled section, keyboard review/return controls, responsive card, one fresh-completion animation only, reduced-motion support, no audio/flashing/modals/forced focus.
 - **Security:** no source execution, account, personal-data collection, new storage record, or XP/badge ledger; source correctness remains exclusively the unchanged checker's decision. Browser records remain user-editable.
 - **Future improvements:** founder/learner review and real assistive-technology testing; additional lessons may opt into configurable content later. The hint recognizer does not diagnose arbitrary Python, and the local recognition is not a mastery certification.
+
+## Mission 016 classroom delivery
+
+### F37 — The Variable Vault: Python Lesson 002
+
+- **Status:** Implemented locally for Little, Junior, Adults, and AI; unpublished pending founder approval.
+- **Purpose:** teach named values, = assignment, strings/integers, variable printing, reassignment, and simple naming conventions.
+- **Audience:** Little Apprentices 6–9, Junior Spellcasters 10–13, Adults, and developers evaluating AI learners.
+- **Benefit:** six explicit objectives with differentiated explanations, knowledge checks, guided/independent quests, unlimited retries, actionable hints, and completion recognition.
+- **Location:** [canonical data](../src/data/lessons/python-variables.v1.json), [adapters](../src/data/lessons/python-variables.ts), [human classroom](../src/pages/VariableVault.tsx), [AI classroom](../src/pages/AiVariableVault.tsx), [practice](../src/components/lessons/VariablePractice.tsx), [checker](../src/learning/variables.ts), [schema](../src/learning/variables-schema.ts), [AI records](../src/learning/variables-agent.ts).
+- **Dependencies:** existing React/Router, Valibot, curriculum modules, shared examples/knowledge controls, completion card, and browser-only progress helpers; no new package or service.
+- **Accessibility:** labels, fieldsets, keyboard hint/disclosure controls, visible focus, polite feedback/celebration, existing responsive themes and reduced-motion rules. Completion has no forced scroll, audio, or time pressure.
+- **Security:** bounded text-only assignment/print model; no Python execution, public agent API, network-backed evaluation, executor connection, tool permissions, or personal-data collection. Sources/answers are not saved. Lesson 001's checker and progress semantics are retained.
+- **Future improvements:** review with learners and assistive technologies; separately approve a Potion Lab adapter and further Python syntax. Passing a task is not a mastery or retained-learning claim.
+- **Verification:** [Mission 016 review](MISSION_016_REVIEW.md), [unit tests](../tests/variables.test.ts), [browser regression](../scripts/verify-variables.cjs).

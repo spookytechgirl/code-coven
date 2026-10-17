@@ -2,7 +2,7 @@
 
 **A Little Magic. A Lot of Code.** A completely free, cozy magical coding academy. Free to learn. Free to grow. Free forever.
 
-The public academy, searchable course catalog, seven open departments, student demo dashboard, Daylight/Midnight themes, and Hexi concept illustrations work as a static React application. Mission 003 prepares it for Cloudflare Pages while preserving its design. Mission 008 classroom changes remain local and unpublished. The GitHub repository is [spookytechgirl/code-coven](https://github.com/spookytechgirl/code-coven).
+The public academy, searchable course catalog, seven open departments, student demo dashboard, Daylight/Midnight themes, and Hexi concept illustrations work as a static React application. Mission 003 prepares it for Cloudflare Pages while preserving its design. Mission 016 adds Lesson 002 locally; publication requires separate founder approval. The GitHub repository is [spookytechgirl/code-coven](https://github.com/spookytechgirl/code-coven).
 
 ## Living academy blueprint
 
@@ -14,7 +14,7 @@ The [Academy Vision](docs/ACADEMY_VISION.md) explains Crystal's founding directi
 - [Decision Log](docs/DECISION_LOG.md): recorded decisions, tradeoffs, evidence, and explicitly undocumented history.
 - [Reference Guide](docs/REFERENCE_GUIDE.md): how independent projects can study the architecture without assuming branding rights or private access.
 
-Developers and AI coding agents should follow [AGENTS.md](AGENTS.md) and maintain the affected documents alongside relevant changes. [ARTWORK.md](ARTWORK.md) and [DEPLOYMENT.md](DEPLOYMENT.md) remain the detailed asset and hosting guides. Mission 008 implements one print() pilot with Kids/Adults teaching and a downloadable AI specification. Broader curricula, Python execution, agent APIs, and capability-based progression remain Planned.
+Developers and AI coding agents should follow [AGENTS.md](AGENTS.md) and maintain the affected documents alongside relevant changes. [ARTWORK.md](ARTWORK.md) and [DEPLOYMENT.md](DEPLOYMENT.md) remain the detailed asset and hosting guides. Mission 008 implements the print() pilot; Mission 016 adds variables with Little/Junior/Adults adaptations and a downloadable AI specification. Broader curricula, Python execution, agent APIs, and capability-based progression remain Planned.
 
 ## Stack and structure
 
@@ -89,7 +89,7 @@ A current source/configuration scan found no credential-like tokens or private k
 
 ## Demo and artwork limitations
 
-Catalog lesson totals describe planned content. Python Potions now contains one complete output pilot with two Kids adaptations, an Adults lesson, and a machine-readable AI lesson. Other courses remain previews. Restricted practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
+Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Other courses remain previews. Restricted practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
 
 Mission 015 preserves all existing academy/course illustrations and Hexi while removing visitor-facing temporary artwork labels. No image was replaced, recolored, cropped, or regenerated. [ARTWORK.md](ARTWORK.md) records the label inventory and asset guidance; [Mission 015 review](docs/MISSION_015_REVIEW.md) records scope and verification. No paid services are required.
 
@@ -117,3 +117,15 @@ BASE_URL=http://127.0.0.1:4173 PLAYWRIGHT_CHANNEL=chrome node --experimental-str
 As with the original browser test, set `PLAYWRIGHT_MODULE` to your optional Playwright installation if needed. Tests cover content/schema/evaluation, retries, clipboard/download, browser completion isolation/reset, storage failure, navigation, keyboard interactions, reduced motion, CSP, and both themes at phone/tablet/laptop/desktop widths. See [AI_INTEGRATION.md](docs/AI_INTEGRATION.md) for contract details and [LEARNING_ARCHITECTURE.md](docs/LEARNING_ARCHITECTURE.md) for boundaries. No learning effectiveness or full accessibility conformance is claimed.
 
 [Mission 008 review notes and complete file list](docs/MISSION_008_REVIEW.md).
+
+## Mission 016 · The Variable Vault
+
+**Implemented locally; unpublished:** Lesson 002 — The Variable Vault — Giving Names to Magic! introduces variables, assignment, strings/integers, printing named values, reassignment, and naming rules. Existing Lesson 001 links onward without requiring completion or changing its checker/progress records.
+
+- Little / Junior: `/learn/kids/python/variable-vault?band=little` or `?band=junior`.
+- Adults: `/learn/adults/python/variable-vault`.
+- AI data and assessments: `/learn/ai/python/variable-vault`.
+
+Each human variant has six locally tracked activities with retries, hints, and a Hexi completion card. The variables checker recognizes a bounded assignment/print subset; **it does not run Python or contact an executor**. Lesson 001's checker remains unchanged. No account, API, name/age collection, source persistence, or dashboard reward is added. See [Mission 016 review](docs/MISSION_016_REVIEW.md), [Learning Architecture](docs/LEARNING_ARCHITECTURE.md), and [AI Integration](docs/AI_INTEGRATION.md).
+
+Run `pnpm test:variables` for the eight variable test groups and `pnpm test:lessons` for the existing ten lesson tests. The optional `scripts/verify-variables.cjs` uses the same external Playwright/Chrome setup documented above; with a running production preview, set `BASE_URL` and run it alongside the existing lesson/teaching browser regressions. It checks human activities, downloads, storage isolation/failure, keyboard behavior, reflow, reduced motion, local-only requests, and a local simulation of the existing Pages headers. It adds no application dependency or hosting setting.

@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowRight, BookOpen, Sparkles } from "lucide-react";
 import { DepartmentArtwork } from "../components/DepartmentArtwork";
 import { learningPaths, lessonRoutes } from "../data/lessons/python-output";
+import { variableRoutes } from "../data/lessons/python-variables";
 import { NotFound } from "./Placeholder";
 export function LearningEntry() {
   return (
@@ -36,10 +37,10 @@ export function LearningEntry() {
       <aside className="lesson-note">
         <BookOpen size={21} />
         <p>
-          One complete pilot lesson: use Python’s print() function to display
-          text. Human activities use a limited text checker. The AI classroom
-          provides validated downloadable data and sample evaluations, not an
-          agent service.
+          Two Python lessons: display text with print(), then give values names
+          in the Variable Vault. Human activities use a limited text checker.
+          The AI classroom provides validated downloadable data and sample
+          evaluations, not an agent service.
         </p>
       </aside>
     </section>
@@ -54,7 +55,7 @@ export function PathOverview() {
       <Link className="text-link" to="/learn">
         ← Switch learning paths
       </Link>
-      <span className="eyebrow">YOUR PYTHON ADVENTURE · LESSON 001</span>
+      <span className="eyebrow">YOUR PYTHON ADVENTURE · LESSONS 001–002</span>
       <h1>{path.title}</h1>
       <p className="page-intro">{path.experience}</p>
       {path.id === "kids" ? (
@@ -104,6 +105,18 @@ export function PathOverview() {
           </Link>
         </article>
       )}
+      <section className="card pilot-summary">
+        <span className="eyebrow">LESSON 002 · PYTHON VARIABLES</span>
+        <h2>The Variable Vault — Giving Names to Magic!</h2>
+        <p>
+          Name text and numbers, print their values, and change what a name
+          holds. Lesson 001 is a helpful first step; either lesson is open to
+          everyone.
+        </p>
+        <Link className="button" to={variableRoutes[path.id]}>
+          Open the Variable Vault <ArrowRight size={17} />
+        </Link>
+      </section>
       <p className="learning-privacy">
         {path.id === "kids"
           ? "Age bands guide difficulty, not access. Choose either; no age, name, or other personal information is requested. No public profiles, chat, leaderboards, streaks, or rewards are part of this lesson."

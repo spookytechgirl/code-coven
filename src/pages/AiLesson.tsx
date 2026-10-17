@@ -165,6 +165,9 @@ export function AiLesson() {
           account identity is represented.
         </p>
       </section>
+      <Link className="button secondary" to="/learn/ai/python/variable-vault">
+        Lesson 002 · Open the Variable Vault
+      </Link>
       <Link className="button" to="/learn">
         Explore another classroom <ArrowRight size={17} />
       </Link>

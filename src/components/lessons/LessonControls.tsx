@@ -11,10 +11,12 @@ export function CodeExample({
   code,
   output,
   copy = true,
+  outputNotice = "The quote marks are not displayed. print normally adds a newline.",
 }: {
   code: string;
   output?: string;
   copy?: boolean;
+  outputNotice?: string;
 }) {
   const [copyStatus, setCopyStatus] = useState("");
   async function copyCode() {
@@ -66,9 +68,7 @@ export function CodeExample({
         <div className="expected-output">
           <strong>Expected output in Python</strong>
           <pre>{output}</pre>
-          <small>
-            The quote marks are not displayed. print normally adds a newline.
-          </small>
+          <small>{outputNotice}</small>
         </div>
       )}
     </div>

@@ -1,3 +1,4 @@
+import { variablesLesson } from "./lessons/python-variables.ts";
 import { pythonLesson } from "./lessons/python-output.ts";
 import type { Course, Department } from "../types/curriculum";
 export const courses: Course[] = [
@@ -26,6 +27,11 @@ export const courses: Course[] = [
         id: "python-output-basics",
         title: "Your first Python output",
         lessons: [pythonLesson],
+      },
+      {
+        id: "python-variable-basics",
+        title: "Names and values in the Variable Vault",
+        lessons: [variablesLesson],
       },
     ],
     accent: "purple",

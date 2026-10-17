@@ -10,7 +10,8 @@
     "preview": "vite preview --host 127.0.0.1",
     "check:format": "prettier --check src scripts tests vite.config.ts tsconfig.json index.html",
     "test:build": "node scripts/verify-build.mjs",
-    "test:lessons": "node --experimental-strip-types --test tests/lessons.test.ts"
+    "test:lessons": "node --experimental-strip-types --test tests/lessons.test.ts",
+    "test:variables": "node --experimental-strip-types --test tests/variables.test.ts"
   },
   "dependencies": {
     "lucide-react": "1.55.0",

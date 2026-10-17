@@ -1,0 +1,293 @@
+{
+  "lessonId": "python-variables-002",
+  "specificationVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "courseId": "python-potions",
+  "departmentId": "potions",
+  "moduleId": "python-variable-basics",
+  "conceptId": "python.variables.literal-assignment",
+  "title": "The Variable Vault — Giving Names to Magic!",
+  "learningObjectives": [
+    {
+      "id": "python.variables.meaning",
+      "description": "Explain that a variable is a name referring to a value."
+    },
+    {
+      "id": "python.variables.assignment",
+      "description": "Assign a value to a name using =."
+    },
+    {
+      "id": "python.variables.types",
+      "description": "Store a string and an integer."
+    },
+    {
+      "id": "python.variables.printing",
+      "description": "Display a variable’s value with print()."
+    },
+    {
+      "id": "python.variables.reassignment",
+      "description": "Change the value associated with a name."
+    },
+    {
+      "id": "python.variables.names",
+      "description": "Recognize simple valid names and use readable snake_case."
+    }
+  ],
+  "prerequisites": ["python-output-001"],
+  "conceptExplanations": [
+    "A variable is a name referring to a value. The labeled-box picture is a learning aid: Python names refer to objects; they are not physical boxes.",
+    "Use = for assignment: familiar = \"Hexi\" associates a string with a name. potions = 3 associates an integer. Assignment itself produces no printed output.",
+    "print(familiar) displays the stored value; print(\"familiar\") displays the literal name. Names must be assigned before use and are case-sensitive.",
+    "Reassignment makes the same name refer to a new value. Earlier output does not change. Print before and after the assignment to observe both values.",
+    "Python names can start with a letter or underscore, followed by letters, digits, or underscores. No spaces, hyphens, or reserved keywords. Lowercase snake_case is a convention; uppercase is legal. This activity supports ASCII names up to 40 characters and reserves print to avoid shadowing it.",
+    "This is a bounded source-text model, not a Python interpreter. Only literal strings, small integers, assignments, and print(variable) are recognized. Other valid Python forms can be unsupported. No source is executed or transmitted."
+  ],
+  "examples": [
+    {
+      "code": "familiar = \"Hexi\"\nprint(familiar)",
+      "expectedOutput": "Hexi\n",
+      "explanation": "The name familiar refers to the string Hexi. print(familiar) displays its value, not its name."
+    },
+    {
+      "code": "potions = 3\nprint(potions)",
+      "expectedOutput": "3\n",
+      "explanation": "3 is an integer. \"3\" would be a string; they look alike when printed but have different types."
+    },
+    {
+      "code": "potions = 2\nprint(potions)\npotions = 5\nprint(potions)",
+      "expectedOutput": "2\n5\n",
+      "explanation": "Statements are read from top to bottom. Reassignment changes what the same name refers to; it does not print anything by itself."
+    }
+  ],
+  "audienceAdaptations": [
+    {
+      "id": "kids-little",
+      "audience": "kids",
+      "route": "/learn/kids/python/variable-vault",
+      "title": "The Variable Vault — Giving Names to Magic!"
+    },
+    {
+      "id": "kids-junior",
+      "audience": "kids",
+      "route": "/learn/kids/python/variable-vault",
+      "title": "The Variable Vault — Giving Names to Magic!"
+    },
+    {
+      "id": "adults",
+      "audience": "adults",
+      "route": "/learn/adults/python/variable-vault",
+      "title": "The Variable Vault — Giving Names to Magic!"
+    },
+    {
+      "id": "ai",
+      "audience": "ai",
+      "route": "/learn/ai/python/variable-vault",
+      "title": "The Variable Vault — Giving Names to Magic!"
+    }
+  ],
+  "practiceTasks": [
+    {
+      "id": "label",
+      "kind": "text",
+      "instruction": "Give a variable the string \"Hexi\", then print that variable. Use one assignment and one print on separate lines.",
+      "expectedOutput": "Hexi\n"
+    },
+    {
+      "id": "number",
+      "kind": "integer",
+      "instruction": "Store the integer 3 in a variable, then print that variable. Do not put the number in quotes. Use one assignment and one print.",
+      "expectedOutput": "3\n"
+    },
+    {
+      "id": "change",
+      "kind": "reassign",
+      "instruction": "Store the integer 2 in a variable and print it. Reassign the same name to the integer 5, then print it again. Use two assignments and two prints.",
+      "expectedOutput": "2\n5\n"
+    },
+    {
+      "id": "inventory",
+      "kind": "inventory",
+      "instruction": "Create two different variables: a string with the value \"Moon Tea\" and an integer with the value 4. Print the text variable, then the number variable, on separate lines. Use two assignments and two prints.",
+      "expectedOutput": "Moon Tea\n4\n"
+    }
+  ],
+  "assessment": {
+    "method": "restricted-variables-pattern-v1",
+    "successCriteria": [
+      "Use the task’s required value types, assignments, and variable prints.",
+      "Match expected output exactly, including one newline per print.",
+      "For reassignment, print the same variable before and after changing it."
+    ],
+    "evaluationCriteria": [
+      "At most 500 characters and 12 lines; no indented statements.",
+      "ASCII identifiers up to 40 characters, plain single/double-quoted strings without escapes, and integers from -9999 to 9999.",
+      "Reject all unsupported forms, imports, expressions, calls, and direct-literal prints without executing source.",
+      "Passing establishes only task-pattern performance, not mastery, execution, or permanent learning."
+    ],
+    "testCases": [
+      {
+        "id": "text-double",
+        "taskId": "label",
+        "source": "familiar = \"Hexi\"\nprint(familiar)",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "text-single",
+        "taskId": "label",
+        "source": "pet_name = 'Hexi'\nprint(pet_name)",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "integer",
+        "taskId": "number",
+        "source": "potions = 3\nprint(potions)",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "reassignment",
+        "taskId": "change",
+        "source": "potions = 2\nprint(potions)\npotions = 5\nprint(potions)",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "inventory",
+        "taskId": "inventory",
+        "source": "potion_name = \"Moon Tea\"\nbottles = 4\nprint(potion_name)\nprint(bottles)",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "wrong-value",
+        "taskId": "label",
+        "source": "familiar = \"hexi\"\nprint(familiar)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "output-mismatch"
+      },
+      {
+        "id": "quoted-name",
+        "taskId": "label",
+        "source": "familiar = \"Hexi\"\nprint(\"familiar\")",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "print-variable"
+      },
+      {
+        "id": "undefined",
+        "taskId": "label",
+        "source": "print(familiar)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "undefined-name"
+      },
+      {
+        "id": "case-mismatch",
+        "taskId": "label",
+        "source": "familiar = \"Hexi\"\nprint(Familiar)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "undefined-name"
+      },
+      {
+        "id": "invalid-name",
+        "taskId": "number",
+        "source": "3potions = 3\nprint(3potions)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "invalid-name"
+      },
+      {
+        "id": "keyword",
+        "taskId": "number",
+        "source": "class = 3\nprint(class)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "invalid-name"
+      },
+      {
+        "id": "equals-comparison",
+        "taskId": "number",
+        "source": "potions == 3\nprint(potions)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "assignment"
+      },
+      {
+        "id": "missing-quotes",
+        "taskId": "label",
+        "source": "familiar = Hexi\nprint(familiar)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "quotes"
+      },
+      {
+        "id": "string-not-integer",
+        "taskId": "number",
+        "source": "potions = \"3\"\nprint(potions)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "task-shape"
+      },
+      {
+        "id": "no-reassignment",
+        "taskId": "change",
+        "source": "first = 2\nprint(first)\nsecond = 5\nprint(second)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "task-shape"
+      },
+      {
+        "id": "late-prints",
+        "taskId": "change",
+        "source": "potions = 2\npotions = 5\nprint(potions)\nprint(potions)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "task-shape"
+      },
+      {
+        "id": "literal-shortcut",
+        "taskId": "number",
+        "source": "print(3)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "print-variable"
+      },
+      {
+        "id": "import-blocked",
+        "taskId": "number",
+        "source": "import os\npotions = 3\nprint(potions)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported-syntax"
+      },
+      {
+        "id": "expression-blocked",
+        "taskId": "number",
+        "source": "potions = 1 + 2\nprint(potions)",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported-syntax"
+      },
+      {
+        "id": "empty",
+        "taskId": "number",
+        "source": " ",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "empty"
+      }
+    ]
+  },
+  "errorFeedback": {
+    "empty": "Start with an assignment, then print the variable on a new line.",
+    "unsupported-syntax": "This checker accepts only one literal assignment or print(variable) per line: plain quoted strings and integers from -9999 to 9999. No expressions, escapes, comments, or other Python forms are supported.",
+    "output-mismatch": "The supported statements are recognized, but their inferred output differs. Check values, case, spaces, and statement order.",
+    "too-long": "Keep this small exercise to 500 characters and 12 lines or fewer.",
+    "correct": "Your written assignments match the task and expected output under this restricted checker. Python was not executed.",
+    "invalid-name": "Use an ASCII letter or underscore first, followed by letters, digits, or underscores (up to 40 characters here). Avoid Python keywords and the name print. Lowercase snake_case is recommended, not required.",
+    "assignment": "Use a single = for assignment. == compares values; it does not assign them. This activity does not support :=.",
+    "quotes": "Use a plain quoted string, like \"Hexi\", or an integer, like 3. Copying another variable is valid Python but outside this exercise’s literal-only checker.",
+    "undefined-name": "Assign this variable before printing it. Names are case-sensitive: potions and Potions are different names.",
+    "print-variable": "Print one assigned variable: print(familiar). A quoted name prints literal text. Expressions, multiple arguments, and direct literals are outside this task.",
+    "indentation": "Start these simple statements at the left edge. This lesson does not use indented blocks.",
+    "task-shape": "Follow this task’s required assignments and prints. Reassignment needs the same variable twice, with one print before and one after the change; each other task needs its stated value types."
+  },
+  "capabilityIdentifiers": [
+    "python.variables.literal-assignment",
+    "python.variables.reassignment"
+  ],
+  "safety": {
+    "execution": "none",
+    "permissions": [],
+    "performanceClaim": "Passing demonstrates performance under a restricted text checker, not Python execution, mastery, humanlike understanding, or retained agent learning."
+  }
+}

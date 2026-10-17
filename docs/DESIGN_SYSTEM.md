@@ -87,3 +87,9 @@ A fresh completion gets a single 450 ms fade/small rise. A restored completion i
 **Educational transparency:** retain a brief separate practice notice: “This is guided practice. It checks your written spell. It does not run Python.” Do not bury this clarification, but keep it outside the main celebration so the celebration stays warm. Older learners retain the original fuller explanation.
 
 A persistent polite, atomic status region announces the completion title/recognition on a state change. The card is a labeled section, decorative stars are hidden from assistive technology, and Review This Lesson targets a focusable lesson heading without clearing progress. Return to Learning Path uses the real Kids path; no nonexistent second lesson is linked. Automated checks verify these semantics and keyboard behavior, not actual listening with every screen reader or educational effectiveness with children.
+
+## Mission 016 · The Variable Vault
+
+**Implemented locally:** existing classroom cards, palette, code examples, keyboard controls, Hexi artwork, progress sidebar, and completion component serve Lesson 002. No illustration, theme token, grid, or breakpoint was redesigned. Little's instructions stay short; checker limits are placed in native expandable details beneath an always-visible notice that Python does not run. Hints use real buttons with `aria-expanded`/`aria-controls`, inputs have associated labels, and feedback uses status regions with line hints where available.
+
+Six shared objectives have plain-language Little labels. Examples explain that assignments print nothing and each print shows the current value. Completion is gated on all six activities, announced politely, and static on restore. The existing reduced-motion CSS also applies to the new celebration. Browser checks are evidence for the tested sizes and interactions, not a full screen-reader or learning-effectiveness certification.

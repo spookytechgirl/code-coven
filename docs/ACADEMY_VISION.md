@@ -1,6 +1,6 @@
 # Academy Vision
 
-Last reviewed: 2026-10-15 · Application baseline: v0.3.0 + Mission 008 local pilot
+Last reviewed: 2026-10-17 · Application baseline: Mission 015 + Mission 016 local lessons
 
 ## Purpose and authority
 
@@ -22,7 +22,7 @@ This blueprint explains both what exists and why future work matters. Current im
 
 ## Three audiences
 
-**Implemented:** a three-path selector and one shared Python print() pilot, with Little/Junior Kids adaptations, an Adults classroom, and a downloadable validated AI lesson. Full multi-course audience pathways remain **Planned**. No agent API, age collection, or age gating exists.
+**Implemented:** a three-path selector and two shared Python lessons (output and variables), with Little/Junior Kids adaptations, an Adults classroom, and a downloadable validated AI lesson. Full multi-course audience pathways remain **Planned**. No agent API, age collection, or age gating exists.
 
 - **Code Coven for Kids:** Little Apprentices (ages 6–9) and Junior Spellcasters (ages 10–13), with distinct introductory activities now implemented; broader audience testing and support policies remain Planned.
 - **Code Coven for Adults:** flexible entry points, practical paths, and progressively demanding work without assuming every adult starts at the same level.
@@ -48,7 +48,7 @@ Study the separation of curriculum data, presentation, and learning evidence. Do
 
 ## Founder decisions still needed
 
-1. Mission 008 selects print() across all three experiences as the first pilot. Which concept/path should follow, and how should the pilot be evaluated with real learners?
+1. Mission 016 selects variables as Lesson 002 after print(). Which concept should follow, and how should both lessons be evaluated with real learners?
 2. What reading, interaction, supervision, and privacy expectations should distinguish the two children's pathways?
 3. How should older learners choose or demonstrate readiness without restrictive age assumptions?
 4. What should adult pathways emphasize: general foundations, practical projects, career goals, or a combination?
@@ -61,3 +61,7 @@ Beyond the bounded pilot specified by Mission 008, these are unresolved decision
 ## Maintenance
 
 Update this document when mission, governance, audiences, or guiding principles change. Keep implementation details in the registry and source, design rules in the [Design System](DESIGN_SYSTEM.md), and decision evidence in the [Decision Log](DECISION_LOG.md). Do not rewrite history to match a later implementation.
+
+## Mission 016 scope
+
+**Implemented locally:** the Variable Vault is the second Python lesson for all pathways, with a safe restricted source-text checker, six explicit shared objectives, differentiated practice, and browser-only completion. This expands the lesson content, not platform execution privileges or trusted mastery claims. The broader curriculum and learner validation remain Planned. Founder approval is required before publication.

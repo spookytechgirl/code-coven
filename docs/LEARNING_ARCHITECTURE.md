@@ -1,10 +1,10 @@
 # Learning Architecture
 
-Last reviewed: 2026-10-15 · Baseline: v0.3.0 + Mission 008 local pilot
+Last reviewed: 2026-10-17 · Baseline: Mission 015 + Mission 016 local lessons
 
 ## Verified implementation boundary
 
-**Implemented:** the existing hierarchy now contains one Python output module with one canonical lesson and four human/data adaptations (Little, Junior, Adults, AI). Kids and Adults have real knowledge checks and restricted text practice; AI has a versioned validated specification, deterministic sample evaluations, and a non-operational future contract. **Not implemented:** Python execution, trusted capability tracking, a public agent API, or multi-course audience curricula.
+**Implemented:** the hierarchy contains two Python modules: output (Lesson 001) and variables (Lesson 002), each with Little, Junior, Adults, and AI adaptations. Kids and Adults have real knowledge checks and restricted text practice; AI has a versioned validated specification, deterministic sample evaluations, and a non-operational future contract. **Not implemented:** Python execution, trusted capability tracking, a public agent API, or multi-course audience curricula.
 
 ```text
 Department: potions
@@ -116,3 +116,17 @@ The [presentation helper](../src/learning/feedback.ts) consumes the existing che
 A newly completed attempt can animate once; an already completed lesson restores a static celebration. Reset removes the current variant's progress using the unchanged helper and hides the celebration until all activities are completed again. Review focuses the lesson heading without resetting anything. Return navigates to `/learn/kids`, not a nonexistent Lesson 002.
 
 **Educational principles:** short actionable explanations reduce overwhelm; recognizing completed work need not create pressure, artificial urgency, forced streaks, or manipulative rewards. Celebrate what this guided practice establishes while separately explaining that no Python was executed. Full Python execution, formal achievement tracking, trusted capability assessment, and broader audience validation remain Planned. These boundaries are useful reference patterns for independent projects such as Alignment Academy; they imply no shared ownership, private access, or branding permission.
+
+## Mission 016 · Variables lesson and safe checker
+
+**Implemented locally:** [variables data](../src/data/lessons/python-variables.v1.json) supplies lesson `python-variables-002`, content/specification v1.0.0, six objectives, three examples, four shared tasks, and 20 deterministic cases. Module `python-variable-basics` follows `python-output-basics` in Python Potions. Lesson 001 is a recommended prerequisite, never an access lock.
+
+[Human adapters](../src/data/lessons/python-variables.ts) distinguish Little's short labeled-box explanations and guided starters, Junior's shorter independent challenges, and Adults' two-variable inventory and reassignment practice. Each has six required activities: three checks plus three quests for Kids, four checks plus two quests for Adults. All get a gated Hexi celebration. [VariableVault](../src/pages/VariableVault.tsx) reuses shared knowledge checks, examples, completion card, progress storage, themes, and responsive classroom layout. A small optional example-output notice keeps Lesson 001's existing default copy unchanged.
+
+[checkVariableAnswer](../src/learning/variables.ts) is a bounded text model, not Python execution. Supported lines are literal assignment and `print(variable)`. It supports plain matching single/double-quoted strings without escapes, integers from -9999 to 9999, and ASCII names up to 40 characters (excluding keywords and `print`). Input is bounded at 500 characters and 12 lines. Imports, loops, expressions, comments, indented blocks, calls, escapes, prompts, and other forms are rejected. Python itself allows many of these forms; rejection here does not claim they are invalid Python.
+
+Task checks require the declared value types and statement shapes, not merely a matching printed string. Reassignment needs the same name printed before and after its changed numeric value. Values are tracked in a local Map only to infer this narrow pattern's output; source is never evaluated, executed, or sent anywhere. The old [print checker](../src/learning/evaluate.ts) and Lesson 001 schemas are unchanged.
+
+Each lesson/variant keeps separate existing progress keys; only completed activity IDs and record/content versions persist. No answers, code, names, ages, timestamps, account synchronization, XP, or AI retention are added. Already-completed activities remain complete until reset. Reset clears only the active Lesson 002 variant and its current form state. Restore uses a static celebration; fresh completion has the existing reduced-motion-aware entrance.
+
+**Planned:** eventual integration with a separately reviewed real Python Potion Lab. The versioned examples and expected outputs can be adapter inputs in future authorized work, but there is no runner import, iframe bridge, API call, executor URL, or deployment in this lesson. This mission neither imports unpublished Potion Lab work nor changes its approved isolation/security architecture. Execution approval must be separate from lesson publication.

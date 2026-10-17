@@ -137,9 +137,9 @@ export function CourseDetail() {
         <article className="card detail-placeholder">
           <h2>Your first Python classroom is open</h2>
           <p>
-            One implemented pilot lesson teaches print() through Kids, Adults,
-            and AI experiences. The remaining lessons are planned. Practice
-            checks text only; no Python interpreter runs.
+            Two implemented lessons teach print() and variables through Kids,
+            Adults, and AI experiences. The remaining lessons are planned.
+            Practice checks text only; no Python interpreter runs.
           </p>
           {course.modules.map((module) => (
             <section key={module.id}>

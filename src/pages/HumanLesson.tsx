@@ -156,6 +156,17 @@ function HumanClassroom({ variant }: { variant: LessonVariant }) {
             outputNotice={teaching?.outputNotice}
             onPass={() => markComplete("practice")}
           />
+          <nav className="lesson-path-nav" aria-label="Next Python lesson">
+            <Link
+              to={
+                variant.audience === "adults"
+                  ? "/learn/adults/python/variable-vault"
+                  : `/learn/kids/python/variable-vault?band=${variant.band ?? "little"}`
+              }
+            >
+              Lesson 002 · Open the Variable Vault <ArrowRight size={17} />
+            </Link>
+          </nav>
           {teaching && (
             <p
               className="sr-only"

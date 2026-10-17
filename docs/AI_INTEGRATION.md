@@ -57,3 +57,11 @@ Evaluation only demonstrates successful task performance under this restricted r
 **Planned:** an authorized integration may deliver lessons, negotiate versions, validate bounded submissions, and return auditable evaluations. Authentication/authorization, rate/resource limits, retention, provenance, evaluator isolation, and human review would need independent design and approval. This pilot selects no provider, model, storage platform, or server runtime and provisions no service.
 
 Alignment Academy or another independent project can study these boundaries and tests. It does not inherit branding rights, private access, educational validation, or compatibility guarantees. See [Reference Guide](REFERENCE_GUIDE.md), [Learning Architecture](LEARNING_ARCHITECTURE.md), and [Feature Registry](FEATURE_REGISTRY.md).
+
+## Mission 016 · Variable exercises
+
+Lesson `python-variables-002` has a separate strict [schema](../src/learning/variables-schema.ts) and versioned [JSON](../src/data/lessons/python-variables.v1.json). Specification/content versions are 1.0.0; checker identity is `restricted-variables-pattern-v1`. Unknown versions/properties, cross-lesson requests, unknown task IDs, and nonempty permissions fail validation. Lesson 001's schemas and examples are unchanged.
+
+Task IDs are `label`, `number`, `change`, and `inventory`; each declares a required pattern kind and exact newline-terminated output. [evaluateVariableRequest](../src/learning/variables-agent.ts) validates a local request and calls the bounded checker. Records include versions, lesson/task IDs, checker identity, pass/fail, feedback, optional line, expected/inferred output, `executed: false`, and a limited-performance claim. Twenty declared sample cases are downloadable from the AI classroom. These are samples, not real external agent attempts or a persistent learning ledger.
+
+No API endpoint, credentials, registration, code execution, filesystem/network capability, agent tool grant, or remote executor is provided. Source is checked as data; future Potion Lab integration needs separate authorization and must retain the approved isolation design. See [Learning Architecture](LEARNING_ARCHITECTURE.md#mission-016--variables-lesson-and-safe-checker) for exact subset limits and [Mission 016 review](MISSION_016_REVIEW.md) for fresh verification.

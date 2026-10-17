@@ -195,3 +195,15 @@ For future entries, copy the field structure above, use the actual recorded/adop
 - **Tradeoffs:** obsolete artwork flags and label-only CSS are removed. The study's temporary caption no longer occupies space; its illustration frame, contents, and responsive sizing are retained. Honest demo and unavailable-feature notices remain visible.
 - **Result:** shared department/course labels, study caption, dashboard mascot caption, and learning-path concept labels removed. No SVG artwork or Hexi component changed. Verification is recorded in the [Mission 015 review](MISSION_015_REVIEW.md); it does not claim deployment or a full accessibility audit.
 - **Related:** F07, F11, F31, F32; [artwork handoff](../ARTWORK.md), [design guide](DESIGN_SYSTEM.md), [art registry](../src/data/artwork.ts).
+
+## D016 — Add a differentiated variables lesson without granting execution
+
+- **Date:** 2026-10-17, Mission 016 founder instruction and local implementation.
+- **Status:** Implemented locally; publication awaits founder approval.
+- **Decision:** add Lesson 002 in a separate local checkout based on Mission 015, using versioned shared content and existing classroom/progress components. Keep Lesson 001's checker contract unchanged.
+- **Context:** the founder requests Little, Junior, Adults, and deterministic AI variables exercises, with eventual Potion Lab compatibility but no exposure or modification of the unfinished executor.
+- **Alternatives considered:** importing unpublished runtime work would expand security/release scope; exact full-source matching would reject equivalent names/quotes; a general interpreter is unnecessary for bounded literal assignments and variable prints.
+- **Reasoning:** a small, explicitly described text model can recognize assignment types and order without running untrusted code. Task-shape checks prevent direct-literal shortcuts from satisfying variable objectives.
+- **Tradeoffs:** many valid Python programs are unsupported; ASCII/small integer bounds are checker limits, not Python language limits. A labeled-box metaphor helps beginners, with clarification that Python names refer to values. Local completion is editable and not trusted mastery evidence.
+- **Result:** two curriculum modules, differentiated six-activity human variants, 20 AI sample cases and downloadable records, namespace-isolated completion, hints, and a gated Hexi card. No executor integration, paid service, account system, or production change.
+- **Related:** F17–F24, F32–F37; [architecture](LEARNING_ARCHITECTURE.md), [AI integration](AI_INTEGRATION.md), [review](MISSION_016_REVIEW.md).
