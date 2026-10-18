@@ -15,7 +15,7 @@ Department: potions
                   └─ Challenges: hello, welcome (no XP awards)
 ```
 
-[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; one course module list remains empty and catalog lesson totals remain planned counts.
+[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; all seven courses now have introductory modules locally (Software Sorcery awaits founder publication approval) and catalog lesson totals remain planned counts.
 
 The dashboard's `demoProgress` still represents sample numbers, not the pilot's local completion. No lesson completion changes dashboard XP or percentages.
 
@@ -194,3 +194,40 @@ Each experience has three checks and three practicals: classify a written-rule g
 The tiny set does not mathematically determine a trained model; its prediction is supplied as authored evidence. No classifier is trained or called. Narrow coverage motivates evaluation without claiming that more data alone proves fairness or reliability. Training, inference and separate updates are distinguished; fluent generation is not guaranteed truth or evidence of consciousness.
 
 [Finite checking](../src/learning/intelligence.ts) compares supplied IDs and rejects unsupported contract fields/versions. Existing progress helpers store completion IDs/versions only. Practical records are memory-only, capped at 20 for download and cleared on reload/navigation/full reset. Individual reset preserves previously earned completion; full reset isolates current lesson/variant. No answers or personal data are sent or persisted. [Small catalog metadata](../src/data/lessons/intelligence-entry.ts) prevents eager loading of full new lesson content; tests verify parity. Earlier lesson source/helpers/artwork/security/executor boundaries remain unchanged.
+
+## Mission 017F · Project engineering beyond instructions
+
+**Implemented locally; awaiting publication approval:** sanctum → sanctum-path → software-sorcery → software-project-basics → software-spellbook-001. Six shared objectives cover software/app purpose, requirements, iterative lifecycle, components, quality/feedback and version control/collaboration. No new prerequisite gate.
+
+Three practicals per variant assess (1) small useful feature scope, keyboard quality requirement and clarification of missing-item behavior; (2) screen/storage/lookup responsibilities, save-before-lookup dependency and a cycle including retesting; (3) a first-record lookup defect, tests for both known items and the agreed missing case, plus truthful version/review/release evidence. Little learners use Hexi’s fictional treat boxes. Adults use a fictional equipment tracker and learn functional/nonfunctional requirements and MVP tradeoffs. AIs explicitly avoid invented requirements or unobserved test passes.
+
+The finite checker compares three supplied choice IDs, never runs code, Git or a test suite, and never changes a student repository. Simulation disclosures distinguish educational checks from real development tools. Strict v1 contracts, original progress/reset helpers, ephemeral session records and the gated reduced-motion-aware celebration follow existing patterns. See [review](MISSION_017F_REVIEW.md).
+
+## Mission 017F · Current introductory inventory
+
+This table supersedes earlier missions’ historical remaining-course counts. Every existing department/course has an introduction locally. Baseline presence means verified in GitHub source at Mission 017E, not fresh live Cloudflare verification. **Software Sorcery is local only and awaits founder publication approval.** Catalog lesson totals remain planned scope, not implemented counts.
+
+| Department | Existing course | Implemented introductory lessons | Status in this mission |
+|---|---|---|---|
+| Cottage | Programming Fundamentals / Your First Spell | Thinking Like a Programmer | Present in verified GitHub baseline; preserved |
+| Potions | Python Potions | Lesson 001 output; Lesson 002 Variable Vault | Present in verified GitHub baseline; preserved |
+| Workshop | Web Enchantment | The Anatomy of a Magical Web Page | Present in verified GitHub baseline; preserved |
+| Library | Algorithm Alchemy | The Alchemist’s Recipe | Present in verified GitHub baseline; preserved |
+| Observatory | AI Fundamentals | The Familiar’s First Intelligence | Present in verified GitHub baseline; preserved |
+| Tower | Cybersecurity Charms | The Guardian’s First Shield | Present in verified GitHub baseline; preserved |
+| Sanctum | Software Sorcery | The Software Spellbook | **Implemented locally; unpublished by this mission** |
+
+Seven courses, eight individual lessons, four audience adaptations per lesson. This completes the Great Classroom Awakening’s introductory local coverage, not the full curriculum, trusted mastery progression or execution platform. No later course/lesson implementation is included.
+
+
+## Mission 017F · Final publication polish
+
+**Implemented locally; publication pending:** the shared Software Sorcery course
+page now describes the available introductory lesson and its four pathway links,
+without visitor-facing approval-status wording. This copy is suitable for the
+proposed release; it does not establish that a deployment has occurred. The
+verified public source baseline remains Mission 017E
+(`b39c8b5ed040ab380de1a28170cf0e13435c7215`). Software Sorcery is locally
+ready for founder approval; no staging, commit, push or deployment is authorized.
+All other lesson content, artwork, progress, accessibility and security behavior
+remain unchanged. Fresh verification is recorded in the external release packet.

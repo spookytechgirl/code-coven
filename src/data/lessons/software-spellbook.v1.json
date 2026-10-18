@@ -1,0 +1,1721 @@
+{
+  "specificationVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "lessonId": "software-spellbook-001",
+  "courseId": "software-sorcery",
+  "moduleId": "software-project-basics",
+  "departmentId": "sanctum",
+  "title": "The Software Spellbook — From Magical Ideas to Working Applications",
+  "prerequisites": [],
+  "learningObjectives": [
+    {
+      "id": "software-goal-1",
+      "description": "Explain software and how applications help users solve problems."
+    },
+    {
+      "id": "software-goal-2",
+      "description": "Turn a user need into clear, checkable software requirements."
+    },
+    {
+      "id": "software-goal-3",
+      "description": "Describe Plan → Build → Test → Improve → Release as an iterative development cycle."
+    },
+    {
+      "id": "software-goal-4",
+      "description": "Divide an application into manageable components with clear responsibilities."
+    },
+    {
+      "id": "software-goal-5",
+      "description": "Use testing, debugging and user feedback to check and improve software."
+    },
+    {
+      "id": "software-goal-6",
+      "description": "Explain how version control, collaboration and reviews support ongoing projects."
+    }
+  ],
+  "variants": [
+    {
+      "id": "kids-little",
+      "audienceLabel": "Little Apprentices · ages 6–9",
+      "intro": "Hexi: Help me build the Great Goblin Treat Tracker! It is a pretend app for remembering my treat boxes. We will plan it, give its parts jobs, and find a story bug. No real code needed.",
+      "sections": [
+        {
+          "title": "An app helps with a problem",
+          "paragraphs": [
+            "Software is instructions and other information a computer uses. An app is software that helps with a job. Hexi forgets which pretend box holds his treats!"
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Decide what it must do",
+          "paragraphs": [
+            "Our app should save a treat name and its box, then show the box when asked. That is a clear goal. Fancy music can wait."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Plan, build, test, improve, release",
+          "paragraphs": [
+            "Plan what is needed. Build a small version. Test it. Improve what is wrong, then check again. Release means share the checked version with its users. You can go around again."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Give each part a clear job",
+          "paragraphs": [
+            "One part shows the screen. One remembers treat boxes. One looks up the right box. Small parts with clear jobs are easier to change."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Find bugs and listen to users",
+          "paragraphs": [
+            "A bug is a mistake. If the app shows the wrong box, compare the answer with the treat list. Try a known treat and a missing treat. Ask users what was confusing."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Remember changes and work together",
+          "paragraphs": [
+            "A tool called Git can record chosen sets of changes, like labeled pages in our project’s history. A teammate can help review a change. A saved version can still have bugs. No account is needed here."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "little-check-1",
+          "prompt": "What must Hexi’s treat app do?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Play music only",
+              "correct": false,
+              "feedback": "Hexi: Try again. Hexi needs to save and find his treat box."
+            },
+            {
+              "id": "choice-1",
+              "text": "Save a treat name and box, then show its box",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Hexi needs to save and find his treat box."
+            },
+            {
+              "id": "choice-2",
+              "text": "Add every possible feature first",
+              "correct": false,
+              "feedback": "Hexi: Try again. Hexi needs to save and find his treat box."
+            }
+          ]
+        },
+        {
+          "id": "little-check-2",
+          "prompt": "What should happen after a bug is fixed?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Release without checking",
+              "correct": false,
+              "feedback": "Hexi: Try again. A fix needs checking again; user feedback can guide further improvements."
+            },
+            {
+              "id": "choice-1",
+              "text": "Ignore user feedback",
+              "correct": false,
+              "feedback": "Hexi: Try again. A fix needs checking again; user feedback can guide further improvements."
+            },
+            {
+              "id": "choice-2",
+              "text": "Test the changed behavior again",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A fix needs checking again; user feedback can guide further improvements."
+            }
+          ]
+        },
+        {
+          "id": "little-check-3",
+          "prompt": "What does Git help with?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Recording chosen project versions so changes can be compared",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Git records chosen snapshots; it does not prove that software works."
+            },
+            {
+              "id": "choice-1",
+              "text": "Proving every version has no bugs",
+              "correct": false,
+              "feedback": "Hexi: Try again. Git records chosen snapshots; it does not prove that software works."
+            },
+            {
+              "id": "choice-2",
+              "text": "Automatically saving every typed character",
+              "correct": false,
+              "feedback": "Hexi: Try again. Git records chosen snapshots; it does not prove that software works."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["little-requirements", "little-components", "little-debug"]
+    },
+    {
+      "id": "kids-junior",
+      "audienceLabel": "Junior Spellcasters · ages 10–13",
+      "intro": "Hexi: Turn a user need into a small software project. Plan requirements, connect components, investigate a defect and distinguish proposed work from verified release evidence.",
+      "sections": [
+        {
+          "title": "An app helps with a problem",
+          "paragraphs": [
+            "Software includes programs and related data that make computers useful. Applications solve user problems. This lesson focuses on creating and maintaining a project, beyond the earlier lesson on precise instructions."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Decide what it must do",
+          "paragraphs": [
+            "Start with user needs, then write requirements that can be checked. Our fictional tracker must save an item and location and find it later. Plan a small useful first version; optional decoration can wait. Ask questions when behavior is unclear."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Plan, build, test, improve, release",
+          "paragraphs": [
+            "Plan → Build → Test → Improve → Release describes a repeating workflow. Check what users need, build a small version, compare expected and observed results, fix and retest, then release with approval. Feedback can start another cycle."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Give each part a clear job",
+          "paragraphs": [
+            "Give screen, storage and lookup components clear responsibilities. Lookup uses saved records; the screen shows the lookup result. Decide how they communicate and what a missing result means. Small components still need integration checks."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Find bugs and listen to users",
+          "paragraphs": [
+            "A defect can make an app return the wrong location. Trace the supplied records and expected result. Choose tests for known and missing items. Debugging fixes a cause; testing checks behavior. Listen to users and retest changes. Do not claim a test passed unless a result was observed."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Remember changes and work together",
+          "paragraphs": [
+            "Git records chosen snapshots of a project through commits, so people can compare versions and understand changes. Branches can separate work, and reviews help teammates examine it before integration. Git is not the same as GitHub; this lesson needs neither an account nor a real repository. A commit or review alone does not guarantee correct software."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "junior-check-1",
+          "prompt": "What is a useful first requirement?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Play music only",
+              "correct": false,
+              "feedback": "Hexi: Try again. A checkable requirement describes the needed user task."
+            },
+            {
+              "id": "choice-1",
+              "text": "Save a treat name and box, then show its box",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A checkable requirement describes the needed user task."
+            },
+            {
+              "id": "choice-2",
+              "text": "Add every possible feature first",
+              "correct": false,
+              "feedback": "Hexi: Try again. A checkable requirement describes the needed user task."
+            }
+          ]
+        },
+        {
+          "id": "junior-check-2",
+          "prompt": "What should happen after a bug is fixed?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Release without checking",
+              "correct": false,
+              "feedback": "Hexi: Try again. A fix needs checking again; user feedback can guide further improvements."
+            },
+            {
+              "id": "choice-1",
+              "text": "Ignore user feedback",
+              "correct": false,
+              "feedback": "Hexi: Try again. A fix needs checking again; user feedback can guide further improvements."
+            },
+            {
+              "id": "choice-2",
+              "text": "Test the changed behavior again",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A fix needs checking again; user feedback can guide further improvements."
+            }
+          ]
+        },
+        {
+          "id": "junior-check-3",
+          "prompt": "What does Git help with?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Recording chosen project versions so changes can be compared",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Git records chosen snapshots; it does not prove that software works."
+            },
+            {
+              "id": "choice-1",
+              "text": "Proving every version has no bugs",
+              "correct": false,
+              "feedback": "Hexi: Try again. Git records chosen snapshots; it does not prove that software works."
+            },
+            {
+              "id": "choice-2",
+              "text": "Automatically saving every typed character",
+              "correct": false,
+              "feedback": "Hexi: Try again. Git records chosen snapshots; it does not prove that software works."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["junior-requirements", "junior-components", "junior-debug"]
+    },
+    {
+      "id": "adults",
+      "audienceLabel": "Adult learners",
+      "intro": "Hexi: Turn a user need into a small software project. Plan requirements, connect components, investigate a defect and distinguish proposed work from verified release evidence.",
+      "sections": [
+        {
+          "title": "An app helps with a problem",
+          "paragraphs": [
+            "Software engineering includes understanding needs, designing, implementing, evaluating and maintaining software—not only writing instructions. An application supports a user task; we will plan a fictional equipment-location tracker."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Decide what it must do",
+          "paragraphs": [
+            "A functional requirement describes behavior: save an item/location and retrieve it. A nonfunctional requirement describes a quality or constraint, such as readable keyboard-accessible controls. Make both checkable. An MVP is the smallest useful scope for learning from users, not permission to skip safety, privacy or accessibility."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Plan, build, test, improve, release",
+          "paragraphs": [
+            "Plan → Build → Test → Improve → Release is a simplified iterative cycle, not a one-way waterfall rule. Agree acceptance criteria, build a small slice, test observed results, fix issues and retest before an approved release. After release, feedback, defects and changing needs drive maintenance."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Give each part a clear job",
+          "paragraphs": [
+            "Separate presentation, storage and lookup responsibilities. The lookup depends on saved records; the screen presents its result. Define their interface and expected missing-item behavior. Modular design helps isolate changes but does not automatically prevent integration bugs."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Find bugs and listen to users",
+          "paragraphs": [
+            "Testing compares actual and expected outcomes; debugging investigates and corrects a cause. Use ordinary, missing and boundary cases and retest after a fix. User feedback can reveal usability needs that passing tests miss. A proposed fix or written test is not a verified passing result."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Remember changes and work together",
+          "paragraphs": [
+            "Git records selected project snapshots through commits; it does not automatically save every keystroke or prove correctness. Compare changes, explain intent and request code review. Git is a version-control tool; GitHub is an optional hosting service, not required to use Git. Coordinate integration, handle conflicts and retain responsible review/release decisions."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "adults-check-1",
+          "prompt": "What is a useful first requirement?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Play music only",
+              "correct": false,
+              "feedback": "Hexi: Try again. A checkable requirement describes the needed user task."
+            },
+            {
+              "id": "choice-1",
+              "text": "Save a treat name and box, then show its box",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A checkable requirement describes the needed user task."
+            },
+            {
+              "id": "choice-2",
+              "text": "Add every possible feature first",
+              "correct": false,
+              "feedback": "Hexi: Try again. A checkable requirement describes the needed user task."
+            }
+          ]
+        },
+        {
+          "id": "adults-check-2",
+          "prompt": "What should happen after a bug is fixed?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Release without checking",
+              "correct": false,
+              "feedback": "Hexi: Try again. A fix needs checking again; user feedback can guide further improvements."
+            },
+            {
+              "id": "choice-1",
+              "text": "Ignore user feedback",
+              "correct": false,
+              "feedback": "Hexi: Try again. A fix needs checking again; user feedback can guide further improvements."
+            },
+            {
+              "id": "choice-2",
+              "text": "Test the changed behavior again",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A fix needs checking again; user feedback can guide further improvements."
+            }
+          ]
+        },
+        {
+          "id": "adults-check-3",
+          "prompt": "What does Git help with?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Recording chosen project versions so changes can be compared",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Git records chosen snapshots; it does not prove that software works."
+            },
+            {
+              "id": "choice-1",
+              "text": "Proving every version has no bugs",
+              "correct": false,
+              "feedback": "Hexi: Try again. Git records chosen snapshots; it does not prove that software works."
+            },
+            {
+              "id": "choice-2",
+              "text": "Automatically saving every typed character",
+              "correct": false,
+              "feedback": "Hexi: Try again. Git records chosen snapshots; it does not prove that software works."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["adults-requirements", "adults-components", "adults-debug"]
+    },
+    {
+      "id": "ai",
+      "audienceLabel": "AI learners · controlled project-planning workbench",
+      "intro": "Hexi: Turn a user need into a small software project. Plan requirements, connect components, investigate a defect and distinguish proposed work from verified release evidence.",
+      "sections": [
+        {
+          "title": "An app helps with a problem",
+          "paragraphs": [
+            "Software includes programs and related data that make computers useful. Applications solve user problems. This lesson focuses on creating and maintaining a project, beyond the earlier lesson on precise instructions."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Decide what it must do",
+          "paragraphs": [
+            "Start with user needs, then write requirements that can be checked. Our fictional tracker must save an item and location and find it later. Plan a small useful first version; optional decoration can wait. Ask questions when behavior is unclear."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Plan, build, test, improve, release",
+          "paragraphs": [
+            "Plan → Build → Test → Improve → Release describes a repeating workflow. Check what users need, build a small version, compare expected and observed results, fix and retest, then release with approval. Feedback can start another cycle."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Give each part a clear job",
+          "paragraphs": [
+            "Give screen, storage and lookup components clear responsibilities. Lookup uses saved records; the screen shows the lookup result. Decide how they communicate and what a missing result means. Small components still need integration checks."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Find bugs and listen to users",
+          "paragraphs": [
+            "A defect can make an app return the wrong location. Trace the supplied records and expected result. Choose tests for known and missing items. Debugging fixes a cause; testing checks behavior. Listen to users and retest changes. Do not claim a test passed unless a result was observed."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Remember changes and work together",
+          "paragraphs": [
+            "Git records chosen snapshots of a project through commits, so people can compare versions and understand changes. Branches can separate work, and reviews help teammates examine it before integration. Git is not the same as GitHub; this lesson needs neither an account nor a real repository. A commit or review alone does not guarantee correct software."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "ai-check-1",
+          "prompt": "What is a useful first requirement?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Play music only",
+              "correct": false,
+              "feedback": "Hexi: Try again. A checkable requirement describes the needed user task."
+            },
+            {
+              "id": "choice-1",
+              "text": "Save a treat name and box, then show its box",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A checkable requirement describes the needed user task."
+            },
+            {
+              "id": "choice-2",
+              "text": "Add every possible feature first",
+              "correct": false,
+              "feedback": "Hexi: Try again. A checkable requirement describes the needed user task."
+            }
+          ]
+        },
+        {
+          "id": "ai-check-2",
+          "prompt": "What should happen after a bug is fixed?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Release without checking",
+              "correct": false,
+              "feedback": "Hexi: Try again. A fix needs checking again; user feedback can guide further improvements."
+            },
+            {
+              "id": "choice-1",
+              "text": "Ignore user feedback",
+              "correct": false,
+              "feedback": "Hexi: Try again. A fix needs checking again; user feedback can guide further improvements."
+            },
+            {
+              "id": "choice-2",
+              "text": "Test the changed behavior again",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A fix needs checking again; user feedback can guide further improvements."
+            }
+          ]
+        },
+        {
+          "id": "ai-check-3",
+          "prompt": "What does Git help with?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Recording chosen project versions so changes can be compared",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Git records chosen snapshots; it does not prove that software works."
+            },
+            {
+              "id": "choice-1",
+              "text": "Proving every version has no bugs",
+              "correct": false,
+              "feedback": "Hexi: Try again. Git records chosen snapshots; it does not prove that software works."
+            },
+            {
+              "id": "choice-2",
+              "text": "Automatically saving every typed character",
+              "correct": false,
+              "feedback": "Hexi: Try again. Git records chosen snapshots; it does not prove that software works."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["ai-requirements", "ai-components", "ai-debug"]
+    }
+  ],
+  "practiceTasks": [
+    {
+      "id": "little-requirements",
+      "kind": "requirements",
+      "title": "Plan a useful first version",
+      "instruction": "Hexi forgets his pretend treat boxes. Choose what the app needs first.",
+      "goal": "Help Hexi find treats without adding everything at once.",
+      "input": "Problem: forgotten treat boxes. Needed: save and find a treat’s box. Missing treat: what should the screen say?",
+      "expectedOutput": "small save/find scope; keyboard-accessible controls; clarify missing-item behavior",
+      "explanation": "Save and find treat boxes first. Keep the controls easy to use. Ask what to show when a treat is missing.",
+      "hint": "Start with the user’s need. Choose a usable first version and ask about the missing case.",
+      "slots": [
+        {
+          "label": "Useful first features",
+          "options": [
+            {
+              "id": "core",
+              "text": "Save and find names and boxes"
+            },
+            {
+              "id": "music",
+              "text": "Only play decorative music"
+            },
+            {
+              "id": "everything",
+              "text": "Build every imaginable feature now"
+            }
+          ],
+          "expectedId": "core",
+          "hint": "Start with saving and finding, not decoration."
+        },
+        {
+          "label": "Make the controls usable",
+          "options": [
+            {
+              "id": "keyboard",
+              "text": "Let people use the controls with a keyboard"
+            },
+            {
+              "id": "pointer",
+              "text": "Require a mouse for every action"
+            },
+            {
+              "id": "hide",
+              "text": "Hide the controls behind unreadable labels"
+            }
+          ],
+          "expectedId": "keyboard",
+          "hint": "People need to reach and understand the controls."
+        },
+        {
+          "label": "A name is missing: what next?",
+          "options": [
+            {
+              "id": "ask",
+              "text": "Ask what message should appear"
+            },
+            {
+              "id": "guess",
+              "text": "Invent an answer and call it agreed"
+            },
+            {
+              "id": "private",
+              "text": "Ask for real student private records"
+            }
+          ],
+          "expectedId": "ask",
+          "hint": "That behavior is unspecified. Ask before assuming."
+        }
+      ]
+    },
+    {
+      "id": "little-components",
+      "kind": "components",
+      "title": "Organize the workshop",
+      "instruction": "Give the pretend app’s parts clear jobs. Then choose the order for building and checking it.",
+      "goal": "Keep the jobs clear and check the app before sharing.",
+      "input": "Screen shows answers. Storage keeps name/location records. Lookup finds a location from storage. No build or tests have run.",
+      "expectedOutput": "separate screen/storage/lookup; save before lookup; plan-build-test-improve/retest-release",
+      "explanation": "The screen shows, storage remembers, and lookup finds. Save a box before looking it up. Plan, build, test, improve and check again before sharing.",
+      "hint": "Which part shows, remembers or finds? What must exist before lookup can use it?",
+      "slots": [
+        {
+          "label": "Choose the parts’ jobs",
+          "options": [
+            {
+              "id": "separate",
+              "text": "Screen shows; storage remembers; lookup finds"
+            },
+            {
+              "id": "mix",
+              "text": "Every part changes every other part without clear jobs"
+            },
+            {
+              "id": "screen",
+              "text": "Only a screen; nothing remembers records"
+            }
+          ],
+          "expectedId": "separate",
+          "hint": "Give each part one clear responsibility."
+        },
+        {
+          "label": "Respect the dependency",
+          "options": [
+            {
+              "id": "save-first",
+              "text": "Save a name and box, then look it up"
+            },
+            {
+              "id": "lookup-first",
+              "text": "Guarantee lookup works before any record exists"
+            },
+            {
+              "id": "skip",
+              "text": "Remove all stored records but promise saved results"
+            }
+          ],
+          "expectedId": "save-first",
+          "hint": "Lookup needs a saved record to find its location."
+        },
+        {
+          "label": "Choose the project cycle",
+          "options": [
+            {
+              "id": "cycle",
+              "text": "Plan → Build → Test → Improve and retest → Release"
+            },
+            {
+              "id": "rush",
+              "text": "Build → Release → Maybe test later"
+            },
+            {
+              "id": "once",
+              "text": "Plan → Build → Test → Never listen to users again"
+            }
+          ],
+          "expectedId": "cycle",
+          "hint": "Check and retest before release; feedback can start another cycle."
+        }
+      ]
+    },
+    {
+      "id": "little-debug",
+      "kind": "debug",
+      "title": "Repair, check and review",
+      "instruction": "Pretend records say Moon Biscuit is in box A and Star Snack is in box B. The app always shows box A. Find the bug and choose how to check a fix.",
+      "goal": "Find the right box, check the fix, and keep a clear project history.",
+      "input": "Moon Biscuit → box A. Star Snack → box B. Bug: every search returns box A. No check of a fix has happened yet.",
+      "expectedOutput": "match requested name; known and missing-item tests; record/review change without claiming unobserved passes",
+      "explanation": "Find the name that was asked for. Check both treat names and a missing name. Keep a labeled version and ask for review. A planned check is not a passed check.",
+      "hint": "The second item exposes returning the first record. A test plan is not a result, and a saved version is not proof.",
+      "slots": [
+        {
+          "label": "Repair the bug",
+          "options": [
+            {
+              "id": "match",
+              "text": "Find the requested name and return its own box"
+            },
+            {
+              "id": "first",
+              "text": "Keep returning the first location"
+            },
+            {
+              "id": "rename",
+              "text": "Rename the app without changing lookup"
+            }
+          ],
+          "expectedId": "match",
+          "hint": "The requested name may be the second record, not the first."
+        },
+        {
+          "label": "Select a useful test set",
+          "options": [
+            {
+              "id": "cases",
+              "text": "Check both known names and the agreed missing-name message"
+            },
+            {
+              "id": "first-only",
+              "text": "Check the first name only"
+            },
+            {
+              "id": "colors",
+              "text": "Check only decorative colors"
+            }
+          ],
+          "expectedId": "cases",
+          "hint": "The second known name catches this bug; the missing case checks agreed behavior."
+        },
+        {
+          "label": "Version, review and release status",
+          "options": [
+            {
+              "id": "honest",
+              "text": "Record a labeled change, ask for review and say checks still need to run"
+            },
+            {
+              "id": "claim",
+              "text": "Claim all tests passed because a fix was suggested"
+            },
+            {
+              "id": "erase",
+              "text": "Erase all history and release without checking"
+            }
+          ],
+          "expectedId": "honest",
+          "hint": "Git/review can help track work. They do not turn an unrun test into a pass."
+        }
+      ]
+    },
+    {
+      "id": "junior-requirements",
+      "kind": "requirements",
+      "title": "Plan a useful first version",
+      "instruction": "Plan a small first release of the Great Goblin Treat Tracker. Users need to save and find treat locations. “Find missing items” has not been defined. Choose a useful scope, a quality requirement and a clarification.",
+      "goal": "Turn a problem into a bounded, checkable plan before building.",
+      "input": "Functional need: save item/location and retrieve location. Quality: use controls by keyboard. Missing item behavior: unspecified.",
+      "expectedOutput": "small save/find scope; keyboard-accessible controls; clarify missing-item behavior",
+      "explanation": "Save/find meets the core need; keyboard operation is a quality requirement. Clarify missing-item behavior instead of silently inventing a requirement. An MVP does not excuse skipping essential quality or safety.",
+      "hint": "Start with the user’s need. Choose a usable first version and ask about the missing case.",
+      "slots": [
+        {
+          "label": "Useful first features",
+          "options": [
+            {
+              "id": "core",
+              "text": "Save item/location and retrieve it"
+            },
+            {
+              "id": "music",
+              "text": "Only play decorative music"
+            },
+            {
+              "id": "everything",
+              "text": "Build every imaginable feature now"
+            }
+          ],
+          "expectedId": "core",
+          "hint": "Start with saving and finding, not decoration."
+        },
+        {
+          "label": "Make the controls usable",
+          "options": [
+            {
+              "id": "keyboard",
+              "text": "Let people use the controls with a keyboard"
+            },
+            {
+              "id": "pointer",
+              "text": "Require a mouse for every action"
+            },
+            {
+              "id": "hide",
+              "text": "Hide the controls behind unreadable labels"
+            }
+          ],
+          "expectedId": "keyboard",
+          "hint": "People need to reach and understand the controls."
+        },
+        {
+          "label": "A name is missing: what next?",
+          "options": [
+            {
+              "id": "ask",
+              "text": "Ask what message should appear"
+            },
+            {
+              "id": "guess",
+              "text": "Invent an answer and call it agreed"
+            },
+            {
+              "id": "private",
+              "text": "Ask for real student private records"
+            }
+          ],
+          "expectedId": "ask",
+          "hint": "That behavior is unspecified. Ask before assuming."
+        }
+      ]
+    },
+    {
+      "id": "junior-components",
+      "kind": "components",
+      "title": "Organize the workshop",
+      "instruction": "Decompose the tracker, respect the lookup’s dependence on stored records, and select a release workflow. This is a planning simulation, not a build tool.",
+      "goal": "Connect component responsibilities and dependencies to an iterative delivery plan.",
+      "input": "Screen shows answers. Storage keeps name/location records. Lookup finds a location from storage. No build or tests have run.",
+      "expectedOutput": "separate screen/storage/lookup; save before lookup; plan-build-test-improve/retest-release",
+      "explanation": "Clear responsibilities help manage change. Lookup needs records first. The simplified cycle includes retesting fixes before a reviewed release; later user feedback can start another cycle.",
+      "hint": "Which part shows, remembers or finds? What must exist before lookup can use it?",
+      "slots": [
+        {
+          "label": "Choose the parts’ jobs",
+          "options": [
+            {
+              "id": "separate",
+              "text": "Screen shows; storage remembers; lookup finds"
+            },
+            {
+              "id": "mix",
+              "text": "Every part changes every other part without clear jobs"
+            },
+            {
+              "id": "screen",
+              "text": "Only a screen; nothing remembers records"
+            }
+          ],
+          "expectedId": "separate",
+          "hint": "Give each part one clear responsibility."
+        },
+        {
+          "label": "Respect the dependency",
+          "options": [
+            {
+              "id": "save-first",
+              "text": "Save a name and box, then look it up"
+            },
+            {
+              "id": "lookup-first",
+              "text": "Guarantee lookup works before any record exists"
+            },
+            {
+              "id": "skip",
+              "text": "Remove all stored records but promise saved results"
+            }
+          ],
+          "expectedId": "save-first",
+          "hint": "Lookup needs a saved record to find its location."
+        },
+        {
+          "label": "Choose the project cycle",
+          "options": [
+            {
+              "id": "cycle",
+              "text": "Plan → Build → Test → Improve and retest → Release"
+            },
+            {
+              "id": "rush",
+              "text": "Build → Release → Maybe test later"
+            },
+            {
+              "id": "once",
+              "text": "Plan → Build → Test → Never listen to users again"
+            }
+          ],
+          "expectedId": "cycle",
+          "hint": "Check and retest before release; feedback can start another cycle."
+        }
+      ]
+    },
+    {
+      "id": "junior-debug",
+      "kind": "debug",
+      "title": "Repair, check and review",
+      "instruction": "The fictional tracker stores Item A→Shelf A and Item B→Shelf B. Its proposed lookup always returns the first record’s location. No test execution results are supplied. Choose a repair, tests and a truthful collaboration/release response.",
+      "goal": "Distinguish a proposed fix and test plan from verified results; collaborate using version history and review.",
+      "input": "Expected lookup(Item B): Shelf B. Given defective rule: return first record location. Missing-item requirement must be agreed. Only a proposed fix/test plan exists.",
+      "expectedOutput": "match requested name; known and missing-item tests; record/review change without claiming unobserved passes",
+      "explanation": "Match the requested identifier rather than returning the first location. Test the first and second items plus the agreed missing-item behavior, retest the fix, record a meaningful version and seek review. Do not report a pass or readiness before results and approval exist.",
+      "hint": "The second item exposes returning the first record. A test plan is not a result, and a saved version is not proof.",
+      "slots": [
+        {
+          "label": "Repair the bug",
+          "options": [
+            {
+              "id": "match",
+              "text": "Match the requested item identifier and return its location"
+            },
+            {
+              "id": "first",
+              "text": "Keep returning the first location"
+            },
+            {
+              "id": "rename",
+              "text": "Rename the app without changing lookup"
+            }
+          ],
+          "expectedId": "match",
+          "hint": "The requested name may be the second record, not the first."
+        },
+        {
+          "label": "Select a useful test set",
+          "options": [
+            {
+              "id": "cases",
+              "text": "Check both known names and the agreed missing-name message"
+            },
+            {
+              "id": "first-only",
+              "text": "Check the first name only"
+            },
+            {
+              "id": "colors",
+              "text": "Check only decorative colors"
+            }
+          ],
+          "expectedId": "cases",
+          "hint": "The second known name catches this bug; the missing case checks agreed behavior."
+        },
+        {
+          "label": "Version, review and release status",
+          "options": [
+            {
+              "id": "honest",
+              "text": "Record a labeled change, ask for review and say checks still need to run"
+            },
+            {
+              "id": "claim",
+              "text": "Claim all tests passed because a fix was suggested"
+            },
+            {
+              "id": "erase",
+              "text": "Erase all history and release without checking"
+            }
+          ],
+          "expectedId": "honest",
+          "hint": "Git/review can help track work. They do not turn an unrun test into a pass."
+        }
+      ]
+    },
+    {
+      "id": "adults-requirements",
+      "kind": "requirements",
+      "title": "Plan a useful first version",
+      "instruction": "Plan a small first release of the fictional equipment-location tracker. Users need to save and find equipment locations. “Find missing items” has not been defined. Choose a useful scope, a quality requirement and a clarification.",
+      "goal": "Turn a problem into a bounded, checkable plan before building.",
+      "input": "Functional need: save item/location and retrieve location. Quality: use controls by keyboard. Missing item behavior: unspecified.",
+      "expectedOutput": "small save/find scope; keyboard-accessible controls; clarify missing-item behavior",
+      "explanation": "Save/find meets the core need; keyboard operation is a quality requirement. Clarify missing-item behavior instead of silently inventing a requirement. An MVP does not excuse skipping essential quality or safety.",
+      "hint": "Start with the user’s need. Choose a usable first version and ask about the missing case.",
+      "slots": [
+        {
+          "label": "Useful first features",
+          "options": [
+            {
+              "id": "core",
+              "text": "Save item/location and retrieve it"
+            },
+            {
+              "id": "music",
+              "text": "Only play decorative music"
+            },
+            {
+              "id": "everything",
+              "text": "Build every imaginable feature now"
+            }
+          ],
+          "expectedId": "core",
+          "hint": "Start with saving and finding, not decoration."
+        },
+        {
+          "label": "Make the controls usable",
+          "options": [
+            {
+              "id": "keyboard",
+              "text": "Let people use the controls with a keyboard"
+            },
+            {
+              "id": "pointer",
+              "text": "Require a mouse for every action"
+            },
+            {
+              "id": "hide",
+              "text": "Hide the controls behind unreadable labels"
+            }
+          ],
+          "expectedId": "keyboard",
+          "hint": "People need to reach and understand the controls."
+        },
+        {
+          "label": "A name is missing: what next?",
+          "options": [
+            {
+              "id": "ask",
+              "text": "Ask what message should appear"
+            },
+            {
+              "id": "guess",
+              "text": "Invent an answer and call it agreed"
+            },
+            {
+              "id": "private",
+              "text": "Ask for real student private records"
+            }
+          ],
+          "expectedId": "ask",
+          "hint": "That behavior is unspecified. Ask before assuming."
+        }
+      ]
+    },
+    {
+      "id": "adults-components",
+      "kind": "components",
+      "title": "Organize the workshop",
+      "instruction": "Decompose the tracker, respect the lookup’s dependence on stored records, and select a release workflow. This is a planning simulation, not a build tool.",
+      "goal": "Connect component responsibilities and dependencies to an iterative delivery plan.",
+      "input": "Screen shows answers. Storage keeps name/location records. Lookup finds a location from storage. No build or tests have run.",
+      "expectedOutput": "separate screen/storage/lookup; save before lookup; plan-build-test-improve/retest-release",
+      "explanation": "Clear responsibilities help manage change. Lookup needs records first. The simplified cycle includes retesting fixes before a reviewed release; later user feedback can start another cycle.",
+      "hint": "Which part shows, remembers or finds? What must exist before lookup can use it?",
+      "slots": [
+        {
+          "label": "Choose the parts’ jobs",
+          "options": [
+            {
+              "id": "separate",
+              "text": "Screen shows; storage remembers; lookup finds"
+            },
+            {
+              "id": "mix",
+              "text": "Every part changes every other part without clear jobs"
+            },
+            {
+              "id": "screen",
+              "text": "Only a screen; nothing remembers records"
+            }
+          ],
+          "expectedId": "separate",
+          "hint": "Give each part one clear responsibility."
+        },
+        {
+          "label": "Respect the dependency",
+          "options": [
+            {
+              "id": "save-first",
+              "text": "Save a name and box, then look it up"
+            },
+            {
+              "id": "lookup-first",
+              "text": "Guarantee lookup works before any record exists"
+            },
+            {
+              "id": "skip",
+              "text": "Remove all stored records but promise saved results"
+            }
+          ],
+          "expectedId": "save-first",
+          "hint": "Lookup needs a saved record to find its location."
+        },
+        {
+          "label": "Choose the project cycle",
+          "options": [
+            {
+              "id": "cycle",
+              "text": "Plan → Build → Test → Improve and retest → Release"
+            },
+            {
+              "id": "rush",
+              "text": "Build → Release → Maybe test later"
+            },
+            {
+              "id": "once",
+              "text": "Plan → Build → Test → Never listen to users again"
+            }
+          ],
+          "expectedId": "cycle",
+          "hint": "Check and retest before release; feedback can start another cycle."
+        }
+      ]
+    },
+    {
+      "id": "adults-debug",
+      "kind": "debug",
+      "title": "Repair, check and review",
+      "instruction": "The fictional tracker stores Item A→Shelf A and Item B→Shelf B. Its proposed lookup always returns the first record’s location. No test execution results are supplied. Choose a repair, tests and a truthful collaboration/release response.",
+      "goal": "Distinguish a proposed fix and test plan from verified results; collaborate using version history and review.",
+      "input": "Expected lookup(Item B): Shelf B. Given defective rule: return first record location. Missing-item requirement must be agreed. Only a proposed fix/test plan exists.",
+      "expectedOutput": "match requested name; known and missing-item tests; record/review change without claiming unobserved passes",
+      "explanation": "Match the requested identifier rather than returning the first location. Test the first and second items plus the agreed missing-item behavior, retest the fix, record a meaningful version and seek review. Do not report a pass or readiness before results and approval exist.",
+      "hint": "The second item exposes returning the first record. A test plan is not a result, and a saved version is not proof.",
+      "slots": [
+        {
+          "label": "Repair the bug",
+          "options": [
+            {
+              "id": "match",
+              "text": "Match the requested item identifier and return its location"
+            },
+            {
+              "id": "first",
+              "text": "Keep returning the first location"
+            },
+            {
+              "id": "rename",
+              "text": "Rename the app without changing lookup"
+            }
+          ],
+          "expectedId": "match",
+          "hint": "The requested name may be the second record, not the first."
+        },
+        {
+          "label": "Select a useful test set",
+          "options": [
+            {
+              "id": "cases",
+              "text": "Check both known names and the agreed missing-name message"
+            },
+            {
+              "id": "first-only",
+              "text": "Check the first name only"
+            },
+            {
+              "id": "colors",
+              "text": "Check only decorative colors"
+            }
+          ],
+          "expectedId": "cases",
+          "hint": "The second known name catches this bug; the missing case checks agreed behavior."
+        },
+        {
+          "label": "Version, review and release status",
+          "options": [
+            {
+              "id": "honest",
+              "text": "Record a labeled change, ask for review and say checks still need to run"
+            },
+            {
+              "id": "claim",
+              "text": "Claim all tests passed because a fix was suggested"
+            },
+            {
+              "id": "erase",
+              "text": "Erase all history and release without checking"
+            }
+          ],
+          "expectedId": "honest",
+          "hint": "Git/review can help track work. They do not turn an unrun test into a pass."
+        }
+      ]
+    },
+    {
+      "id": "ai-requirements",
+      "kind": "requirements",
+      "title": "Plan a useful first version",
+      "instruction": "Interpret only supplied requirements: save and retrieve fictional item locations; keyboard operation required; missing-item behavior unspecified. Choose scope, quality and clarification. Do not silently add features or claim agreement.",
+      "goal": "Turn a problem into a bounded, checkable plan before building.",
+      "input": "Functional need: save item/location and retrieve location. Quality: use controls by keyboard. Missing item behavior: unspecified.",
+      "expectedOutput": "small save/find scope; keyboard-accessible controls; clarify missing-item behavior",
+      "explanation": "Save/find meets the core need; keyboard operation is a quality requirement. Clarify missing-item behavior instead of silently inventing a requirement. An MVP does not excuse skipping essential quality or safety.",
+      "hint": "Start with the user’s need. Choose a usable first version and ask about the missing case.",
+      "slots": [
+        {
+          "label": "Useful first features",
+          "options": [
+            {
+              "id": "core",
+              "text": "Save item/location and retrieve it"
+            },
+            {
+              "id": "music",
+              "text": "Only play decorative music"
+            },
+            {
+              "id": "everything",
+              "text": "Build every imaginable feature now"
+            }
+          ],
+          "expectedId": "core",
+          "hint": "Start with saving and finding, not decoration."
+        },
+        {
+          "label": "Make the controls usable",
+          "options": [
+            {
+              "id": "keyboard",
+              "text": "Let people use the controls with a keyboard"
+            },
+            {
+              "id": "pointer",
+              "text": "Require a mouse for every action"
+            },
+            {
+              "id": "hide",
+              "text": "Hide the controls behind unreadable labels"
+            }
+          ],
+          "expectedId": "keyboard",
+          "hint": "People need to reach and understand the controls."
+        },
+        {
+          "label": "A name is missing: what next?",
+          "options": [
+            {
+              "id": "ask",
+              "text": "Ask what message should appear"
+            },
+            {
+              "id": "guess",
+              "text": "Invent an answer and call it agreed"
+            },
+            {
+              "id": "private",
+              "text": "Ask for real student private records"
+            }
+          ],
+          "expectedId": "ask",
+          "hint": "That behavior is unspecified. Ask before assuming."
+        }
+      ]
+    },
+    {
+      "id": "ai-components",
+      "kind": "components",
+      "title": "Organize the workshop",
+      "instruction": "Decompose the tracker, respect the lookup’s dependence on stored records, and select a release workflow. This is a planning simulation, not a build tool.",
+      "goal": "Connect component responsibilities and dependencies to an iterative delivery plan.",
+      "input": "Screen shows answers. Storage keeps name/location records. Lookup finds a location from storage. No build or tests have run.",
+      "expectedOutput": "separate screen/storage/lookup; save before lookup; plan-build-test-improve/retest-release",
+      "explanation": "Clear responsibilities help manage change. Lookup needs records first. The simplified cycle includes retesting fixes before a reviewed release; later user feedback can start another cycle.",
+      "hint": "Which part shows, remembers or finds? What must exist before lookup can use it?",
+      "slots": [
+        {
+          "label": "Choose the parts’ jobs",
+          "options": [
+            {
+              "id": "separate",
+              "text": "Screen shows; storage remembers; lookup finds"
+            },
+            {
+              "id": "mix",
+              "text": "Every part changes every other part without clear jobs"
+            },
+            {
+              "id": "screen",
+              "text": "Only a screen; nothing remembers records"
+            }
+          ],
+          "expectedId": "separate",
+          "hint": "Give each part one clear responsibility."
+        },
+        {
+          "label": "Respect the dependency",
+          "options": [
+            {
+              "id": "save-first",
+              "text": "Save a name and box, then look it up"
+            },
+            {
+              "id": "lookup-first",
+              "text": "Guarantee lookup works before any record exists"
+            },
+            {
+              "id": "skip",
+              "text": "Remove all stored records but promise saved results"
+            }
+          ],
+          "expectedId": "save-first",
+          "hint": "Lookup needs a saved record to find its location."
+        },
+        {
+          "label": "Choose the project cycle",
+          "options": [
+            {
+              "id": "cycle",
+              "text": "Plan → Build → Test → Improve and retest → Release"
+            },
+            {
+              "id": "rush",
+              "text": "Build → Release → Maybe test later"
+            },
+            {
+              "id": "once",
+              "text": "Plan → Build → Test → Never listen to users again"
+            }
+          ],
+          "expectedId": "cycle",
+          "hint": "Check and retest before release; feedback can start another cycle."
+        }
+      ]
+    },
+    {
+      "id": "ai-debug",
+      "kind": "debug",
+      "title": "Repair, check and review",
+      "instruction": "Given only the defective first-record lookup, two fictional records and a proposed repair, identify the defect/test coverage and report status without inventing execution evidence. Do not execute commands or modify repositories.",
+      "goal": "Distinguish a proposed fix and test plan from verified results; collaborate using version history and review.",
+      "input": "Expected lookup(Item B): Shelf B. Given defective rule: return first record location. Missing-item requirement must be agreed. Only a proposed fix/test plan exists.",
+      "expectedOutput": "match requested name; known and missing-item tests; record/review change without claiming unobserved passes",
+      "explanation": "Match the requested identifier rather than returning the first location. Test the first and second items plus the agreed missing-item behavior, retest the fix, record a meaningful version and seek review. Do not report a pass or readiness before results and approval exist.",
+      "hint": "The second item exposes returning the first record. A test plan is not a result, and a saved version is not proof.",
+      "slots": [
+        {
+          "label": "Repair the bug",
+          "options": [
+            {
+              "id": "match",
+              "text": "Match the requested item identifier and return its location"
+            },
+            {
+              "id": "first",
+              "text": "Keep returning the first location"
+            },
+            {
+              "id": "rename",
+              "text": "Rename the app without changing lookup"
+            }
+          ],
+          "expectedId": "match",
+          "hint": "The requested name may be the second record, not the first."
+        },
+        {
+          "label": "Select a useful test set",
+          "options": [
+            {
+              "id": "cases",
+              "text": "Check both known names and the agreed missing-name message"
+            },
+            {
+              "id": "first-only",
+              "text": "Check the first name only"
+            },
+            {
+              "id": "colors",
+              "text": "Check only decorative colors"
+            }
+          ],
+          "expectedId": "cases",
+          "hint": "The second known name catches this bug; the missing case checks agreed behavior."
+        },
+        {
+          "label": "Version, review and release status",
+          "options": [
+            {
+              "id": "honest",
+              "text": "Record a labeled change, ask for review and say checks still need to run"
+            },
+            {
+              "id": "claim",
+              "text": "Claim all tests passed because a fix was suggested"
+            },
+            {
+              "id": "erase",
+              "text": "Erase all history and release without checking"
+            }
+          ],
+          "expectedId": "honest",
+          "hint": "Git/review can help track work. They do not turn an unrun test into a pass."
+        }
+      ]
+    }
+  ],
+  "assessment": {
+    "method": "fixed-software-project-choice-v1",
+    "testCases": [
+      {
+        "id": "little-requirements-correct",
+        "taskId": "little-requirements",
+        "answers": ["core", "keyboard", "ask"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-requirements-first-wrong",
+        "taskId": "little-requirements",
+        "answers": ["music", "keyboard", "ask"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-requirements-last-wrong",
+        "taskId": "little-requirements",
+        "answers": ["core", "keyboard", "guess"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-requirements-empty",
+        "taskId": "little-requirements",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "little-components-correct",
+        "taskId": "little-components",
+        "answers": ["separate", "save-first", "cycle"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-components-first-wrong",
+        "taskId": "little-components",
+        "answers": ["mix", "save-first", "cycle"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-components-last-wrong",
+        "taskId": "little-components",
+        "answers": ["separate", "save-first", "rush"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-components-empty",
+        "taskId": "little-components",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "little-debug-correct",
+        "taskId": "little-debug",
+        "answers": ["match", "cases", "honest"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-debug-first-wrong",
+        "taskId": "little-debug",
+        "answers": ["first", "cases", "honest"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-debug-last-wrong",
+        "taskId": "little-debug",
+        "answers": ["match", "cases", "claim"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-debug-empty",
+        "taskId": "little-debug",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-requirements-correct",
+        "taskId": "junior-requirements",
+        "answers": ["core", "keyboard", "ask"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-requirements-first-wrong",
+        "taskId": "junior-requirements",
+        "answers": ["music", "keyboard", "ask"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-requirements-last-wrong",
+        "taskId": "junior-requirements",
+        "answers": ["core", "keyboard", "guess"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-requirements-empty",
+        "taskId": "junior-requirements",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-components-correct",
+        "taskId": "junior-components",
+        "answers": ["separate", "save-first", "cycle"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-components-first-wrong",
+        "taskId": "junior-components",
+        "answers": ["mix", "save-first", "cycle"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-components-last-wrong",
+        "taskId": "junior-components",
+        "answers": ["separate", "save-first", "rush"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-components-empty",
+        "taskId": "junior-components",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-debug-correct",
+        "taskId": "junior-debug",
+        "answers": ["match", "cases", "honest"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-debug-first-wrong",
+        "taskId": "junior-debug",
+        "answers": ["first", "cases", "honest"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-debug-last-wrong",
+        "taskId": "junior-debug",
+        "answers": ["match", "cases", "claim"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-debug-empty",
+        "taskId": "junior-debug",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-requirements-correct",
+        "taskId": "adults-requirements",
+        "answers": ["core", "keyboard", "ask"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-requirements-first-wrong",
+        "taskId": "adults-requirements",
+        "answers": ["music", "keyboard", "ask"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-requirements-last-wrong",
+        "taskId": "adults-requirements",
+        "answers": ["core", "keyboard", "guess"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-requirements-empty",
+        "taskId": "adults-requirements",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-components-correct",
+        "taskId": "adults-components",
+        "answers": ["separate", "save-first", "cycle"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-components-first-wrong",
+        "taskId": "adults-components",
+        "answers": ["mix", "save-first", "cycle"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-components-last-wrong",
+        "taskId": "adults-components",
+        "answers": ["separate", "save-first", "rush"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-components-empty",
+        "taskId": "adults-components",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-debug-correct",
+        "taskId": "adults-debug",
+        "answers": ["match", "cases", "honest"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-debug-first-wrong",
+        "taskId": "adults-debug",
+        "answers": ["first", "cases", "honest"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-debug-last-wrong",
+        "taskId": "adults-debug",
+        "answers": ["match", "cases", "claim"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-debug-empty",
+        "taskId": "adults-debug",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-requirements-correct",
+        "taskId": "ai-requirements",
+        "answers": ["core", "keyboard", "ask"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-requirements-first-wrong",
+        "taskId": "ai-requirements",
+        "answers": ["music", "keyboard", "ask"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-requirements-last-wrong",
+        "taskId": "ai-requirements",
+        "answers": ["core", "keyboard", "guess"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-requirements-empty",
+        "taskId": "ai-requirements",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-components-correct",
+        "taskId": "ai-components",
+        "answers": ["separate", "save-first", "cycle"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-components-first-wrong",
+        "taskId": "ai-components",
+        "answers": ["mix", "save-first", "cycle"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-components-last-wrong",
+        "taskId": "ai-components",
+        "answers": ["separate", "save-first", "rush"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-components-empty",
+        "taskId": "ai-components",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-debug-correct",
+        "taskId": "ai-debug",
+        "answers": ["match", "cases", "honest"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-debug-first-wrong",
+        "taskId": "ai-debug",
+        "answers": ["first", "cases", "honest"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-debug-last-wrong",
+        "taskId": "ai-debug",
+        "answers": ["match", "cases", "claim"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-debug-empty",
+        "taskId": "ai-debug",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      }
+    ]
+  },
+  "safety": {
+    "execution": "Fixed fictional project choices only. No software, tests, Git commands or external repository actions are executed.",
+    "performanceClaim": "Passing these bounded educational checks does not establish general software engineering competence or retained AI learning."
+  }
+}

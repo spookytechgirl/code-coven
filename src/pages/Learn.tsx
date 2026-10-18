@@ -1,3 +1,4 @@
+import { softwareRoutes } from "../data/lessons/software-entry";
 import { intelligenceRoutes } from "../data/lessons/intelligence-entry";
 import { algorithmRoutes } from "../data/lessons/algorithm-recipe";
 import { shieldRoutes } from "../data/lessons/cyber-shield";
@@ -177,6 +178,17 @@ export function PathOverview() {
         </p>
         <Link className="button" to={intelligenceRoutes[path.id]}>
           Open AI Fundamentals <ArrowRight size={17} />
+        </Link>
+      </section>
+      <section className="card pilot-summary">
+        <span className="eyebrow">SOFTWARE SORCERY · LESSON 001</span>
+        <h2>The Software Spellbook</h2>
+        <p>
+          Plan a useful application, organize its parts, check defects and
+          collaborate through project history.
+        </p>
+        <Link className="button" to={softwareRoutes[path.id]}>
+          Open Software Sorcery <ArrowRight size={17} />
         </Link>
       </section>
       <p className="learning-privacy">

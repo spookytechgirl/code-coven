@@ -1,3 +1,4 @@
+import { softwareRoutes } from "../data/lessons/software-entry";
 import { intelligenceRoutes } from "../data/lessons/intelligence-entry";
 import { algorithmRoutes } from "../data/lessons/algorithm-recipe";
 import { shieldRoutes } from "../data/lessons/cyber-shield";
@@ -278,6 +279,35 @@ export function CourseDetail() {
           <p>
             Fictional evidence and fixed choices only. No model calls, training,
             accounts or generated-command execution.
+          </p>
+        </article>
+      ) : course.id === "software-sorcery" ? (
+        <article id="classrooms" className="card detail-placeholder">
+          <h2>The Software Spellbook</h2>
+          <p>
+            One complete introductory lesson: requirements, project workflow,
+            components, testing/debugging, feedback and version control. The
+            other 21 catalog lessons remain planned. Choose Little Apprentices,
+            Junior Spellcasters, Adults or AIs below to open the introductory
+            classroom.
+          </p>
+          <div className="lesson-downloads">
+            <Link className="button" to={`${softwareRoutes.kids}?band=little`}>
+              Little Apprentices
+            </Link>
+            <Link className="button" to={`${softwareRoutes.kids}?band=junior`}>
+              Junior Spellcasters
+            </Link>
+            <Link className="button" to={softwareRoutes.adults}>
+              Adult learners
+            </Link>
+            <Link className="button" to={softwareRoutes.ai}>
+              AI learning pathway
+            </Link>
+          </div>
+          <p>
+            Fictional project choices only. No app/test execution, Git commands,
+            repository connections, accounts or paid tools.
           </p>
         </article>
       ) : course.learningEntry ? (

@@ -56,7 +56,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F04 — Course previews, pilot entry, and not-found routing
 
-- **Status:** Implemented; Python, Programming Fundamentals, Web Enchantment, Cybersecurity Charms, Algorithm Alchemy and AI Fundamentals link to complete introductory lessons; Software Sorcery remains a preview.
+- **Status:** Implemented; Python, Programming Fundamentals, Web Enchantment, Cybersecurity Charms, Algorithm Alchemy and AI Fundamentals link to complete introductory lessons; Software Sorcery now has an introduction locally; publication awaits founder approval.
 - **Purpose:** provide stable course routes and honest availability messages.
 - **Audience:** visitors and human/AI pilot learners.
 - **Benefit:** reach working content without broken links or invented completed courses.
@@ -478,7 +478,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F38 — Thinking Like a Programmer
 
-- **Status:** Implemented locally; publication awaits founder approval. Five further course introductions remain Planned.
+- **Status:** Implemented; included in the verified Mission 017E GitHub source baseline. Current course coverage is recorded in the [Mission 017F inventory](LEARNING_ARCHITECTURE.md#mission-017f--current-introductory-inventory); Software Sorcery is local only.
 - **Purpose:** give the existing Programming Fundamentals course one complete introduction to programming, instructions, precision, sequencing, decomposition and debugging.
 - **Audience:** Little Apprentices, Junior Spellcasters, Adults, and AI learners/developers, with distinct content and tasks.
 - **Benefit:** clear goals and examples, three knowledge checks plus three practical plans per experience, unlimited retries, helpful hints, local completion/reset and a satisfying Hexi celebration.
@@ -495,7 +495,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F39 — The Anatomy of a Magical Web Page
 
-- **Status:** Implemented locally; publication awaits founder review. Four other course introductions remain Planned.
+- **Status:** Implemented; included in the verified Mission 017E GitHub source baseline. Current course coverage is recorded in the [Mission 017F inventory](LEARNING_ARCHITECTURE.md#mission-017f--current-introductory-inventory); Software Sorcery is local only.
 - **Purpose:** teach websites/pages, HTML’s purpose, elements/tags, headings/paragraphs, structure and simple HTML repairs.
 - **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers with differentiated instruction/tasks.
 - **Benefit:** six objectives, worked examples, three checks and three practices per variant, hints, unlimited retries, resettable browser completion and Hexi celebration. Adults independently choose content for a full restricted document.
@@ -512,7 +512,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F40 — The Guardian’s First Shield
 
-- **Status:** Implemented locally; publication awaits founder review. Three further course introductions remain Planned.
+- **Status:** Implemented; included in the verified Mission 017E GitHub source baseline. Current course coverage is recorded in the [Mission 017F inventory](LEARNING_ARCHITECTURE.md#mission-017f--current-introductory-inventory); Software Sorcery is local only.
 - **Purpose:** teach introductory defensive cybersecurity: protection, suspicious messages/addresses, unique strong passwords, MFA, privacy and safe response/help.
 - **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers with adapted instruction and fictional scenarios.
 - **Benefit:** six objectives, three checks and three practical scenarios per variant, actionable feedback/hints, unlimited retries, isolated completion/reset and Hexi encouragement/celebration. Both suspicious and confirmed informational examples prevent an always-suspicious shortcut.
@@ -522,14 +522,14 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Security:** fixed choice IDs only. No attacks, phishing delivery, secret collection, free-text entry, account connection, link visits, reporting transmission, attachment download, agent execution or executor/security-policy change. Addresses are reserved .invalid text; descriptions are not instructions to perform an action.
 - **Privacy/evidence:** completion IDs/versions only; no names, ages, passwords, answers or session results persisted. AI evaluations are local/deterministic; up to 20 practical results remain in memory for optional download. No general safety, mastery or retained-learning claim.
 - **Verification:** [review](MISSION_017C_REVIEW.md), [native tests](../tests/shield.test.ts), [browser checks](../scripts/verify-shield.cjs), all existing lesson regressions and production checks.
-- **Future improvements:** learner/screen-reader review, deeper privacy/updates/recovery topics through later bounded tasks. Algorithm Alchemy is next in the planned course order, not implemented here.
+- **Future improvements:** learner/screen-reader review, deeper privacy/updates/recovery topics through later bounded tasks. Algorithm Alchemy now has its own introduction; see F41 and the current inventory.
 
 
 ## Mission 017D classroom awakening · Algorithm Alchemy
 
 ### F41 — The Alchemist’s Recipe
 
-- **Status:** Implemented locally; publication awaits founder approval. AI Fundamentals and Software Sorcery introductions remain Planned.
+- **Status:** Implemented; included in the verified Mission 017E GitHub source baseline. Current course coverage is recorded in the [Mission 017F inventory](LEARNING_ARCHITECTURE.md#mission-017f--current-introductory-inventory); Software Sorcery is local only.
 - **Purpose:** extend basic sequencing into patterns, IF/ELSE, finite loops and removal of unnecessary instructions while preserving a goal.
 - **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers, with adapted explanations/examples.
 - **Benefit:** six objectives; three checks and three practicals per experience; hints, unlimited retries, feedback, independent resets, isolated progress and an encouraging Hexi/potion celebration.
@@ -545,7 +545,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F42 — The Familiar’s First Intelligence
 
-- **Status:** Implemented locally; awaiting founder publication approval. Software Sorcery remains Planned.
+- **Status:** Implemented; included in the verified Mission 017E GitHub source baseline. Current course coverage is recorded in the [Mission 017F inventory](LEARNING_ARCHITECTURE.md#mission-017f--current-introductory-inventory); Software Sorcery is local only.
 - **Purpose:** introduce AI, written rules versus learned patterns/generation, training examples, mistakes, human oversight and responsible privacy/fairness/verification.
 - **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers, with adapted instruction and fictional scenarios.
 - **Benefit:** six objectives; three checks/three multi-part practicals; helpful hints, unlimited retries, isolated completion/reset and original-Hexi encouragement plus a first-spark celebration.
@@ -555,4 +555,33 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Security/privacy:** fictional bounded choices only; no code/model/command execution, real data collection, external AI/OS access, executor or security-policy change. Completion IDs/versions only persist; session assessments remain memory-only and are never sent.
 - **Assessment:** versioned 1.0.0 contract, 48 declared cases, expected answers/output/explanations, three downloads and a 20-record session cap. No general alignment, mastery, consciousness or retained-learning claim.
 - **Verification:** [review](MISSION_017E_REVIEW.md), [native tests](../tests/intelligence.test.ts), [browser suite](../scripts/verify-intelligence.cjs) and all published lesson regressions.
-- **Future opportunities:** better dataset coverage/evaluation, uncertainty calibration, source verification and explicit fairness tradeoffs through later bounded exercises. Proposed only; Mission 017F is not implemented.
+- **Future opportunities:** better dataset coverage/evaluation, uncertainty calibration, source verification and explicit fairness tradeoffs through later bounded exercises. Proposed only for further AI lessons; Software Sorcery’s local introduction is recorded in F43.
+
+## Mission 017F classroom awakening · Software Sorcery
+
+### F43 — The Software Spellbook
+
+- **Status:** Implemented locally; awaiting founder publication approval. All seven existing courses now have introductory content locally; the broader catalog remains Planned.
+- **Purpose:** teach application purpose, checkable requirements, the iterative project cycle, component responsibilities/dependencies, testing/debugging/feedback and Git/collaboration/review.
+- **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers through adapted fictional project scenarios.
+- **Benefit:** six objectives, three checks/three multi-part practicals, hints/retries/feedback, isolated completion/reset and original-Hexi workshop/spellbook celebration.
+- **Location:** [data](../src/data/lessons/software-spellbook.v1.json), [catalog entry](../src/data/lessons/software-entry.ts), [adapter](../src/data/lessons/software-spellbook.ts), [schema](../src/learning/software-schema.ts), [checker](../src/learning/software.ts), [practice](../src/components/lessons/SoftwarePractice.tsx), [classroom](../src/pages/SoftwareLesson.tsx), course/path discovery.
+- **Dependencies:** existing React/Router, Valibot, native controls, unchanged progress/celebration helpers, themes and original Hexi. No new dependency, paid tool, account or service.
+- **Accessibility:** native labeled menus/radios, fieldsets/legends, wrapping selected text, keyboard hints/reset/check, polite status, static restoration and reduced motion; no child code editor, dragging or timer.
+- **Security/privacy:** bounded fictional choices only. No arbitrary code/test/Git execution, repository access, external AI, real personal information, unfinished executor or changed security boundary. Only completion IDs/versions persist; up to 20 session results stay in memory for optional download.
+- **Evidence:** 48 versioned deterministic cases with expected responses/explanations and executed:false/actionsPerformed:false. No general engineering competence, actual application release, retained learning or real test-pass claim.
+- **Verification:** [review](MISSION_017F_REVIEW.md), [native tests](../tests/software.test.ts), [browser checks](../scripts/verify-software.cjs), existing lesson regressions and [current inventory](LEARNING_ARCHITECTURE.md#mission-017f--current-introductory-inventory).
+- **Future opportunities:** user acceptance criteria, richer component interfaces, integration tests, branches/conflict resolution and maintenance scenarios. Proposed only; no further lessons implemented.
+
+
+## Mission 017F · Final publication polish
+
+**Implemented locally; publication pending:** the shared Software Sorcery course
+page now describes the available introductory lesson and its four pathway links,
+without visitor-facing approval-status wording. This copy is suitable for the
+proposed release; it does not establish that a deployment has occurred. The
+verified public source baseline remains Mission 017E
+(`b39c8b5ed040ab380de1a28170cf0e13435c7215`). Software Sorcery is locally
+ready for founder approval; no staging, commit, push or deployment is authorized.
+All other lesson content, artwork, progress, accessibility and security behavior
+remain unchanged. Fresh verification is recorded in the external release packet.

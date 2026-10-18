@@ -46,7 +46,7 @@ test("six goals and all four six-activity experiences register only the new cybe
     );
     assert.ok(tasks.some((t) => t.expectedClassification === "suspicious"));
   }
-  assert.equal(courses.filter((c) => c.modules.length > 0).length, 6);
+  assert.equal(courses.filter((c) => c.modules.length > 0).length, 7);
   assert.equal(
     courses.find((c) => c.id === "cybersecurity-charms")!.modules[0].lessons[0]
       .id,
@@ -67,8 +67,10 @@ test("six goals and all four six-activity experiences register only the new cybe
     courses.find((c) => c.id === "web-enchantment")!.modules[0].lessons[0].id,
     "web-html-anatomy-001",
   );
-  for (const id of ["software-sorcery"])
-    assert.equal(courses.find((c) => c.id === id)!.modules.length, 0);
+  assert.equal(
+    courses.find((c) => c.id === "software-sorcery")!.modules.length,
+    1,
+  );
 });
 test("all 36 deterministic examples reproduce declared outcomes and explain expected protective responses", () => {
   assert.equal(shieldAssessmentRecords.length, 36);

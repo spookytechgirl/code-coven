@@ -51,6 +51,9 @@ const IntelligenceLesson = lazy(() =>
     default: m.IntelligenceLesson,
   })),
 );
+const SoftwareLesson = lazy(() =>
+  import("./pages/SoftwareLesson").then((m) => ({ default: m.SoftwareLesson })),
+);
 function RouteFocus() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -92,6 +95,9 @@ function RouteFocus() {
         "The Familiar’s First Intelligence",
       "/learn/ai/ai-fundamentals/first-spark":
         "The Familiar’s First Intelligence",
+      "/learn/kids/software/first-spellbook": "The Software Spellbook",
+      "/learn/adults/software/first-spellbook": "The Software Spellbook",
+      "/learn/ai/software/first-spellbook": "The Software Spellbook",
       "/dashboard": "Student Dashboard",
       "/courses": "Explore Courses",
       "/academy": "The Academy",
@@ -150,6 +156,18 @@ export function App() {
           >
             <Route index element={<LearningEntry />} />
             <Route path=":audience" element={<PathOverview />} />
+            <Route
+              path="kids/software/first-spellbook"
+              element={<SoftwareLesson audience="kids" />}
+            />
+            <Route
+              path="adults/software/first-spellbook"
+              element={<SoftwareLesson audience="adults" />}
+            />
+            <Route
+              path="ai/software/first-spellbook"
+              element={<SoftwareLesson audience="ai" />}
+            />
             <Route
               path="kids/ai-fundamentals/first-spark"
               element={<IntelligenceLesson audience="kids" />}

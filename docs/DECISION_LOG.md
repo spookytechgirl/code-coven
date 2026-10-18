@@ -271,3 +271,28 @@ For future entries, copy the field structure above, use the actual recorded/adop
 - **Tradeoffs:** simplified scenarios do not evaluate arbitrary responses, calibration, genuine model fairness or retained learning. Native controls preserve keyboard interaction; symbol appearance varies. Real learner and screen-reader evaluation remains outstanding.
 - **Result:** six objectives, six activities per experience, hints/retries, local progress/reset, lavender spark/Hexi celebration, 48 cases and three downloads. A small separate catalog entry keeps full new data on the lazy classroom route and removes the initial main-bundle warning; a parity test guards duplicate metadata. Four older tests update only curriculum counts/empty-course expectations. No old lesson implementation, artwork, dependency, header or executor change.
 - **Related:** F12, F17–F24, F31–F42; [review](MISSION_017E_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [data](../src/data/lessons/intelligence-spark.v1.json).
+
+## D022 — Complete introductory coverage through a simulated software project
+
+- **Date:** 2026-10-18, Mission 017F founder instruction and local implementation.
+- **Status:** Implemented locally; no stage, commit, push or deployment authorized.
+- **Decision:** add Software Sorcery’s introduction across four experiences, focusing on requirements, components, iterative quality work and collaboration, with finite project-choice checks and a glowing spellbook celebration.
+- **Context:** the founder identifies this as the final Great Classroom Awakening introduction. GitHub main was verified at published Mission 017E before cloning a separate checkout. Existing lessons/artwork and unfinished executor isolation must be preserved.
+- **Alternatives considered:** another sequencing-only lesson would duplicate Programming Fundamentals; real project/Git execution or account integrations would violate scope; unconstrained free-text grading would lose deterministic correctness. A bounded plan from idea to release supports this introduction without real execution.
+- **Reasoning:** three multi-part activities can assess requirements/clarification, decomposition/dependencies/workflow and defects/tests/truthful review evidence. Native menus support keyboard and younger learners without code. Small metadata stays separate from full lazy classroom data, guarded by parity tests.
+- **Tradeoffs:** only supplied plans are graded; no real app, Git repository, tests or release is produced. A simplified lifecycle is iterative, not a rigid process mandate. Git does not prove correctness or automatically capture every edit; it is distinct from GitHub. Learner/screen-reader evaluation remains outstanding.
+- **Result:** seven of seven existing courses have introductions locally, eight individual lessons total. New lesson: six goals, six activities per experience, hints/retries/progress/reset, original-Hexi workshop reward, 48 cases and three downloads. Five older tests update only curriculum expectations. No old lesson implementation, artwork, dependency, header or executor modification. Software Sorcery remains unpublished by this mission.
+- **Related:** F12, F17–F24, F31–F43; [review](MISSION_017F_REVIEW.md), [inventory](LEARNING_ARCHITECTURE.md#mission-017f--current-introductory-inventory), [data](../src/data/lessons/software-spellbook.v1.json).
+
+
+## D023 — Separate classroom copy from release operations
+
+- **Date:** 2026-10-18, Mission 017F final publication polish.
+- **Status:** Implemented locally; publication pending founder approval.
+- **Context:** the reviewed course description would retain an outdated approval notice after publication.
+- **Decision:** replace only that visitor-facing sentence with guidance to the four existing pathways; keep local readiness and deployment status explicit in the Living Blueprint.
+- **Alternatives:** retaining the notice would confuse published visitors; claiming a completed deployment would be unsupported.
+- **Reasoning:** learners need accurate lesson availability; release authorization belongs in operational documentation.
+- **Tradeoffs:** documentation must still be updated after an actual deployment is verified.
+- **Result:** course copy is publication-ready; no lesson, artwork, navigation, execution or security behavior changed. Rebuild, regressions and refreshed hashes are required before approval.
+- **Related:** F43; [review](MISSION_017F_REVIEW.md), [course page](../src/pages/Explore.tsx).

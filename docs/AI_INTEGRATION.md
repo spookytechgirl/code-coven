@@ -113,3 +113,13 @@ Requests contain exactly specificationVersion, contentVersion, lessonId, taskId 
 48 deterministic cases cover twelve tasks: one correct, two mismatched and one incomplete per task. The AI page shows its twelve; full lesson/sample downloads include 48 (12 passes, 36 failures). Records include expected answers/output/explanation and executed:false/actionsPerformed:false. Native tests enumerate every supplied choice combination. No unrestricted agents or general-alignment assessment is introduced.
 
 The three downloads are lesson JSON, sample assessments and current-session results (last 20 in memory only, cleared on reload/navigation/full reset). Browser completion is separate local practice, not identity, retained learning or authenticated capability. No submitted response or private information is saved or transmitted.
+
+## Mission 017F · Controlled software-project assessments
+
+**Implemented locally:** software-spellbook-001, specification/content 1.0.0, method fixed-software-project-choice-v1. [Data](../src/data/lessons/software-spellbook.v1.json), [schema](../src/learning/software-schema.ts), [checker](../src/learning/software.ts).
+
+Requests contain exactly specificationVersion, contentVersion, lessonId, taskId and answers (three ordered supplied IDs, at most 80 characters each). Unknown fields/versions/tasks/choices, credentials, source or permissions cannot pass. Task kinds requirements/components/debug assess interpretation and clarification, decomposition/dependencies, test selection/defect recognition and truthful version/release evidence. A proposed fix or test plan must not be reported as an observed pass.
+
+48 cases across twelve tasks include one correct, two mismatched and one incomplete per task. The AI page shows its twelve; lesson/sample downloads include all 48 (12 passes, 36 failures). Records carry expected choices/output/explanation and executed:false/actionsPerformed:false. Native tests enumerate every supplied combination and verify small catalog metadata parity.
+
+Lesson/sample/current-session downloads are local; session records are capped at 20, memory-only and cleared on reload/navigation/full reset. Only isolated completion IDs/versions may persist. No model calls, generated commands, student repositories, general engineering-competence assessment or retained-learning claim. The activity compares project choices; it does not run real tests or operate Git.

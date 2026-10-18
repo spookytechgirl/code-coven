@@ -36,7 +36,7 @@ Older learners need flexible pathways rather than an automatic placement based o
 
 **Implemented in Mission 008:** one populated Python module/lesson with a canonical objective, audience-specific explanations, knowledge checks, restricted text practice, and browser-only completion. The AI variant includes a validated versioned specification and deterministic sample records.
 
-**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. One course module list remains empty; Programming Fundamentals, Web Enchantment and Cybersecurity Charms have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
+**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. All seven courses now contain introductory lessons locally; Software Sorcery awaits publication approval; Programming Fundamentals, Web Enchantment and Cybersecurity Charms have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
 
 The seven magical locations establish a setting, not locked academic silos. Avoid unrelated prerequisites that prevent someone exploring a department. Any future prerequisite should explain its learning purpose and offer a way to demonstrate an existing capability.
 
@@ -89,3 +89,20 @@ Update this document when mission, governance, audiences, or guiding principles 
 ## Mission 017E · Curiosity with evidence
 
 **Implemented locally:** The Familiar’s First Intelligence extends introductory coverage to six of seven courses while preserving Crystal’s creative direction, original Hexi and free education. Four adapted experiences explain AI mechanisms, examples, mistakes, oversight, privacy/fairness/verification. The verified GitHub baseline includes Mission 017D (`262f20ec880fd8ae5a10f3cd732471a6269c9b24`); this local mission does not claim a new production deployment. Only Software Sorcery’s introduction remains Planned. No model API, account, paid service or execution privilege is introduced. Earlier mission sections retain their historical scope. See [review](MISSION_017E_REVIEW.md).
+
+## Mission 017F · The final introductory classroom
+
+**Implemented locally; awaiting founder publication approval:** The Software Spellbook completes local introductory coverage across all seven existing courses. Software Sorcery focuses on a project’s user needs, requirements, components, quality, collaboration and maintenance, beyond Programming Fundamentals’ instruction/sequencing focus. The GitHub baseline includes Mission 017E (`b39c8b5ed040ab380de1a28170cf0e13435c7215`). This mission makes no new public deployment claim. The 127-lesson catalog remains largely Planned; eight individual lessons now exist locally. Crystal’s direction, free education, original Hexi and existing lessons are preserved. No account, real project execution, repository integration or paid service is introduced. Earlier mission sections describe their historical scope. See [review](MISSION_017F_REVIEW.md).
+
+
+## Mission 017F · Final publication polish
+
+**Implemented locally; publication pending:** the shared Software Sorcery course
+page now describes the available introductory lesson and its four pathway links,
+without visitor-facing approval-status wording. This copy is suitable for the
+proposed release; it does not establish that a deployment has occurred. The
+verified public source baseline remains Mission 017E
+(`b39c8b5ed040ab380de1a28170cf0e13435c7215`). Software Sorcery is locally
+ready for founder approval; no staging, commit, push or deployment is authorized.
+All other lesson content, artwork, progress, accessibility and security behavior
+remain unchanged. Fresh verification is recorded in the external release packet.

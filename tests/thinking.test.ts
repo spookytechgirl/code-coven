@@ -39,8 +39,8 @@ test("all four experiences have six goals, three valid checks, three practices a
   );
   assert.equal(
     courses.filter((c) => c.modules.length > 0).length,
-    6,
-    "Only Python, Programming Fundamentals, Web Enchantment, Cybersecurity Charms, Algorithm Alchemy and AI Fundamentals are implemented",
+    7,
+    "Only Python, Programming Fundamentals, Web Enchantment, Cybersecurity Charms, Algorithm Alchemy, AI Fundamentals and Software Sorcery are implemented",
   );
   assert.deepEqual(
     courses

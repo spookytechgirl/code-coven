@@ -1,3 +1,4 @@
+import { softwareLesson } from "./lessons/software-entry.ts";
 import { intelligenceLesson } from "./lessons/intelligence-entry.ts";
 import { algorithmLesson } from "./lessons/algorithm-recipe.ts";
 import { shieldLesson } from "./lessons/cyber-shield.ts";
@@ -123,7 +124,14 @@ export const courses: Course[] = [
     description: "Design resilient software and grow your engineering craft.",
     difficulty: "Advanced",
     lessonCount: 22,
-    modules: [],
+    learningEntry: "/courses/software-sorcery#classrooms",
+    modules: [
+      {
+        id: "software-project-basics",
+        title: "From user needs to a maintained application",
+        lessons: [softwareLesson],
+      },
+    ],
     accent: "pink",
   },
 ];

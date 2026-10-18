@@ -42,7 +42,7 @@ test("four variants, six objectives and six activities each extend the existing 
     );
   }
   assert.equal(new Set(ids).size, 24);
-  assert.equal(courses.filter((c) => c.modules.length > 0).length, 6);
+  assert.equal(courses.filter((c) => c.modules.length > 0).length, 7);
   assert.equal(
     courses.find((c) => c.id === "ai-fundamentals")!.modules[0].lessons[0].id,
     intelligenceSpec.lessonId,
@@ -60,7 +60,7 @@ test("four variants, six objectives and six activities each extend the existing 
   );
   assert.equal(
     courses.find((c) => c.id === "software-sorcery")!.modules.length,
-    0,
+    1,
   );
   assert.ok(intelligenceRoutes.ai.includes("ai-fundamentals/first-spark"));
 });

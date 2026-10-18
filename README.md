@@ -89,7 +89,7 @@ A current source/configuration scan found no credential-like tokens or private k
 
 ## Demo and artwork limitations
 
-Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; Cybersecurity Charms adds its defensive introduction and Algorithm Alchemy adds its recipe introduction; the remaining course remains a preview. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
+Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; Cybersecurity Charms adds its defensive introduction and Algorithm Alchemy adds its recipe introduction; Software Sorcery now adds its introduction locally, awaiting founder publication approval. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
 
 Mission 015 preserves all existing academy/course illustrations and Hexi while removing visitor-facing temporary artwork labels. No image was replaced, recolored, cropped, or regenerated. [ARTWORK.md](ARTWORK.md) records the label inventory and asset guidance; [Mission 015 review](docs/MISSION_015_REVIEW.md) records scope and verification. No paid services are required.
 
@@ -202,3 +202,18 @@ Practice checks only supplied identifiers; it does not run code, pseudocode or a
 Run `pnpm test:intelligence` and all existing native/build/format checks. `scripts/verify-intelligence.cjs` uses the optional external Playwright/Chrome setup above, default preview port 4200. [Mission 017E review](docs/MISSION_017E_REVIEW.md) records exact files, objectives, evidence, accuracy and limitations.
 
 Fictional supplied choices only: no model training/call, generated-command execution, external account, paid AI service, personal information or executor. Specification/content 1.0.0 includes 48 deterministic cases and lesson/sample/session downloads. Passing is bounded task performance, not general alignment or retained learning. AI Fundamentals is the subject course; its AI pathway is a controlled educational workbench, not a live agent service. Small discovery metadata loads separately from full lesson data, with parity checked by native tests. Software Sorcery remains Planned; Mission 017F is not started.
+
+## Mission 017F · The Software Spellbook
+
+**Implemented locally; not publicly released by this mission:** the final introductory classroom in the Great Classroom Awakening is available for founder review. All seven existing courses now have at least one introduction locally; this is not completion of the planned catalog.
+
+- Selector: `/courses/software-sorcery`.
+- Little / Junior: `/learn/kids/software/first-spellbook?band=little` or `?band=junior`.
+- Adults: `/learn/adults/software/first-spellbook`.
+- AIs: `/learn/ai/software/first-spellbook`.
+
+Six objectives cover software, requirements, the iterative project cycle, components, testing/debugging/feedback and version control/collaboration. Every pathway includes three checks, three multi-part practicals, hints, retries, browser-local progress/reset and the original-Hexi workshop celebration with a glowing spellbook. Little learners plan the Great Goblin Treat Tracker without writing code; adults plan a fictional equipment tracker. AI data includes 48 deterministic cases and three downloads.
+
+Run `pnpm test:software` and all existing native/build/format suites. `scripts/verify-software.cjs` follows the optional external Playwright/Chrome setup above (default port 4202). [Mission 017F review](docs/MISSION_017F_REVIEW.md) records objectives, evidence, limitations, exact files and release isolation. [Current curriculum inventory](docs/LEARNING_ARCHITECTURE.md#mission-017f--current-introductory-inventory) distinguishes baseline lessons from this local addition.
+
+Fixed project-choice simulation only: no real application, tests, Git commands, student repository access, model API, account or paid tool. Passing does not establish general software engineering competence. Original lessons/artwork/security remain unchanged; no publication is authorized.
