@@ -89,7 +89,7 @@ A current source/configuration scan found no credential-like tokens or private k
 
 ## Demo and artwork limitations
 
-Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; Cybersecurity Charms adds its defensive introduction and Algorithm Alchemy adds its recipe introduction; the other two courses remain previews. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
+Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; Cybersecurity Charms adds its defensive introduction and Algorithm Alchemy adds its recipe introduction; the remaining course remains a preview. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
 
 Mission 015 preserves all existing academy/course illustrations and Hexi while removing visitor-facing temporary artwork labels. No image was replaced, recolored, cropped, or regenerated. [ARTWORK.md](ARTWORK.md) records the label inventory and asset guidance; [Mission 015 review](docs/MISSION_015_REVIEW.md) records scope and verification. No paid services are required.
 
@@ -189,3 +189,16 @@ Run `pnpm test:shield` alongside all existing native/build suites. `scripts/veri
 Use `pnpm test:algorithms`, all existing native suites, `pnpm build`, `pnpm test:build` and `pnpm check:format`. With the production preview running, `scripts/verify-algorithms.cjs` uses the optional external Playwright/Chrome setup documented above. Its default preview port is 4198; override with BASE_URL.
 
 Practice checks only supplied identifiers; it does not run code, pseudocode or a recipe. AI specification/content 1.0.0 supplies 48 deterministic examples across twelve activities, expected output/explanation, and lesson/sample/session downloads. No new dependency, paid service, credential field, executor or deployment configuration. [Mission 017D review](docs/MISSION_017D_REVIEW.md) records exact files, evidence, boundaries and future opportunities. AI Fundamentals and Software Sorcery remain Planned; Mission 017E is not started.
+
+## Mission 017E · The Familiar’s First Intelligence
+
+**Implemented locally; publication awaits founder approval:** AI Fundamentals now has an introduction across Little, Junior, Adults and AI experiences. Six objectives distinguish AI approaches, examples, prediction errors, human oversight and responsible use. Each experience includes three checks, three multi-part practicals, hints, unlimited retries, browser-local progress/reset and original-Hexi celebration with “The Familiar’s First Spark.”
+
+- Selector: `/courses/ai-fundamentals`.
+- Little / Junior: `/learn/kids/ai-fundamentals/first-spark?band=little` or `?band=junior`.
+- Adults: `/learn/adults/ai-fundamentals/first-spark`.
+- AI workbench: `/learn/ai/ai-fundamentals/first-spark`.
+
+Run `pnpm test:intelligence` and all existing native/build/format checks. `scripts/verify-intelligence.cjs` uses the optional external Playwright/Chrome setup above, default preview port 4200. [Mission 017E review](docs/MISSION_017E_REVIEW.md) records exact files, objectives, evidence, accuracy and limitations.
+
+Fictional supplied choices only: no model training/call, generated-command execution, external account, paid AI service, personal information or executor. Specification/content 1.0.0 includes 48 deterministic cases and lesson/sample/session downloads. Passing is bounded task performance, not general alignment or retained learning. AI Fundamentals is the subject course; its AI pathway is a controlled educational workbench, not a live agent service. Small discovery metadata loads separately from full lesson data, with parity checked by native tests. Software Sorcery remains Planned; Mission 017F is not started.

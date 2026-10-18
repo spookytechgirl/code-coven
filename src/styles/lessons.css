@@ -1107,3 +1107,86 @@
     animation: none;
   }
 }
+
+/* Mission 017E: fictional machine cards and a lavender spark. */
+.intelligence-machines {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.intelligence-machines > div {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+.intelligence-machines span {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+.intelligence-slots {
+  display: grid;
+  gap: 1rem;
+}
+.intelligence-slots label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.intelligence-slots select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.65rem;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+.intelligence-evidence {
+  padding: 1rem;
+  background: var(--soft);
+  border-radius: 1rem;
+  overflow-wrap: anywhere;
+}
+.intelligence-spark-reward {
+  display: grid;
+  gap: 0.6rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 1.5rem 0;
+  border: 2px solid var(--accent);
+  border-radius: 1.5rem;
+  background: var(--surface);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+.intelligence-spark-reward span {
+  font-size: 3rem;
+  color: var(--accent);
+  text-shadow: 0 0 15px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.spark-enter {
+  animation: familiar-spark 1.2s ease-out 1;
+}
+@keyframes familiar-spark {
+  from {
+    opacity: 0.5;
+    box-shadow: 0 0 0 transparent;
+  }
+  to {
+    opacity: 1;
+    box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+}
+@media (max-width: 760px) {
+  .intelligence-machines {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spark-enter {
+    animation: none;
+  }
+}

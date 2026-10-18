@@ -46,6 +46,11 @@ const AlgorithmLesson = lazy(() =>
     default: m.AlgorithmLesson,
   })),
 );
+const IntelligenceLesson = lazy(() =>
+  import("./pages/IntelligenceLesson").then((m) => ({
+    default: m.IntelligenceLesson,
+  })),
+);
 function RouteFocus() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -81,6 +86,12 @@ function RouteFocus() {
       "/learn/kids/algorithms/first-recipe": "The Alchemist’s Recipe",
       "/learn/adults/algorithms/first-recipe": "The Alchemist’s Recipe",
       "/learn/ai/algorithms/first-recipe": "The Alchemist’s Recipe",
+      "/learn/kids/ai-fundamentals/first-spark":
+        "The Familiar’s First Intelligence",
+      "/learn/adults/ai-fundamentals/first-spark":
+        "The Familiar’s First Intelligence",
+      "/learn/ai/ai-fundamentals/first-spark":
+        "The Familiar’s First Intelligence",
       "/dashboard": "Student Dashboard",
       "/courses": "Explore Courses",
       "/academy": "The Academy",
@@ -139,6 +150,18 @@ export function App() {
           >
             <Route index element={<LearningEntry />} />
             <Route path=":audience" element={<PathOverview />} />
+            <Route
+              path="kids/ai-fundamentals/first-spark"
+              element={<IntelligenceLesson audience="kids" />}
+            />
+            <Route
+              path="adults/ai-fundamentals/first-spark"
+              element={<IntelligenceLesson audience="adults" />}
+            />
+            <Route
+              path="ai/ai-fundamentals/first-spark"
+              element={<IntelligenceLesson audience="ai" />}
+            />
             <Route
               path="kids/algorithms/first-recipe"
               element={<AlgorithmLesson audience="kids" />}

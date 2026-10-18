@@ -1,3 +1,4 @@
+import { intelligenceLesson } from "./lessons/intelligence-entry.ts";
 import { algorithmLesson } from "./lessons/algorithm-recipe.ts";
 import { shieldLesson } from "./lessons/cyber-shield.ts";
 import { htmlLesson } from "./lessons/web-html.ts";
@@ -88,7 +89,14 @@ export const courses: Course[] = [
     description: "Explore the curious world of artificial intelligence.",
     difficulty: "Beginner",
     lessonCount: 16,
-    modules: [],
+    learningEntry: "/courses/ai-fundamentals#classrooms",
+    modules: [
+      {
+        id: "ai-first-spark-basics",
+        title: "AI mechanisms, evidence and responsible use",
+        lessons: [intelligenceLesson],
+      },
+    ],
     accent: "gold",
   },
   {

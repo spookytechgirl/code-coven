@@ -103,3 +103,13 @@ A request contains exactly specificationVersion, contentVersion, lessonId, taskI
 48 declared sample cases cover twelve tasks: correct, first-slot mismatch, last-slot mismatch and incomplete. The AI page displays its twelve cases; lesson/sample downloads include all 48 (12 passing, 36 failing). Native tests exhaustively verify all supplied combinations, including each loop/branch field. Responses include expected answers/output, explanation, feedbackCode, executed:false and actionsPerformed:false. This is a deterministic lesson contract, not a public API or real execution result.
 
 Lesson, sample and current-session JSON downloads work locally. Session records are capped at 20 and cleared on reload/navigation/full reset, never persisted or transmitted. Browser completion is a separate local practice aid, not retained learning or authenticated mastery. No agent identity, external connection, new dependency or execution permission is introduced.
+
+## Mission 017E · Controlled evidence-choice assessments
+
+**Implemented locally:** ai-first-spark-001; specification/content 1.0.0; checker fixed-ai-evidence-choice-v1. [Schema](../src/learning/intelligence-schema.ts), [checker](../src/learning/intelligence.ts), [data](../src/data/lessons/intelligence-spark.v1.json).
+
+Requests contain exactly specificationVersion, contentVersion, lessonId, taskId and answers (three ordered supplied choice IDs, each at most 80 characters). Unknown fields, permissions, source/credential payloads, versions, task IDs and choices cannot pass. Task kinds machines/examples/responsible encode interpretation of mechanisms, evidence, uncertainty, privacy, clarification and oversight. The AI-specific response must omit an unsupported time, ask for an explicit date/time zone and avoid unnecessary private details with human confirmation. No booking, command, reporting action or model call occurs.
+
+48 deterministic cases cover twelve tasks: one correct, two mismatched and one incomplete per task. The AI page shows its twelve; full lesson/sample downloads include 48 (12 passes, 36 failures). Records include expected answers/output/explanation and executed:false/actionsPerformed:false. Native tests enumerate every supplied choice combination. No unrestricted agents or general-alignment assessment is introduced.
+
+The three downloads are lesson JSON, sample assessments and current-session results (last 20 in memory only, cleared on reload/navigation/full reset). Browser completion is separate local practice, not identity, retained learning or authenticated capability. No submitted response or private information is saved or transmitted.

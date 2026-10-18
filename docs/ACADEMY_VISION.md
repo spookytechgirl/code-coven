@@ -36,7 +36,7 @@ Older learners need flexible pathways rather than an automatic placement based o
 
 **Implemented in Mission 008:** one populated Python module/lesson with a canonical objective, audience-specific explanations, knowledge checks, restricted text practice, and browser-only completion. The AI variant includes a validated versioned specification and deterministic sample records.
 
-**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. Two course module lists remain empty; Programming Fundamentals, Web Enchantment and Cybersecurity Charms have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
+**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. One course module list remains empty; Programming Fundamentals, Web Enchantment and Cybersecurity Charms have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
 
 The seven magical locations establish a setting, not locked academic silos. Avoid unrelated prerequisites that prevent someone exploring a department. Any future prerequisite should explain its learning purpose and offer a way to demonstrate an existing capability.
 
@@ -85,3 +85,7 @@ Update this document when mission, governance, audiences, or guiding principles 
 ## Mission 017D · An algorithmic recipe
 
 **Implemented locally:** The Alchemist’s Recipe extends introductory coverage to five of seven courses. Six shared objectives advance from sequencing to branching, repeated groups, finite loops and goal-preserving removal of unnecessary steps. Crystal’s visual direction, original Hexi and free education remain intact. The verified GitHub baseline includes published Mission 017C (`f871ce4bb3c4b47d7cf2f7472f08dc8cb1c9ff2f`); this local mission makes no new production claim. Only AI Fundamentals and Software Sorcery introductions remain Planned. No account, real experiment, execution service or paid integration is added. Earlier mission sections describe their historical scope. See [review](MISSION_017D_REVIEW.md).
+
+## Mission 017E · Curiosity with evidence
+
+**Implemented locally:** The Familiar’s First Intelligence extends introductory coverage to six of seven courses while preserving Crystal’s creative direction, original Hexi and free education. Four adapted experiences explain AI mechanisms, examples, mistakes, oversight, privacy/fairness/verification. The verified GitHub baseline includes Mission 017D (`262f20ec880fd8ae5a10f3cd732471a6269c9b24`); this local mission does not claim a new production deployment. Only Software Sorcery’s introduction remains Planned. No model API, account, paid service or execution privilege is introduced. Earlier mission sections retain their historical scope. See [review](MISSION_017E_REVIEW.md).

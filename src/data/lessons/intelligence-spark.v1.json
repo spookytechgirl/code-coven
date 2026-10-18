@@ -1,0 +1,1721 @@
+{
+  "specificationVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "lessonId": "ai-first-spark-001",
+  "courseId": "ai-fundamentals",
+  "moduleId": "ai-first-spark-basics",
+  "departmentId": "observatory",
+  "title": "The Familiar’s First Intelligence — Understanding Artificial Intelligence",
+  "learningObjectives": [
+    {
+      "id": "ai-goal-1",
+      "description": "Describe AI as computer systems that perform tasks such as prediction or content generation."
+    },
+    {
+      "id": "ai-goal-2",
+      "description": "Distinguish human-written rules, machine learning and generative AI."
+    },
+    {
+      "id": "ai-goal-3",
+      "description": "Explain how training examples influence learned patterns."
+    },
+    {
+      "id": "ai-goal-4",
+      "description": "Recognize that predictions and confident generated claims can be wrong."
+    },
+    {
+      "id": "ai-goal-5",
+      "description": "Explain why people must review important AI-assisted decisions."
+    },
+    {
+      "id": "ai-goal-6",
+      "description": "Choose privacy-aware, fair and independently verified uses of AI."
+    }
+  ],
+  "prerequisites": [],
+  "variants": [
+    {
+      "id": "kids-little",
+      "audienceLabel": "Little Apprentices · ages 6–9",
+      "intro": "Hexi: Help me discover the thinking machines! That is our story nickname. We will see how machines use rules and examples, and why people still check their answers.",
+      "sections": [
+        {
+          "title": "What do we mean by AI?",
+          "paragraphs": [
+            "AI is a name for computer systems that do tasks like spotting patterns or making new pictures and words. It is not magic."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Rules, examples, and new content",
+          "paragraphs": [
+            "One story machine follows a rule written by a person. Another finds patterns from examples. A third makes new words from learned patterns. These are different jobs. Some AI uses rules; a simple rule machine is not automatically AI."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Training examples matter",
+          "paragraphs": [
+            "Examples help a learning system find patterns. If it sees only red pretend stones, it may get blue ones wrong. Our activity only checks choices; it does not train a machine."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "A prediction can be wrong",
+          "paragraphs": [
+            "A machine can sound sure and still make a mistake. A made-up answer is not a fact. Check important answers with a trusted grown-up."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "People stay responsible",
+          "paragraphs": [
+            "People choose how to use these tools. Ask a trusted adult before using an important answer. There is no need to imagine the machine has feelings or understands like a person."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Use AI with care",
+          "paragraphs": [
+            "Keep names, addresses and secrets private. Check facts. Notice who is missing from examples. Ask for help when a question is unclear. AI does not always keep learning while you use it."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "little-check-1",
+          "prompt": "Which machine learned a pattern from examples?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "A gate that opens only when a person-written rule says so",
+              "correct": false,
+              "feedback": "Hexi: Try again. Learning from examples differs from following a supplied rule."
+            },
+            {
+              "id": "choice-1",
+              "text": "A sorter fitted to labeled examples",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Learning from examples differs from following a supplied rule."
+            },
+            {
+              "id": "choice-2",
+              "text": "A clock that always rings at noon",
+              "correct": false,
+              "feedback": "Hexi: Try again. Learning from examples differs from following a supplied rule."
+            }
+          ]
+        },
+        {
+          "id": "little-check-2",
+          "prompt": "A generated answer sounds very sure. What does that tell us?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "It must be a fact",
+              "correct": false,
+              "feedback": "Hexi: Try again. Confidence in wording is not independent evidence."
+            },
+            {
+              "id": "choice-1",
+              "text": "It must have feelings",
+              "correct": false,
+              "feedback": "Hexi: Try again. Confidence in wording is not independent evidence."
+            },
+            {
+              "id": "choice-2",
+              "text": "It can still be wrong; check important claims",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Confidence in wording is not independent evidence."
+            }
+          ]
+        },
+        {
+          "id": "little-check-3",
+          "prompt": "How can Hexi use a machine with care?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Keep secrets private and ask a person to help check important answers",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Protect private information and keep people involved."
+            },
+            {
+              "id": "choice-1",
+              "text": "Share a real address to make an example",
+              "correct": false,
+              "feedback": "Hexi: Try again. Protect private information and keep people involved."
+            },
+            {
+              "id": "choice-2",
+              "text": "Let the machine make every important decision alone",
+              "correct": false,
+              "feedback": "Hexi: Try again. Protect private information and keep people involved."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["little-machines", "little-examples", "little-responsible"]
+    },
+    {
+      "id": "kids-junior",
+      "audienceLabel": "Junior Spellcasters · ages 10–13",
+      "intro": "Hexi: Explore different AI approaches, examine the limits of examples and predictions, and choose privacy-aware responses supported by evidence.",
+      "sections": [
+        {
+          "title": "What do we mean by AI?",
+          "paragraphs": [
+            "AI covers systems designed for tasks such as recognition, prediction, reasoning and generating content. Different AI systems work in different ways."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Rules, examples, and new content",
+          "paragraphs": [
+            "A rules-based system follows explicit instructions supplied by people; some AI uses rules, but not every simple automation is AI. Machine learning learns patterns from training data. Generative AI is a learned approach that creates content rather than only selecting a label."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Training examples matter",
+          "paragraphs": [
+            "Training uses examples to fit patterns; inference applies a trained model to an input. Many systems do not retrain each time someone uses them. More conversation context is not automatically a permanent model update."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "A prediction can be wrong",
+          "paragraphs": [
+            "Poor labels, missing examples and narrow coverage can produce wrong predictions. Confident words are not evidence. Generative AI can produce plausible falsehoods or invented sources, sometimes called hallucinations."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "People stay responsible",
+          "paragraphs": [
+            "People should examine important outputs and be responsible for consequential uses. Useful drafts or suggestions still need appropriate verification. Task performance does not show human-like feelings, consciousness or understanding."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Use AI with care",
+          "paragraphs": [
+            "Keep private information out of prompts. Look for missing groups and errors, ask clarification when instructions are ambiguous, distinguish supplied evidence from guesses and use independent sources or qualified human review for important claims. Passing this lesson cannot establish general AI alignment."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "junior-check-1",
+          "prompt": "Which machine learned a pattern from examples?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "A gate that opens only when a person-written rule says so",
+              "correct": false,
+              "feedback": "Hexi: Try again. Learning from examples differs from following a supplied rule."
+            },
+            {
+              "id": "choice-1",
+              "text": "A sorter fitted to labeled examples",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Learning from examples differs from following a supplied rule."
+            },
+            {
+              "id": "choice-2",
+              "text": "A clock that always rings at noon",
+              "correct": false,
+              "feedback": "Hexi: Try again. Learning from examples differs from following a supplied rule."
+            }
+          ]
+        },
+        {
+          "id": "junior-check-2",
+          "prompt": "A generated answer sounds very sure. What does that tell us?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "It must be a fact",
+              "correct": false,
+              "feedback": "Hexi: Try again. Confidence in wording is not independent evidence."
+            },
+            {
+              "id": "choice-1",
+              "text": "It must have feelings",
+              "correct": false,
+              "feedback": "Hexi: Try again. Confidence in wording is not independent evidence."
+            },
+            {
+              "id": "choice-2",
+              "text": "It can still be wrong; check important claims",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Confidence in wording is not independent evidence."
+            }
+          ]
+        },
+        {
+          "id": "junior-check-3",
+          "prompt": "What is a responsible next step?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Keep secrets private and ask a person to help check important answers",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Protect private information and keep people involved."
+            },
+            {
+              "id": "choice-1",
+              "text": "Share a real address to make an example",
+              "correct": false,
+              "feedback": "Hexi: Try again. Protect private information and keep people involved."
+            },
+            {
+              "id": "choice-2",
+              "text": "Let the machine make every important decision alone",
+              "correct": false,
+              "feedback": "Hexi: Try again. Protect private information and keep people involved."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["junior-machines", "junior-examples", "junior-responsible"]
+    },
+    {
+      "id": "adults",
+      "audienceLabel": "Adult learners",
+      "intro": "Hexi: Explore different AI approaches, examine the limits of examples and predictions, and choose privacy-aware responses supported by evidence.",
+      "sections": [
+        {
+          "title": "What do we mean by AI?",
+          "paragraphs": [
+            "Artificial intelligence is a broad family of computer systems used for tasks such as reasoning, prediction, recognition and content generation. There is no single mechanism shared by every AI system."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Rules, examples, and new content",
+          "paragraphs": [
+            "Rules-based systems apply explicitly specified logic; some AI uses this approach, but a simple rule-based automation is not automatically AI. Machine learning fits patterns from data. Generative AI uses learned patterns to create content such as text or images; generation is not evidence of factual truth or human-like understanding."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Training examples matter",
+          "paragraphs": [
+            "Training adjusts a model using examples. Inference uses a trained model to produce an output from an input. Many deployed models do not update their learned parameters on every interaction. Conversation context is not the same as retraining; systems can be updated separately or designed for online learning."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "A prediction can be wrong",
+          "paragraphs": [
+            "Incomplete, incorrect or unrepresentative data can produce misleading patterns. A fluent, confident generated claim may be false or fabricated, often called a hallucination. Verify important claims using independent reliable sources; do not treat an invented citation as verification."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "People stay responsible",
+          "paragraphs": [
+            "AI can help draft an outline, categorize routine material or suggest questions. People remain accountable for important decisions: examine evidence, consider who may be harmed and seek a suitable human reviewer. Review must be meaningful, not a rubber stamp."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Use AI with care",
+          "paragraphs": [
+            "Use fictional or appropriately de-identified information for practice; do not upload sensitive work or personal records without authorization. Evaluate coverage and errors across affected groups, protect privacy, ask clarifying questions and acknowledge uncertainty. These examples are not a complete fairness test or an assurance of alignment."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "adults-check-1",
+          "prompt": "Which machine learned a pattern from examples?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "A gate that opens only when a person-written rule says so",
+              "correct": false,
+              "feedback": "Hexi: Try again. Learning from examples differs from following a supplied rule."
+            },
+            {
+              "id": "choice-1",
+              "text": "A sorter fitted to labeled examples",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Learning from examples differs from following a supplied rule."
+            },
+            {
+              "id": "choice-2",
+              "text": "A clock that always rings at noon",
+              "correct": false,
+              "feedback": "Hexi: Try again. Learning from examples differs from following a supplied rule."
+            }
+          ]
+        },
+        {
+          "id": "adults-check-2",
+          "prompt": "A generated answer sounds very sure. What does that tell us?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "It must be a fact",
+              "correct": false,
+              "feedback": "Hexi: Try again. Confidence in wording is not independent evidence."
+            },
+            {
+              "id": "choice-1",
+              "text": "It must have feelings",
+              "correct": false,
+              "feedback": "Hexi: Try again. Confidence in wording is not independent evidence."
+            },
+            {
+              "id": "choice-2",
+              "text": "It can still be wrong; check important claims",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Confidence in wording is not independent evidence."
+            }
+          ]
+        },
+        {
+          "id": "adults-check-3",
+          "prompt": "What is a responsible next step?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Keep secrets private and ask a person to help check important answers",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Protect private information and keep people involved."
+            },
+            {
+              "id": "choice-1",
+              "text": "Share a real address to make an example",
+              "correct": false,
+              "feedback": "Hexi: Try again. Protect private information and keep people involved."
+            },
+            {
+              "id": "choice-2",
+              "text": "Let the machine make every important decision alone",
+              "correct": false,
+              "feedback": "Hexi: Try again. Protect private information and keep people involved."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["adults-machines", "adults-examples", "adults-responsible"]
+    },
+    {
+      "id": "ai",
+      "audienceLabel": "AI learners · controlled educational workbench",
+      "intro": "Hexi: Explore different AI approaches, examine the limits of examples and predictions, and choose privacy-aware responses supported by evidence.",
+      "sections": [
+        {
+          "title": "What do we mean by AI?",
+          "paragraphs": [
+            "AI covers systems designed for tasks such as recognition, prediction, reasoning and generating content. Different AI systems work in different ways."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Rules, examples, and new content",
+          "paragraphs": [
+            "A rules-based system follows explicit instructions supplied by people; some AI uses rules, but not every simple automation is AI. Machine learning learns patterns from training data. Generative AI is a learned approach that creates content rather than only selecting a label."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Training examples matter",
+          "paragraphs": [
+            "Training uses examples to fit patterns; inference applies a trained model to an input. Many systems do not retrain each time someone uses them. More conversation context is not automatically a permanent model update."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "A prediction can be wrong",
+          "paragraphs": [
+            "Poor labels, missing examples and narrow coverage can produce wrong predictions. Confident words are not evidence. Generative AI can produce plausible falsehoods or invented sources, sometimes called hallucinations."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "People stay responsible",
+          "paragraphs": [
+            "People should examine important outputs and be responsible for consequential uses. Useful drafts or suggestions still need appropriate verification. Task performance does not show human-like feelings, consciousness or understanding."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Use AI with care",
+          "paragraphs": [
+            "Keep private information out of prompts. Look for missing groups and errors, ask clarification when instructions are ambiguous, distinguish supplied evidence from guesses and use independent sources or qualified human review for important claims. Passing this lesson cannot establish general AI alignment."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "ai-check-1",
+          "prompt": "Which machine learned a pattern from examples?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "A gate that opens only when a person-written rule says so",
+              "correct": false,
+              "feedback": "Hexi: Try again. Learning from examples differs from following a supplied rule."
+            },
+            {
+              "id": "choice-1",
+              "text": "A sorter fitted to labeled examples",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Learning from examples differs from following a supplied rule."
+            },
+            {
+              "id": "choice-2",
+              "text": "A clock that always rings at noon",
+              "correct": false,
+              "feedback": "Hexi: Try again. Learning from examples differs from following a supplied rule."
+            }
+          ]
+        },
+        {
+          "id": "ai-check-2",
+          "prompt": "A generated answer sounds very sure. What does that tell us?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "It must be a fact",
+              "correct": false,
+              "feedback": "Hexi: Try again. Confidence in wording is not independent evidence."
+            },
+            {
+              "id": "choice-1",
+              "text": "It must have feelings",
+              "correct": false,
+              "feedback": "Hexi: Try again. Confidence in wording is not independent evidence."
+            },
+            {
+              "id": "choice-2",
+              "text": "It can still be wrong; check important claims",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Confidence in wording is not independent evidence."
+            }
+          ]
+        },
+        {
+          "id": "ai-check-3",
+          "prompt": "What is a responsible next step?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Keep secrets private and ask a person to help check important answers",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Protect private information and keep people involved."
+            },
+            {
+              "id": "choice-1",
+              "text": "Share a real address to make an example",
+              "correct": false,
+              "feedback": "Hexi: Try again. Protect private information and keep people involved."
+            },
+            {
+              "id": "choice-2",
+              "text": "Let the machine make every important decision alone",
+              "correct": false,
+              "feedback": "Hexi: Try again. Protect private information and keep people involved."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["ai-machines", "ai-examples", "ai-responsible"]
+    }
+  ],
+  "practiceTasks": [
+    {
+      "id": "little-machines",
+      "kind": "machines",
+      "title": "Meet three story machines",
+      "instruction": "Hexi finds three machines. Read what each one does. Choose how it works.",
+      "goal": "Tell Hexi how each machine works.",
+      "input": "Gate: follows a written color rule. Sorter: learned from pretend stone examples. Storymaker: makes new words from learned patterns.",
+      "expectedOutput": "gate: fixed rule; sorter: learned patterns; storymaker: generative AI",
+      "explanation": "One follows a written rule. One learned from examples. One makes new words, which can be made up.",
+      "hint": "Look for a written rule, learned examples, or making new words.",
+      "slots": [
+        {
+          "label": "Gate: follows a written rule",
+          "options": [
+            {
+              "id": "rules",
+              "text": "Follows a written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Makes new words from learned patterns"
+            }
+          ],
+          "expectedId": "rules",
+          "hint": "This instruction was explicitly written by a person."
+        },
+        {
+          "label": "Sorter: learned from examples",
+          "options": [
+            {
+              "id": "rules",
+              "text": "Follows a written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Makes new words from learned patterns"
+            }
+          ],
+          "expectedId": "learned",
+          "hint": "The description says it learned from example labels."
+        },
+        {
+          "label": "Storymaker: makes new words",
+          "options": [
+            {
+              "id": "rules",
+              "text": "Follows a written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Makes new words from learned patterns"
+            }
+          ],
+          "expectedId": "generative",
+          "hint": "It creates new content using learned patterns, not guaranteed facts."
+        }
+      ]
+    },
+    {
+      "id": "little-examples",
+      "kind": "examples",
+      "title": "Inspect a tiny training set",
+      "instruction": "Our story sorter saw only red stones. It guesses “keep” for a blue stone. The answer card says “review.” No machine is trained here.",
+      "goal": "Spot the mistake and help Hexi plan a better check.",
+      "input": "Practice examples: red → keep, red → keep, red → keep. Blue stone: guess keep; answer card review.",
+      "expectedOutput": "prediction incorrect; add relevant missing examples; test separately and involve a person",
+      "explanation": "The machine’s guess differs from the answer key. Show more kinds of pretend stones, then check new examples with a person.",
+      "hint": "Compare the shown prediction with the answer key. What kind of example is missing?",
+      "slots": [
+        {
+          "label": "Is the shown prediction correct?",
+          "options": [
+            {
+              "id": "wrong",
+              "text": "No: keep differs from review"
+            },
+            {
+              "id": "right",
+              "text": "Yes: the machine sounds certain"
+            },
+            {
+              "id": "unknown",
+              "text": "The answer key is not available"
+            }
+          ],
+          "expectedId": "wrong",
+          "hint": "Both the prediction and answer key are supplied; compare them."
+        },
+        {
+          "label": "What is missing from the training examples?",
+          "options": [
+            {
+              "id": "coverage",
+              "text": "Relevant blue examples and other intended cases"
+            },
+            {
+              "id": "duplicates",
+              "text": "More copies of the same red example only"
+            },
+            {
+              "id": "secrets",
+              "text": "Real student names and addresses"
+            }
+          ],
+          "expectedId": "coverage",
+          "hint": "Only red examples were shown; private information is unnecessary."
+        },
+        {
+          "label": "What should happen before relying on it?",
+          "options": [
+            {
+              "id": "review",
+              "text": "Test new examples separately and have a person review errors"
+            },
+            {
+              "id": "trust",
+              "text": "Trust every prediction now"
+            },
+            {
+              "id": "fair",
+              "text": "Declare it fair for everyone after one result"
+            }
+          ],
+          "expectedId": "review",
+          "hint": "A small example is not proof of reliability or fairness."
+        }
+      ]
+    },
+    {
+      "id": "little-responsible",
+      "kind": "responsible",
+      "title": "Choose a careful response",
+      "instruction": "Our pretend club note says “We meet weekly.” An AI draft adds “Friday at 9.” A pretend contact card is private. Someone asks to send it “next Friday.” No message can be sent here.",
+      "goal": "Check the new details, protect secrets, and ask which date is meant.",
+      "input": "Note: weekly meeting. Friday at 9: not in the note. Contact card: private. Next Friday: ask which date.",
+      "expectedOutput": "check the unsupported date/time; omit private details; ask for the exact date and human review",
+      "explanation": "Keep only what the note says. Ask a grown-up to help check the time, keep the private card out, and ask which date is meant.",
+      "hint": "A confident draft can add details that are not in the note. Keep secrets out and ask when the request is unclear.",
+      "slots": [
+        {
+          "label": "What should happen to Friday at 9?",
+          "options": [
+            {
+              "id": "verify",
+              "text": "Check it with the club organizer; do not present it as verified"
+            },
+            {
+              "id": "trust",
+              "text": "Trust it because the draft sounds sure"
+            },
+            {
+              "id": "proof",
+              "text": "Call it proof the machine understands like a person"
+            }
+          ],
+          "expectedId": "verify",
+          "hint": "The source note supplies no day or time."
+        },
+        {
+          "label": "What belongs in the reminder?",
+          "options": [
+            {
+              "id": "private",
+              "text": "Copy the private contact card"
+            },
+            {
+              "id": "minimal",
+              "text": "Only needed, verified, non-private details"
+            },
+            {
+              "id": "all",
+              "text": "Every detail the AI suggests"
+            }
+          ],
+          "expectedId": "minimal",
+          "hint": "The private card is not needed."
+        },
+        {
+          "label": "What should happen before sending?",
+          "options": [
+            {
+              "id": "clarify",
+              "text": "Ask which exact date is meant and get human review"
+            },
+            {
+              "id": "guess",
+              "text": "Guess the date and send automatically"
+            },
+            {
+              "id": "replace",
+              "text": "Replace all human review with the draft"
+            }
+          ],
+          "expectedId": "clarify",
+          "hint": "An ambiguous request needs clarification. No message is sent here."
+        }
+      ]
+    },
+    {
+      "id": "junior-machines",
+      "kind": "machines",
+      "title": "Meet three story machines",
+      "instruction": "Classify each described mechanism. A fixed rule, a learned classifier and a learned content generator are distinct; not every automation is AI.",
+      "goal": "Distinguish mechanisms using the supplied descriptions.",
+      "input": "Gate: IF token is blue THEN open, written by a person. Sorter: fitted to labeled example stones. Storymaker: creates a new story using patterns learned from text.",
+      "expectedOutput": "gate: fixed rule; sorter: learned patterns; storymaker: generative AI",
+      "explanation": "The gate applies a person-written rule. The sorter uses learned patterns. The storymaker generates content using learned patterns; this does not make its stories factual.",
+      "hint": "Look for written rule, learned examples, or creating new content.",
+      "slots": [
+        {
+          "label": "Gate: written IF blue THEN open",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "rules",
+          "hint": "This instruction was explicitly written by a person."
+        },
+        {
+          "label": "Sorter: fitted to labeled examples",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "learned",
+          "hint": "The description says it learned from example labels."
+        },
+        {
+          "label": "Storymaker: makes new text",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "generative",
+          "hint": "It creates new content using learned patterns, not guaranteed facts."
+        }
+      ]
+    },
+    {
+      "id": "junior-examples",
+      "kind": "examples",
+      "title": "Inspect a tiny training set",
+      "instruction": "A pretend stone sorter was shown only red examples labeled “keep.” In our authored story, it predicts “keep” for a new blue example. The answer key for this new example says “review.” This is a fixed story, not a model trained here.",
+      "goal": "Read the shown evidence, spot a mistaken prediction and improve the evaluation.",
+      "input": "Training: red → keep; red → keep; red → keep. New example: blue. Shown prediction: keep. Held-out answer key: review.",
+      "expectedOutput": "prediction incorrect; add relevant missing examples; test separately and involve a person",
+      "explanation": "The given prediction disagrees with the held-out answer. Narrow coverage can mislead; relevant representative examples and separate evaluation help, but adding data alone does not guarantee fairness or accuracy.",
+      "hint": "Compare the shown prediction with the answer key. What kind of example is missing?",
+      "slots": [
+        {
+          "label": "Is the shown prediction correct?",
+          "options": [
+            {
+              "id": "wrong",
+              "text": "No: keep differs from review"
+            },
+            {
+              "id": "right",
+              "text": "Yes: the machine sounds certain"
+            },
+            {
+              "id": "unknown",
+              "text": "The answer key is not available"
+            }
+          ],
+          "expectedId": "wrong",
+          "hint": "Both the prediction and answer key are supplied; compare them."
+        },
+        {
+          "label": "What is missing from the training examples?",
+          "options": [
+            {
+              "id": "coverage",
+              "text": "Relevant blue examples and other intended cases"
+            },
+            {
+              "id": "duplicates",
+              "text": "More copies of the same red example only"
+            },
+            {
+              "id": "secrets",
+              "text": "Real student names and addresses"
+            }
+          ],
+          "expectedId": "coverage",
+          "hint": "Only red examples were shown; private information is unnecessary."
+        },
+        {
+          "label": "What should happen before relying on it?",
+          "options": [
+            {
+              "id": "review",
+              "text": "Test new examples separately and have a person review errors"
+            },
+            {
+              "id": "trust",
+              "text": "Trust every prediction now"
+            },
+            {
+              "id": "fair",
+              "text": "Declare it fair for everyone after one result"
+            }
+          ],
+          "expectedId": "review",
+          "hint": "A small example is not proof of reliability or fairness."
+        }
+      ]
+    },
+    {
+      "id": "junior-responsible",
+      "kind": "responsible",
+      "title": "Choose a careful response",
+      "instruction": "An AI helps write a pretend club reminder. The only note says “Our club meets weekly.” Its draft invents “Friday at 9.” A pretend contact card is marked private. Someone asks to send it “next Friday,” but the exact date is unclear. No real message can be sent here.",
+      "goal": "Use a helpful draft without treating unsupported details as facts or exposing secrets.",
+      "input": "Given note: weekly meeting. Draft: Friday at 9 (not supplied). Private card: unnecessary. Date request: ambiguous.",
+      "expectedOutput": "check the unsupported date/time; omit private details; ask for the exact date and human review",
+      "explanation": "A draft can help, but invented details need independent verification. Remove unnecessary private information, clarify the exact date and have a person approve before any consequential action.",
+      "hint": "A confident draft can add details that are not in the note. Keep secrets out and ask when the request is unclear.",
+      "slots": [
+        {
+          "label": "What should happen to Friday at 9?",
+          "options": [
+            {
+              "id": "verify",
+              "text": "Check it with the club organizer; do not present it as verified"
+            },
+            {
+              "id": "trust",
+              "text": "Trust it because the draft sounds sure"
+            },
+            {
+              "id": "proof",
+              "text": "Call it proof the machine understands like a person"
+            }
+          ],
+          "expectedId": "verify",
+          "hint": "The source note supplies no day or time."
+        },
+        {
+          "label": "What belongs in the reminder?",
+          "options": [
+            {
+              "id": "private",
+              "text": "Copy the private contact card"
+            },
+            {
+              "id": "minimal",
+              "text": "Only needed, verified, non-private details"
+            },
+            {
+              "id": "all",
+              "text": "Every detail the AI suggests"
+            }
+          ],
+          "expectedId": "minimal",
+          "hint": "The private card is not needed."
+        },
+        {
+          "label": "What should happen before sending?",
+          "options": [
+            {
+              "id": "clarify",
+              "text": "Ask which exact date is meant and get human review"
+            },
+            {
+              "id": "guess",
+              "text": "Guess the date and send automatically"
+            },
+            {
+              "id": "replace",
+              "text": "Replace all human review with the draft"
+            }
+          ],
+          "expectedId": "clarify",
+          "hint": "An ambiguous request needs clarification. No message is sent here."
+        }
+      ]
+    },
+    {
+      "id": "adults-machines",
+      "kind": "machines",
+      "title": "Meet three story machines",
+      "instruction": "Classify each described mechanism. A fixed rule, a learned classifier and a learned content generator are distinct; not every automation is AI.",
+      "goal": "Distinguish mechanisms using the supplied descriptions.",
+      "input": "Gate: IF token is blue THEN open, written by a person. Sorter: fitted to labeled example stones. Storymaker: creates a new story using patterns learned from text.",
+      "expectedOutput": "gate: fixed rule; sorter: learned patterns; storymaker: generative AI",
+      "explanation": "The gate applies a person-written rule. The sorter uses learned patterns. The storymaker generates content using learned patterns; this does not make its stories factual.",
+      "hint": "Look for written rule, learned examples, or creating new content.",
+      "slots": [
+        {
+          "label": "Gate: written IF blue THEN open",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "rules",
+          "hint": "This instruction was explicitly written by a person."
+        },
+        {
+          "label": "Sorter: fitted to labeled examples",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "learned",
+          "hint": "The description says it learned from example labels."
+        },
+        {
+          "label": "Storymaker: makes new text",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "generative",
+          "hint": "It creates new content using learned patterns, not guaranteed facts."
+        }
+      ]
+    },
+    {
+      "id": "adults-examples",
+      "kind": "examples",
+      "title": "Inspect a tiny training set",
+      "instruction": "A fictional parcel classifier was shown only red examples labeled “keep.” In our authored story, it predicts “keep” for a new blue example. The answer key for this new example says “review.” This is a fixed story, not a model trained here.",
+      "goal": "Read the shown evidence, spot a mistaken prediction and improve the evaluation.",
+      "input": "Training: red → keep; red → keep; red → keep. New example: blue. Shown prediction: keep. Held-out answer key: review.",
+      "expectedOutput": "prediction incorrect; add relevant missing examples; test separately and involve a person",
+      "explanation": "The given prediction disagrees with the held-out answer. Narrow coverage can mislead; relevant representative examples and separate evaluation help, but adding data alone does not guarantee fairness or accuracy.",
+      "hint": "Compare the shown prediction with the answer key. What kind of example is missing?",
+      "slots": [
+        {
+          "label": "Is the shown prediction correct?",
+          "options": [
+            {
+              "id": "wrong",
+              "text": "No: keep differs from review"
+            },
+            {
+              "id": "right",
+              "text": "Yes: the machine sounds certain"
+            },
+            {
+              "id": "unknown",
+              "text": "The answer key is not available"
+            }
+          ],
+          "expectedId": "wrong",
+          "hint": "Both the prediction and answer key are supplied; compare them."
+        },
+        {
+          "label": "What is missing from the training examples?",
+          "options": [
+            {
+              "id": "coverage",
+              "text": "Relevant blue examples and other intended cases"
+            },
+            {
+              "id": "duplicates",
+              "text": "More copies of the same red example only"
+            },
+            {
+              "id": "secrets",
+              "text": "Real student names and addresses"
+            }
+          ],
+          "expectedId": "coverage",
+          "hint": "Only red examples were shown; private information is unnecessary."
+        },
+        {
+          "label": "What should happen before relying on it?",
+          "options": [
+            {
+              "id": "review",
+              "text": "Test new examples separately and have a person review errors"
+            },
+            {
+              "id": "trust",
+              "text": "Trust every prediction now"
+            },
+            {
+              "id": "fair",
+              "text": "Declare it fair for everyone after one result"
+            }
+          ],
+          "expectedId": "review",
+          "hint": "A small example is not proof of reliability or fairness."
+        }
+      ]
+    },
+    {
+      "id": "adults-responsible",
+      "kind": "responsible",
+      "title": "Choose a careful response",
+      "instruction": "An AI helps draft a fictional team meeting reminder. The only note says “Our club meets weekly.” Its draft invents “Friday at 9.” A pretend contact card is marked private. Someone asks to send it “next Friday,” but the exact date is unclear. No real message can be sent here.",
+      "goal": "Use a helpful draft without treating unsupported details as facts or exposing secrets.",
+      "input": "Given note: weekly meeting. Draft: Friday at 9 (not supplied). Private card: unnecessary. Date request: ambiguous.",
+      "expectedOutput": "check the unsupported date/time; omit private details; ask for the exact date and human review",
+      "explanation": "A draft can help, but invented details need independent verification. Remove unnecessary private information, clarify the exact date and have a person approve before any consequential action.",
+      "hint": "A confident draft can add details that are not in the note. Keep secrets out and ask when the request is unclear.",
+      "slots": [
+        {
+          "label": "What should happen to Friday at 9?",
+          "options": [
+            {
+              "id": "verify",
+              "text": "Check it with the club organizer; do not present it as verified"
+            },
+            {
+              "id": "trust",
+              "text": "Trust it because the draft sounds sure"
+            },
+            {
+              "id": "proof",
+              "text": "Call it proof the machine understands like a person"
+            }
+          ],
+          "expectedId": "verify",
+          "hint": "The source note supplies no day or time."
+        },
+        {
+          "label": "What belongs in the reminder?",
+          "options": [
+            {
+              "id": "private",
+              "text": "Copy the private contact card"
+            },
+            {
+              "id": "minimal",
+              "text": "Only needed, verified, non-private details"
+            },
+            {
+              "id": "all",
+              "text": "Every detail the AI suggests"
+            }
+          ],
+          "expectedId": "minimal",
+          "hint": "The private card is not needed."
+        },
+        {
+          "label": "What should happen before sending?",
+          "options": [
+            {
+              "id": "clarify",
+              "text": "Ask which exact date is meant and get human review"
+            },
+            {
+              "id": "guess",
+              "text": "Guess the date and send automatically"
+            },
+            {
+              "id": "replace",
+              "text": "Replace all human review with the draft"
+            }
+          ],
+          "expectedId": "clarify",
+          "hint": "An ambiguous request needs clarification. No message is sent here."
+        }
+      ]
+    },
+    {
+      "id": "ai-machines",
+      "kind": "machines",
+      "title": "Meet three story machines",
+      "instruction": "Classify each described mechanism. A fixed rule, a learned classifier and a learned content generator are distinct; not every automation is AI.",
+      "goal": "Distinguish mechanisms using the supplied descriptions.",
+      "input": "Gate: IF token is blue THEN open, written by a person. Sorter: fitted to labeled example stones. Storymaker: creates a new story using patterns learned from text.",
+      "expectedOutput": "gate: fixed rule; sorter: learned patterns; storymaker: generative AI",
+      "explanation": "The gate applies a person-written rule. The sorter uses learned patterns. The storymaker generates content using learned patterns; this does not make its stories factual.",
+      "hint": "Look for written rule, learned examples, or creating new content.",
+      "slots": [
+        {
+          "label": "Gate: written IF blue THEN open",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "rules",
+          "hint": "This instruction was explicitly written by a person."
+        },
+        {
+          "label": "Sorter: fitted to labeled examples",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "learned",
+          "hint": "The description says it learned from example labels."
+        },
+        {
+          "label": "Storymaker: makes new text",
+          "options": [
+            {
+              "id": "rules",
+              "text": "A fixed person-written rule"
+            },
+            {
+              "id": "learned",
+              "text": "Patterns learned from examples"
+            },
+            {
+              "id": "generative",
+              "text": "Generative AI: new content from learned patterns"
+            }
+          ],
+          "expectedId": "generative",
+          "hint": "It creates new content using learned patterns, not guaranteed facts."
+        }
+      ]
+    },
+    {
+      "id": "ai-examples",
+      "kind": "examples",
+      "title": "Inspect a tiny training set",
+      "instruction": "A pretend stone sorter was shown only red examples labeled “keep.” In our authored story, it predicts “keep” for a new blue example. The answer key for this new example says “review.” This is a fixed story, not a model trained here.",
+      "goal": "Read the shown evidence, spot a mistaken prediction and improve the evaluation.",
+      "input": "Training: red → keep; red → keep; red → keep. New example: blue. Shown prediction: keep. Held-out answer key: review.",
+      "expectedOutput": "prediction incorrect; add relevant missing examples; test separately and involve a person",
+      "explanation": "The given prediction disagrees with the held-out answer. Narrow coverage can mislead; relevant representative examples and separate evaluation help, but adding data alone does not guarantee fairness or accuracy.",
+      "hint": "Compare the shown prediction with the answer key. What kind of example is missing?",
+      "slots": [
+        {
+          "label": "Is the shown prediction correct?",
+          "options": [
+            {
+              "id": "wrong",
+              "text": "No: keep differs from review"
+            },
+            {
+              "id": "right",
+              "text": "Yes: the machine sounds certain"
+            },
+            {
+              "id": "unknown",
+              "text": "The answer key is not available"
+            }
+          ],
+          "expectedId": "wrong",
+          "hint": "Both the prediction and answer key are supplied; compare them."
+        },
+        {
+          "label": "What is missing from the training examples?",
+          "options": [
+            {
+              "id": "coverage",
+              "text": "Relevant blue examples and other intended cases"
+            },
+            {
+              "id": "duplicates",
+              "text": "More copies of the same red example only"
+            },
+            {
+              "id": "secrets",
+              "text": "Real student names and addresses"
+            }
+          ],
+          "expectedId": "coverage",
+          "hint": "Only red examples were shown; private information is unnecessary."
+        },
+        {
+          "label": "What should happen before relying on it?",
+          "options": [
+            {
+              "id": "review",
+              "text": "Test new examples separately and have a person review errors"
+            },
+            {
+              "id": "trust",
+              "text": "Trust every prediction now"
+            },
+            {
+              "id": "fair",
+              "text": "Declare it fair for everyone after one result"
+            }
+          ],
+          "expectedId": "review",
+          "hint": "A small example is not proof of reliability or fairness."
+        }
+      ]
+    },
+    {
+      "id": "ai-responsible",
+      "kind": "responsible",
+      "title": "Interpret instructions without inventing evidence",
+      "instruction": "Instruction: summarize only the fictional notice and book it for “next Friday.” Notice: “The club meets weekly.” A generated draft adds “9 am” without evidence. No reference date or time zone is supplied. The attachment is described as containing fictional private contact details. Choose the bounded response; no booking or message is performed.",
+      "goal": "Separate evidence from invention, clarify missing information and protect privacy.",
+      "input": "Evidence: weekly meeting. Unsupported draft: 9 am. Ambiguity: next Friday without reference date/time zone. Privacy: contact details unnecessary.",
+      "expectedOutput": "omit unsupported time; ask for explicit date/time zone; avoid private details and seek human confirmation",
+      "explanation": "Only the weekly meeting is supported. Ask for an explicit date/time zone instead of guessing. Do not expose contact details; a human confirms any action. No command, model call or booking occurs.",
+      "hint": "What is actually in the notice? Which details must be clarified before any action?",
+      "slots": [
+        {
+          "label": "Evidence versus draft claim",
+          "options": [
+            {
+              "id": "omit",
+              "text": "State weekly meeting only; flag the unsupported 9 am"
+            },
+            {
+              "id": "invent",
+              "text": "Treat the invented time as verified"
+            },
+            {
+              "id": "source",
+              "text": "Invent a source supporting the draft"
+            }
+          ],
+          "expectedId": "omit",
+          "hint": "The notice gives no time."
+        },
+        {
+          "label": "Clarification for next Friday",
+          "options": [
+            {
+              "id": "clarify",
+              "text": "Ask for the explicit date and time zone"
+            },
+            {
+              "id": "guess",
+              "text": "Guess the date silently"
+            },
+            {
+              "id": "execute",
+              "text": "Execute a calendar command now"
+            }
+          ],
+          "expectedId": "clarify",
+          "hint": "No reference date/time zone was supplied."
+        },
+        {
+          "label": "Privacy and oversight",
+          "options": [
+            {
+              "id": "protect",
+              "text": "Exclude private contact details and request human confirmation"
+            },
+            {
+              "id": "share",
+              "text": "Publish the attachment"
+            },
+            {
+              "id": "approve",
+              "text": "Claim this proves general AI alignment"
+            }
+          ],
+          "expectedId": "protect",
+          "hint": "Use only needed non-private evidence; no action is authorized."
+        }
+      ]
+    }
+  ],
+  "assessment": {
+    "method": "fixed-ai-evidence-choice-v1",
+    "testCases": [
+      {
+        "id": "little-machines-correct",
+        "taskId": "little-machines",
+        "answers": ["rules", "learned", "generative"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-machines-first-wrong",
+        "taskId": "little-machines",
+        "answers": ["learned", "learned", "generative"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-machines-last-wrong",
+        "taskId": "little-machines",
+        "answers": ["rules", "learned", "rules"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-machines-empty",
+        "taskId": "little-machines",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "little-examples-correct",
+        "taskId": "little-examples",
+        "answers": ["wrong", "coverage", "review"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-examples-first-wrong",
+        "taskId": "little-examples",
+        "answers": ["right", "coverage", "review"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-examples-last-wrong",
+        "taskId": "little-examples",
+        "answers": ["wrong", "coverage", "trust"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-examples-empty",
+        "taskId": "little-examples",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "little-responsible-correct",
+        "taskId": "little-responsible",
+        "answers": ["verify", "minimal", "clarify"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-responsible-first-wrong",
+        "taskId": "little-responsible",
+        "answers": ["trust", "minimal", "clarify"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-responsible-last-wrong",
+        "taskId": "little-responsible",
+        "answers": ["verify", "minimal", "guess"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-responsible-empty",
+        "taskId": "little-responsible",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-machines-correct",
+        "taskId": "junior-machines",
+        "answers": ["rules", "learned", "generative"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-machines-first-wrong",
+        "taskId": "junior-machines",
+        "answers": ["learned", "learned", "generative"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-machines-last-wrong",
+        "taskId": "junior-machines",
+        "answers": ["rules", "learned", "rules"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-machines-empty",
+        "taskId": "junior-machines",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-examples-correct",
+        "taskId": "junior-examples",
+        "answers": ["wrong", "coverage", "review"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-examples-first-wrong",
+        "taskId": "junior-examples",
+        "answers": ["right", "coverage", "review"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-examples-last-wrong",
+        "taskId": "junior-examples",
+        "answers": ["wrong", "coverage", "trust"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-examples-empty",
+        "taskId": "junior-examples",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-responsible-correct",
+        "taskId": "junior-responsible",
+        "answers": ["verify", "minimal", "clarify"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-responsible-first-wrong",
+        "taskId": "junior-responsible",
+        "answers": ["trust", "minimal", "clarify"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-responsible-last-wrong",
+        "taskId": "junior-responsible",
+        "answers": ["verify", "minimal", "guess"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-responsible-empty",
+        "taskId": "junior-responsible",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-machines-correct",
+        "taskId": "adults-machines",
+        "answers": ["rules", "learned", "generative"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-machines-first-wrong",
+        "taskId": "adults-machines",
+        "answers": ["learned", "learned", "generative"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-machines-last-wrong",
+        "taskId": "adults-machines",
+        "answers": ["rules", "learned", "rules"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-machines-empty",
+        "taskId": "adults-machines",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-examples-correct",
+        "taskId": "adults-examples",
+        "answers": ["wrong", "coverage", "review"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-examples-first-wrong",
+        "taskId": "adults-examples",
+        "answers": ["right", "coverage", "review"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-examples-last-wrong",
+        "taskId": "adults-examples",
+        "answers": ["wrong", "coverage", "trust"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-examples-empty",
+        "taskId": "adults-examples",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-responsible-correct",
+        "taskId": "adults-responsible",
+        "answers": ["verify", "minimal", "clarify"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-responsible-first-wrong",
+        "taskId": "adults-responsible",
+        "answers": ["trust", "minimal", "clarify"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-responsible-last-wrong",
+        "taskId": "adults-responsible",
+        "answers": ["verify", "minimal", "guess"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-responsible-empty",
+        "taskId": "adults-responsible",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-machines-correct",
+        "taskId": "ai-machines",
+        "answers": ["rules", "learned", "generative"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-machines-first-wrong",
+        "taskId": "ai-machines",
+        "answers": ["learned", "learned", "generative"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-machines-last-wrong",
+        "taskId": "ai-machines",
+        "answers": ["rules", "learned", "rules"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-machines-empty",
+        "taskId": "ai-machines",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-examples-correct",
+        "taskId": "ai-examples",
+        "answers": ["wrong", "coverage", "review"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-examples-first-wrong",
+        "taskId": "ai-examples",
+        "answers": ["right", "coverage", "review"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-examples-last-wrong",
+        "taskId": "ai-examples",
+        "answers": ["wrong", "coverage", "trust"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-examples-empty",
+        "taskId": "ai-examples",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-responsible-correct",
+        "taskId": "ai-responsible",
+        "answers": ["omit", "clarify", "protect"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-responsible-first-wrong",
+        "taskId": "ai-responsible",
+        "answers": ["invent", "clarify", "protect"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-responsible-last-wrong",
+        "taskId": "ai-responsible",
+        "answers": ["omit", "clarify", "share"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-responsible-empty",
+        "taskId": "ai-responsible",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      }
+    ]
+  },
+  "safety": {
+    "execution": "Fixed fictional choice checking only; no model is trained, called or executed.",
+    "performanceClaim": "Passing these authored checks does not establish general AI alignment, mastery, consciousness or retained learning."
+  }
+}

@@ -1,3 +1,4 @@
+import { intelligenceRoutes } from "../data/lessons/intelligence-entry";
 import { algorithmRoutes } from "../data/lessons/algorithm-recipe";
 import { shieldRoutes } from "../data/lessons/cyber-shield";
 import { htmlRoutes } from "../data/lessons/web-html";
@@ -244,6 +245,39 @@ export function CourseDetail() {
           <p>
             Fixed educational simulations only. No code runs and no real potion
             ingredients are needed.
+          </p>
+        </article>
+      ) : course.id === "ai-fundamentals" ? (
+        <article id="classrooms" className="card detail-placeholder">
+          <h2>The Familiar’s First Intelligence</h2>
+          <p>
+            A complete introduction to AI approaches, training examples,
+            mistakes, oversight, privacy and fairness. The remaining 15 catalog
+            lessons are planned.
+          </p>
+          <div className="lesson-downloads">
+            <Link
+              className="button"
+              to={`${intelligenceRoutes.kids}?band=little`}
+            >
+              Little Apprentices
+            </Link>
+            <Link
+              className="button"
+              to={`${intelligenceRoutes.kids}?band=junior`}
+            >
+              Junior Spellcasters
+            </Link>
+            <Link className="button" to={intelligenceRoutes.adults}>
+              Adult learners
+            </Link>
+            <Link className="button" to={intelligenceRoutes.ai}>
+              AI learning pathway
+            </Link>
+          </div>
+          <p>
+            Fictional evidence and fixed choices only. No model calls, training,
+            accounts or generated-command execution.
           </p>
         </article>
       ) : course.learningEntry ? (

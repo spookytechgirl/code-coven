@@ -1,3 +1,4 @@
+import { intelligenceRoutes } from "../data/lessons/intelligence-entry";
 import { algorithmRoutes } from "../data/lessons/algorithm-recipe";
 import { shieldRoutes } from "../data/lessons/cyber-shield";
 import { htmlRoutes } from "../data/lessons/web-html";
@@ -165,6 +166,17 @@ export function PathOverview() {
         </p>
         <Link className="button" to={algorithmRoutes[path.id]}>
           Open Algorithm Alchemy <ArrowRight size={17} />
+        </Link>
+      </section>
+      <section className="card pilot-summary">
+        <span className="eyebrow">AI FUNDAMENTALS · LESSON 001</span>
+        <h2>The Familiar’s First Intelligence</h2>
+        <p>
+          Compare rules and learned patterns, inspect fictional evidence and use
+          AI responsibly.
+        </p>
+        <Link className="button" to={intelligenceRoutes[path.id]}>
+          Open AI Fundamentals <ArrowRight size={17} />
         </Link>
       </section>
       <p className="learning-privacy">

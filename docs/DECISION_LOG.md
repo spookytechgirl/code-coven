@@ -259,3 +259,15 @@ For future entries, copy the field structure above, use the actual recorded/adop
 - **Tradeoffs:** only authored finite plans are accepted; alternative valid algorithms and runtime optimization are not evaluated. Loop notation can reduce written repetition without reducing operations. The flask uses system emoji, whose appearance varies. Target-age learner and real assistive-technology review remain outstanding.
 - **Result:** six objectives, six activities per experience, hints/retries, isolated local progress/reset, original Hexi celebration and glowing potion reward; versioned data, 48 sample cases and three downloads. No executor, account, paid service, asset replacement, security-header or dependency change. Three older curriculum tests recognize the fifth populated course.
 - **Related:** F12, F17–F24, F31–F41; [review](MISSION_017D_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [data](../src/data/lessons/algorithm-recipe.v1.json).
+
+## D021 — Teach AI accurately with finite fictional evidence
+
+- **Date:** 2026-10-18, Mission 017E founder instruction and local implementation.
+- **Status:** Implemented locally; no commit, push, deployment or Mission 017F authorized.
+- **Decision:** introduce AI Fundamentals through four adapted experiences with fixed mechanism/evidence/responsibility tasks and versioned records. Reuse lesson/progress/celebration patterns; preserve original Hexi and executor boundaries.
+- **Context:** the founder requests accurate distinctions among rules, ML and generation, uncertainty, privacy/fairness, oversight and an accessible first-spark reward. GitHub main was verified at published Mission 017D before cloning a separate checkout.
+- **Alternatives considered:** calling a live model would add prohibited accounts/cost/data risk; training an actual classifier would expand scope; unconstrained free-text grading would not be reproducible. Treating every rule or confident output as AI/truth would misteach the objectives.
+- **Reasoning:** authored evidence and supplied IDs make correctness inspectable without implying real training, execution or general alignment. Both the prediction and held-out answer are supplied; no trained model is inferred from a few examples.
+- **Tradeoffs:** simplified scenarios do not evaluate arbitrary responses, calibration, genuine model fairness or retained learning. Native controls preserve keyboard interaction; symbol appearance varies. Real learner and screen-reader evaluation remains outstanding.
+- **Result:** six objectives, six activities per experience, hints/retries, local progress/reset, lavender spark/Hexi celebration, 48 cases and three downloads. A small separate catalog entry keeps full new data on the lazy classroom route and removes the initial main-bundle warning; a parity test guards duplicate metadata. Four older tests update only curriculum counts/empty-course expectations. No old lesson implementation, artwork, dependency, header or executor change.
+- **Related:** F12, F17–F24, F31–F42; [review](MISSION_017E_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [data](../src/data/lessons/intelligence-spark.v1.json).

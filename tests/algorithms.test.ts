@@ -42,7 +42,7 @@ test("four variants, six objectives and six activities each extend the existing 
     );
   }
   assert.equal(new Set(ids).size, 24);
-  assert.equal(courses.filter((c) => c.modules.length > 0).length, 5);
+  assert.equal(courses.filter((c) => c.modules.length > 0).length, 6);
   assert.equal(
     courses.find((c) => c.id === "algorithm-alchemy")!.modules[0].lessons[0].id,
     algorithmSpec.lessonId,
@@ -56,7 +56,7 @@ test("four variants, six objectives and six activities each extend the existing 
   );
   assert.equal(
     courses.find((c) => c.id === "ai-fundamentals")!.modules.length,
-    0,
+    1,
   );
   assert.equal(
     courses.find((c) => c.id === "software-sorcery")!.modules.length,

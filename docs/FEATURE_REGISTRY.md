@@ -56,7 +56,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F04 — Course previews, pilot entry, and not-found routing
 
-- **Status:** Implemented; Python, Programming Fundamentals, Web Enchantment, Cybersecurity Charms and Algorithm Alchemy link to complete introductory lessons; two courses remain previews.
+- **Status:** Implemented; Python, Programming Fundamentals, Web Enchantment, Cybersecurity Charms, Algorithm Alchemy and AI Fundamentals link to complete introductory lessons; Software Sorcery remains a preview.
 - **Purpose:** provide stable course routes and honest availability messages.
 - **Audience:** visitors and human/AI pilot learners.
 - **Benefit:** reach working content without broken links or invented completed courses.
@@ -540,3 +540,19 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Privacy/evidence:** only completed IDs/versions persist. Versioned AI data and 48 deterministic cases can be downloaded; up to 20 session records remain memory-only. No names, ages, answers or records sent to a service. Bounded practice passes are not mastery or retained AI learning.
 - **Verification:** [review](MISSION_017D_REVIEW.md), [native tests](../tests/algorithms.test.ts), [browser checks](../scripts/verify-algorithms.cjs) and existing lesson regressions.
 - **Future improvements:** learner/screen-reader evaluation, multiple valid plans with explicit constraints, later nested decisions/loops and search/sort topics. These are Proposed, not implemented.
+
+## Mission 017E classroom awakening · AI Fundamentals
+
+### F42 — The Familiar’s First Intelligence
+
+- **Status:** Implemented locally; awaiting founder publication approval. Software Sorcery remains Planned.
+- **Purpose:** introduce AI, written rules versus learned patterns/generation, training examples, mistakes, human oversight and responsible privacy/fairness/verification.
+- **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers, with adapted instruction and fictional scenarios.
+- **Benefit:** six objectives; three checks/three multi-part practicals; helpful hints, unlimited retries, isolated completion/reset and original-Hexi encouragement plus a first-spark celebration.
+- **Location:** [data](../src/data/lessons/intelligence-spark.v1.json), [catalog entry](../src/data/lessons/intelligence-entry.ts), [adapter](../src/data/lessons/intelligence-spark.ts), [schema](../src/learning/intelligence-schema.ts), [checker](../src/learning/intelligence.ts), [practice](../src/components/lessons/IntelligencePractice.tsx), [classroom](../src/pages/IntelligenceLesson.tsx), course/path discovery.
+- **Dependencies:** existing React/Router, Valibot, native controls, progress/celebration helpers, themes and Hexi. No new package, service, payment or account.
+- **Accessibility:** labeled native menus/radios, fieldsets/legends, text evidence/feedback, keyboard hints/resets, polite completion, responsive wrapping and reduced motion. No drag/typing requirement, timer or color-only result.
+- **Security/privacy:** fictional bounded choices only; no code/model/command execution, real data collection, external AI/OS access, executor or security-policy change. Completion IDs/versions only persist; session assessments remain memory-only and are never sent.
+- **Assessment:** versioned 1.0.0 contract, 48 declared cases, expected answers/output/explanations, three downloads and a 20-record session cap. No general alignment, mastery, consciousness or retained-learning claim.
+- **Verification:** [review](MISSION_017E_REVIEW.md), [native tests](../tests/intelligence.test.ts), [browser suite](../scripts/verify-intelligence.cjs) and all published lesson regressions.
+- **Future opportunities:** better dataset coverage/evaluation, uncertainty calibration, source verification and explicit fairness tradeoffs through later bounded exercises. Proposed only; Mission 017F is not implemented.
