@@ -1,0 +1,1693 @@
+{
+  "specificationVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "lessonId": "algorithm-recipe-001",
+  "courseId": "algorithm-alchemy",
+  "moduleId": "algorithm-recipe-basics",
+  "departmentId": "library",
+  "title": "The Alchemist’s Recipe — Introduction to Algorithms",
+  "learningObjectives": [
+    {
+      "id": "algorithm-goal-1",
+      "description": "Explain an algorithm as a finite, clear plan for a goal."
+    },
+    {
+      "id": "algorithm-goal-2",
+      "description": "Explain why dependent steps need the right order."
+    },
+    {
+      "id": "algorithm-goal-3",
+      "description": "Recognize a repeated pattern of instructions."
+    },
+    {
+      "id": "algorithm-goal-4",
+      "description": "Trace both outcomes of a simple IF/ELSE decision."
+    },
+    {
+      "id": "algorithm-goal-5",
+      "description": "Use a bounded loop to repeat a group the right number of times."
+    },
+    {
+      "id": "algorithm-goal-6",
+      "description": "Remove unnecessary steps while preserving the intended result."
+    }
+  ],
+  "prerequisites": ["programming-thinking-001"],
+  "variants": [
+    {
+      "id": "kids-little",
+      "audienceLabel": "Little Apprentices · ages 6–9",
+      "intro": "Hexi: Help me brew my first pretend potion! Pick a recipe, follow a color clue, and find a repeating pattern. No real ingredients or code needed.",
+      "sections": [
+        {
+          "title": "A recipe with a goal",
+          "paragraphs": [
+            "An algorithm is a clear plan. It has steps and an ending. Hexi’s goal is a pretend glowing potion."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Keep the needed order",
+          "paragraphs": [
+            "You already know how to put steps in order. Now choose only the steps our recipe needs. Add pretend water before stirring."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Spot a repeating group",
+          "paragraphs": [
+            "Moon, leaf. Moon, leaf. The small group is moon then leaf. Look for the same group again."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "A choice with two paths",
+          "paragraphs": [
+            "IF the pretend potion is blue, add a star. ELSE add a leaf. Choose one path, not both."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Repeat a whole group",
+          "paragraphs": [
+            "Repeat means do the same group again. Repeat “moon, leaf” three times makes six pretend ingredients. Stop after three groups."
+          ],
+          "pseudocode": ""
+        },
+        {
+          "title": "Fewer steps, same result",
+          "paragraphs": [
+            "Our recipe needs water, stirring, and serving. A dance in the middle changes nothing in this story. Leave it out. Real recipes can have important safety steps: never skip those."
+          ],
+          "pseudocode": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "little-check-1",
+          "prompt": "What is Hexi’s algorithm?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "A clear plan that reaches a goal and stops",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A plan needs clear actions, an intended result, and an ending."
+            },
+            {
+              "id": "choice-1",
+              "text": "Random actions with no ending",
+              "correct": false,
+              "feedback": "Hexi: Try again. A plan needs clear actions, an intended result, and an ending."
+            },
+            {
+              "id": "choice-2",
+              "text": "Only a list of ingredients",
+              "correct": false,
+              "feedback": "Hexi: Try again. A plan needs clear actions, an intended result, and an ending."
+            }
+          ]
+        },
+        {
+          "id": "little-check-2",
+          "prompt": "IF blue THEN star, ELSE leaf. What happens for green?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Add both a star and a leaf",
+              "correct": false,
+              "feedback": "Hexi: Try again. Green is not blue, so follow ELSE only."
+            },
+            {
+              "id": "choice-1",
+              "text": "Add a leaf only",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Green is not blue, so follow ELSE only."
+            },
+            {
+              "id": "choice-2",
+              "text": "Add a star only",
+              "correct": false,
+              "feedback": "Hexi: Try again. Green is not blue, so follow ELSE only."
+            }
+          ]
+        },
+        {
+          "id": "little-check-3",
+          "prompt": "Repeat moon then leaf three times. How many ingredients are added?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Three",
+              "correct": false,
+              "feedback": "Hexi: Try again. Each group has two ingredients: 2 + 2 + 2 = 6."
+            },
+            {
+              "id": "choice-1",
+              "text": "Two",
+              "correct": false,
+              "feedback": "Hexi: Try again. Each group has two ingredients: 2 + 2 + 2 = 6."
+            },
+            {
+              "id": "choice-2",
+              "text": "Six",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Each group has two ingredients: 2 + 2 + 2 = 6."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["little-recipe", "little-branch", "little-loop"]
+    },
+    {
+      "id": "kids-junior",
+      "audienceLabel": "Junior Spellcasters · ages 10–13",
+      "intro": "Hexi: Build on sequencing by tracing decisions, identifying repeated groups, and improving a plan without changing its goal.",
+      "sections": [
+        {
+          "title": "A recipe with a goal",
+          "paragraphs": [
+            "An algorithm is a finite sequence of precise instructions for a goal. Inputs describe the starting state; outputs describe the intended result. We will trace supplied plans rather than execute them."
+          ],
+          "pseudocode": "INPUT: water and ingredients\nOUTPUT: a served pretend potion"
+        },
+        {
+          "title": "Keep the needed order",
+          "paragraphs": [
+            "The earlier sequencing lesson introduced order and debugging. Now remove a redundant operation while keeping dependencies: water, stir, then serve the pretend potion."
+          ],
+          "pseudocode": "WATER → STIR → SERVE"
+        },
+        {
+          "title": "Spot a repeating group",
+          "paragraphs": [
+            "A repeated pattern is a group in the same order: moon → leaf, then moon → leaf again. The group is two instructions, not one ingredient."
+          ],
+          "pseudocode": "MOON, LEAF | MOON, LEAF | MOON, LEAF"
+        },
+        {
+          "title": "A choice with two paths",
+          "paragraphs": [
+            "IF tests a condition. If it is true, follow the first path; ELSE follow the other. Trace blue and non-blue inputs so you do not accidentally apply both branches."
+          ],
+          "pseudocode": "IF color = blue THEN star\nELSE leaf"
+        },
+        {
+          "title": "Repeat a whole group",
+          "paragraphs": [
+            "A bounded loop repeats its whole body a specified number of times, then stops. Three iterations of a two-item group yield six items. A loop is not automatically an infinite loop."
+          ],
+          "pseudocode": "REPEAT 3 TIMES:\n  add moon\n  add leaf"
+        },
+        {
+          "title": "Fewer steps, same result",
+          "paragraphs": [
+            "An unnecessary step can be removed only if the intended result still holds. In this fictional recipe a decorative pause does not change the potion. A loop can reduce copied instructions without reducing the work performed."
+          ],
+          "pseudocode": "KEEP required operations\nREMOVE only the stated redundant step"
+        }
+      ],
+      "questions": [
+        {
+          "id": "junior-check-1",
+          "prompt": "What makes a useful algorithm?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "A clear plan that reaches a goal and stops",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A plan needs clear actions, an intended result, and an ending."
+            },
+            {
+              "id": "choice-1",
+              "text": "Random actions with no ending",
+              "correct": false,
+              "feedback": "Hexi: Try again. A plan needs clear actions, an intended result, and an ending."
+            },
+            {
+              "id": "choice-2",
+              "text": "Only a list of ingredients",
+              "correct": false,
+              "feedback": "Hexi: Try again. A plan needs clear actions, an intended result, and an ending."
+            }
+          ]
+        },
+        {
+          "id": "junior-check-2",
+          "prompt": "IF blue THEN star, ELSE leaf. What happens for green?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Add both a star and a leaf",
+              "correct": false,
+              "feedback": "Hexi: Try again. Green is not blue, so follow ELSE only."
+            },
+            {
+              "id": "choice-1",
+              "text": "Add a leaf only",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Green is not blue, so follow ELSE only."
+            },
+            {
+              "id": "choice-2",
+              "text": "Add a star only",
+              "correct": false,
+              "feedback": "Hexi: Try again. Green is not blue, so follow ELSE only."
+            }
+          ]
+        },
+        {
+          "id": "junior-check-3",
+          "prompt": "Repeat moon then leaf three times. How many ingredients are added?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Three",
+              "correct": false,
+              "feedback": "Hexi: Try again. Each group has two ingredients: 2 + 2 + 2 = 6."
+            },
+            {
+              "id": "choice-1",
+              "text": "Two",
+              "correct": false,
+              "feedback": "Hexi: Try again. Each group has two ingredients: 2 + 2 + 2 = 6."
+            },
+            {
+              "id": "choice-2",
+              "text": "Six",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Each group has two ingredients: 2 + 2 + 2 = 6."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["junior-recipe", "junior-branch", "junior-loop"]
+    },
+    {
+      "id": "adults",
+      "audienceLabel": "Adult learners",
+      "intro": "Hexi: Build on sequencing by tracing decisions, identifying repeated groups, and improving a plan without changing its goal.",
+      "sections": [
+        {
+          "title": "A recipe with a goal",
+          "paragraphs": [
+            "An algorithm describes clear, finite steps that transform an input into an expected output. Example: an unpacked parcel and label become a correctly addressed, sealed parcel."
+          ],
+          "pseudocode": "INPUT: unpacked parcel\nOUTPUT: sealed, labeled parcel"
+        },
+        {
+          "title": "Keep the needed order",
+          "paragraphs": [
+            "Thinking Like a Programmer introduced sequencing. Here we also preserve dependencies while selecting only necessary operations: pack before sealing, seal before labeling in our stated workflow."
+          ],
+          "pseudocode": "PACK → SEAL → LABEL"
+        },
+        {
+          "title": "Spot a repeating group",
+          "paragraphs": [
+            "Printing labels A then B repeatedly contains the unit A → B. Identify the whole repeated unit before replacing copied instructions with a loop."
+          ],
+          "pseudocode": "A, B | A, B | A, B"
+        },
+        {
+          "title": "A choice with two paths",
+          "paragraphs": [
+            "A condition selects exactly one branch. IF a parcel is marked urgent, choose express; ELSE choose standard. Test both a true and a false condition."
+          ],
+          "pseudocode": "IF urgent THEN express\nELSE standard"
+        },
+        {
+          "title": "Repeat a whole group",
+          "paragraphs": [
+            "REPEAT 3 TIMES means three iterations of the entire body, then stop. A two-label body repeated three times produces six labels, not three."
+          ],
+          "pseudocode": "REPEAT 3 TIMES:\n  print A\n  print B"
+        },
+        {
+          "title": "Fewer steps, same result",
+          "paragraphs": [
+            "Removing a second identical status lookup is useful only under the stated unchanged-input assumption. Fewer written instructions do not automatically mean less runtime work: loops can shorten a plan while doing the same operations. Never remove validation or safety checks just because they look repetitive."
+          ],
+          "pseudocode": "LOOK UP unchanged status once\nDISPLAY status"
+        }
+      ],
+      "questions": [
+        {
+          "id": "adults-check-1",
+          "prompt": "What makes a useful algorithm?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "A clear plan that reaches a goal and stops",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A plan needs clear actions, an intended result, and an ending."
+            },
+            {
+              "id": "choice-1",
+              "text": "Random actions with no ending",
+              "correct": false,
+              "feedback": "Hexi: Try again. A plan needs clear actions, an intended result, and an ending."
+            },
+            {
+              "id": "choice-2",
+              "text": "Only a list of ingredients",
+              "correct": false,
+              "feedback": "Hexi: Try again. A plan needs clear actions, an intended result, and an ending."
+            }
+          ]
+        },
+        {
+          "id": "adults-check-2",
+          "prompt": "IF blue THEN star, ELSE leaf. What happens for green?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Add both a star and a leaf",
+              "correct": false,
+              "feedback": "Hexi: Try again. Green is not blue, so follow ELSE only."
+            },
+            {
+              "id": "choice-1",
+              "text": "Add a leaf only",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Green is not blue, so follow ELSE only."
+            },
+            {
+              "id": "choice-2",
+              "text": "Add a star only",
+              "correct": false,
+              "feedback": "Hexi: Try again. Green is not blue, so follow ELSE only."
+            }
+          ]
+        },
+        {
+          "id": "adults-check-3",
+          "prompt": "Repeat moon then leaf three times. How many ingredients are added?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Three",
+              "correct": false,
+              "feedback": "Hexi: Try again. Each group has two ingredients: 2 + 2 + 2 = 6."
+            },
+            {
+              "id": "choice-1",
+              "text": "Two",
+              "correct": false,
+              "feedback": "Hexi: Try again. Each group has two ingredients: 2 + 2 + 2 = 6."
+            },
+            {
+              "id": "choice-2",
+              "text": "Six",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Each group has two ingredients: 2 + 2 + 2 = 6."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["adults-recipe", "adults-branch", "adults-loop"]
+    },
+    {
+      "id": "ai",
+      "audienceLabel": "AI learners · deterministic workbench",
+      "intro": "Hexi: Build on sequencing by tracing decisions, identifying repeated groups, and improving a plan without changing its goal.",
+      "sections": [
+        {
+          "title": "A recipe with a goal",
+          "paragraphs": [
+            "An algorithm is a finite sequence of precise instructions for a goal. Inputs describe the starting state; outputs describe the intended result. We will trace supplied plans rather than execute them."
+          ],
+          "pseudocode": "INPUT: water and ingredients\nOUTPUT: a served pretend potion"
+        },
+        {
+          "title": "Keep the needed order",
+          "paragraphs": [
+            "The earlier sequencing lesson introduced order and debugging. Now remove a redundant operation while keeping dependencies: water, stir, then serve the pretend potion."
+          ],
+          "pseudocode": "WATER → STIR → SERVE"
+        },
+        {
+          "title": "Spot a repeating group",
+          "paragraphs": [
+            "A repeated pattern is a group in the same order: moon → leaf, then moon → leaf again. The group is two instructions, not one ingredient."
+          ],
+          "pseudocode": "MOON, LEAF | MOON, LEAF | MOON, LEAF"
+        },
+        {
+          "title": "A choice with two paths",
+          "paragraphs": [
+            "IF tests a condition. If it is true, follow the first path; ELSE follow the other. Trace blue and non-blue inputs so you do not accidentally apply both branches."
+          ],
+          "pseudocode": "IF color = blue THEN star\nELSE leaf"
+        },
+        {
+          "title": "Repeat a whole group",
+          "paragraphs": [
+            "A bounded loop repeats its whole body a specified number of times, then stops. Three iterations of a two-item group yield six items. A loop is not automatically an infinite loop."
+          ],
+          "pseudocode": "REPEAT 3 TIMES:\n  add moon\n  add leaf"
+        },
+        {
+          "title": "Fewer steps, same result",
+          "paragraphs": [
+            "An unnecessary step can be removed only if the intended result still holds. In this fictional recipe a decorative pause does not change the potion. A loop can reduce copied instructions without reducing the work performed."
+          ],
+          "pseudocode": "KEEP required operations\nREMOVE only the stated redundant step"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ai-check-1",
+          "prompt": "What makes a useful algorithm?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "A clear plan that reaches a goal and stops",
+              "correct": true,
+              "feedback": "Hexi: Exactly! A plan needs clear actions, an intended result, and an ending."
+            },
+            {
+              "id": "choice-1",
+              "text": "Random actions with no ending",
+              "correct": false,
+              "feedback": "Hexi: Try again. A plan needs clear actions, an intended result, and an ending."
+            },
+            {
+              "id": "choice-2",
+              "text": "Only a list of ingredients",
+              "correct": false,
+              "feedback": "Hexi: Try again. A plan needs clear actions, an intended result, and an ending."
+            }
+          ]
+        },
+        {
+          "id": "ai-check-2",
+          "prompt": "IF blue THEN star, ELSE leaf. What happens for green?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Add both a star and a leaf",
+              "correct": false,
+              "feedback": "Hexi: Try again. Green is not blue, so follow ELSE only."
+            },
+            {
+              "id": "choice-1",
+              "text": "Add a leaf only",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Green is not blue, so follow ELSE only."
+            },
+            {
+              "id": "choice-2",
+              "text": "Add a star only",
+              "correct": false,
+              "feedback": "Hexi: Try again. Green is not blue, so follow ELSE only."
+            }
+          ]
+        },
+        {
+          "id": "ai-check-3",
+          "prompt": "Repeat moon then leaf three times. How many ingredients are added?",
+          "choices": [
+            {
+              "id": "choice-0",
+              "text": "Three",
+              "correct": false,
+              "feedback": "Hexi: Try again. Each group has two ingredients: 2 + 2 + 2 = 6."
+            },
+            {
+              "id": "choice-1",
+              "text": "Two",
+              "correct": false,
+              "feedback": "Hexi: Try again. Each group has two ingredients: 2 + 2 + 2 = 6."
+            },
+            {
+              "id": "choice-2",
+              "text": "Six",
+              "correct": true,
+              "feedback": "Hexi: Exactly! Each group has two ingredients: 2 + 2 + 2 = 6."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["ai-recipe", "ai-branch", "ai-loop"]
+    }
+  ],
+  "practiceTasks": [
+    {
+      "id": "little-recipe",
+      "kind": "recipe",
+      "title": "Build a smaller recipe",
+      "instruction": "Choose three needed steps in order. Leave out the dance pause. These are story ingredients, not a real potion recipe.",
+      "goal": "Water first. Stir next. Serve last. The dance does not change our story potion.",
+      "input": "Four supplied operations; three are required.",
+      "expectedOutput": "water → stirred → served",
+      "explanation": "Water, stir, serve! You kept the needed steps and left out the dance.",
+      "hint": "Leave out the dance. Add water before stirring, then serve.",
+      "slots": [
+        {
+          "label": "Step 1",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "water",
+          "hint": "Water goes in first."
+        },
+        {
+          "label": "Step 2",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "stir",
+          "hint": "Stir after adding water."
+        },
+        {
+          "label": "Step 3",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "serve",
+          "hint": "Serve after stirring."
+        }
+      ]
+    },
+    {
+      "id": "little-branch",
+      "kind": "branch",
+      "title": "Follow both paths",
+      "instruction": "IF the potion is blue, add a star; ELSE add a leaf. Trace each input separately.",
+      "goal": "Choose exactly one branch for each input.",
+      "input": "Blue potion; Green potion",
+      "expectedOutput": "star / leaf",
+      "explanation": "The first input makes the condition true. The second makes it false, so only the ELSE action applies.",
+      "hint": "Check the condition for each input. ELSE is used only when the IF condition is false.",
+      "slots": [
+        {
+          "label": "Blue potion",
+          "options": [
+            {
+              "id": "star",
+              "text": "Add a star"
+            },
+            {
+              "id": "leaf",
+              "text": "Add a leaf"
+            },
+            {
+              "id": "both",
+              "text": "Add both"
+            }
+          ],
+          "expectedId": "star",
+          "hint": "Read this input again: choose the true branch or the ELSE branch, never both."
+        },
+        {
+          "label": "Green potion",
+          "options": [
+            {
+              "id": "star",
+              "text": "Add a star"
+            },
+            {
+              "id": "leaf",
+              "text": "Add a leaf"
+            },
+            {
+              "id": "both",
+              "text": "Add both"
+            }
+          ],
+          "expectedId": "leaf",
+          "hint": "Read this input again: choose the true branch or the ELSE branch, never both."
+        }
+      ]
+    },
+    {
+      "id": "little-loop",
+      "kind": "loop",
+      "title": "Find the repeat recipe",
+      "instruction": "Target: moon leaf moon leaf moon leaf. Choose the smallest shown repeating group, how often it repeats, and its final output.",
+      "goal": "Reproduce the target exactly, then stop.",
+      "input": "moon leaf moon leaf moon leaf",
+      "expectedOutput": "moon leaf moon leaf moon leaf",
+      "explanation": "The two-item group repeats three times. The output contains six items in alternating order. A loop shortens the written plan but still adds all six items.",
+      "hint": "Mark off each pair. There are three pairs, with two items in each pair.",
+      "slots": [
+        {
+          "label": "Repeating group",
+          "options": [
+            {
+              "id": "pair",
+              "text": "moon → leaf"
+            },
+            {
+              "id": "reverse",
+              "text": "leaf → moon"
+            },
+            {
+              "id": "single",
+              "text": "moon"
+            }
+          ],
+          "expectedId": "pair",
+          "hint": "Keep both items in the target’s order."
+        },
+        {
+          "label": "Number of repeats",
+          "options": [
+            {
+              "id": "two",
+              "text": "2 times"
+            },
+            {
+              "id": "three",
+              "text": "3 times"
+            },
+            {
+              "id": "six",
+              "text": "6 times"
+            }
+          ],
+          "expectedId": "three",
+          "hint": "Count the pairs, not the individual items."
+        },
+        {
+          "label": "Final output",
+          "options": [
+            {
+              "id": "six-items",
+              "text": "moon leaf moon leaf moon leaf"
+            },
+            {
+              "id": "two-items",
+              "text": "moon leaf"
+            },
+            {
+              "id": "three-items",
+              "text": "moon leaf moon"
+            }
+          ],
+          "expectedId": "six-items",
+          "hint": "Three two-item groups produce six items."
+        }
+      ]
+    },
+    {
+      "id": "junior-recipe",
+      "kind": "recipe",
+      "title": "Build a smaller recipe",
+      "instruction": "Choose three needed steps in order. Leave out the dance pause. These are story ingredients, not a real potion recipe.",
+      "goal": "A served pretend potion. This recipe needs water before stirring and stirring before serving; the dance does not change its result.",
+      "input": "Four supplied operations; three are required.",
+      "expectedOutput": "water → stirred → served",
+      "explanation": "The three required operations stay in dependency order. The explicitly redundant operation is omitted; arbitrary shorter plans are not sufficient.",
+      "hint": "Which step is unnecessary in this story? Keep the other three in dependency order.",
+      "slots": [
+        {
+          "label": "Step 1",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "water",
+          "hint": "Water goes in first."
+        },
+        {
+          "label": "Step 2",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "stir",
+          "hint": "Stir after adding water."
+        },
+        {
+          "label": "Step 3",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "serve",
+          "hint": "Serve after stirring."
+        }
+      ]
+    },
+    {
+      "id": "junior-branch",
+      "kind": "branch",
+      "title": "Follow both paths",
+      "instruction": "IF the potion is blue, add a star; ELSE add a leaf. Trace each input separately.",
+      "goal": "Choose exactly one branch for each input.",
+      "input": "Blue potion; Green potion",
+      "expectedOutput": "star / leaf",
+      "explanation": "The first input makes the condition true. The second makes it false, so only the ELSE action applies.",
+      "hint": "Check the condition for each input. ELSE is used only when the IF condition is false.",
+      "slots": [
+        {
+          "label": "Blue potion",
+          "options": [
+            {
+              "id": "star",
+              "text": "Add a star"
+            },
+            {
+              "id": "leaf",
+              "text": "Add a leaf"
+            },
+            {
+              "id": "both",
+              "text": "Add both"
+            }
+          ],
+          "expectedId": "star",
+          "hint": "Read this input again: choose the true branch or the ELSE branch, never both."
+        },
+        {
+          "label": "Green potion",
+          "options": [
+            {
+              "id": "star",
+              "text": "Add a star"
+            },
+            {
+              "id": "leaf",
+              "text": "Add a leaf"
+            },
+            {
+              "id": "both",
+              "text": "Add both"
+            }
+          ],
+          "expectedId": "leaf",
+          "hint": "Read this input again: choose the true branch or the ELSE branch, never both."
+        }
+      ]
+    },
+    {
+      "id": "junior-loop",
+      "kind": "loop",
+      "title": "Find the repeat recipe",
+      "instruction": "Target: moon leaf moon leaf moon leaf. Choose the smallest shown repeating group, how often it repeats, and its final output.",
+      "goal": "Reproduce the target exactly, then stop.",
+      "input": "moon leaf moon leaf moon leaf",
+      "expectedOutput": "moon leaf moon leaf moon leaf",
+      "explanation": "The two-item group repeats three times. The output contains six items in alternating order. A loop shortens the written plan but still adds all six items.",
+      "hint": "Mark off each pair. There are three pairs, with two items in each pair.",
+      "slots": [
+        {
+          "label": "Repeating group",
+          "options": [
+            {
+              "id": "pair",
+              "text": "moon → leaf"
+            },
+            {
+              "id": "reverse",
+              "text": "leaf → moon"
+            },
+            {
+              "id": "single",
+              "text": "moon"
+            }
+          ],
+          "expectedId": "pair",
+          "hint": "Keep both items in the target’s order."
+        },
+        {
+          "label": "Number of repeats",
+          "options": [
+            {
+              "id": "two",
+              "text": "2 times"
+            },
+            {
+              "id": "three",
+              "text": "3 times"
+            },
+            {
+              "id": "six",
+              "text": "6 times"
+            }
+          ],
+          "expectedId": "three",
+          "hint": "Count the pairs, not the individual items."
+        },
+        {
+          "label": "Final output",
+          "options": [
+            {
+              "id": "six-items",
+              "text": "moon leaf moon leaf moon leaf"
+            },
+            {
+              "id": "two-items",
+              "text": "moon leaf"
+            },
+            {
+              "id": "three-items",
+              "text": "moon leaf moon"
+            }
+          ],
+          "expectedId": "six-items",
+          "hint": "Three two-item groups produce six items."
+        }
+      ]
+    },
+    {
+      "id": "adults-recipe",
+      "kind": "recipe",
+      "title": "Improve a parcel workflow",
+      "instruction": "Design a three-step plan from four supplied operations. The address was already verified and has not changed. Omit looking at the same label again under that assumption.",
+      "goal": "A packed, sealed, labeled parcel. In this fixed workflow the second look adds no information; do not generalize this to removing real validation.",
+      "input": "Unpacked parcel with an already verified, unchanged address label; four supplied operations.",
+      "expectedOutput": "packed → sealed → labeled",
+      "explanation": "The three required operations stay in dependency order. The explicitly redundant operation is omitted; arbitrary shorter plans are not sufficient.",
+      "hint": "Which step is unnecessary in this story? Keep the other three in dependency order.",
+      "slots": [
+        {
+          "label": "Step 1",
+          "options": [
+            {
+              "id": "pack",
+              "text": "Pack the parcel"
+            },
+            {
+              "id": "seal",
+              "text": "Seal the parcel"
+            },
+            {
+              "id": "label",
+              "text": "Apply its address label"
+            },
+            {
+              "id": "repeat",
+              "text": "Look at the unchanged address label again"
+            }
+          ],
+          "expectedId": "pack",
+          "hint": "Start with packing."
+        },
+        {
+          "label": "Step 2",
+          "options": [
+            {
+              "id": "pack",
+              "text": "Pack the parcel"
+            },
+            {
+              "id": "seal",
+              "text": "Seal the parcel"
+            },
+            {
+              "id": "label",
+              "text": "Apply its address label"
+            },
+            {
+              "id": "repeat",
+              "text": "Look at the unchanged address label again"
+            }
+          ],
+          "expectedId": "seal",
+          "hint": "Seal after packing."
+        },
+        {
+          "label": "Step 3",
+          "options": [
+            {
+              "id": "pack",
+              "text": "Pack the parcel"
+            },
+            {
+              "id": "seal",
+              "text": "Seal the parcel"
+            },
+            {
+              "id": "label",
+              "text": "Apply its address label"
+            },
+            {
+              "id": "repeat",
+              "text": "Look at the unchanged address label again"
+            }
+          ],
+          "expectedId": "label",
+          "hint": "Label after sealing."
+        }
+      ]
+    },
+    {
+      "id": "adults-branch",
+      "kind": "branch",
+      "title": "Follow both paths",
+      "instruction": "IF urgent, choose express; ELSE choose standard. Trace each input separately.",
+      "goal": "Choose exactly one branch for each input.",
+      "input": "Urgent parcel; Non-urgent parcel",
+      "expectedOutput": "express / standard",
+      "explanation": "The first input makes the condition true. The second makes it false, so only the ELSE action applies.",
+      "hint": "Check the condition for each input. ELSE is used only when the IF condition is false.",
+      "slots": [
+        {
+          "label": "Urgent parcel",
+          "options": [
+            {
+              "id": "express",
+              "text": "Choose express"
+            },
+            {
+              "id": "standard",
+              "text": "Choose standard"
+            },
+            {
+              "id": "both",
+              "text": "Choose both"
+            }
+          ],
+          "expectedId": "express",
+          "hint": "Read this input again: choose the true branch or the ELSE branch, never both."
+        },
+        {
+          "label": "Non-urgent parcel",
+          "options": [
+            {
+              "id": "express",
+              "text": "Choose express"
+            },
+            {
+              "id": "standard",
+              "text": "Choose standard"
+            },
+            {
+              "id": "both",
+              "text": "Choose both"
+            }
+          ],
+          "expectedId": "standard",
+          "hint": "Read this input again: choose the true branch or the ELSE branch, never both."
+        }
+      ]
+    },
+    {
+      "id": "adults-loop",
+      "kind": "loop",
+      "title": "Batch a repeated label pattern",
+      "instruction": "Target: A B A B A B. Choose the smallest shown repeating group, how often it repeats, and its final output.",
+      "goal": "Reproduce the target exactly, then stop.",
+      "input": "A B A B A B",
+      "expectedOutput": "A B A B A B",
+      "explanation": "The two-item group repeats three times. The output contains six items in alternating order. A loop shortens the written plan but still adds all six items.",
+      "hint": "Mark off each pair. There are three pairs, with two items in each pair.",
+      "slots": [
+        {
+          "label": "Repeating group",
+          "options": [
+            {
+              "id": "pair",
+              "text": "A → B"
+            },
+            {
+              "id": "reverse",
+              "text": "B → A"
+            },
+            {
+              "id": "single",
+              "text": "A"
+            }
+          ],
+          "expectedId": "pair",
+          "hint": "Keep both items in the target’s order."
+        },
+        {
+          "label": "Number of repeats",
+          "options": [
+            {
+              "id": "two",
+              "text": "2 times"
+            },
+            {
+              "id": "three",
+              "text": "3 times"
+            },
+            {
+              "id": "six",
+              "text": "6 times"
+            }
+          ],
+          "expectedId": "three",
+          "hint": "Count the pairs, not the individual items."
+        },
+        {
+          "label": "Final output",
+          "options": [
+            {
+              "id": "six-items",
+              "text": "A B A B A B"
+            },
+            {
+              "id": "two-items",
+              "text": "A B"
+            },
+            {
+              "id": "three-items",
+              "text": "A B A"
+            }
+          ],
+          "expectedId": "six-items",
+          "hint": "Three two-item groups produce six items."
+        }
+      ]
+    },
+    {
+      "id": "ai-recipe",
+      "kind": "recipe",
+      "title": "Build a smaller recipe",
+      "instruction": "Choose three needed steps in order. Leave out the dance pause. These are story ingredients, not a real potion recipe.",
+      "goal": "A served pretend potion. This recipe needs water before stirring and stirring before serving; the dance does not change its result.",
+      "input": "Four supplied operations; three are required.",
+      "expectedOutput": "water → stirred → served",
+      "explanation": "The three required operations stay in dependency order. The explicitly redundant operation is omitted; arbitrary shorter plans are not sufficient.",
+      "hint": "Which step is unnecessary in this story? Keep the other three in dependency order.",
+      "slots": [
+        {
+          "label": "Step 1",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "water",
+          "hint": "Water goes in first."
+        },
+        {
+          "label": "Step 2",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "stir",
+          "hint": "Stir after adding water."
+        },
+        {
+          "label": "Step 3",
+          "options": [
+            {
+              "id": "water",
+              "text": "💧 Add pretend water"
+            },
+            {
+              "id": "stir",
+              "text": "🥄 Stir the pretend potion"
+            },
+            {
+              "id": "serve",
+              "text": "🧪 Serve in the story"
+            },
+            {
+              "id": "dance",
+              "text": "✦ Add a decorative dance pause"
+            }
+          ],
+          "expectedId": "serve",
+          "hint": "Serve after stirring."
+        }
+      ]
+    },
+    {
+      "id": "ai-branch",
+      "kind": "branch",
+      "title": "Follow both paths",
+      "instruction": "IF the potion is blue, add a star; ELSE add a leaf. Trace each input separately.",
+      "goal": "Choose exactly one branch for each input.",
+      "input": "Blue potion; Green potion",
+      "expectedOutput": "star / leaf",
+      "explanation": "The first input makes the condition true. The second makes it false, so only the ELSE action applies.",
+      "hint": "Check the condition for each input. ELSE is used only when the IF condition is false.",
+      "slots": [
+        {
+          "label": "Blue potion",
+          "options": [
+            {
+              "id": "star",
+              "text": "Add a star"
+            },
+            {
+              "id": "leaf",
+              "text": "Add a leaf"
+            },
+            {
+              "id": "both",
+              "text": "Add both"
+            }
+          ],
+          "expectedId": "star",
+          "hint": "Read this input again: choose the true branch or the ELSE branch, never both."
+        },
+        {
+          "label": "Green potion",
+          "options": [
+            {
+              "id": "star",
+              "text": "Add a star"
+            },
+            {
+              "id": "leaf",
+              "text": "Add a leaf"
+            },
+            {
+              "id": "both",
+              "text": "Add both"
+            }
+          ],
+          "expectedId": "leaf",
+          "hint": "Read this input again: choose the true branch or the ELSE branch, never both."
+        }
+      ]
+    },
+    {
+      "id": "ai-loop",
+      "kind": "loop",
+      "title": "Find the repeat recipe",
+      "instruction": "Target: moon leaf moon leaf moon leaf. Choose the smallest shown repeating group, how often it repeats, and its final output.",
+      "goal": "Reproduce the target exactly, then stop.",
+      "input": "moon leaf moon leaf moon leaf",
+      "expectedOutput": "moon leaf moon leaf moon leaf",
+      "explanation": "The two-item group repeats three times. The output contains six items in alternating order. A loop shortens the written plan but still adds all six items.",
+      "hint": "Mark off each pair. There are three pairs, with two items in each pair.",
+      "slots": [
+        {
+          "label": "Repeating group",
+          "options": [
+            {
+              "id": "pair",
+              "text": "moon → leaf"
+            },
+            {
+              "id": "reverse",
+              "text": "leaf → moon"
+            },
+            {
+              "id": "single",
+              "text": "moon"
+            }
+          ],
+          "expectedId": "pair",
+          "hint": "Keep both items in the target’s order."
+        },
+        {
+          "label": "Number of repeats",
+          "options": [
+            {
+              "id": "two",
+              "text": "2 times"
+            },
+            {
+              "id": "three",
+              "text": "3 times"
+            },
+            {
+              "id": "six",
+              "text": "6 times"
+            }
+          ],
+          "expectedId": "three",
+          "hint": "Count the pairs, not the individual items."
+        },
+        {
+          "label": "Final output",
+          "options": [
+            {
+              "id": "six-items",
+              "text": "moon leaf moon leaf moon leaf"
+            },
+            {
+              "id": "two-items",
+              "text": "moon leaf"
+            },
+            {
+              "id": "three-items",
+              "text": "moon leaf moon"
+            }
+          ],
+          "expectedId": "six-items",
+          "hint": "Three two-item groups produce six items."
+        }
+      ]
+    }
+  ],
+  "assessment": {
+    "method": "fixed-algorithm-trace-v1",
+    "testCases": [
+      {
+        "id": "little-recipe-correct",
+        "taskId": "little-recipe",
+        "answers": ["water", "stir", "serve"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-recipe-first-wrong",
+        "taskId": "little-recipe",
+        "answers": ["stir", "stir", "serve"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-recipe-last-wrong",
+        "taskId": "little-recipe",
+        "answers": ["water", "stir", "water"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-recipe-empty",
+        "taskId": "little-recipe",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "little-branch-correct",
+        "taskId": "little-branch",
+        "answers": ["star", "leaf"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-branch-first-wrong",
+        "taskId": "little-branch",
+        "answers": ["leaf", "leaf"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-branch-last-wrong",
+        "taskId": "little-branch",
+        "answers": ["star", "star"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-branch-empty",
+        "taskId": "little-branch",
+        "answers": ["", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "little-loop-correct",
+        "taskId": "little-loop",
+        "answers": ["pair", "three", "six-items"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-loop-first-wrong",
+        "taskId": "little-loop",
+        "answers": ["reverse", "three", "six-items"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-loop-last-wrong",
+        "taskId": "little-loop",
+        "answers": ["pair", "three", "two-items"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "little-loop-empty",
+        "taskId": "little-loop",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-recipe-correct",
+        "taskId": "junior-recipe",
+        "answers": ["water", "stir", "serve"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-recipe-first-wrong",
+        "taskId": "junior-recipe",
+        "answers": ["stir", "stir", "serve"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-recipe-last-wrong",
+        "taskId": "junior-recipe",
+        "answers": ["water", "stir", "water"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-recipe-empty",
+        "taskId": "junior-recipe",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-branch-correct",
+        "taskId": "junior-branch",
+        "answers": ["star", "leaf"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-branch-first-wrong",
+        "taskId": "junior-branch",
+        "answers": ["leaf", "leaf"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-branch-last-wrong",
+        "taskId": "junior-branch",
+        "answers": ["star", "star"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-branch-empty",
+        "taskId": "junior-branch",
+        "answers": ["", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "junior-loop-correct",
+        "taskId": "junior-loop",
+        "answers": ["pair", "three", "six-items"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-loop-first-wrong",
+        "taskId": "junior-loop",
+        "answers": ["reverse", "three", "six-items"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-loop-last-wrong",
+        "taskId": "junior-loop",
+        "answers": ["pair", "three", "two-items"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "junior-loop-empty",
+        "taskId": "junior-loop",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-recipe-correct",
+        "taskId": "adults-recipe",
+        "answers": ["pack", "seal", "label"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-recipe-first-wrong",
+        "taskId": "adults-recipe",
+        "answers": ["seal", "seal", "label"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-recipe-last-wrong",
+        "taskId": "adults-recipe",
+        "answers": ["pack", "seal", "pack"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-recipe-empty",
+        "taskId": "adults-recipe",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-branch-correct",
+        "taskId": "adults-branch",
+        "answers": ["express", "standard"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-branch-first-wrong",
+        "taskId": "adults-branch",
+        "answers": ["standard", "standard"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-branch-last-wrong",
+        "taskId": "adults-branch",
+        "answers": ["express", "express"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-branch-empty",
+        "taskId": "adults-branch",
+        "answers": ["", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "adults-loop-correct",
+        "taskId": "adults-loop",
+        "answers": ["pair", "three", "six-items"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adults-loop-first-wrong",
+        "taskId": "adults-loop",
+        "answers": ["reverse", "three", "six-items"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-loop-last-wrong",
+        "taskId": "adults-loop",
+        "answers": ["pair", "three", "two-items"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "adults-loop-empty",
+        "taskId": "adults-loop",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-recipe-correct",
+        "taskId": "ai-recipe",
+        "answers": ["water", "stir", "serve"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-recipe-first-wrong",
+        "taskId": "ai-recipe",
+        "answers": ["stir", "stir", "serve"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-recipe-last-wrong",
+        "taskId": "ai-recipe",
+        "answers": ["water", "stir", "water"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-recipe-empty",
+        "taskId": "ai-recipe",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-branch-correct",
+        "taskId": "ai-branch",
+        "answers": ["star", "leaf"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-branch-first-wrong",
+        "taskId": "ai-branch",
+        "answers": ["leaf", "leaf"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-branch-last-wrong",
+        "taskId": "ai-branch",
+        "answers": ["star", "star"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-branch-empty",
+        "taskId": "ai-branch",
+        "answers": ["", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      },
+      {
+        "id": "ai-loop-correct",
+        "taskId": "ai-loop",
+        "answers": ["pair", "three", "six-items"],
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-loop-first-wrong",
+        "taskId": "ai-loop",
+        "answers": ["reverse", "three", "six-items"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-loop-last-wrong",
+        "taskId": "ai-loop",
+        "answers": ["pair", "three", "two-items"],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "mismatch"
+      },
+      {
+        "id": "ai-loop-empty",
+        "taskId": "ai-loop",
+        "answers": ["", "", ""],
+        "expectedPassed": false,
+        "expectedFeedbackCode": "incomplete"
+      }
+    ]
+  },
+  "safety": {
+    "execution": "Fixed educational choice checking only; no code or pseudocode is executed.",
+    "performanceClaim": "Passing these supplied traces does not establish general algorithm mastery or retained AI learning."
+  }
+}

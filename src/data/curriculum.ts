@@ -1,3 +1,4 @@
+import { algorithmLesson } from "./lessons/algorithm-recipe.ts";
 import { shieldLesson } from "./lessons/cyber-shield.ts";
 import { htmlLesson } from "./lessons/web-html.ts";
 import { thinkingLesson } from "./lessons/programming-thinking.ts";
@@ -70,7 +71,14 @@ export const courses: Course[] = [
     description: "Discover patterns, data structures, and elegant solutions.",
     difficulty: "Intermediate",
     lessonCount: 20,
-    modules: [],
+    learningEntry: "/courses/algorithm-alchemy#classrooms",
+    modules: [
+      {
+        id: "algorithm-recipe-basics",
+        title: "Algorithms, decisions and repeated patterns",
+        lessons: [algorithmLesson],
+      },
+    ],
     accent: "gold",
   },
   {

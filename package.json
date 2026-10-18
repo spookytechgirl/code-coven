@@ -14,7 +14,8 @@
     "test:variables": "node --experimental-strip-types --test tests/variables.test.ts",
     "test:thinking": "node --experimental-strip-types --test tests/thinking.test.ts",
     "test:html": "node --experimental-strip-types --test tests/html.test.ts",
-    "test:shield": "node --experimental-strip-types --test tests/shield.test.ts"
+    "test:shield": "node --experimental-strip-types --test tests/shield.test.ts",
+    "test:algorithms": "node --experimental-strip-types --test tests/algorithms.test.ts"
   },
   "dependencies": {
     "lucide-react": "1.55.0",

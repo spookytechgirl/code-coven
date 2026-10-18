@@ -34,7 +34,7 @@ test("six goals, four differentiated experiences and a new Web course module pre
     courses.find((c) => c.id === "web-enchantment")!.modules[0].lessons[0].id,
     htmlSpec.lessonId,
   );
-  assert.equal(courses.filter((c) => c.modules.length > 0).length, 4);
+  assert.equal(courses.filter((c) => c.modules.length > 0).length, 5);
   assert.deepEqual(
     courses
       .find((c) => c.id === "python-potions")!

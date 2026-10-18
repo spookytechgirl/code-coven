@@ -1,3 +1,4 @@
+import { algorithmRoutes } from "../data/lessons/algorithm-recipe";
 import { shieldRoutes } from "../data/lessons/cyber-shield";
 import { htmlRoutes } from "../data/lessons/web-html";
 import { thinkingRoutes } from "../data/lessons/programming-thinking";
@@ -153,6 +154,17 @@ export function PathOverview() {
         </p>
         <Link className="button" to={shieldRoutes[path.id]}>
           Open Cybersecurity Charms <ArrowRight size={17} />
+        </Link>
+      </section>
+      <section className="card pilot-summary">
+        <span className="eyebrow">ALGORITHM ALCHEMY · LESSON 001</span>
+        <h2>The Alchemist’s Recipe</h2>
+        <p>
+          Go beyond sequencing: trace IF/ELSE, repeat a pattern and improve a
+          plan.
+        </p>
+        <Link className="button" to={algorithmRoutes[path.id]}>
+          Open Algorithm Alchemy <ArrowRight size={17} />
         </Link>
       </section>
       <p className="learning-privacy">

@@ -92,3 +92,14 @@ The AI workbench provides interactive checks/practice/completion and downloads f
 A request contains exactly specificationVersion, contentVersion, lessonId, taskId, classification and actionId. [assessShield](../src/learning/shield.ts) rejects unknown fields, secret/source payloads, tasks and actions. Valid responses include submitted and expected IDs, explanation, feedback code, checker/content versions, executed:false and actionsPerformed:false. Nothing is sent, visited, scanned or reported. No-warning-shown is bounded to the authored context and grants no safety guarantee or tools.
 
 The AI classroom includes three knowledge checks and three practical cases with browser-only completion, plus lesson/sample/current-session downloads. The sample download includes all 36 cross-variant cases; the page lists its nine relevant cases. Current practical results are capped at 20 in memory and cleared on navigation/reload/reset; no responses are persisted or transmitted. Only isolated completion IDs/versions may be stored. This is not a live agent service, general threat detector, retained AI learning or trusted capability record.
+
+
+## Mission 017D · Fixed algorithm trace contract
+
+**Implemented locally:** [lesson JSON](../src/data/lessons/algorithm-recipe.v1.json), [strict schema](../src/learning/algorithm-schema.ts), [pure checker](../src/learning/algorithm.ts). specificationVersion/contentVersion 1.0.0; lessonId algorithm-recipe-001; method fixed-algorithm-trace-v1.
+
+A request contains exactly specificationVersion, contentVersion, lessonId, taskId and answers (an ordered array of at most three supplied IDs, maximum 80 characters each). Recipe slots encode dependent order and omission of a redundant option; branch slots trace true and false inputs; loop slots encode pattern/count/final output. Each task defines slot options, expected IDs, input, expectedOutput, explanation and hints. Unknown fields, versions, task IDs or choice IDs cannot pass. Empty slots receive incomplete feedback. No arbitrary source, permissions or operating-system action.
+
+48 declared sample cases cover twelve tasks: correct, first-slot mismatch, last-slot mismatch and incomplete. The AI page displays its twelve cases; lesson/sample downloads include all 48 (12 passing, 36 failing). Native tests exhaustively verify all supplied combinations, including each loop/branch field. Responses include expected answers/output, explanation, feedbackCode, executed:false and actionsPerformed:false. This is a deterministic lesson contract, not a public API or real execution result.
+
+Lesson, sample and current-session JSON downloads work locally. Session records are capped at 20 and cleared on reload/navigation/full reset, never persisted or transmitted. Browser completion is a separate local practice aid, not retained learning or authenticated mastery. No agent identity, external connection, new dependency or execution permission is introduced.

@@ -1030,3 +1030,80 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Mission 017D: bounded recipe choices and a local visual celebration. */
+.algorithm-ingredients {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.algorithm-ingredients span {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  font-weight: 700;
+}
+.algorithm-slots {
+  display: grid;
+  gap: 1rem;
+}
+.algorithm-slots label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.algorithm-slots select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.65rem;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+.algorithm-pseudocode {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: var(--surface);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+.algorithm-potion-reward {
+  display: grid;
+  gap: 0.6rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 1.5rem 0;
+  border: 2px solid var(--accent);
+  border-radius: 1.5rem;
+  background: var(--surface);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+.algorithm-potion-reward span {
+  font-size: 2.5rem;
+}
+.potion-enter {
+  animation: potion-glow 1.2s ease-out 1;
+}
+@keyframes potion-glow {
+  from {
+    box-shadow: 0 0 0 transparent;
+  }
+  to {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+}
+@media (max-width: 480px) {
+  .algorithm-ingredients {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .potion-enter {
+    animation: none;
+  }
+}

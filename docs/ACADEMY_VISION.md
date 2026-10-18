@@ -22,7 +22,7 @@ This blueprint explains both what exists and why future work matters. Current im
 
 ## Three audiences
 
-**Implemented:** a three-path selector and two shared Python lessons (output and variables) and Programming Fundamentals, Web Enchantment and Cybersecurity Charms introductions, with Little/Junior Kids adaptations, an Adults classroom, and a downloadable validated AI lesson. Full multi-course audience pathways remain **Planned**. No agent API, age collection, or age gating exists.
+**Implemented:** a three-path selector and two shared Python lessons (output and variables) and Programming Fundamentals, Web Enchantment, Cybersecurity Charms and Algorithm Alchemy introductions, with Little/Junior Kids adaptations, an Adults classroom, and a downloadable validated AI lesson. Full multi-course audience pathways remain **Planned**. No agent API, age collection, or age gating exists.
 
 - **Code Coven for Kids:** Little Apprentices (ages 6–9) and Junior Spellcasters (ages 10–13), with distinct introductory activities now implemented; broader audience testing and support policies remain Planned.
 - **Code Coven for Adults:** flexible entry points, practical paths, and progressively demanding work without assuming every adult starts at the same level.
@@ -36,7 +36,7 @@ Older learners need flexible pathways rather than an automatic placement based o
 
 **Implemented in Mission 008:** one populated Python module/lesson with a canonical objective, audience-specific explanations, knowledge checks, restricted text practice, and browser-only completion. The AI variant includes a validated versioned specification and deterministic sample records.
 
-**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. Three course module lists remain empty; Programming Fundamentals, Web Enchantment and Cybersecurity Charms have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
+**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. Two course module lists remain empty; Programming Fundamentals, Web Enchantment and Cybersecurity Charms have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
 
 The seven magical locations establish a setting, not locked academic silos. Avoid unrelated prerequisites that prevent someone exploring a department. Any future prerequisite should explain its learning purpose and offer a way to demonstrate an existing capability.
 
@@ -80,3 +80,8 @@ Update this document when mission, governance, audiences, or guiding principles 
 ## Mission 017C · A defensive first shield
 
 **Implemented locally:** The Guardian’s First Shield introduces six shared defensive cybersecurity objectives through four adapted learning experiences. It extends introductory coverage to four of seven courses while preserving Crystal’s design and Hexi. The verified GitHub source baseline includes Mission 017B (`7fdcfdea6e8b5771633b181eaeeca89d566a5f2a`); this mission makes no production deployment claim. All scenarios are fictional, with fixed choices and no passwords/personal information requested. No attack, live suspicious link, student account, public agent service or executor is introduced. Algorithm Alchemy, AI Fundamentals and Software Sorcery remain **Planned**; Mission 017D has not started. See [review](MISSION_017C_REVIEW.md).
+
+
+## Mission 017D · An algorithmic recipe
+
+**Implemented locally:** The Alchemist’s Recipe extends introductory coverage to five of seven courses. Six shared objectives advance from sequencing to branching, repeated groups, finite loops and goal-preserving removal of unnecessary steps. Crystal’s visual direction, original Hexi and free education remain intact. The verified GitHub baseline includes published Mission 017C (`f871ce4bb3c4b47d7cf2f7472f08dc8cb1c9ff2f`); this local mission makes no new production claim. Only AI Fundamentals and Software Sorcery introductions remain Planned. No account, real experiment, execution service or paid integration is added. Earlier mission sections describe their historical scope. See [review](MISSION_017D_REVIEW.md).

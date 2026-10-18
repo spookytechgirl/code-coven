@@ -1,3 +1,4 @@
+import { algorithmRoutes } from "../data/lessons/algorithm-recipe";
 import { shieldRoutes } from "../data/lessons/cyber-shield";
 import { htmlRoutes } from "../data/lessons/web-html";
 import { thinkingRoutes } from "../data/lessons/programming-thinking";
@@ -216,6 +217,33 @@ export function CourseDetail() {
           <p>
             Fictional scenarios and fixed choices only. No real passwords,
             accounts, link visits or attacks.
+          </p>
+        </article>
+      ) : course.id === "algorithm-alchemy" ? (
+        <article id="classrooms" className="card detail-placeholder">
+          <h2>The Alchemist’s Recipe</h2>
+          <p>
+            One complete introductory lesson: algorithms, decisions, patterns,
+            bounded loops and removing unnecessary steps. Builds on Programming
+            Fundamentals. The other 19 catalog lessons are planned.
+          </p>
+          <div className="lesson-downloads">
+            <Link className="button" to={`${algorithmRoutes.kids}?band=little`}>
+              Little Apprentices
+            </Link>
+            <Link className="button" to={`${algorithmRoutes.kids}?band=junior`}>
+              Junior Spellcasters
+            </Link>
+            <Link className="button" to={algorithmRoutes.adults}>
+              Adult learners
+            </Link>
+            <Link className="button" to={algorithmRoutes.ai}>
+              AI learning pathway
+            </Link>
+          </div>
+          <p>
+            Fixed educational simulations only. No code runs and no real potion
+            ingredients are needed.
           </p>
         </article>
       ) : course.learningEntry ? (

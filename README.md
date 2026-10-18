@@ -89,7 +89,7 @@ A current source/configuration scan found no credential-like tokens or private k
 
 ## Demo and artwork limitations
 
-Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; Cybersecurity Charms now adds its defensive introduction; the other three courses remain previews. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
+Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; Cybersecurity Charms adds its defensive introduction and Algorithm Alchemy adds its recipe introduction; the other two courses remain previews. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
 
 Mission 015 preserves all existing academy/course illustrations and Hexi while removing visitor-facing temporary artwork labels. No image was replaced, recolored, cropped, or regenerated. [ARTWORK.md](ARTWORK.md) records the label inventory and asset guidance; [Mission 015 review](docs/MISSION_015_REVIEW.md) records scope and verification. No paid services are required.
 
@@ -175,3 +175,17 @@ Little learners help Hexi at three castle gates; Junior learners inspect address
 The AI workbench provides specification/content v1.0.0, deterministic fixed-choice comparison, 36 sample cases with expected responses/explanations and lesson/sample/session downloads. Only completion IDs/versions may persist; no answers or personal data are saved or sent. Up to 20 practical results remain in memory until reload/navigation/reset. Passing is bounded task performance, not real-world threat detection or retained AI learning.
 
 Run `pnpm test:shield` alongside all existing native/build suites. `scripts/verify-shield.cjs` follows the documented optional external Playwright/Chrome setup. See [Mission 017C review](docs/MISSION_017C_REVIEW.md) for objectives, references, safety boundaries, test results, limits and exact changed files. Original lesson implementations, artwork, dependencies and security headers are preserved. Only two existing curriculum-count assertions change from three to four populated courses. Mission 017D is not implemented.
+
+
+## Mission 017D · The Alchemist’s Recipe
+
+**Implemented locally; publication awaits founder approval:** Algorithm Alchemy now introduces algorithms, dependent ordering, patterns, IF/ELSE, bounded loops and removing unnecessary steps. It builds on Thinking Like a Programmer rather than repeating a sequencing-only lesson. Every experience has six goals, three knowledge checks, three practical activities, hints/retries, isolated browser progress/reset and Hexi celebration with a local glowing potion reward.
+
+- Course selector: `/courses/algorithm-alchemy`.
+- Little / Junior: `/learn/kids/algorithms/first-recipe?band=little` or `?band=junior`.
+- Adults: `/learn/adults/algorithms/first-recipe`.
+- AIs: `/learn/ai/algorithms/first-recipe`.
+
+Use `pnpm test:algorithms`, all existing native suites, `pnpm build`, `pnpm test:build` and `pnpm check:format`. With the production preview running, `scripts/verify-algorithms.cjs` uses the optional external Playwright/Chrome setup documented above. Its default preview port is 4198; override with BASE_URL.
+
+Practice checks only supplied identifiers; it does not run code, pseudocode or a recipe. AI specification/content 1.0.0 supplies 48 deterministic examples across twelve activities, expected output/explanation, and lesson/sample/session downloads. No new dependency, paid service, credential field, executor or deployment configuration. [Mission 017D review](docs/MISSION_017D_REVIEW.md) records exact files, evidence, boundaries and future opportunities. AI Fundamentals and Software Sorcery remain Planned; Mission 017E is not started.

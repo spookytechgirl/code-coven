@@ -56,7 +56,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F04 — Course previews, pilot entry, and not-found routing
 
-- **Status:** Implemented; Python, Programming Fundamentals, Web Enchantment and Cybersecurity Charms link to complete introductory lessons; three courses remain previews.
+- **Status:** Implemented; Python, Programming Fundamentals, Web Enchantment, Cybersecurity Charms and Algorithm Alchemy link to complete introductory lessons; two courses remain previews.
 - **Purpose:** provide stable course routes and honest availability messages.
 - **Audience:** visitors and human/AI pilot learners.
 - **Benefit:** reach working content without broken links or invented completed courses.
@@ -523,3 +523,20 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Privacy/evidence:** completion IDs/versions only; no names, ages, passwords, answers or session results persisted. AI evaluations are local/deterministic; up to 20 practical results remain in memory for optional download. No general safety, mastery or retained-learning claim.
 - **Verification:** [review](MISSION_017C_REVIEW.md), [native tests](../tests/shield.test.ts), [browser checks](../scripts/verify-shield.cjs), all existing lesson regressions and production checks.
 - **Future improvements:** learner/screen-reader review, deeper privacy/updates/recovery topics through later bounded tasks. Algorithm Alchemy is next in the planned course order, not implemented here.
+
+
+## Mission 017D classroom awakening · Algorithm Alchemy
+
+### F41 — The Alchemist’s Recipe
+
+- **Status:** Implemented locally; publication awaits founder approval. AI Fundamentals and Software Sorcery introductions remain Planned.
+- **Purpose:** extend basic sequencing into patterns, IF/ELSE, finite loops and removal of unnecessary instructions while preserving a goal.
+- **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers, with adapted explanations/examples.
+- **Benefit:** six objectives; three checks and three practicals per experience; hints, unlimited retries, feedback, independent resets, isolated progress and an encouraging Hexi/potion celebration.
+- **Location:** [data](../src/data/lessons/algorithm-recipe.v1.json), [adapter](../src/data/lessons/algorithm-recipe.ts), [schema](../src/learning/algorithm-schema.ts), [checker](../src/learning/algorithm.ts), [practice](../src/components/lessons/AlgorithmPractice.tsx), [classroom](../src/pages/AlgorithmLesson.tsx), course/path entry links.
+- **Dependencies:** existing React/Router, Valibot, controls, progress/celebration components, themes and original Hexi. No new package, service or payment.
+- **Accessibility:** native labeled menus/radios, fieldsets/legends, wrapping choice text, keyboard hints/reset/check controls, polite status, static restoration, reduced-motion-aware reward; no dragging, typing, timer or color-only meaning required.
+- **Security:** fixed choice IDs only; no code/pseudocode execution, OS/agent tools, real ingredients, secrets, external accounts or executor-policy change.
+- **Privacy/evidence:** only completed IDs/versions persist. Versioned AI data and 48 deterministic cases can be downloaded; up to 20 session records remain memory-only. No names, ages, answers or records sent to a service. Bounded practice passes are not mastery or retained AI learning.
+- **Verification:** [review](MISSION_017D_REVIEW.md), [native tests](../tests/algorithms.test.ts), [browser checks](../scripts/verify-algorithms.cjs) and existing lesson regressions.
+- **Future improvements:** learner/screen-reader evaluation, multiple valid plans with explicit constraints, later nested decisions/loops and search/sort topics. These are Proposed, not implemented.

@@ -246,3 +246,16 @@ For future entries, copy the field structure above, use the actual recorded/adop
 - **Tradeoffs:** no real-world threat classification or trusted mastery is established. Scenarios simplify context; no-warning-shown is not a safety guarantee. AI results are ephemeral/local and do not establish retained learning. Learner/assistive-technology validation remains future work.
 - **Result:** six objectives, six activities per variant, safe text-only message cards, hints/retries, completion/reset/celebration, 36 sample cases and downloads. No original artwork, existing lesson implementation, dependency, lockfile, header or executor changes. Two old curriculum-count assertions reflect four populated courses.
 - **Related:** F12, F17–F24, F31–F40; [review](MISSION_017C_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [data](../src/data/lessons/cyber-shield.v1.json).
+
+
+## D020 — Trace bounded algorithms beyond the sequencing introduction
+
+- **Date:** 2026-10-18, Mission 017D founder instruction and local implementation.
+- **Status:** Implemented locally; no commit, push, deployment or Mission 017E authorized.
+- **Decision:** populate Algorithm Alchemy with four adapted experiences covering algorithms, dependencies, patterns, IF/ELSE, bounded loops and removal of unnecessary steps. Keep fixed supplied choice arrays rather than executing pseudocode or grading arbitrary plans.
+- **Context:** the founder requests progression beyond Programming Fundamentals, a child-friendly potion adventure, practical adult examples, AI records and a small reduced-motion-aware potion reward. GitHub main was verified at Mission 017C before cloning a separate checkout.
+- **Alternatives considered:** drag-only ordering would exclude keyboard users; unrestricted code execution would violate scope; free-form algorithm grading would require broader correctness/security design. Repeating only sequencing would miss the new objectives.
+- **Reasoning:** three multi-part activities per experience can test omission/dependencies, both conditional branches and pattern/count/output independently with deterministic, inspectable results. Native menus provide an equivalent accessible ordering interface without dragging.
+- **Tradeoffs:** only authored finite plans are accepted; alternative valid algorithms and runtime optimization are not evaluated. Loop notation can reduce written repetition without reducing operations. The flask uses system emoji, whose appearance varies. Target-age learner and real assistive-technology review remain outstanding.
+- **Result:** six objectives, six activities per experience, hints/retries, isolated local progress/reset, original Hexi celebration and glowing potion reward; versioned data, 48 sample cases and three downloads. No executor, account, paid service, asset replacement, security-header or dependency change. Three older curriculum tests recognize the fifth populated course.
+- **Related:** F12, F17–F24, F31–F41; [review](MISSION_017D_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [data](../src/data/lessons/algorithm-recipe.v1.json).
