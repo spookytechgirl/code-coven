@@ -12,7 +12,8 @@
     "test:build": "node scripts/verify-build.mjs",
     "test:lessons": "node --experimental-strip-types --test tests/lessons.test.ts",
     "test:variables": "node --experimental-strip-types --test tests/variables.test.ts",
-    "test:thinking": "node --experimental-strip-types --test tests/thinking.test.ts"
+    "test:thinking": "node --experimental-strip-types --test tests/thinking.test.ts",
+    "test:html": "node --experimental-strip-types --test tests/html.test.ts"
   },
   "dependencies": {
     "lucide-react": "1.55.0",

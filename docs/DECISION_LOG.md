@@ -220,3 +220,16 @@ For future entries, copy the field structure above, use the actual recorded/adop
 - **Tradeoffs:** exact task orders assess bounded dependency examples, not general reasoning. AI workbench progress is browser practice only; its optional session records are ephemeral. Completion is editable locally and cannot certify mastery. Target-audience and screen-reader review remain future work.
 - **Result:** six objectives, six activities per experience, hints/retries, isolated progress/reset and celebration; strict lesson and request schemas; 24 sample cases and JSON/session downloads; updated course/path discovery. Existing Python lesson source, helpers, assets, dependencies and security headers are preserved.
 - **Related:** F12, F17–F24, F31–F38; [review](MISSION_017_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [data](../src/data/lessons/programming-thinking.v1.json).
+
+
+## D018 — Teach HTML with inert structure checking and fixed text display
+
+- **Date:** 2026-10-17, Mission 017B founder instruction and local implementation.
+- **Status:** Implemented locally; commit, push and deployment are not authorized.
+- **Decision:** add the existing Web Enchantment course’s first complete lesson, using small validated HTML tasks and a fixed React text model instead of rendering learner markup.
+- **Context:** the founder requests four introductory HTML experiences, interactive feedback/progress, deterministic AI data, preserved lessons/artwork, and appropriate isolation if untrusted markup is previewed.
+- **Alternatives considered:** inserting HTML into the academy would grant unnecessary browser behavior; an iframe browser renderer would require additional sandbox/CSP design; fixed exact-string comparison would reject harmless tag case/whitespace variations. A bounded inert tree plus structural checking fits the first lesson.
+- **Reasoning:** recognizing a small explicit syntax and displaying only validated text supports headings, paragraphs and document structure without creating a new execution context. Reuse existing lesson/progress/celebration architecture, keeping original Python and thinking content unchanged.
+- **Tradeoffs:** this is not a full HTML parser/validator or browser-rendered preview. Many legal HTML forms are deliberately unsupported; the UI states the limits. Local completion is editable, and deterministic passes do not establish mastery. Real learner and screen-reader evaluation remain future work.
+- **Result:** six shared objectives, three checks/three practices per experience, visual Little blocks, older real-tag editing, independent adult document, 36 AI cases and three downloads, keyboard/reflow/theme/motion checks and old-lesson regressions. Only the older test’s populated-course count is updated; no executor, artwork, dependency, header or deployment change.
+- **Related:** F12, F17–F24, F31–F39; [review](MISSION_017B_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [source data](../src/data/lessons/web-html.v1.json).

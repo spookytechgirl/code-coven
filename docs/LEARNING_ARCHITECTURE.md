@@ -4,7 +4,7 @@ Last reviewed: 2026-10-17 · Baseline: Mission 015 + Mission 016 local lessons
 
 ## Verified implementation boundary
 
-**Implemented:** the hierarchy contains two Python modules: output (Lesson 001) and variables (Lesson 002), each with Little, Junior, Adults, and AI adaptations. Kids and Adults have real knowledge checks and restricted text practice; AI has a versioned validated specification, deterministic sample evaluations, and a non-operational future contract. **Also Implemented locally in Mission 017:** Programming Fundamentals has one introductory lesson with four adaptations. **Not implemented:** Python execution, trusted capability tracking, a public agent API, or complete multi-course curricula.
+**Implemented:** the hierarchy contains two Python modules: output (Lesson 001) and variables (Lesson 002), each with Little, Junior, Adults, and AI adaptations. Kids and Adults have real knowledge checks and restricted text practice; AI has a versioned validated specification, deterministic sample evaluations, and a non-operational future contract. **Also Implemented locally in Mission 017:** Programming Fundamentals has one introductory lesson with four adaptations. **Also Implemented locally in Mission 017B:** Web Enchantment has a four-experience HTML introduction. **Not implemented:** Python execution, trusted capability tracking, a public agent API, or complete multi-course curricula.
 
 ```text
 Department: potions
@@ -15,7 +15,7 @@ Department: potions
                   └─ Challenges: hello, welcome (no XP awards)
 ```
 
-[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; five course module lists remain empty and catalog lesson totals remain planned counts.
+[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; four course module lists remain empty and catalog lesson totals remain planned counts.
 
 The dashboard's `demoProgress` still represents sample numbers, not the pilot's local completion. No lesson completion changes dashboard XP or percentages.
 
@@ -134,7 +134,7 @@ Each lesson/variant keeps separate existing progress keys; only completed activi
 
 ## Mission 017 · Programming Fundamentals
 
-**Implemented locally:** Department cottage → existing path cottage-path → course programming-foundations → module programming-thinking-basics → lesson programming-thinking-001, content/specification 1.0.0. This is distinct from Python Lesson 001. Course and pathway pages link to all four experiences; no prerequisites lock access. Five other courses still have empty modules.
+**Implemented locally:** Department cottage → existing path cottage-path → course programming-foundations → module programming-thinking-basics → lesson programming-thinking-001, content/specification 1.0.0. This is distinct from Python Lesson 001. Course and pathway pages link to all four experiences; no prerequisites lock access. At the Mission 017 phase-one baseline, five other courses had empty modules; Mission 017B populates Web Enchantment.
 
 [Versioned data](../src/data/lessons/programming-thinking.v1.json) owns six shared objectives, four differentiated introductions/sections, three questions and three practice tasks per experience, and 24 declared deterministic cases. [Strict schemas](../src/learning/thinking-schema.ts) reject unknown fields, versions, execution permissions, duplicate IDs and inconsistent references/orders. [Adapters](../src/data/lessons/programming-thinking.ts) register the lesson in the existing curriculum without changing legacy types or Python data.
 
@@ -145,3 +145,18 @@ Each lesson/variant keeps separate existing progress keys; only completed activi
 The AI workbench includes the same interactive learning cycle, explicit performance limits, lesson/sample JSON and current-session assessment downloads. The last 20 practical checks exist only in memory, are lost on navigation/reload/reset and never automatically transmitted. Only completed IDs and record/content versions may persist for all four experiences. AI browser practice completion does not establish an agent identity, external learning history or trusted mastery. Python AI storage behavior is unchanged. Specification/request validation plus finite comparison follows the established local AI architecture without a public API.
 
 **Planned:** the remaining five course introductions, real learner/assistive-technology review, and richer checking only under later scoped approval. No Mission 017 execution infrastructure is authorized. See [review](MISSION_017_REVIEW.md).
+
+
+## Mission 017B · Bounded HTML anatomy
+
+**Implemented locally:** workshop → workshop-path → web-enchantment → web-html-basics → web-html-anatomy-001. Existing Department/Path/Course/Module/Lesson/Challenge types and IDs remain intact. [Versioned data](../src/data/lessons/web-html.v1.json), validated by [strict schemas](../src/learning/html-schema.ts), supplies six objectives, four adaptations, three checks plus three practices per adaptation, accepted examples and 36 deterministic assessment cases. [The adapter](../src/data/lessons/web-html.ts) registers the lesson. No old lesson data or progression contract changes.
+
+[checkHtml](../src/learning/html.ts) tokenizes a bounded source string into an inert small tree, checks balanced explicit tags and validates the requested shape/content. Accepted fragments are one h1 or h1 then p, with no attributes. The full document requires doctype, html lang=en, head containing UTF-8 meta then title, and body containing h1 then p. Attribute values require matching single/double quotes. Tag case and harmless whitespace are normalized. Limits: 1600 source characters, 16 elements and 160 normalized plain-text characters per text element. Entities, comments, URLs, general attributes, other tags and optional-end-tag forms are unsupported. These are checker limits, not general HTML-validity rules.
+
+Only a passing result produces a heading/paragraph/optional title text model. [HtmlPractice](../src/components/lessons/HtmlPractice.tsx) displays that model through fixed React elements and text children. Submitted markup is never passed to a browser HTML parser, innerHTML, iframe/srcdoc, document.write or script evaluation. There is no untrusted rendered document to isolate, no resource URL binding and no academy-storage interface for markup. Labels explicitly describe a simplified safe model instead of a real browser preview. No CSP, executor isolation or other security architecture change is needed.
+
+[WebLesson](../src/pages/WebLesson.tsx) reuses native knowledge checks, browser progress helpers, Hexi and the celebration component. Little’s tags/words are selected in labeled blocks; older learners edit a bounded textarea. Every activity must pass at least once. Wrong attempts do not advance completion; retries are unlimited. Reset clears only the active lesson/variant and current forms/session results. Activity reset restores only that form and retains prior completion as disclosed by the progress policy. Fresh celebrations animate once, restored celebrations are static and reduced motion is respected.
+
+AI lesson/sample downloads use specification/content v1.0.0, checker restricted-html-structure-v1, explicit task IDs and deterministic pass/fail/feedback. Strict request fields are specificationVersion, contentVersion, lessonId, taskId and source; unknown fields/permissions/versions/tasks fail validation. Records include executed:false and renderedAsHtml:false. Up to 20 practical results remain in memory for optional session download, cleared on reload/navigation/reset; no source or answers are saved. All four experiences may save completion IDs and versions under isolated browser keys, without account synchronization, external agent identity or retained-learning claims.
+
+The old thinking test’s academy count is updated from two to three populated courses; its sequencing assertions and existing lesson implementation are unchanged. Four future course introductions remain Planned. See [review](MISSION_017B_REVIEW.md).

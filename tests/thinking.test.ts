@@ -39,8 +39,8 @@ test("all four experiences have six goals, three valid checks, three practices a
   );
   assert.equal(
     courses.filter((c) => c.modules.length > 0).length,
-    2,
-    "Five future courses stay unimplemented",
+    3,
+    "Only Python, Programming Fundamentals and Web Enchantment are implemented",
   );
   assert.deepEqual(
     courses

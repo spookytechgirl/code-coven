@@ -89,7 +89,7 @@ A current source/configuration scan found no credential-like tokens or private k
 
 ## Demo and artwork limitations
 
-Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals now contains Thinking Like a Programmer; the other five courses remain previews. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
+Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; the other four courses remain previews. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
 
 Mission 015 preserves all existing academy/course illustrations and Hexi while removing visitor-facing temporary artwork labels. No image was replaced, recolored, cropped, or regenerated. [ARTWORK.md](ARTWORK.md) records the label inventory and asset guidance; [Mission 015 review](docs/MISSION_015_REVIEW.md) records scope and verification. No paid services are required.
 
@@ -143,3 +143,19 @@ Run `pnpm test:variables` for the eight variable test groups and `pnpm test:less
 Practice compares fixed step identifiers; it neither runs code nor executes the described actions. AI downloads include the strict versioned lesson, 24 sample assessments, and up to 20 in-memory practical checks from the current session. All four experiences can remember completed activity IDs in this browser, separately from Python and each other. AI-page browser completion is a practice aid, not an external agent memory or capability record. No submitted answers/assessment records are persisted or transmitted.
 
 Run `pnpm test:thinking` alongside the existing lesson, variables and build checks. With a production preview running, `scripts/verify-thinking.cjs` uses the optional Playwright/Chrome setup above. See [Mission 017 review](docs/MISSION_017_REVIEW.md) for objectives, evidence, limitations, future course order and the exact changed files. Web, security, algorithms, AI Fundamentals and Software Sorcery are not implemented by this phase. Python Lessons 001/002, illustrations, security headers, dependencies and executor boundaries are preserved.
+
+
+## Mission 017B · The Anatomy of a Magical Web Page
+
+**Implemented locally; publication awaits founder review:** Web Enchantment now has its own introductory lesson across Little, Junior, Adults and AI experiences. Six objectives cover websites/pages, HTML’s purpose, tags/elements, headings/paragraphs, document structure and simple repairs. Each experience has three knowledge checks, three practices, hints, unlimited retries, isolated browser completion/reset and Hexi celebration.
+
+- Little / Junior: `/learn/kids/web/first-web-spell?band=little` or `?band=junior`.
+- Adults: `/learn/adults/web/first-web-spell`.
+- AI data/workbench: `/learn/ai/web/first-web-spell`.
+- All four entry points: `/courses/web-enchantment`.
+
+Little learners use tag-and-word building blocks; Junior learners edit real fragments; Adults write an independent complete document with their own title/heading/message. The AI workbench provides specification/content v1.0.0, 36 deterministic cases and lesson/sample/current-session downloads. Source and assessment records are never persisted or automatically sent; browser completion stores IDs and versions only.
+
+The bounded checker accepts explicit h1/p fragments or a restricted English document skeleton. The visual preview is a fixed React text model, **not insertion or browser rendering of submitted markup**. No innerHTML, iframe/srcdoc, script, style, external resource, code executor or paid service is introduced. Other valid HTML is intentionally unsupported. Existing lesson sources, artwork, dependencies and security headers are preserved; only an existing curriculum-count test changes to recognize the third course.
+
+Run `pnpm test:html`, the existing native suites and `pnpm test:build`. `scripts/verify-html.cjs` uses the optional external Playwright/Chrome setup above for activity/security-boundary/keyboard/theme/reflow checks with local CSP simulation. See [Mission 017B review](docs/MISSION_017B_REVIEW.md) for evidence, limits and the exact changed-file list.

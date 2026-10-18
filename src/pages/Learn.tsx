@@ -1,3 +1,4 @@
+import { htmlRoutes } from "../data/lessons/web-html";
 import { thinkingRoutes } from "../data/lessons/programming-thinking";
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, BookOpen, Sparkles } from "lucide-react";
@@ -13,9 +14,9 @@ export function LearningEntry() {
       </span>
       <h1>One little spell. Three ways to learn.</h1>
       <p className="page-intro">
-        Begin with Programming Fundamentals or explore Python with{" "}
-        <code>print()</code>. Choose the experience that fits you. Every path is
-        free, and you can switch whenever you like.
+        Start with Programming Fundamentals, build with Web Enchantment, or
+        explore Python with <code>print()</code>. Choose the experience that
+        fits you. Every path is free, and you can switch whenever you like.
       </p>
       <div className="path-grid">
         {learningPaths.map((path) => (
@@ -129,6 +130,17 @@ export function PathOverview() {
         </p>
         <Link className="button" to={variableRoutes[path.id]}>
           Open the Variable Vault <ArrowRight size={17} />
+        </Link>
+      </section>
+      <section className="card pilot-summary">
+        <span className="eyebrow">WEB ENCHANTMENT · LESSON 001</span>
+        <h2>The Anatomy of a Magical Web Page</h2>
+        <p>
+          Build headings and paragraphs, understand page structure, and repair a
+          mixed-up HTML tag.
+        </p>
+        <Link className="button" to={htmlRoutes[path.id]}>
+          Open Web Enchantment <ArrowRight size={17} />
         </Link>
       </section>
       <p className="learning-privacy">

@@ -1,3 +1,4 @@
+import { htmlLesson } from "./lessons/web-html.ts";
 import { thinkingLesson } from "./lessons/programming-thinking.ts";
 import { variablesLesson } from "./lessons/python-variables.ts";
 import { pythonLesson } from "./lessons/python-output.ts";
@@ -51,7 +52,14 @@ export const courses: Course[] = [
     description: "Bring your ideas to life with HTML, CSS, and JavaScript.",
     difficulty: "Beginner",
     lessonCount: 24,
-    modules: [],
+    learningEntry: "/courses/web-enchantment#classrooms",
+    modules: [
+      {
+        id: "web-html-basics",
+        title: "A first meaningful web page",
+        lessons: [htmlLesson],
+      },
+    ],
     accent: "pink",
   },
   {

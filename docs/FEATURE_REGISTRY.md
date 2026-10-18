@@ -56,7 +56,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F04 — Course previews, pilot entry, and not-found routing
 
-- **Status:** Implemented; Python and Programming Fundamentals link to complete introductory lessons; five courses remain previews.
+- **Status:** Implemented; Python, Programming Fundamentals and Web Enchantment link to complete introductory lessons; four courses remain previews.
 - **Purpose:** provide stable course routes and honest availability messages.
 - **Audience:** visitors and human/AI pilot learners.
 - **Benefit:** reach working content without broken links or invented completed courses.
@@ -489,3 +489,20 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Progress/privacy:** all four variants store only isolated completion IDs and versions. No names, ages, answers or assessment records are persisted. AI workbench completion is local practice, not agent retention. The last 20 practical checks can be downloaded in the current session; reload/reset clears them.
 - **Verification:** [review](MISSION_017_REVIEW.md), [native tests](../tests/thinking.test.ts), [browser checks](../scripts/verify-thinking.cjs), plus existing Python regressions.
 - **Future improvements:** founder/learner/assistive-technology review, additional foundations concepts and sequential implementation of the remaining five courses. No mastery certification is claimed.
+
+
+## Mission 017B classroom awakening · Web Enchantment
+
+### F39 — The Anatomy of a Magical Web Page
+
+- **Status:** Implemented locally; publication awaits founder review. Four other course introductions remain Planned.
+- **Purpose:** teach websites/pages, HTML’s purpose, elements/tags, headings/paragraphs, structure and simple HTML repairs.
+- **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers with differentiated instruction/tasks.
+- **Benefit:** six objectives, worked examples, three checks and three practices per variant, hints, unlimited retries, resettable browser completion and Hexi celebration. Adults independently choose content for a full restricted document.
+- **Location:** [data](../src/data/lessons/web-html.v1.json), [adapter](../src/data/lessons/web-html.ts), [schema](../src/learning/html-schema.ts), [checker/records](../src/learning/html.ts), [practice](../src/components/lessons/HtmlPractice.tsx), [classroom](../src/pages/WebLesson.tsx), curriculum/course/path links.
+- **Dependencies:** existing React/Router, Valibot, lesson knowledge checks, progress helpers, original Hexi, themes and completion component. No package, runtime service or paid dependency added.
+- **Accessibility:** labeled native tag menus/text inputs/editor, semantic blocks, wrapping source, normal Tab exit, optional button hints with expanded state, status feedback, labeled progress/reset, existing reduced-motion celebration. No drag-only operation or timer.
+- **Security:** bounded tree/shape checking and fixed React text-child display only. No submitted DOM markup, iframe/srcdoc, scripts, dynamic styles, resource URLs, storage bridge, public agent service, executor or security-header change. Other valid HTML may be unsupported.
+- **Privacy/evidence:** isolated lesson/variant completion IDs and versions only; no names/ages/source/answers saved or transmitted. AI sample/session records are deterministic local results, not trusted mastery or retained learning. Current practical results are in-memory only and capped at 20.
+- **Verification:** [review](MISSION_017B_REVIEW.md), [native tests](../tests/html.test.ts), [browser checks](../scripts/verify-html.cjs), existing Python/Programming Fundamentals regressions and production checks.
+- **Future improvements:** human/assistive-technology review, later CSS/links/images topics with separately reviewed checking boundaries. The remaining course order starts with Cybersecurity Charms; none is implemented here.

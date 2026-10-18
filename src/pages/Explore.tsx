@@ -1,3 +1,4 @@
+import { htmlRoutes } from "../data/lessons/web-html";
 import { thinkingRoutes } from "../data/lessons/programming-thinking";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -35,7 +36,8 @@ export function Courses() {
       <h1>Explore Courses</h1>
       <p className="page-intro">
         Real skills. A little wonder. Every course is completely free. Lesson
-        content is growing — try Programming Fundamentals or Python Potions.
+        content is growing — try Programming Fundamentals, Python Potions or Web
+        Enchantment.
       </p>
       <div className="filters">
         <label htmlFor="course-search">
@@ -159,6 +161,33 @@ export function CourseDetail() {
           <p>
             Fixed-step checking only; no submitted code executes. Progress is
             local to this browser.
+          </p>
+        </article>
+      ) : course.id === "web-enchantment" ? (
+        <article id="classrooms" className="card detail-placeholder">
+          <h2>The Anatomy of a Magical Web Page</h2>
+          <p>
+            One complete introductory lesson: websites, HTML elements, headings,
+            paragraphs, document structure and simple repairs. Choose an
+            experience. The other 23 catalog lessons are planned.
+          </p>
+          <div className="lesson-downloads">
+            <Link className="button" to={`${htmlRoutes.kids}?band=little`}>
+              Little Apprentices
+            </Link>
+            <Link className="button" to={`${htmlRoutes.kids}?band=junior`}>
+              Junior Spellcasters
+            </Link>
+            <Link className="button" to={htmlRoutes.adults}>
+              Adult learners
+            </Link>
+            <Link className="button" to={htmlRoutes.ai}>
+              AI learning pathway
+            </Link>
+          </div>
+          <p>
+            Bounded HTML checking and a fixed safe text model; no submitted
+            markup is executed or inserted into the academy.
           </p>
         </article>
       ) : course.learningEntry ? (

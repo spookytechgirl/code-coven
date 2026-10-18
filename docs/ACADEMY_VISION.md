@@ -22,7 +22,7 @@ This blueprint explains both what exists and why future work matters. Current im
 
 ## Three audiences
 
-**Implemented:** a three-path selector and two shared Python lessons (output and variables) and a Programming Fundamentals introduction, with Little/Junior Kids adaptations, an Adults classroom, and a downloadable validated AI lesson. Full multi-course audience pathways remain **Planned**. No agent API, age collection, or age gating exists.
+**Implemented:** a three-path selector and two shared Python lessons (output and variables) and Programming Fundamentals and Web Enchantment introductions, with Little/Junior Kids adaptations, an Adults classroom, and a downloadable validated AI lesson. Full multi-course audience pathways remain **Planned**. No agent API, age collection, or age gating exists.
 
 - **Code Coven for Kids:** Little Apprentices (ages 6–9) and Junior Spellcasters (ages 10–13), with distinct introductory activities now implemented; broader audience testing and support policies remain Planned.
 - **Code Coven for Adults:** flexible entry points, practical paths, and progressively demanding work without assuming every adult starts at the same level.
@@ -36,7 +36,7 @@ Older learners need flexible pathways rather than an automatic placement based o
 
 **Implemented in Mission 008:** one populated Python module/lesson with a canonical objective, audience-specific explanations, knowledge checks, restricted text practice, and browser-only completion. The AI variant includes a validated versioned specification and deterministic sample records.
 
-**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. Five course modules remain empty; Programming Fundamentals has its own introduction. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
+**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. Four course module lists remain empty; Programming Fundamentals and Web Enchantment have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
 
 The seven magical locations establish a setting, not locked academic silos. Avoid unrelated prerequisites that prevent someone exploring a department. Any future prerequisite should explain its learning purpose and offer a way to demonstrate an existing capability.
 
@@ -70,3 +70,8 @@ Update this document when mission, governance, audiences, or guiding principles 
 ## Mission 017 · First classroom awakening
 
 **Implemented locally:** Your First Spell — Programming Fundamentals now begins with Thinking Like a Programmer. Crystal selected this course first; the other five missing course introductions remain **Planned**, in the order Web Enchantment, Cybersecurity Charms, Algorithm Alchemy, AI Fundamentals, Software Sorcery. This phase adds a complete four-experience lesson, not the whole 127-lesson catalog. All six objectives concern planning and checking instructions before language-specific coding. No redesign, executor, paid service or production publication is included. See [review](MISSION_017_REVIEW.md).
+
+
+## Mission 017B · Web Enchantment awakens
+
+**Implemented locally:** The Anatomy of a Magical Web Page adds six shared HTML objectives with concrete Little building blocks, Junior fragments, an independent adult document and deterministic AI exercises. This advances introductory coverage to three of seven courses locally, preserving Crystal’s design and original Hexi artwork. The observed GitHub main baseline includes Mission 017A (`2715cde93996f89ad72f6857f02aec2025dfb9ed`); no new deployment is claimed by this local mission. Cybersecurity, Algorithms, AI Fundamentals and Software Sorcery introductions remain **Planned**, in that order. Broader learner validation and trusted capability progression remain Planned. See [review](MISSION_017B_REVIEW.md).

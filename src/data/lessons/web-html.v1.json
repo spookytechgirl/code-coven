@@ -1,0 +1,787 @@
+{
+  "specificationVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "lessonId": "web-html-anatomy-001",
+  "courseId": "web-enchantment",
+  "moduleId": "web-html-basics",
+  "departmentId": "workshop",
+  "title": "The Anatomy of a Magical Web Page",
+  "learningObjectives": [
+    {
+      "id": "web-goal-1",
+      "description": "Explain how a website groups related web pages."
+    },
+    {
+      "id": "web-goal-2",
+      "description": "Explain that HTML describes content meaning and page structure."
+    },
+    {
+      "id": "web-goal-3",
+      "description": "Identify HTML elements, opening tags and closing tags."
+    },
+    {
+      "id": "web-goal-4",
+      "description": "Use a main heading and a paragraph appropriately."
+    },
+    {
+      "id": "web-goal-5",
+      "description": "Recognize the structure of body fragments and a basic HTML document."
+    },
+    {
+      "id": "web-goal-6",
+      "description": "Find and repair simple mismatched-tag or structure mistakes."
+    }
+  ],
+  "prerequisites": [],
+  "variants": [
+    {
+      "id": "kids-little",
+      "audienceLabel": "Little Apprentices · ages 6–9",
+      "intro": "Hexi is making a garden page. Help her choose a big heading and a little message. You can read with a grown-up.",
+      "sections": [
+        {
+          "title": "A page in a website",
+          "paragraphs": [
+            "A web page is one page you can open in a browser. A website is a collection of related pages.",
+            "Hexi’s garden website could have a welcome page and a plant page."
+          ]
+        },
+        {
+          "title": "HTML building blocks",
+          "paragraphs": [
+            "HTML tells the browser what each piece is: a heading, a paragraph, and more.",
+            "A tag is a little marker like <h1>. An element is the whole piece: <h1>Hello!</h1>. The closing tag has a slash."
+          ]
+        },
+        {
+          "title": "Give the page a shape",
+          "paragraphs": [
+            "Use <h1> for the page’s main heading. Use <p> for a paragraph, like a short welcome message.",
+            "Put the heading before the welcome paragraph. Match <h1> with </h1>, and <p> with </p>. We can fix a mix-up and try again!"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "page",
+          "prompt": "Which describes a website?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Only one heading.",
+              "correct": false,
+              "feedback": "Hexi: A heading is one part of a page. A website holds related pages."
+            },
+            {
+              "id": "clear",
+              "text": "A collection of related web pages.",
+              "correct": true,
+              "feedback": "Hexi: Yes! A website can have several pages."
+            }
+          ]
+        },
+        {
+          "id": "heading",
+          "prompt": "Which tag starts a main heading?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "<p>",
+              "correct": false,
+              "feedback": "Hexi: <p> starts a paragraph. Look for the heading tag."
+            },
+            {
+              "id": "clear",
+              "text": "<h1>",
+              "correct": true,
+              "feedback": "Hexi: <h1> starts our main heading."
+            }
+          ]
+        },
+        {
+          "id": "closing",
+          "prompt": "Which tag closes a paragraph?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "</h1>",
+              "correct": false,
+              "feedback": "Hexi: Match the p in <p> with the p in its closing tag."
+            },
+            {
+              "id": "clear",
+              "text": "</p>",
+              "correct": true,
+              "feedback": "Hexi: The p names match, and / closes the paragraph."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["little-heading", "little-page", "little-fix"]
+    },
+    {
+      "id": "kids-junior",
+      "audienceLabel": "Junior Spellcasters · ages 10–13",
+      "intro": "Build a tiny spellbook page with real HTML. Recognize each part, write a heading and paragraph, then repair a mismatched tag.",
+      "sections": [
+        {
+          "title": "Websites, pages and HTML",
+          "paragraphs": [
+            "A web page is a document a browser can display. A website groups related pages, usually connected by links.",
+            "HTML means HyperText Markup Language. It describes the meaning and structure of content; CSS styles it, and JavaScript can add behavior. This lesson uses HTML only."
+          ]
+        },
+        {
+          "title": "Tags and elements",
+          "paragraphs": [
+            "In <h1>My Spellbook</h1>, <h1> is an opening tag and </h1> is a closing tag. The tags and content together form an element.",
+            "Use h1 for a main heading and p for a paragraph. HTML has h1 through h6 for heading levels; choose them for structure rather than just size."
+          ]
+        },
+        {
+          "title": "Structure and repair",
+          "paragraphs": [
+            "A full document has an html root, a head for information such as the browser-tab title, and a body for the page content. Our small practice fragments contain just body content.",
+            "Browsers can recover from some HTML mistakes, so looking okay does not prove the source is right. Read the tag names, match each pair, and check the page’s order."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "html",
+          "prompt": "What is HTML used for?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Choosing every visual color by itself.",
+              "correct": false,
+              "feedback": "Think about headings and paragraphs, rather than colors."
+            },
+            {
+              "id": "clear",
+              "text": "Describing content meaning and page structure.",
+              "correct": true,
+              "feedback": "HTML describes structure; CSS handles most styling."
+            }
+          ]
+        },
+        {
+          "id": "element",
+          "prompt": "Which is a whole HTML element?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "<p>",
+              "correct": false,
+              "feedback": "<p> alone is an opening tag. Include content and its closing tag."
+            },
+            {
+              "id": "clear",
+              "text": "<p>A little magic.</p>",
+              "correct": true,
+              "feedback": "The whole element includes its opening tag, content and closing tag."
+            }
+          ]
+        },
+        {
+          "id": "structure",
+          "prompt": "Which describes a clear introductory page structure?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Every sentence marked as a main heading.",
+              "correct": false,
+              "feedback": "Use headings for structure and paragraphs for regular sentences."
+            },
+            {
+              "id": "clear",
+              "text": "A main heading followed by a welcome paragraph.",
+              "correct": true,
+              "feedback": "Headings name sections; paragraphs hold ordinary text."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["junior-heading", "junior-page", "junior-fix"]
+    },
+    {
+      "id": "adults",
+      "audienceLabel": "Adult learners",
+      "intro": "Create a small, meaningful web page. Learn the difference between document metadata and visible content, practice headings and paragraphs, then write your own complete introductory document.",
+      "sections": [
+        {
+          "title": "A document on the web",
+          "paragraphs": [
+            "A website is a collection of related web pages. A web page is a document viewed in a browser; a browser tab displays a particular page.",
+            "HTML (HyperText Markup Language) marks up content and structure. It is not a general programming language: HTML alone does not describe arbitrary computational logic. CSS and JavaScript have different roles."
+          ]
+        },
+        {
+          "title": "Elements communicate meaning",
+          "paragraphs": [
+            "An opening tag, content and closing tag form an element, such as <p>Welcome.</p>. A main heading uses h1; a paragraph uses p.",
+            "Headings h1–h6 represent levels of structure. For this introductory single-section page, use one main heading followed by a paragraph; do not choose heading levels only for their visual size."
+          ]
+        },
+        {
+          "title": "The document skeleton",
+          "paragraphs": [
+            "<!doctype html> declares modern HTML. The html element is the root; lang=\"en\" identifies English. The head holds metadata: charset=\"utf-8\" declares encoding, and title supplies the browser-tab title.",
+            "The body contains visible content. Our independent exercise requires an explicit head/body skeleton, one h1 and one p. Repair mismatched tags even if a browser would recover; our strict lesson checker is not a full HTML validator."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "page",
+          "prompt": "Which distinction is accurate?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "HTML and a website are the same thing.",
+              "correct": false,
+              "feedback": "Separate the collection of pages from the language describing a document."
+            },
+            {
+              "id": "clear",
+              "text": "A website groups related pages; HTML describes a page’s structure.",
+              "correct": true,
+              "feedback": "The website is the collection; HTML is a markup language used for documents."
+            }
+          ]
+        },
+        {
+          "id": "title",
+          "prompt": "Where do browser-tab title and visible main heading belong?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Both must go in head.",
+              "correct": false,
+              "feedback": "A visible heading belongs in body, while title is document metadata."
+            },
+            {
+              "id": "clear",
+              "text": "title in head; h1 in body.",
+              "correct": true,
+              "feedback": "The head describes the document; body contains its visible content."
+            }
+          ]
+        },
+        {
+          "id": "repair",
+          "prompt": "A browser displays mismatched tags without an obvious problem. What follows?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Assume the source is correct because it displays.",
+              "correct": false,
+              "feedback": "A forgiving display does not establish correct source structure."
+            },
+            {
+              "id": "clear",
+              "text": "Review and correct the source; browser recovery can hide mistakes.",
+              "correct": true,
+              "feedback": "Browsers repair some errors; explicit matching tags keep the intended structure clear."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["adult-fragment", "adult-fix", "adult-document"]
+    },
+    {
+      "id": "ai",
+      "audienceLabel": "AI learning pathway · deterministic HTML data",
+      "intro": "Inspect explicit structure constraints and finite assessment cases, then try the local workbench. Submitted source stays data; no browser markup or agent code is executed.",
+      "sections": [
+        {
+          "title": "Document and language identities",
+          "paragraphs": [
+            "A website groups related web pages. HTML is a markup language for document semantics and structure. It is distinct from CSS styling and JavaScript behavior.",
+            "The lesson accepts a deliberately bounded attribute-free h1/p fragment or an explicit restricted document skeleton, not general HTML."
+          ]
+        },
+        {
+          "title": "Element and structure constraints",
+          "paragraphs": [
+            "An element such as <p>Text</p> contains opening/closing tags and text. Task shapes require either a single h1, an h1 followed by p, or a full declared document skeleton.",
+            "In a document, metadata such as title belongs in head; the main heading and paragraph belong in body. This checker requires explicit end tags even where HTML itself may allow omission."
+          ]
+        },
+        {
+          "title": "Deterministic repair and safe display",
+          "paragraphs": [
+            "Correct tag-pair and order mistakes, then reassess against the same task constraints. Matching the restricted grammar is task performance, not general validation or retained AI learning.",
+            "A successful result produces a small text model. Fixed React components display its text; the submitted HTML is never used as DOM markup, an iframe document or tool instructions."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "html",
+          "prompt": "Which statement describes HTML?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "An agent execution permission format.",
+              "correct": false,
+              "feedback": "Document source is data, not execution authorization."
+            },
+            {
+              "id": "clear",
+              "text": "A markup language for document meaning and structure.",
+              "correct": true,
+              "feedback": "HTML describes documents; this lesson grants no tool permissions."
+            }
+          ]
+        },
+        {
+          "id": "element",
+          "prompt": "What makes the supplied p example a complete element?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Only its final character.",
+              "correct": false,
+              "feedback": "Inspect the opening marker, content and closing marker together."
+            },
+            {
+              "id": "clear",
+              "text": "Its opening tag, text content and matching closing tag.",
+              "correct": true,
+              "feedback": "The paired markers and content form the element."
+            }
+          ]
+        },
+        {
+          "id": "structure",
+          "prompt": "Where must the visible heading be in the document task?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Inside title as raw nested markup.",
+              "correct": false,
+              "feedback": "title is plain-text metadata in the head, not a container for visible body structure."
+            },
+            {
+              "id": "clear",
+              "text": "Inside body, following the declared head.",
+              "correct": true,
+              "feedback": "The body contains visible page content."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["ai-fragment", "ai-fix", "ai-document"]
+    }
+  ],
+  "practiceTasks": [
+    {
+      "id": "little-heading",
+      "title": "Choose a heading block",
+      "instruction": "Make one main heading that says Hexi’s Garden. Choose matching h1 tags.",
+      "kind": "heading",
+      "expectedHeading": "Hexi’s Garden",
+      "expectedParagraph": "",
+      "expectedTitle": "",
+      "starter": "<p>Hexi’s Garden</p>",
+      "hint": "A main heading starts with <h1> and ends with </h1>.",
+      "example": "<h1>Hexi’s Garden</h1>"
+    },
+    {
+      "id": "little-page",
+      "title": "Build Hexi’s welcome page",
+      "instruction": "Put the main heading Hexi’s Garden first. Follow it with a paragraph saying Welcome, apprentice!",
+      "kind": "pair",
+      "expectedHeading": "Hexi’s Garden",
+      "expectedParagraph": "Welcome, apprentice!",
+      "expectedTitle": "",
+      "starter": "<h1>Hexi’s Garden</h1>\n<h1>Welcome, apprentice!</h1>",
+      "hint": "The first block is h1. The second block is p.",
+      "example": "<h1>Hexi’s Garden</h1>\n<p>Welcome, apprentice!</p>"
+    },
+    {
+      "id": "little-fix",
+      "title": "Fix a mixed-up tag",
+      "instruction": "This heading closes with the wrong tag. Help Hexi match it, then keep the welcome paragraph.",
+      "kind": "pair",
+      "expectedHeading": "Hexi’s Garden",
+      "expectedParagraph": "Welcome, apprentice!",
+      "expectedTitle": "",
+      "starter": "<h1>Hexi’s Garden</p>\n<p>Welcome, apprentice!</p>",
+      "hint": "Change the first closing tag from </p> to </h1>.",
+      "example": "<h1>Hexi’s Garden</h1>\n<p>Welcome, apprentice!</p>"
+    },
+    {
+      "id": "junior-heading",
+      "title": "Write a main heading",
+      "instruction": "Write one h1 element containing My Spellbook.",
+      "kind": "heading",
+      "expectedHeading": "My Spellbook",
+      "expectedParagraph": "",
+      "expectedTitle": "",
+      "starter": "<p>My Spellbook</p>",
+      "hint": "Replace both p tag names with h1.",
+      "example": "<h1>My Spellbook</h1>"
+    },
+    {
+      "id": "junior-page",
+      "title": "Build a spellbook fragment",
+      "instruction": "Write an h1 containing My Spellbook followed by a p containing A little magic starts here.",
+      "kind": "pair",
+      "expectedHeading": "My Spellbook",
+      "expectedParagraph": "A little magic starts here.",
+      "expectedTitle": "",
+      "starter": "",
+      "hint": "Use <h1>...</h1> first, then <p>...</p>. Replace the dots with the requested text.",
+      "example": "<h1>My Spellbook</h1>\n<p>A little magic starts here.</p>"
+    },
+    {
+      "id": "junior-fix",
+      "title": "Repair the closing tag",
+      "instruction": "Fix the mismatched heading tag. Keep the requested heading and paragraph in that order.",
+      "kind": "pair",
+      "expectedHeading": "My Spellbook",
+      "expectedParagraph": "A little magic starts here.",
+      "expectedTitle": "",
+      "starter": "<h1>My Spellbook</p>\n<p>A little magic starts here.</p>",
+      "hint": "The heading must close with </h1>, not </p>.",
+      "example": "<h1>My Spellbook</h1>\n<p>A little magic starts here.</p>"
+    },
+    {
+      "id": "adult-fragment",
+      "title": "Make a useful content fragment",
+      "instruction": "Write an h1 containing Community Garden and then a p containing Everyone is welcome.",
+      "kind": "pair",
+      "expectedHeading": "Community Garden",
+      "expectedParagraph": "Everyone is welcome.",
+      "expectedTitle": "",
+      "starter": "",
+      "hint": "Use two sibling elements in order: h1, then p.",
+      "example": "<h1>Community Garden</h1>\n<p>Everyone is welcome.</p>"
+    },
+    {
+      "id": "adult-fix",
+      "title": "Debug the welcome heading",
+      "instruction": "Repair the mismatched closing tag without changing the requested text.",
+      "kind": "pair",
+      "expectedHeading": "Community Garden",
+      "expectedParagraph": "Everyone is welcome.",
+      "expectedTitle": "",
+      "starter": "<h1>Community Garden</p>\n<p>Everyone is welcome.</p>",
+      "hint": "The h1 opening tag needs an h1 closing tag.",
+      "example": "<h1>Community Garden</h1>\n<p>Everyone is welcome.</p>"
+    },
+    {
+      "id": "adult-document",
+      "title": "Your independent first document",
+      "instruction": "Write a complete English HTML document using the shown skeleton. Choose your own nonempty tab title, main heading and paragraph. Use plain text and the supported tags only.",
+      "kind": "document",
+      "expectedHeading": "",
+      "expectedParagraph": "",
+      "expectedTitle": "",
+      "starter": "",
+      "hint": "Start with <!doctype html> and <html lang=\"en\">. Inside head put <meta charset=\"utf-8\"> and a title. Inside body put an h1 and a p, then close body and html.",
+      "example": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>My Spellbook</title>\n</head>\n<body>\n<h1>A Little Magic</h1>\n<p>Welcome to my first page.</p>\n</body>\n</html>"
+    },
+    {
+      "id": "ai-fragment",
+      "title": "Build a deterministic fragment",
+      "instruction": "Submit an h1 containing Spellbook followed by a p containing Learn one spell at a time.",
+      "kind": "pair",
+      "expectedHeading": "Spellbook",
+      "expectedParagraph": "Learn one spell at a time.",
+      "expectedTitle": "",
+      "starter": "",
+      "hint": "The only allowed fragment elements for this task are h1 then p.",
+      "example": "<h1>Spellbook</h1>\n<p>Learn one spell at a time.</p>"
+    },
+    {
+      "id": "ai-fix",
+      "title": "Repair a deterministic tag mismatch",
+      "instruction": "Repair the h1 closing tag and retain the exact requested heading and paragraph.",
+      "kind": "pair",
+      "expectedHeading": "Spellbook",
+      "expectedParagraph": "Learn one spell at a time.",
+      "expectedTitle": "",
+      "starter": "<h1>Spellbook</p>\n<p>Learn one spell at a time.</p>",
+      "hint": "Use </h1> to close the h1 element.",
+      "example": "<h1>Spellbook</h1>\n<p>Learn one spell at a time.</p>"
+    },
+    {
+      "id": "ai-document",
+      "title": "Construct a restricted document",
+      "instruction": "Submit the full English document skeleton with your own nonempty title, h1 and p. All content must be plain text within the documented limits.",
+      "kind": "document",
+      "expectedHeading": "",
+      "expectedParagraph": "",
+      "expectedTitle": "",
+      "starter": "",
+      "hint": "Use doctype, html lang=en, head with UTF-8 meta and title, then body with h1 and p. Close the paired elements.",
+      "example": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>My Spellbook</title>\n</head>\n<body>\n<h1>A Little Magic</h1>\n<p>Welcome to my first page.</p>\n</body>\n</html>"
+    }
+  ],
+  "assessment": {
+    "method": "restricted-html-structure-v1",
+    "testCases": [
+      {
+        "id": "little-heading-pass",
+        "taskId": "little-heading",
+        "source": "<h1>Hexi’s Garden</h1>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-heading-closing",
+        "taskId": "little-heading",
+        "source": "<h1>Hexi’s Garden</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "little-heading-script",
+        "taskId": "little-heading",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "little-page-pass",
+        "taskId": "little-page",
+        "source": "<h1>Hexi’s Garden</h1>\n<p>Welcome, apprentice!</p>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-page-closing",
+        "taskId": "little-page",
+        "source": "<h1>Hexi’s Garden</p>\n<p>Welcome, apprentice!</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "little-page-script",
+        "taskId": "little-page",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "little-fix-pass",
+        "taskId": "little-fix",
+        "source": "<h1>Hexi’s Garden</h1>\n<p>Welcome, apprentice!</p>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-fix-closing",
+        "taskId": "little-fix",
+        "source": "<h1>Hexi’s Garden</p>\n<p>Welcome, apprentice!</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "little-fix-script",
+        "taskId": "little-fix",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "junior-heading-pass",
+        "taskId": "junior-heading",
+        "source": "<h1>My Spellbook</h1>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-heading-closing",
+        "taskId": "junior-heading",
+        "source": "<h1>My Spellbook</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "junior-heading-script",
+        "taskId": "junior-heading",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "junior-page-pass",
+        "taskId": "junior-page",
+        "source": "<h1>My Spellbook</h1>\n<p>A little magic starts here.</p>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-page-closing",
+        "taskId": "junior-page",
+        "source": "<h1>My Spellbook</p>\n<p>A little magic starts here.</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "junior-page-script",
+        "taskId": "junior-page",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "junior-fix-pass",
+        "taskId": "junior-fix",
+        "source": "<h1>My Spellbook</h1>\n<p>A little magic starts here.</p>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-fix-closing",
+        "taskId": "junior-fix",
+        "source": "<h1>My Spellbook</p>\n<p>A little magic starts here.</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "junior-fix-script",
+        "taskId": "junior-fix",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "adult-fragment-pass",
+        "taskId": "adult-fragment",
+        "source": "<h1>Community Garden</h1>\n<p>Everyone is welcome.</p>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-fragment-closing",
+        "taskId": "adult-fragment",
+        "source": "<h1>Community Garden</p>\n<p>Everyone is welcome.</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "adult-fragment-script",
+        "taskId": "adult-fragment",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "adult-fix-pass",
+        "taskId": "adult-fix",
+        "source": "<h1>Community Garden</h1>\n<p>Everyone is welcome.</p>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-fix-closing",
+        "taskId": "adult-fix",
+        "source": "<h1>Community Garden</p>\n<p>Everyone is welcome.</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "adult-fix-script",
+        "taskId": "adult-fix",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "adult-document-pass",
+        "taskId": "adult-document",
+        "source": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>My Spellbook</title>\n</head>\n<body>\n<h1>A Little Magic</h1>\n<p>Welcome to my first page.</p>\n</body>\n</html>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-document-closing",
+        "taskId": "adult-document",
+        "source": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>My Spellbook</title>\n</head>\n<body>\n<h1>A Little Magic</p>\n<p>Welcome to my first page.</p>\n</body>\n</html>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "adult-document-script",
+        "taskId": "adult-document",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "ai-fragment-pass",
+        "taskId": "ai-fragment",
+        "source": "<h1>Spellbook</h1>\n<p>Learn one spell at a time.</p>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-fragment-closing",
+        "taskId": "ai-fragment",
+        "source": "<h1>Spellbook</p>\n<p>Learn one spell at a time.</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "ai-fragment-script",
+        "taskId": "ai-fragment",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "ai-fix-pass",
+        "taskId": "ai-fix",
+        "source": "<h1>Spellbook</h1>\n<p>Learn one spell at a time.</p>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-fix-closing",
+        "taskId": "ai-fix",
+        "source": "<h1>Spellbook</p>\n<p>Learn one spell at a time.</p>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "ai-fix-script",
+        "taskId": "ai-fix",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      },
+      {
+        "id": "ai-document-pass",
+        "taskId": "ai-document",
+        "source": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>My Spellbook</title>\n</head>\n<body>\n<h1>A Little Magic</h1>\n<p>Welcome to my first page.</p>\n</body>\n</html>",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-document-closing",
+        "taskId": "ai-document",
+        "source": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>My Spellbook</title>\n</head>\n<body>\n<h1>A Little Magic</p>\n<p>Welcome to my first page.</p>\n</body>\n</html>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "matching-tags"
+      },
+      {
+        "id": "ai-document-script",
+        "taskId": "ai-document",
+        "source": "<script>alert(1)</script>",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "unsupported"
+      }
+    ]
+  },
+  "safety": {
+    "execution": "none",
+    "permissions": [],
+    "preview": "fixed-react-text-model",
+    "performanceClaim": "These bounded checks assess the stated HTML task only, not mastery, general HTML validity or retained AI learning."
+  }
+}
