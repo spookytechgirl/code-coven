@@ -1,3 +1,4 @@
+import { shieldLesson } from "./lessons/cyber-shield.ts";
 import { htmlLesson } from "./lessons/web-html.ts";
 import { thinkingLesson } from "./lessons/programming-thinking.ts";
 import { variablesLesson } from "./lessons/python-variables.ts";
@@ -89,7 +90,14 @@ export const courses: Course[] = [
     description: "Learn how to protect systems and recognize digital threats.",
     difficulty: "Beginner",
     lessonCount: 15,
-    modules: [],
+    learningEntry: "/courses/cybersecurity-charms#classrooms",
+    modules: [
+      {
+        id: "cyber-defensive-basics",
+        title: "A first defensive shield",
+        lessons: [shieldLesson],
+      },
+    ],
     accent: "purple",
   },
   {

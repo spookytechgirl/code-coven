@@ -13,7 +13,8 @@
     "test:lessons": "node --experimental-strip-types --test tests/lessons.test.ts",
     "test:variables": "node --experimental-strip-types --test tests/variables.test.ts",
     "test:thinking": "node --experimental-strip-types --test tests/thinking.test.ts",
-    "test:html": "node --experimental-strip-types --test tests/html.test.ts"
+    "test:html": "node --experimental-strip-types --test tests/html.test.ts",
+    "test:shield": "node --experimental-strip-types --test tests/shield.test.ts"
   },
   "dependencies": {
     "lucide-react": "1.55.0",

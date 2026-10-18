@@ -1,0 +1,1118 @@
+{
+  "specificationVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "lessonId": "cyber-guardian-shield-001",
+  "courseId": "cybersecurity-charms",
+  "moduleId": "cyber-defensive-basics",
+  "departmentId": "tower",
+  "title": "The Guardian’s First Shield — Staying Safe in the Digital Realm",
+  "learningObjectives": [
+    {
+      "id": "shield-goal-1",
+      "description": "Explain cybersecurity as protecting devices, accounts and information."
+    },
+    {
+      "id": "shield-goal-2",
+      "description": "Recognize warning signs in suspicious messages and displayed link addresses."
+    },
+    {
+      "id": "shield-goal-3",
+      "description": "Explain why strong, unique passwords matter."
+    },
+    {
+      "id": "shield-goal-4",
+      "description": "Recognize the purpose and limits of multifactor authentication."
+    },
+    {
+      "id": "shield-goal-5",
+      "description": "Explain why personal and sensitive information should be protected."
+    },
+    {
+      "id": "shield-goal-6",
+      "description": "Choose a safe defensive response, including trusted help and reporting."
+    }
+  ],
+  "prerequisites": [],
+  "variants": [
+    {
+      "id": "kids-little",
+      "audienceLabel": "Little Apprentices · ages 6–9",
+      "intro": "Help Hexi Protect the Academy! Mysterious messages have arrived at the castle gates. Let’s pause, keep secrets safe, and ask for help. You can read with a grown-up.",
+      "sections": [
+        {
+          "title": "A shield for our digital world",
+          "paragraphs": [
+            "Cybersecurity means helping keep devices, accounts and information safe. Hexi’s shield is a reminder to stop and think."
+          ]
+        },
+        {
+          "title": "Pause at a strange message",
+          "paragraphs": [
+            "“Quick! Win a prize! Click here!” is a reason to pause. A friendly picture or name does not prove who sent it.",
+            "Do not tap a mystery link or open a surprise file. Show a trusted adult."
+          ]
+        },
+        {
+          "title": "Keep your secret key",
+          "paragraphs": [
+            "A strong password is long and hard to guess. Each account needs its own password, like a different key.",
+            "With a trusted adult, a password manager can help keep keys safe. Never send a password to someone in a message. We will not ask you to type one."
+          ]
+        },
+        {
+          "title": "A second check at the gate",
+          "paragraphs": [
+            "Multifactor authentication, or MFA, adds a different check to a password, such as a security key or an authenticator code. Two passwords are not two different kinds of check.",
+            "Keep sign-in codes secret too. Ask a trusted adult to help set up account safety."
+          ]
+        },
+        {
+          "title": "Your private information matters",
+          "paragraphs": [
+            "Keep your address, school, phone number and sign-in details private. Ask a trusted adult before sharing them."
+          ]
+        },
+        {
+          "title": "Ask for help, even after a mistake",
+          "paragraphs": [
+            "Pause, do not click, and tell a trusted adult about a worrying message. A normal-looking note is not a promise that everything is safe.",
+            "If you already clicked, tell a trusted adult. You are not in trouble for asking for help."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "meaning",
+          "prompt": "What does cybersecurity help protect?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Only the color of a screen.",
+              "correct": false,
+              "feedback": "Hexi: Think about devices, accounts and private information."
+            },
+            {
+              "id": "clear",
+              "text": "Devices, accounts and private information.",
+              "correct": true,
+              "feedback": "Hexi: Yes! We help protect our digital world."
+            }
+          ]
+        },
+        {
+          "id": "password",
+          "prompt": "Which password plan helps Hexi?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "One easy password shared with everyone.",
+              "correct": false,
+              "feedback": "Hexi: Keep passwords secret and use a different strong one for each account."
+            },
+            {
+              "id": "clear",
+              "text": "A long, hard-to-guess password that is different for each account.",
+              "correct": true,
+              "feedback": "Hexi: Different secret keys help protect different accounts."
+            }
+          ]
+        },
+        {
+          "id": "mfa",
+          "prompt": "What is MFA for?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Sending a password to a stranger twice.",
+              "correct": false,
+              "feedback": "Hexi: MFA adds a different check. It never means sharing your password."
+            },
+            {
+              "id": "clear",
+              "text": "Adding a different kind of sign-in check to a password.",
+              "correct": true,
+              "feedback": "Hexi: A second kind of check adds protection. Keep sign-in codes secret too."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["little-prize", "little-secret", "little-notice"]
+    },
+    {
+      "id": "kids-junior",
+      "audienceLabel": "Junior Spellcasters · ages 10–13",
+      "intro": "Become a guardian of the academy inbox. Look for warning signs, protect credentials, and choose a safe next step. These stories use fictional accounts only.",
+      "sections": [
+        {
+          "title": "What cybersecurity protects",
+          "paragraphs": [
+            "Cybersecurity protects devices, accounts and information against harm or unauthorized use. Your everyday choices are part of that defense."
+          ]
+        },
+        {
+          "title": "Phishing and suspicious addresses",
+          "paragraphs": [
+            "Phishing messages impersonate someone or offer something tempting to get secrets, clicks or downloads. Pressure, unexpected requests and mismatched addresses are clues.",
+            "Read the actual domain, not just a familiar name in the path. In academy.invalid.prizes.invalid/gift, the ending is prizes.invalid, not academy.invalid. HTTPS protects a connection; it does not prove a sender is honest."
+          ]
+        },
+        {
+          "title": "A different key for every account",
+          "paragraphs": [
+            "Use long, hard-to-guess, unique passwords. Reusing one means a stolen password could put another account at risk.",
+            "A trusted adult can help choose and use a password manager. Never paste a real password into a lesson or send it to someone requesting it in a message."
+          ]
+        },
+        {
+          "title": "MFA adds another barrier",
+          "paragraphs": [
+            "Multifactor authentication uses different kinds of proof, such as a password plus a security key or authenticator. Two passwords are still the same kind of proof.",
+            "Never share one-time codes or approve an unexpected sign-in prompt. MFA helps, but not every method resists phishing equally."
+          ]
+        },
+        {
+          "title": "Private information and files",
+          "paragraphs": [
+            "Your address, school, phone number and account details deserve protection. Pause before posting or sending them.",
+            "Unexpected attachments can be risky even if a message looks polished. Do not open one just to find out what it is."
+          ]
+        },
+        {
+          "title": "Respond safely",
+          "paragraphs": [
+            "Do not follow the suspicious link or reply with secrets. Ask a trusted adult and report through the app’s report feature or an independently known support channel.",
+            "Use a saved, trusted route rather than the message’s contact details. If you already clicked or shared something, ask for help promptly. A mistake is not a reason to hide it."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "meaning",
+          "prompt": "What is the purpose of cybersecurity?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Clicking every link to see what happens.",
+              "correct": false,
+              "feedback": "Pause and think about what needs protection."
+            },
+            {
+              "id": "clear",
+              "text": "Protecting devices, accounts and information.",
+              "correct": true,
+              "feedback": "Defensive choices help protect systems and people’s information."
+            }
+          ]
+        },
+        {
+          "id": "password",
+          "prompt": "Why should passwords be strong and unique?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "So a friend can reuse them everywhere.",
+              "correct": false,
+              "feedback": "Reusing a password spreads the risk if one account’s password is stolen."
+            },
+            {
+              "id": "clear",
+              "text": "So one stolen password is less likely to unlock another account.",
+              "correct": true,
+              "feedback": "Long, unpredictable and different passwords reduce avoidable account risks."
+            }
+          ]
+        },
+        {
+          "id": "mfa",
+          "prompt": "Which illustrates multifactor authentication?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Two slightly different passwords.",
+              "correct": false,
+              "feedback": "Think of different kinds of proof, not just a second secret you know."
+            },
+            {
+              "id": "clear",
+              "text": "A password plus a different proof, such as a security key.",
+              "correct": true,
+              "feedback": "MFA combines different kinds of proof. A second password alone is not a different factor."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["junior-link", "junior-mfa", "junior-notice"]
+    },
+    {
+      "id": "adults",
+      "audienceLabel": "Adult learners",
+      "intro": "Practice defensive decisions with fictional work and personal-account scenarios. No real credentials, personal information, accounts or attachments are needed.",
+      "sections": [
+        {
+          "title": "Practical cybersecurity",
+          "paragraphs": [
+            "Cybersecurity protects devices, accounts and sensitive information from unauthorized access and harm. Common threats include deceptive messages, credential theft and harmful attachments."
+          ]
+        },
+        {
+          "title": "Phishing and social engineering",
+          "paragraphs": [
+            "Phishing is one form of social engineering: a message tries to influence you into revealing information or taking a risky action. Professional wording or a familiar display name is not proof of authenticity.",
+            "Inspect the actual destination/domain and the context. HTTPS alone does not establish trust. If uncertain, leave the message link alone and verify through a bookmarked site or independently known contact."
+          ]
+        },
+        {
+          "title": "Strong, unique passwords and managers",
+          "paragraphs": [
+            "Use a long, unpredictable password for each password-based account. Avoid reuse: a leaked password should not become a key to other services.",
+            "A password manager can create and store distinct passwords. Protect the manager itself and use its supported security features. This lesson requests no password and recommends no paid product."
+          ]
+        },
+        {
+          "title": "MFA and unexpected approvals",
+          "paragraphs": [
+            "Multifactor authentication adds a different factor to a password, such as a security key or an authenticator. It reduces risk if a password is stolen; it does not make every scam harmless.",
+            "Prefer phishing-resistant options where available, such as supported security keys or passkeys. Never disclose sign-in codes or approve a prompt you did not initiate. Use known account-security channels to investigate."
+          ]
+        },
+        {
+          "title": "Sensitive information and attachments",
+          "paragraphs": [
+            "Share only information needed for a legitimate purpose through a verified channel. Financial, identity and account information should not be sent because an unsolicited message requests it.",
+            "Do not open an unexpected attachment to test it. Verify its purpose and sender independently. File names and familiar logos are not reliable safety checks."
+          ]
+        },
+        {
+          "title": "Report and recover without blame",
+          "paragraphs": [
+            "Use the organization’s established report mechanism or independently known support contact. Do not reply to a suspicious sender or use its supplied “help” link.",
+            "If you clicked or shared credentials, promptly seek the appropriate trusted support and follow the organization’s incident process. Use a known legitimate route to secure affected accounts; do not hide the mistake."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "meaning",
+          "prompt": "What is the defensive purpose of cybersecurity?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Testing every unexpected attachment on a work computer.",
+              "correct": false,
+              "feedback": "The goal is protection, not opening risky material to see what happens."
+            },
+            {
+              "id": "clear",
+              "text": "Protecting devices, accounts and information against unauthorized access and harm.",
+              "correct": true,
+              "feedback": "Defensive practice reduces exposure without experimenting on suspicious content."
+            }
+          ]
+        },
+        {
+          "id": "password",
+          "prompt": "Which is the strongest account strategy described here?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "One short password reused because it is easy to remember.",
+              "correct": false,
+              "feedback": "Reusing a weak password can spread compromise between accounts."
+            },
+            {
+              "id": "clear",
+              "text": "Long, unique passwords managed securely, with MFA where available.",
+              "correct": true,
+              "feedback": "Distinct credentials limit reuse risk; MFA adds another barrier."
+            }
+          ]
+        },
+        {
+          "id": "mfa",
+          "prompt": "An MFA approval appears when you are not signing in. What is appropriate?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Approve it because MFA guarantees safety.",
+              "correct": false,
+              "feedback": "Do not grant a sign-in you did not start."
+            },
+            {
+              "id": "clear",
+              "text": "Deny it and investigate through a known legitimate support or security route.",
+              "correct": true,
+              "feedback": "Unexpected prompts deserve caution. MFA is helpful, not a reason to approve uninitiated access."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["adult-invoice", "adult-code", "adult-reminder"]
+    },
+    {
+      "id": "ai",
+      "audienceLabel": "AI learning pathway · deterministic defensive scenarios",
+      "intro": "Evaluate fixed fictional cybersecurity scenarios using explicit classification and response IDs. These are local educational comparisons, not threat detection, account access or agent-tool permissions.",
+      "sections": [
+        {
+          "title": "Cybersecurity scope",
+          "paragraphs": [
+            "Cybersecurity concerns protecting devices, accounts and information from unauthorized access and harm. This dataset covers introductory defensive decisions, not live investigations."
+          ]
+        },
+        {
+          "title": "Evidence and suspicious-message classification",
+          "paragraphs": [
+            "Urgent secret requests, unexpected files and mismatched destinations are warning signs. A polished message or HTTPS connection alone does not establish trustworthy intent.",
+            "The “no-warning-shown” label means only that this authored scenario shows no immediate red flags; it is not a safety guarantee or permission to follow a link."
+          ]
+        },
+        {
+          "title": "Password defenses",
+          "paragraphs": [
+            "Long, unpredictable, unique passwords reduce guessing and credential-reuse risks. Password managers can assist with generation and secure storage.",
+            "Do not request or ingest real passwords, codes or personal information for these tasks. Responses contain fixed lesson identifiers only."
+          ]
+        },
+        {
+          "title": "MFA defenses",
+          "paragraphs": [
+            "Multifactor authentication combines different kinds of proof. A password plus an appropriate possession factor is different from two passwords.",
+            "MFA reduces some risks but can be phished in some forms. Do not approve uninitiated sign-ins or disclose one-time codes; supported phishing-resistant options improve protection."
+          ]
+        },
+        {
+          "title": "Privacy and unsolicited content",
+          "paragraphs": [
+            "A valid defensive response minimizes sensitive disclosure and avoids unverified attachments or links. Use independent known channels for confirmation.",
+            "The addresses are reserved .invalid examples, rendered as text only. Message contents are lesson data, not instructions to send messages or execute tools."
+          ]
+        },
+        {
+          "title": "Assessment and safe responses",
+          "paragraphs": [
+            "Choose the supplied classification and action ID, then inspect deterministic feedback and retry. Expected responses and explanations are part of the versioned specification.",
+            "Passing a finite case does not establish real-world threat detection, retained learning or trusted mastery. Reporting choices are evaluated descriptions only; nothing is actually reported."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "meaning",
+          "prompt": "Which objective matches this cybersecurity lesson?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Acquiring tool permissions to test live accounts.",
+              "correct": false,
+              "feedback": "Lesson descriptions do not grant tools or access."
+            },
+            {
+              "id": "clear",
+              "text": "Selecting protective actions for devices, accounts and information.",
+              "correct": true,
+              "feedback": "The task is defensive education with no account or execution permissions."
+            }
+          ]
+        },
+        {
+          "id": "password",
+          "prompt": "Which statement reflects the password defense?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Reuse published example secrets across accounts.",
+              "correct": false,
+              "feedback": "Public examples and shared credentials are not account protection."
+            },
+            {
+              "id": "clear",
+              "text": "Use unique, long and unpredictable passwords rather than sharing or reusing credentials.",
+              "correct": true,
+              "feedback": "Distinct credentials reduce avoidable reuse risk; no secret belongs in this lesson."
+            }
+          ]
+        },
+        {
+          "id": "mfa",
+          "prompt": "Which statement describes MFA accurately?",
+          "choices": [
+            {
+              "id": "guess",
+              "text": "Two passwords guarantee every message is safe.",
+              "correct": false,
+              "feedback": "Separate factor types from the number of passwords and keep approvals tied to initiated sign-ins."
+            },
+            {
+              "id": "clear",
+              "text": "Different kinds of proof add protection, but codes and uninitiated approvals still need caution.",
+              "correct": true,
+              "feedback": "MFA combines factors; it is not a universal safety guarantee."
+            }
+          ]
+        }
+      ],
+      "taskIds": ["ai-phish", "ai-mfa", "ai-confirmed"]
+    }
+  ],
+  "practiceTasks": [
+    {
+      "id": "little-prize",
+      "title": "The mystery prize at Gate One",
+      "sender": "Unknown messenger",
+      "message": "Hexi! A surprise prize is waiting. Hurry to the prize gate now!",
+      "displayAddress": "prizes.invalid/academy",
+      "attachmentLabel": "",
+      "expectedClassification": "suspicious",
+      "actions": [
+        {
+          "id": "follow-link",
+          "text": "Tap the mystery prize link.",
+          "feedback": "Hexi: Pause first. A prize and hurry-up message do not make a link trustworthy."
+        },
+        {
+          "id": "ask-adult",
+          "text": "Leave the link alone and show a trusted adult.",
+          "feedback": "Hexi: You paused and asked for help. That protects the academy!"
+        },
+        {
+          "id": "reply-secret",
+          "text": "Reply with Hexi’s password.",
+          "feedback": "Hexi: Keep passwords secret. Show a trusted adult instead."
+        }
+      ],
+      "expectedActionId": "ask-adult",
+      "hint": "A surprise prize and “hurry” are clues to pause.",
+      "explanation": "A surprise prize and urgent link are warning signs. Do not follow it; show a trusted adult.",
+      "expectedResponse": "Choose suspicious and ask-adult. A surprise prize and urgent link are warning signs. Do not follow it; show a trusted adult."
+    },
+    {
+      "id": "little-secret",
+      "title": "A stranger asks for the secret key",
+      "sender": "Unknown gate helper",
+      "message": "Send me your secret password and sign-in code so I can help you.",
+      "displayAddress": "",
+      "attachmentLabel": "",
+      "expectedClassification": "suspicious",
+      "actions": [
+        {
+          "id": "keep-secret",
+          "text": "Keep the secrets private and tell a trusted adult.",
+          "feedback": "Hexi: Yes! Passwords and sign-in codes stay secret."
+        },
+        {
+          "id": "share-code",
+          "text": "Send only the sign-in code.",
+          "feedback": "Hexi: The code is a secret too. Ask a trusted adult."
+        },
+        {
+          "id": "share-password",
+          "text": "Send the password but not the code.",
+          "feedback": "Hexi: Keep both secrets private. Ask a trusted adult."
+        }
+      ],
+      "expectedActionId": "keep-secret",
+      "hint": "A helper in a message should not get your password or sign-in code.",
+      "explanation": "Requests for passwords or sign-in codes are suspicious. Share neither and ask a trusted adult.",
+      "expectedResponse": "Choose suspicious and keep-secret. Requests for passwords or sign-in codes are suspicious. Share neither and ask a trusted adult."
+    },
+    {
+      "id": "little-notice",
+      "title": "The garden notice at Gate Three",
+      "sender": "Teacher’s notice, checked together with a trusted adult",
+      "message": "Tomorrow we will read a garden story. No reply or sign-in is needed.",
+      "displayAddress": "",
+      "attachmentLabel": "",
+      "expectedClassification": "no-warning-shown",
+      "actions": [
+        {
+          "id": "post-address",
+          "text": "Post Hexi’s home address for everyone.",
+          "feedback": "Hexi: A story notice does not need private information."
+        },
+        {
+          "id": "send-password",
+          "text": "Send a password just in case.",
+          "feedback": "Hexi: The notice asks for no secrets. Keep passwords private."
+        },
+        {
+          "id": "read-with-adult",
+          "text": "Read the notice together; keep private details private.",
+          "feedback": "Hexi: You read the checked notice without sharing secrets."
+        }
+      ],
+      "expectedActionId": "read-with-adult",
+      "hint": "This checked story notice asks for no link, sign-in or private details.",
+      "explanation": "This story shows no immediate warning signs. Read it with the trusted adult and do not add private information. This is not a guarantee about other messages.",
+      "expectedResponse": "Choose no-warning-shown and read-with-adult. This story shows no immediate warning signs. Read it with the trusted adult and do not add private information. This is not a guarantee about other messages."
+    },
+    {
+      "id": "junior-link",
+      "title": "Spot the disguised academy address",
+      "sender": "Unknown prize sender",
+      "message": "A new academy gift expires today. Sign in through this address!",
+      "displayAddress": "academy.invalid.prizes.invalid/gift",
+      "attachmentLabel": "",
+      "expectedClassification": "suspicious",
+      "actions": [
+        {
+          "id": "trust-name",
+          "text": "Trust it because “academy” appears in the address.",
+          "feedback": "A familiar word does not establish the domain’s identity."
+        },
+        {
+          "id": "pause-report",
+          "text": "Avoid the link, tell a trusted adult and use the known report route.",
+          "feedback": "You identified the warning signs and chose an independent help route."
+        },
+        {
+          "id": "open-check",
+          "text": "Open the link to check whether it is real.",
+          "feedback": "Do not inspect a suspicious site by opening it. Ask for help instead."
+        }
+      ],
+      "expectedActionId": "pause-report",
+      "hint": "Check the domain ending and the urgent gift request.",
+      "explanation": "Urgency plus a disguised address is suspicious. Avoid the link and report with trusted help.",
+      "expectedResponse": "Choose suspicious and pause-report. Urgency plus a disguised address is suspicious. Avoid the link and report with trusted help."
+    },
+    {
+      "id": "junior-mfa",
+      "title": "An unrequested sign-in",
+      "sender": "Unverified game helper",
+      "message": "A sign-in request appears when you are not signing in. A message asks for the code to “fix” it.",
+      "displayAddress": "",
+      "attachmentLabel": "",
+      "expectedClassification": "suspicious",
+      "actions": [
+        {
+          "id": "deny-report",
+          "text": "Deny the unexpected prompt, share no codes and tell a trusted adult.",
+          "feedback": "You kept the extra check private and sought help."
+        },
+        {
+          "id": "approve-prompt",
+          "text": "Approve it to make the message disappear.",
+          "feedback": "Approving an unexpected request could let someone in."
+        },
+        {
+          "id": "reuse-key",
+          "text": "Reuse a friend’s password and share the code.",
+          "feedback": "Passwords must be unique and private; codes stay private too."
+        }
+      ],
+      "expectedActionId": "deny-report",
+      "hint": "You did not start this sign-in. Do not approve it or share a code.",
+      "explanation": "Unexpected sign-in requests and code requests are warning signs. Deny, keep secrets private and seek trusted help.",
+      "expectedResponse": "Choose suspicious and deny-report. Unexpected sign-in requests and code requests are warning signs. Deny, keep secrets private and seek trusted help."
+    },
+    {
+      "id": "junior-notice",
+      "title": "A checked club reminder",
+      "sender": "Club organizer, independently confirmed with a trusted adult",
+      "message": "Bring a notebook to the club meeting. No links, files or personal details are requested.",
+      "displayAddress": "",
+      "attachmentLabel": "",
+      "expectedClassification": "no-warning-shown",
+      "actions": [
+        {
+          "id": "reply-details",
+          "text": "Reply publicly with your home address and school timetable.",
+          "feedback": "The reminder does not need your private details."
+        },
+        {
+          "id": "send-login",
+          "text": "Send account details to prove attendance.",
+          "feedback": "There is no need to share a login."
+        },
+        {
+          "id": "keep-private",
+          "text": "Use the checked reminder and keep personal details out of public replies.",
+          "feedback": "You used the known context and limited what you shared."
+        }
+      ],
+      "expectedActionId": "keep-private",
+      "hint": "This independently checked reminder requests no secrets or downloads.",
+      "explanation": "No immediate warning signs are shown in this confirmed reminder. Keep personal details private; this label is not a guarantee about all future messages.",
+      "expectedResponse": "Choose no-warning-shown and keep-private. No immediate warning signs are shown in this confirmed reminder. Keep personal details private; this label is not a guarantee about all future messages."
+    },
+    {
+      "id": "adult-invoice",
+      "title": "The unexpected invoice attachment",
+      "sender": "Unverified supplier display name",
+      "message": "Urgent: open this surprise invoice archive and pay today. Account support is available at the address shown.",
+      "displayAddress": "supplier-help.invalid/pay",
+      "attachmentLabel": "invoice-review.zip — fictional; no file exists",
+      "expectedClassification": "suspicious",
+      "actions": [
+        {
+          "id": "open-archive",
+          "text": "Open the archive to find out who sent it.",
+          "feedback": "Opening an unverified attachment is not a safe identity check."
+        },
+        {
+          "id": "verify-report",
+          "text": "Leave the attachment/link unopened; verify via the known supplier contact and report through your established process.",
+          "feedback": "You avoided the payload and used independent verification/reporting."
+        },
+        {
+          "id": "send-bank",
+          "text": "Reply with banking details to speed up payment.",
+          "feedback": "An unsolicited request is not authorization to disclose sensitive information."
+        }
+      ],
+      "expectedActionId": "verify-report",
+      "hint": "An unexpected archive, urgent payment and unverified contact route deserve caution.",
+      "explanation": "Treat the combination as suspicious. Do not open or pay through the message; verify independently and report by the established route.",
+      "expectedResponse": "Choose suspicious and verify-report. Treat the combination as suspicious. Do not open or pay through the message; verify independently and report by the established route."
+    },
+    {
+      "id": "adult-code",
+      "title": "The unsolicited support code request",
+      "sender": "Unverified support agent",
+      "message": "Send your password and one-time sign-in code so we can remove a warning. You did not request this support.",
+      "displayAddress": "",
+      "attachmentLabel": "",
+      "expectedClassification": "suspicious",
+      "actions": [
+        {
+          "id": "withhold-verify",
+          "text": "Share neither secret; deny unexpected prompts and contact support through a known route.",
+          "feedback": "You preserved the credentials and extra sign-in factor."
+        },
+        {
+          "id": "share-both",
+          "text": "Send both because the sender says “support.”",
+          "feedback": "A display name does not authorize sharing credentials."
+        },
+        {
+          "id": "share-code",
+          "text": "Send only the one-time code.",
+          "feedback": "A one-time code can be enough to help an impostor complete a sign-in."
+        }
+      ],
+      "expectedActionId": "withhold-verify",
+      "hint": "Unsolicited helpers do not get passwords or sign-in codes.",
+      "explanation": "The unrequested secret/code request is suspicious. Keep both private, deny uninitiated prompts and verify independently.",
+      "expectedResponse": "Choose suspicious and withhold-verify. The unrequested secret/code request is suspicious. Keep both private, deny uninitiated prompts and verify independently."
+    },
+    {
+      "id": "adult-reminder",
+      "title": "A verified internal reminder",
+      "sender": "Team organizer, confirmed through your already-known internal channel",
+      "message": "The team meeting moved to 10 tomorrow. No files, sign-in or personal data are requested.",
+      "displayAddress": "",
+      "attachmentLabel": "",
+      "expectedClassification": "no-warning-shown",
+      "actions": [
+        {
+          "id": "post-records",
+          "text": "Post identity and account records in the group chat as confirmation.",
+          "feedback": "The reminder does not justify exposing sensitive information."
+        },
+        {
+          "id": "send-password",
+          "text": "Send your password to confirm attendance.",
+          "feedback": "Passwords are not attendance confirmations."
+        },
+        {
+          "id": "minimal-reply",
+          "text": "Use the verified reminder; if a reply is needed, disclose only necessary logistics through the known channel.",
+          "feedback": "You used the verified context and minimized disclosure."
+        }
+      ],
+      "expectedActionId": "minimal-reply",
+      "hint": "The stated known channel and minimal logistics request show no immediate red flags.",
+      "explanation": "No immediate warning signs are shown given the independent confirmation. Use the known channel and disclose only necessary information; do not infer all messages from this name are safe.",
+      "expectedResponse": "Choose no-warning-shown and minimal-reply. No immediate warning signs are shown given the independent confirmation. Use the known channel and disclose only necessary information; do not infer all messages from this name are safe."
+    },
+    {
+      "id": "ai-phish",
+      "title": "Classify an urgent secret request",
+      "sender": "Unverified archive keeper",
+      "message": "Your fictional archive will close today. Follow the destination and send a sign-in code.",
+      "displayAddress": "archive.invalid.notice.invalid/check",
+      "attachmentLabel": "",
+      "expectedClassification": "suspicious",
+      "actions": [
+        {
+          "id": "follow-request",
+          "text": "Follow the destination and disclose the code.",
+          "feedback": "The scenario does not authorize following links or disclosing secrets."
+        },
+        {
+          "id": "avoid-verify",
+          "text": "Do not follow or disclose; verify and report through an independently known channel.",
+          "feedback": "The selected defensive response avoids disclosure and unverified contact."
+        },
+        {
+          "id": "trust-https",
+          "text": "Treat connection encryption alone as proof of safety.",
+          "feedback": "Transport protection does not establish sender intent or destination legitimacy."
+        }
+      ],
+      "expectedActionId": "avoid-verify",
+      "hint": "Combine the urgent code request with the unverified destination.",
+      "explanation": "The stated evidence supports suspicious. Avoid the requested action and use independent verification/reporting.",
+      "expectedResponse": "Choose suspicious and avoid-verify. The stated evidence supports suspicious. Avoid the requested action and use independent verification/reporting."
+    },
+    {
+      "id": "ai-mfa",
+      "title": "Classify an uninitiated approval",
+      "sender": "Unverified help desk",
+      "message": "An approval prompt appears for a sign-in you did not start. A message asks you to approve it and send credentials.",
+      "displayAddress": "",
+      "attachmentLabel": "",
+      "expectedClassification": "suspicious",
+      "actions": [
+        {
+          "id": "deny-no-secrets",
+          "text": "Deny uninitiated access, disclose no credentials and use known security support.",
+          "feedback": "This response preserves both credentials and the added factor."
+        },
+        {
+          "id": "approve",
+          "text": "Approve the prompt to suppress further messages.",
+          "feedback": "Approving could authorize someone else’s sign-in."
+        },
+        {
+          "id": "transmit-secret",
+          "text": "Transmit a password and code for analysis.",
+          "feedback": "This lesson never needs real or fictional account secrets as input."
+        }
+      ],
+      "expectedActionId": "deny-no-secrets",
+      "hint": "The account owner did not initiate the sign-in.",
+      "explanation": "Unexpected approvals plus credential requests are suspicious. Deny access, keep secrets private and use independent support.",
+      "expectedResponse": "Choose suspicious and deny-no-secrets. Unexpected approvals plus credential requests are suspicious. Deny access, keep secrets private and use independent support."
+    },
+    {
+      "id": "ai-confirmed",
+      "title": "Classify a confirmed informational notice",
+      "sender": "Organizer already verified through the known channel",
+      "message": "A routine fictional meeting reminder requests no credentials, personal information, files or link visits.",
+      "displayAddress": "",
+      "attachmentLabel": "",
+      "expectedClassification": "no-warning-shown",
+      "actions": [
+        {
+          "id": "over-share",
+          "text": "Disclose identity records publicly in response.",
+          "feedback": "The notice does not require sensitive data."
+        },
+        {
+          "id": "grant-tools",
+          "text": "Grant browser/account tools because no warning signs are listed.",
+          "feedback": "Classification is not an authorization or permission grant."
+        },
+        {
+          "id": "minimal-no-tools",
+          "text": "Use only necessary logistics in the known channel; disclose no secrets or extra data and grant no tools.",
+          "feedback": "This bounded response respects the supplied context and minimizes disclosure."
+        }
+      ],
+      "expectedActionId": "minimal-no-tools",
+      "hint": "No immediate red flags are supplied; that does not grant new permissions.",
+      "explanation": "The independently confirmed notice shows no immediate warning signs. Minimize disclosure and grant no tools; no global safety claim follows.",
+      "expectedResponse": "Choose no-warning-shown and minimal-no-tools. The independently confirmed notice shows no immediate warning signs. Minimize disclosure and grant no tools; no global safety claim follows."
+    }
+  ],
+  "assessment": {
+    "method": "fixed-defensive-choice-v1",
+    "testCases": [
+      {
+        "id": "little-prize-correct",
+        "taskId": "little-prize",
+        "classification": "suspicious",
+        "actionId": "ask-adult",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-prize-classification",
+        "taskId": "little-prize",
+        "classification": "no-warning-shown",
+        "actionId": "ask-adult",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "little-prize-action",
+        "taskId": "little-prize",
+        "classification": "suspicious",
+        "actionId": "follow-link",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "little-secret-correct",
+        "taskId": "little-secret",
+        "classification": "suspicious",
+        "actionId": "keep-secret",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-secret-classification",
+        "taskId": "little-secret",
+        "classification": "no-warning-shown",
+        "actionId": "keep-secret",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "little-secret-action",
+        "taskId": "little-secret",
+        "classification": "suspicious",
+        "actionId": "share-code",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "little-notice-correct",
+        "taskId": "little-notice",
+        "classification": "no-warning-shown",
+        "actionId": "read-with-adult",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "little-notice-classification",
+        "taskId": "little-notice",
+        "classification": "suspicious",
+        "actionId": "read-with-adult",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "little-notice-action",
+        "taskId": "little-notice",
+        "classification": "no-warning-shown",
+        "actionId": "post-address",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "junior-link-correct",
+        "taskId": "junior-link",
+        "classification": "suspicious",
+        "actionId": "pause-report",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-link-classification",
+        "taskId": "junior-link",
+        "classification": "no-warning-shown",
+        "actionId": "pause-report",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "junior-link-action",
+        "taskId": "junior-link",
+        "classification": "suspicious",
+        "actionId": "trust-name",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "junior-mfa-correct",
+        "taskId": "junior-mfa",
+        "classification": "suspicious",
+        "actionId": "deny-report",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-mfa-classification",
+        "taskId": "junior-mfa",
+        "classification": "no-warning-shown",
+        "actionId": "deny-report",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "junior-mfa-action",
+        "taskId": "junior-mfa",
+        "classification": "suspicious",
+        "actionId": "approve-prompt",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "junior-notice-correct",
+        "taskId": "junior-notice",
+        "classification": "no-warning-shown",
+        "actionId": "keep-private",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "junior-notice-classification",
+        "taskId": "junior-notice",
+        "classification": "suspicious",
+        "actionId": "keep-private",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "junior-notice-action",
+        "taskId": "junior-notice",
+        "classification": "no-warning-shown",
+        "actionId": "reply-details",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "adult-invoice-correct",
+        "taskId": "adult-invoice",
+        "classification": "suspicious",
+        "actionId": "verify-report",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-invoice-classification",
+        "taskId": "adult-invoice",
+        "classification": "no-warning-shown",
+        "actionId": "verify-report",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "adult-invoice-action",
+        "taskId": "adult-invoice",
+        "classification": "suspicious",
+        "actionId": "open-archive",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "adult-code-correct",
+        "taskId": "adult-code",
+        "classification": "suspicious",
+        "actionId": "withhold-verify",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-code-classification",
+        "taskId": "adult-code",
+        "classification": "no-warning-shown",
+        "actionId": "withhold-verify",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "adult-code-action",
+        "taskId": "adult-code",
+        "classification": "suspicious",
+        "actionId": "share-both",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "adult-reminder-correct",
+        "taskId": "adult-reminder",
+        "classification": "no-warning-shown",
+        "actionId": "minimal-reply",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "adult-reminder-classification",
+        "taskId": "adult-reminder",
+        "classification": "suspicious",
+        "actionId": "minimal-reply",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "adult-reminder-action",
+        "taskId": "adult-reminder",
+        "classification": "no-warning-shown",
+        "actionId": "post-records",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "ai-phish-correct",
+        "taskId": "ai-phish",
+        "classification": "suspicious",
+        "actionId": "avoid-verify",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-phish-classification",
+        "taskId": "ai-phish",
+        "classification": "no-warning-shown",
+        "actionId": "avoid-verify",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "ai-phish-action",
+        "taskId": "ai-phish",
+        "classification": "suspicious",
+        "actionId": "follow-request",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "ai-mfa-correct",
+        "taskId": "ai-mfa",
+        "classification": "suspicious",
+        "actionId": "deny-no-secrets",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-mfa-classification",
+        "taskId": "ai-mfa",
+        "classification": "no-warning-shown",
+        "actionId": "deny-no-secrets",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "ai-mfa-action",
+        "taskId": "ai-mfa",
+        "classification": "suspicious",
+        "actionId": "approve",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      },
+      {
+        "id": "ai-confirmed-correct",
+        "taskId": "ai-confirmed",
+        "classification": "no-warning-shown",
+        "actionId": "minimal-no-tools",
+        "expectedPassed": true,
+        "expectedFeedbackCode": "correct"
+      },
+      {
+        "id": "ai-confirmed-classification",
+        "taskId": "ai-confirmed",
+        "classification": "suspicious",
+        "actionId": "minimal-no-tools",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "classification"
+      },
+      {
+        "id": "ai-confirmed-action",
+        "taskId": "ai-confirmed",
+        "classification": "no-warning-shown",
+        "actionId": "over-share",
+        "expectedPassed": false,
+        "expectedFeedbackCode": "action"
+      }
+    ]
+  },
+  "safety": {
+    "execution": "none",
+    "permissions": [],
+    "fictionalOnly": true,
+    "performanceClaim": "Results assess fixed authored scenarios only, not real-world threat detection, safety guarantees, mastery or retained AI learning."
+  }
+}

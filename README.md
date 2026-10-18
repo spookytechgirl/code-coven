@@ -89,7 +89,7 @@ A current source/configuration scan found no credential-like tokens or private k
 
 ## Demo and artwork limitations
 
-Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; the other four courses remain previews. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
+Catalog lesson totals describe planned content. Python Potions contains output and variable lessons, each with two Kids adaptations, Adults practice, and machine-readable AI data. Programming Fundamentals contains Thinking Like a Programmer, and Web Enchantment now contains its HTML introduction; Cybersecurity Charms now adds its defensive introduction; the other three courses remain previews. Restricted Python practice checks source text only; no Python runs. Human activity completion saves only in this browser and never updates the dashboard’s demo XP/progress. Notes, earned quests, achievements, login, community, and Ask Hexi remain placeholders. The local coding tips rotate on request without a background timer.
 
 Mission 015 preserves all existing academy/course illustrations and Hexi while removing visitor-facing temporary artwork labels. No image was replaced, recolored, cropped, or regenerated. [ARTWORK.md](ARTWORK.md) records the label inventory and asset guidance; [Mission 015 review](docs/MISSION_015_REVIEW.md) records scope and verification. No paid services are required.
 
@@ -159,3 +159,19 @@ Little learners use tag-and-word building blocks; Junior learners edit real frag
 The bounded checker accepts explicit h1/p fragments or a restricted English document skeleton. The visual preview is a fixed React text model, **not insertion or browser rendering of submitted markup**. No innerHTML, iframe/srcdoc, script, style, external resource, code executor or paid service is introduced. Other valid HTML is intentionally unsupported. Existing lesson sources, artwork, dependencies and security headers are preserved; only an existing curriculum-count test changes to recognize the third course.
 
 Run `pnpm test:html`, the existing native suites and `pnpm test:build`. `scripts/verify-html.cjs` uses the optional external Playwright/Chrome setup above for activity/security-boundary/keyboard/theme/reflow checks with local CSP simulation. See [Mission 017B review](docs/MISSION_017B_REVIEW.md) for evidence, limits and the exact changed-file list.
+
+
+## Mission 017C · The Guardian’s First Shield
+
+**Implemented locally; publication awaits founder review:** Cybersecurity Charms now has an introductory lesson, The Guardian’s First Shield — Staying Safe in the Digital Realm. All four experiences cover cybersecurity, suspicious messages/addresses, strong unique passwords, MFA, privacy and defensive responses. Each has three knowledge checks, three two-part scenario activities, hints, unlimited retries, isolated browser completion/reset and a Hexi celebration.
+
+- Little / Junior: `/learn/kids/security/first-shield?band=little` or `?band=junior`.
+- Adults: `/learn/adults/security/first-shield`.
+- AIs: `/learn/ai/security/first-shield`.
+- All four entry points: `/courses/cybersecurity-charms`.
+
+Little learners help Hexi at three castle gates; Junior learners inspect address clues and MFA prompts; Adults review fictional invoice/support/privacy situations. Each variant includes a confirmed informational example as well as suspicious messages. “No warning signs shown” is not a safety guarantee. There are no password/personal-data fields, live links, real attachments, account connections, reporting actions or attack tools. All example addresses use reserved .invalid names and remain text.
+
+The AI workbench provides specification/content v1.0.0, deterministic fixed-choice comparison, 36 sample cases with expected responses/explanations and lesson/sample/session downloads. Only completion IDs/versions may persist; no answers or personal data are saved or sent. Up to 20 practical results remain in memory until reload/navigation/reset. Passing is bounded task performance, not real-world threat detection or retained AI learning.
+
+Run `pnpm test:shield` alongside all existing native/build suites. `scripts/verify-shield.cjs` follows the documented optional external Playwright/Chrome setup. See [Mission 017C review](docs/MISSION_017C_REVIEW.md) for objectives, references, safety boundaries, test results, limits and exact changed files. Original lesson implementations, artwork, dependencies and security headers are preserved. Only two existing curriculum-count assertions change from three to four populated courses. Mission 017D is not implemented.

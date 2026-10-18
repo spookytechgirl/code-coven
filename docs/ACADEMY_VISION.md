@@ -22,7 +22,7 @@ This blueprint explains both what exists and why future work matters. Current im
 
 ## Three audiences
 
-**Implemented:** a three-path selector and two shared Python lessons (output and variables) and Programming Fundamentals and Web Enchantment introductions, with Little/Junior Kids adaptations, an Adults classroom, and a downloadable validated AI lesson. Full multi-course audience pathways remain **Planned**. No agent API, age collection, or age gating exists.
+**Implemented:** a three-path selector and two shared Python lessons (output and variables) and Programming Fundamentals, Web Enchantment and Cybersecurity Charms introductions, with Little/Junior Kids adaptations, an Adults classroom, and a downloadable validated AI lesson. Full multi-course audience pathways remain **Planned**. No agent API, age collection, or age gating exists.
 
 - **Code Coven for Kids:** Little Apprentices (ages 6–9) and Junior Spellcasters (ages 10–13), with distinct introductory activities now implemented; broader audience testing and support policies remain Planned.
 - **Code Coven for Adults:** flexible entry points, practical paths, and progressively demanding work without assuming every adult starts at the same level.
@@ -36,7 +36,7 @@ Older learners need flexible pathways rather than an automatic placement based o
 
 **Implemented in Mission 008:** one populated Python module/lesson with a canonical objective, audience-specific explanations, knowledge checks, restricted text practice, and browser-only completion. The AI variant includes a validated versioned specification and deterministic sample records.
 
-**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. Four course module lists remain empty; Programming Fundamentals and Web Enchantment have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
+**Planned:** the broader teaching curriculum, trusted capability progression, and controlled execution. Three course module lists remain empty; Programming Fundamentals, Web Enchantment and Cybersecurity Charms have their own introductions. No Python interpreter, authentication, database, public agent API, or account synchronization exists. The dashboard statistics remain unrelated demo data.
 
 The seven magical locations establish a setting, not locked academic silos. Avoid unrelated prerequisites that prevent someone exploring a department. Any future prerequisite should explain its learning purpose and offer a way to demonstrate an existing capability.
 
@@ -75,3 +75,8 @@ Update this document when mission, governance, audiences, or guiding principles 
 ## Mission 017B · Web Enchantment awakens
 
 **Implemented locally:** The Anatomy of a Magical Web Page adds six shared HTML objectives with concrete Little building blocks, Junior fragments, an independent adult document and deterministic AI exercises. This advances introductory coverage to three of seven courses locally, preserving Crystal’s design and original Hexi artwork. The observed GitHub main baseline includes Mission 017A (`2715cde93996f89ad72f6857f02aec2025dfb9ed`); no new deployment is claimed by this local mission. Cybersecurity, Algorithms, AI Fundamentals and Software Sorcery introductions remain **Planned**, in that order. Broader learner validation and trusted capability progression remain Planned. See [review](MISSION_017B_REVIEW.md).
+
+
+## Mission 017C · A defensive first shield
+
+**Implemented locally:** The Guardian’s First Shield introduces six shared defensive cybersecurity objectives through four adapted learning experiences. It extends introductory coverage to four of seven courses while preserving Crystal’s design and Hexi. The verified GitHub source baseline includes Mission 017B (`7fdcfdea6e8b5771633b181eaeeca89d566a5f2a`); this mission makes no production deployment claim. All scenarios are fictional, with fixed choices and no passwords/personal information requested. No attack, live suspicious link, student account, public agent service or executor is introduced. Algorithm Alchemy, AI Fundamentals and Software Sorcery remain **Planned**; Mission 017D has not started. See [review](MISSION_017C_REVIEW.md).

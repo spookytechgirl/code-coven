@@ -1,3 +1,4 @@
+import { shieldRoutes } from "../data/lessons/cyber-shield";
 import { htmlRoutes } from "../data/lessons/web-html";
 import { thinkingRoutes } from "../data/lessons/programming-thinking";
 import { useState } from "react";
@@ -36,8 +37,8 @@ export function Courses() {
       <h1>Explore Courses</h1>
       <p className="page-intro">
         Real skills. A little wonder. Every course is completely free. Lesson
-        content is growing — try Programming Fundamentals, Python Potions or Web
-        Enchantment.
+        content is growing — explore Programming Fundamentals, Python Potions,
+        Web Enchantment and Cybersecurity Charms.
       </p>
       <div className="filters">
         <label htmlFor="course-search">
@@ -188,6 +189,33 @@ export function CourseDetail() {
           <p>
             Bounded HTML checking and a fixed safe text model; no submitted
             markup is executed or inserted into the academy.
+          </p>
+        </article>
+      ) : course.id === "cybersecurity-charms" ? (
+        <article id="classrooms" className="card detail-placeholder">
+          <h2>The Guardian’s First Shield</h2>
+          <p>
+            One complete introduction to staying safer online: suspicious
+            messages, strong unique passwords, MFA, privacy and defensive
+            responses. The other 14 catalog lessons are planned.
+          </p>
+          <div className="lesson-downloads">
+            <Link className="button" to={`${shieldRoutes.kids}?band=little`}>
+              Little Apprentices
+            </Link>
+            <Link className="button" to={`${shieldRoutes.kids}?band=junior`}>
+              Junior Spellcasters
+            </Link>
+            <Link className="button" to={shieldRoutes.adults}>
+              Adult learners
+            </Link>
+            <Link className="button" to={shieldRoutes.ai}>
+              AI learning pathway
+            </Link>
+          </div>
+          <p>
+            Fictional scenarios and fixed choices only. No real passwords,
+            accounts, link visits or attacks.
           </p>
         </article>
       ) : course.learningEntry ? (

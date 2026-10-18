@@ -15,7 +15,7 @@ Department: potions
                   └─ Challenges: hello, welcome (no XP awards)
 ```
 
-[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; four course module lists remain empty and catalog lesson totals remain planned counts.
+[Legacy curriculum types](../src/types/curriculum.ts) remain compatible. [LearningLesson](../src/types/learning.ts) extends Lesson with course/concept/version, objectives, prerequisites, examples, and audience variants. [The canonical JSON](../src/data/lessons/python-output.v1.json) defines the shared objective: **“Use Python's print() function to display text.”** [The adapter](../src/data/lessons/python-output.ts) validates it and builds human content and the canonical lesson. [Curriculum data](../src/data/curriculum.ts) places this lesson in the existing hierarchy; three course module lists remain empty and catalog lesson totals remain planned counts.
 
 The dashboard's `demoProgress` still represents sample numbers, not the pilot's local completion. No lesson completion changes dashboard XP or percentages.
 
@@ -160,3 +160,18 @@ Only a passing result produces a heading/paragraph/optional title text model. [H
 AI lesson/sample downloads use specification/content v1.0.0, checker restricted-html-structure-v1, explicit task IDs and deterministic pass/fail/feedback. Strict request fields are specificationVersion, contentVersion, lessonId, taskId and source; unknown fields/permissions/versions/tasks fail validation. Records include executed:false and renderedAsHtml:false. Up to 20 practical results remain in memory for optional session download, cleared on reload/navigation/reset; no source or answers are saved. All four experiences may save completion IDs and versions under isolated browser keys, without account synchronization, external agent identity or retained-learning claims.
 
 The old thinking test’s academy count is updated from two to three populated courses; its sequencing assertions and existing lesson implementation are unchanged. Four future course introductions remain Planned. See [review](MISSION_017B_REVIEW.md).
+
+
+## Mission 017C · Defensive scenario checking
+
+**Implemented locally:** tower → tower-path → cybersecurity-charms → cyber-defensive-basics → cyber-guardian-shield-001. [Versioned data](../src/data/lessons/cyber-shield.v1.json), [strict schema](../src/learning/shield-schema.ts) and [adapter](../src/data/lessons/cyber-shield.ts) reuse the existing hierarchy and introduce no new platform service.
+
+Every variant covers six shared objectives in six short sections, with three native knowledge checks and three two-part practical scenarios. The practical response consists only of a supplied classification and action ID. [The evaluator](../src/learning/shield.ts) requires both to match the authored case; unknown/missing values fail safely and retries are unrestricted. It does not inspect arbitrary messages, visit addresses, send reports or execute the described action. The label no-warning-shown describes the supplied context only, never guarantees safety or grants permissions.
+
+[ShieldPractice](../src/components/lessons/ShieldPractice.tsx) renders fictional message cards, addresses and attachment descriptions as React text. Reserved .invalid addresses cannot become action links through this component; there is no href, external resource binding, file attachment or free-text/credential field. [The classroom](../src/pages/ShieldLesson.tsx) reuses knowledge checks, the unchanged progress hook, original Hexi and completion card. A static numbered storyboard supports Little’s castle-gate adventure without changing artwork.
+
+All six activities must pass at least once. Lesson/variant keys store only completed IDs and versions; reset clears only the active record/forms/session results. An activity reset retains prior completion under the existing disclosed policy. Restored celebrations are static; fresh completion uses existing reduced-motion behavior. No personal information or responses are persisted or transmitted.
+
+AI specification/content versions are 1.0.0; checker fixed-defensive-choice-v1. Requests allow exactly specificationVersion, contentVersion, lessonId, taskId, classification and actionId. Strict validation rejects source payloads, secret/personal-data fields, permissions, unknown versions/tasks/actions. All 36 sample cases have expected classifications/actions/responses and explanations; records include executed:false and actionsPerformed:false. The AI page displays its nine task-specific cases, while downloads include all variants’ 36 cases. Optional current-session downloads expose up to 20 in-memory practical results only; reload/navigation/reset clears them. Browser completion is not an external agent identity, retained learning or mastery evidence.
+
+Existing Python/Thinking/HTML implementations and security boundaries remain unchanged. Two preexisting tests update only the populated-course count to four. The next three course introductions remain Planned. See [review](MISSION_017C_REVIEW.md).

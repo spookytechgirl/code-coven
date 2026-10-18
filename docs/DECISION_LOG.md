@@ -233,3 +233,16 @@ For future entries, copy the field structure above, use the actual recorded/adop
 - **Tradeoffs:** this is not a full HTML parser/validator or browser-rendered preview. Many legal HTML forms are deliberately unsupported; the UI states the limits. Local completion is editable, and deterministic passes do not establish mastery. Real learner and screen-reader evaluation remain future work.
 - **Result:** six shared objectives, three checks/three practices per experience, visual Little blocks, older real-tag editing, independent adult document, 36 AI cases and three downloads, keyboard/reflow/theme/motion checks and old-lesson regressions. Only the older test’s populated-course count is updated; no executor, artwork, dependency, header or deployment change.
 - **Related:** F12, F17–F24, F31–F39; [review](MISSION_017B_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [source data](../src/data/lessons/web-html.v1.json).
+
+
+## D019 — Teach cybersecurity through fixed defensive scenarios only
+
+- **Date:** 2026-10-18, Mission 017C founder instruction and local implementation.
+- **Status:** Implemented locally; commit, push, deployment and Mission 017D are not authorized.
+- **Decision:** add Cybersecurity Charms’ first lesson using fictional message classification plus defensive action selection across four experiences. Reuse existing lesson/progress/celebration components and validated AI-data patterns.
+- **Context:** the founder requests six shared safety objectives, three checks/three practices per experience, no real secrets/accounts/attacks, preserved artwork and unchanged executor protections. GitHub main was verified to include Mission 017B before cloning an isolated checkout.
+- **Alternatives considered:** a real inbox/URL scanner would introduce data/access risks; free-text password or phishing-input fields are unnecessary; live report/link controls could act beyond the educational task. Always labeling every example suspicious would encourage a shortcut instead of reading evidence.
+- **Reasoning:** comparing finite response IDs with authored answers is inspectable, reproducible and sufficient for introductory defensive practice. Both warning-sign and independently confirmed informational scenarios teach caution without claiming a message is proven safe.
+- **Tradeoffs:** no real-world threat classification or trusted mastery is established. Scenarios simplify context; no-warning-shown is not a safety guarantee. AI results are ephemeral/local and do not establish retained learning. Learner/assistive-technology validation remains future work.
+- **Result:** six objectives, six activities per variant, safe text-only message cards, hints/retries, completion/reset/celebration, 36 sample cases and downloads. No original artwork, existing lesson implementation, dependency, lockfile, header or executor changes. Two old curriculum-count assertions reflect four populated courses.
+- **Related:** F12, F17–F24, F31–F40; [review](MISSION_017C_REVIEW.md), [architecture](LEARNING_ARCHITECTURE.md), [data](../src/data/lessons/cyber-shield.v1.json).

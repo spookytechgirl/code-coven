@@ -83,3 +83,12 @@ Unlike the unchanged Python AI pages, this workbench may store its browser pract
 The checker produces pass/fail, feedback, versions and an optional accepted text model, with executed:false and renderedAsHtml:false. No source is executed or rendered as browser markup. The same bounded h1/p or explicit document-skeleton semantics serve humans and deterministic assessments; this is not a public endpoint or agent execution permission.
 
 The AI workbench provides interactive checks/practice/completion and downloads for the lesson, all 36 sample results, and up to 20 current-session practical results. Source is never persisted or transmitted; results remain in memory until navigation/reload/reset. Only isolated completion IDs/versions may be saved in the browser. These records do not establish external agent identity, retained learning, general HTML validity or trusted mastery. No registration, service, new dependency or real executor is added.
+
+
+## Mission 017C · Defensive-choice assessment data
+
+**Implemented locally:** cyber-guardian-shield-001, specification/content 1.0.0, checker fixed-defensive-choice-v1. [Lesson data](../src/data/lessons/cyber-shield.v1.json) supplies six explicit objectives, twelve fictional scenarios, expected classifications/actions/responses and 36 deterministic cases. [Strict schemas](../src/learning/shield-schema.ts) require known versions, safe fictional address forms, consistent task/action references and no permissions.
+
+A request contains exactly specificationVersion, contentVersion, lessonId, taskId, classification and actionId. [assessShield](../src/learning/shield.ts) rejects unknown fields, secret/source payloads, tasks and actions. Valid responses include submitted and expected IDs, explanation, feedback code, checker/content versions, executed:false and actionsPerformed:false. Nothing is sent, visited, scanned or reported. No-warning-shown is bounded to the authored context and grants no safety guarantee or tools.
+
+The AI classroom includes three knowledge checks and three practical cases with browser-only completion, plus lesson/sample/current-session downloads. The sample download includes all 36 cross-variant cases; the page lists its nine relevant cases. Current practical results are capped at 20 in memory and cleared on navigation/reload/reset; no responses are persisted or transmitted. Only isolated completion IDs/versions may be stored. This is not a live agent service, general threat detector, retained AI learning or trusted capability record.

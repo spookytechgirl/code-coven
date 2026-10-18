@@ -56,7 +56,7 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 
 ### F04 — Course previews, pilot entry, and not-found routing
 
-- **Status:** Implemented; Python, Programming Fundamentals and Web Enchantment link to complete introductory lessons; four courses remain previews.
+- **Status:** Implemented; Python, Programming Fundamentals, Web Enchantment and Cybersecurity Charms link to complete introductory lessons; three courses remain previews.
 - **Purpose:** provide stable course routes and honest availability messages.
 - **Audience:** visitors and human/AI pilot learners.
 - **Benefit:** reach working content without broken links or invented completed courses.
@@ -506,3 +506,20 @@ No feature is currently verified as In Progress or Deprecated. Do not apply thos
 - **Privacy/evidence:** isolated lesson/variant completion IDs and versions only; no names/ages/source/answers saved or transmitted. AI sample/session records are deterministic local results, not trusted mastery or retained learning. Current practical results are in-memory only and capped at 20.
 - **Verification:** [review](MISSION_017B_REVIEW.md), [native tests](../tests/html.test.ts), [browser checks](../scripts/verify-html.cjs), existing Python/Programming Fundamentals regressions and production checks.
 - **Future improvements:** human/assistive-technology review, later CSS/links/images topics with separately reviewed checking boundaries. The remaining course order starts with Cybersecurity Charms; none is implemented here.
+
+
+## Mission 017C classroom awakening · Cybersecurity Charms
+
+### F40 — The Guardian’s First Shield
+
+- **Status:** Implemented locally; publication awaits founder review. Three further course introductions remain Planned.
+- **Purpose:** teach introductory defensive cybersecurity: protection, suspicious messages/addresses, unique strong passwords, MFA, privacy and safe response/help.
+- **Audience:** Little Apprentices, Junior Spellcasters, Adults and AI learners/developers with adapted instruction and fictional scenarios.
+- **Benefit:** six objectives, three checks and three practical scenarios per variant, actionable feedback/hints, unlimited retries, isolated completion/reset and Hexi encouragement/celebration. Both suspicious and confirmed informational examples prevent an always-suspicious shortcut.
+- **Location:** [data](../src/data/lessons/cyber-shield.v1.json), [adapter](../src/data/lessons/cyber-shield.ts), [schema](../src/learning/shield-schema.ts), [evaluator/records](../src/learning/shield.ts), [practice](../src/components/lessons/ShieldPractice.tsx), [classroom](../src/pages/ShieldLesson.tsx), course/path discovery.
+- **Dependencies:** existing React/Router, Valibot, local Lucide icons, lesson controls, unchanged progress helpers, original Hexi, themes and completion component. No new package or paid service.
+- **Accessibility:** semantic headings/story cards, native grouped radios, labels, keyboard hint/reset/check controls, text feedback and polite completion announcement, responsive wrapping, reduced motion; no drag-only activity or timer.
+- **Security:** fixed choice IDs only. No attacks, phishing delivery, secret collection, free-text entry, account connection, link visits, reporting transmission, attachment download, agent execution or executor/security-policy change. Addresses are reserved .invalid text; descriptions are not instructions to perform an action.
+- **Privacy/evidence:** completion IDs/versions only; no names, ages, passwords, answers or session results persisted. AI evaluations are local/deterministic; up to 20 practical results remain in memory for optional download. No general safety, mastery or retained-learning claim.
+- **Verification:** [review](MISSION_017C_REVIEW.md), [native tests](../tests/shield.test.ts), [browser checks](../scripts/verify-shield.cjs), all existing lesson regressions and production checks.
+- **Future improvements:** learner/screen-reader review, deeper privacy/updates/recovery topics through later bounded tasks. Algorithm Alchemy is next in the planned course order, not implemented here.

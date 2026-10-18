@@ -1,3 +1,4 @@
+import { shieldRoutes } from "../data/lessons/cyber-shield";
 import { htmlRoutes } from "../data/lessons/web-html";
 import { thinkingRoutes } from "../data/lessons/programming-thinking";
 import { Link, useParams } from "react-router-dom";
@@ -59,7 +60,7 @@ export function PathOverview() {
       <Link className="text-link" to="/learn">
         ← Switch learning paths
       </Link>
-      <span className="eyebrow">YOUR PYTHON ADVENTURE · LESSONS 001–002</span>
+      <span className="eyebrow">CHOOSE YOUR NEXT CLASSROOM</span>
       <h1>{path.title}</h1>
       <p className="page-intro">{path.experience}</p>
       {path.id === "kids" ? (
@@ -141,6 +142,17 @@ export function PathOverview() {
         </p>
         <Link className="button" to={htmlRoutes[path.id]}>
           Open Web Enchantment <ArrowRight size={17} />
+        </Link>
+      </section>
+      <section className="card pilot-summary">
+        <span className="eyebrow">CYBERSECURITY CHARMS · LESSON 001</span>
+        <h2>The Guardian’s First Shield</h2>
+        <p>
+          Recognize suspicious messages, keep secrets private and choose safe
+          defensive responses with Hexi.
+        </p>
+        <Link className="button" to={shieldRoutes[path.id]}>
+          Open Cybersecurity Charms <ArrowRight size={17} />
         </Link>
       </section>
       <p className="learning-privacy">
